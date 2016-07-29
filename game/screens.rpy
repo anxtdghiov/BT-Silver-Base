@@ -1,6 +1,49 @@
 ﻿# This file is in the public domain. Feel free to modify it as a basis
 # for your own screens.
 
+
+init -2 python:
+    import os
+    import re
+    import inspect
+    edit_mode = 0
+    def get_line_from_caller(frame):
+        info = inspect.getouterframes(inspect.currentframe())[frame]
+        lno = info[0].f_lineno
+        with open(info[0].f_code.co_filename) as file:
+            for line in file:
+                lno -= 1
+                if lno == 0:
+                    return line
+
+    #renpy.call_stack_depth()
+    def f_mod(cmd):
+        #Create temp file
+        file_path = inspect.getframinfo(i)
+        fh, abs_path = mkstemp()
+        file_path = config.searchpath[0] + os.path.sep + file_path
+        with open(abs_path,'w') as new_file:
+            with open(file_path) as old_file:
+                for line in old_file:
+                    for k in cmd.keys():
+                        if k == 's':
+                            for s in cmd['s']:
+                                line = re.sub(s[0], s[1], line)
+                        elif k == 'move_up':
+                            for i in range(len(cmd['move_up'])):
+                                mu = cmd['move_up'][i]
+                                if re.match(mu[0]):
+                                    line = re.sub('^(.*)$', mu[1]+r"\n\1", line)
+                                    del cmd['move_up'][i]
+                    new_file.write(line)
+                if 'append' in cmd:
+                    for line in cmd['append']:
+                        new_file.write(line)
+        os.close(fh)
+        os.remove(file_path)
+        move(abs_path, file_path)
+
+
 ##############################################################################
 # Say
 #
@@ -48,6 +91,9 @@ screen say:
                     style "say_vbox"
 
                 text what id "what"
+                $line = get_line_from_caller(25)
+                if edit_mode == 1:
+                    textbutton _("Edit") action ShowMenu("input", prompt="Edit text:", default=line)
 
     # If there's a side image, display it above the text.
     if side_image:
@@ -57,8 +103,6 @@ screen say:
 
     # Use the quick menu.
     use quick_menu
-
-
 ##############################################################################
 # Choice
 #
@@ -95,7 +139,7 @@ init -2:
 
     style menu_window is default
 
-    style menu_choice is button_text:
+    style menu_choice is small_button:
         clear
 
     style menu_choice_button is button:
@@ -116,6 +160,8 @@ screen input:
 
         text prompt style "input_prompt"
         input id "input" style "input_text"
+        if default:
+            input default default
 
     use quick_menu
 
