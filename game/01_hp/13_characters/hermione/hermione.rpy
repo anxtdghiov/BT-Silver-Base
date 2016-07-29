@@ -151,60 +151,7 @@ label __init_variables:
         $ hermione_costume = False
     if not hasattr(renpy.store,'hermione_costume_action_a'): #important!
         $ hermione_costume_action_a = "01_hp/13_characters/hermione/clothes/custom/00_blank.png"
-    
-    return
-    
-label her_main(text="",face=h_body,tears="", xpos = hermione_xpos, ypos = hermione_ypos):
-    hide screen hermione_main
-    #with d3
-    if xpos != hermione_xpos:
-        if xpos == 370:
-            $ hermione_xpos = 510
-        elif xpos == 120:
-            $ hermione_xpos = 140
-        else:
-            $ hermione_xpos = xpos
-    if ypos != hermione_ypos:
-        $ hermione_ypos = ypos
-    if face != h_body:
-        $ h_body = face
-        #$ hermione_body = her_path + str(face) + ".png"
-    $ h_tears = tears
-    call h_update
-    show screen hermione_main
-    with d1
-    if text != "":
-        if "[tmp_name]" in text or "[genie_name]" or "[hermione_name]" in text:
-            if "[tmp_name]" in text:
-                $ text = text.replace("[tmp_name]",tmp_name)
-            if "[genie_name]" in text:
-                $ text = text.replace("[genie_name]",genie_name)
-            if "[hermione_name]" in text:
-                $ text = text.replace("[hermione_name]",hermione_name)
-        her "[text]"
-    return
-    
-label her_head(text="",face=h_body,tears=""):
-    if face != h_body:
-        $ h_body = face
-        # $ h_body = her_path + str(face) + ".png"
-    $ h_tears = tears
-    call h_update
-    show screen hermione_head #h_head2
-    if text != "":
-        if "[tmp_name]" in text or "[genie_name]" in text:
-            if "[tmp_name]" in text:
-                $ text = text.replace("[tmp_name]",tmp_name)
-            if "[genie_name]" in text:
-                $ text = text.replace("[genie_name]",genie_name)
-            if "[hermione_name]" in text:
-                $ text = text.replace("[hermione_name]",hermione_name)
-        her2 "[text]"
-    hide screen hermione_head #h_head2
-    return
-    
-    
-label __init_variables:
+
     if not hasattr(renpy.store,'hg_maid_OBJ'): #important!
         $ hg_maid_OBJ = hermione_outfit()
     $ hg_maid_OBJ.name = "Maid"
@@ -347,6 +294,55 @@ label __init_variables:
     $ hermione_outfits_list.append(hg_christmas_OBJ)
     $ hermione_outfits_list.append(hg_laraCroft_OBJ)
     
+    return
+    
+label her_main(text="",face=h_body,tears="", xpos = hermione_xpos, ypos = hermione_ypos):
+    hide screen hermione_main
+    #with d3
+    if xpos != hermione_xpos:
+        if xpos == 370:
+            $ hermione_xpos = 510
+        elif xpos == 120:
+            $ hermione_xpos = 140
+        else:
+            $ hermione_xpos = xpos
+    if ypos != hermione_ypos:
+        $ hermione_ypos = ypos
+    if face != h_body:
+        $ h_body = face
+        #$ hermione_body = her_path + str(face) + ".png"
+    $ h_tears = tears
+    call h_update
+    show screen hermione_main
+    with d1
+    if text != "":
+        if "[tmp_name]" in text or "[genie_name]" or "[hermione_name]" in text:
+            if "[tmp_name]" in text:
+                $ text = text.replace("[tmp_name]",tmp_name)
+            if "[genie_name]" in text:
+                $ text = text.replace("[genie_name]",genie_name)
+            if "[hermione_name]" in text:
+                $ text = text.replace("[hermione_name]",hermione_name)
+        her "[text]"
+    return
+    
+label her_head(text="",face=h_body,tears=""):
+    if face != h_body:
+        $ h_body = face
+        # $ h_body = her_path + str(face) + ".png"
+    $ h_tears = tears
+    call h_update
+    show screen hermione_head #h_head2
+    if text != "":
+        if "[tmp_name]" in text or "[genie_name]" in text:
+            if "[tmp_name]" in text:
+                $ text = text.replace("[tmp_name]",tmp_name)
+            if "[genie_name]" in text:
+                $ text = text.replace("[genie_name]",genie_name)
+            if "[hermione_name]" in text:
+                $ text = text.replace("[hermione_name]",hermione_name)
+        her2 "[text]"
+    hide screen hermione_head #h_head2
     return
     
 init python:
