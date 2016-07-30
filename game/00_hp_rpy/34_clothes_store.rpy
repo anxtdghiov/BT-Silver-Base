@@ -37,52 +37,22 @@ label __init_variables:
         $ cs_existing_stock_gifted = []
     
     $ clothes_store_order_choice = "null"
-    $ clothes_store_curr_page = 1
     $ clothes_store_selection = 0
     
     $ cs_gui_OBJ = cs_gui_class()
     
-    $ clothes_store_inv = []
-    $ clothes_store_inv.append("null")#buffer for index 0
-    $ clothes_store_inv.append("gryffindor_cheerleader")#start page 1
-    $ clothes_store_inv.append("slytherin_cheerleader")
-    $ clothes_store_inv.append("maid")
-    $ clothes_store_inv.append("silk_nightgown")
-    $ clothes_store_inv.append("ball_dress")
-    $ clothes_store_inv.append("ms_marvel")
-    $ clothes_store_inv.append("heart_dancer")
-    $ clothes_store_inv.append("power_girl")#end page 1
-    ###########################################
-    $ clothes_store_inv.append("harley_quinn")#start page 2
-    $ clothes_store_inv.append("christmas_costume")
-    $ clothes_store_inv.append("lara_croft")
-    $ clothes_store_inv.append("pirate")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")#end page 2
-    ###########################################
-    $ clothes_store_inv.append("")#start page 3
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")
-    $ clothes_store_inv.append("")#end page 3
     
     return
     
 label cs_select:
-    $ tmp = ((clothes_store_curr_page-1)*8) + clothes_store_selection
-    #DEBUG#"You picked page [clothes_store_curr_page] item [clothes_store_selection]!  ([tmp])"
-    if clothes_store_inv[tmp] == "wip":
+    #DEBUG#"You picked item [clothes_store_selection.name]!"
+    if clothes_store_selection == "null":
+        jump clothes_menu
+    if clothes_store_selection.name == "wip":
         call cust_excuse("Sorry this outfit is currently a work in progress and unavalable at this time.")
         jump clothes_menu
-    if clothes_store_selection == -1 or clothes_store_inv[tmp] == "":
-        jump clothes_menu
-    
-    $ clothes_store_order_choice = clothes_store_inv[(((clothes_store_curr_page-1)*8)+ clothes_store_selection)]
+
+    $ clothes_store_order_choice = clothes_store_selection
     jump cs_select_done
     
 label clothes_store:
@@ -511,67 +481,57 @@ label cs_buy_stock(item_id = "", cost):
         return
     
 label clothes_store_gui:
-    $ cs_gui_OBJ = cs_gui_class()
     call screen cs_gui
-    label cs_select:
+label cs_select:
     if clothes_store_selection == "EXIT":
         jump clothes_menu
-    #"You picked page [cs_gui_OBJ.current_page] item [clothes_store_selection.name]!"
+    #"You picked item [clothes_store_selection.name]!"
     $ clothes_store_order_choice = clothes_store_selection
     return
-    
+
 screen cs_gui:
-    
+
     tag clothes_menu
     zorder hermione_main_zorder-1
-    
+
     imagemap:
         cache False
         ground "01_hp/23_clothes_store/cs_gui/c_s_ground.png"
         idle "01_hp/23_clothes_store/cs_gui/c_s_idle.png"
         hover "01_hp/23_clothes_store/cs_gui/c_s_hover.png"
-        
+
         $ page_list = cs_gui_OBJ.getListOfItems()
-        
-        $ index = 0
-        for i in range(0,2):
-            for j in range(0,4):
-                if index < len(page_list):
-                    hotspot((213+(175*j)),(78+(255*i)),125,190) clicked [SetVariable("clothes_store_selection",page_list[index]),Jump("cs_select")]
-                    add page_list[index].getStoreImage() xpos 166+(175*j) ypos (31+(254*i)) zoom 0.40
-                    $ index = index+1
-        
-        if cs_gui_OBJ.current_page > 0:
+
+        for t in range(0, len(page_list)):
+            $i = 255 * int(t / 4)
+            $j = 175 * (t % 4)
+            $p = page_list[t]
+            hotspot(213 + j, 78 + i, 125, 190) clicked [SetVariable("clothes_store_selection",p),Jump("cs_select")]
+            add p.getStoreImage() xpos (166 + j) ypos (31 + i) zoom 0.40
+
+        if cs_gui_OBJ.atItem > 0:
             hotspot (156, 552, 34, 34) clicked Jump("cs_gui_index_down")
-        if cs_gui_OBJ.current_page < cs_gui_OBJ.getTotalPages():
+        if cs_gui_OBJ.atItem < len(cs_gui_OBJ.stock):
             hotspot (885, 552, 34, 34) clicked Jump("cs_gui_index_up")
         hotspot (882, 11, 42, 41) clicked [SetVariable("clothes_store_selection","EXIT"),Jump("cs_select")]#exit
-    
+
 label cs_gui_index_up:
-    $ cs_gui_OBJ.current_page = cs_gui_OBJ.current_page+1
+    $ cs_gui_OBJ.atItem = cs_gui_OBJ.atItem + 8
     call screen cs_gui
 label cs_gui_index_down:
-    $ cs_gui_OBJ.current_page = cs_gui_OBJ.current_page-1
+    $ cs_gui_OBJ.atItem = cs_gui_OBJ.atItem - 8
     call screen cs_gui
-    
+
 init python:
     class cs_gui_class(object):
-        current_page = 0
-        
+        atItem = 0
+        stock = []
+        def __init__(self):
+            self.stock = hermione_outfits_list
+
         def getListOfItems(self):
-            list = []
-            start_range = self.current_page*8
-            list.extend(hermione_outfits_list[start_range:start_range+8])
-            return list
-            
+            return self.stock[self.atItem:min(self.atItem+8, len(self.stock))]
+
         def getNamesOfItems(self):
-            list = []
-            start_range = self.current_page*8
-            list.extend(hermione_outfits_list[start_range:start_range+8])
-            name_list = []
-            for i in list:
-                name_list.append(i.name)
-            return name_list
-        def getTotalPages(self):
-            return len(hermione_outfits_list)/8
-            
+            return [i.name for i in self.getListOfItems()]
+
