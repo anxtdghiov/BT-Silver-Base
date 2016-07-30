@@ -161,10 +161,7 @@ init python:
         def getMenuText(self):
             return "-"+self.name+"-"
         def getFullPath(self, passed_list):
-            list = []
-            for i in passed_list:
-                list.append("01_hp/13_characters/hermione/clothes/custom/"+i)
-            return list
+            return ["01_hp/13_characters/hermione/clothes/custom/" + i for i in passed_list]
         def getOutfitLayers(self):
             return self.getFullPath(self.outfit_layers)
         def getTopLayers(self):
