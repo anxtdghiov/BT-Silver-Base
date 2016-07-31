@@ -180,8 +180,6 @@ label __init_variables:
         $ hair_style = "A"
     if not hasattr(renpy.store,'skip_duel'): #important!
         $ skip_duel = False
-    if not hasattr(renpy.store,'next_day'): #important!
-        $ next_day = False
     if not hasattr(renpy.store,'force_unlock_pub_favors'): #important!
         $ force_unlock_pub_favors = False
     if not hasattr(renpy.store,'leg_pos'): #important!

@@ -131,10 +131,12 @@ if mad >= 1:
 ### MUGGLE ODDITIES RELATED FLAGS ### VERSION TWO. This one randomizes delivery waiting days.
 if order_placed: #TRUE when and order has been placed on an item.
     $ days_in_delivery2 -=1
-    if days_in_delivery2 <= 0 or next_day:
-        $ next_day = False
+    if days_in_delivery2 <= 0:
         $ package_is_here = True
         $ order_placed = False
+elif dailyDelivery.got_mail():
+    $ package_is_here = True
+    $ order_placed = False
 
 
 

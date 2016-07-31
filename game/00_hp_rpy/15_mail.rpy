@@ -1,11 +1,11 @@
 init python:
-    from collections import deque, defaultdict, Counter
+    from collections import defaultdict, Counter
 
     # lambda functions don't work with pickle (save/resume). This instead is ok.
     def get_Counter():
         return Counter()
 
-    class DailyDelivery(deque):
+    class DailyDelivery(list):
 
         maxdays = 10 # safety limit: if you send mail in 100000000000 days then
         # deliverylist grows and eats all your RAM (computer may crash)
@@ -17,9 +17,11 @@ init python:
                 self.extend([defaultdict(get_Counter)] * (in_days - len(self) + 1))
 
             self[in_days][kind].update({itemName: quantity}) # add quantities
+        def got_mail(self):
+            return len(self) != 0
 
         def receive(self):
-            return self.popleft() if len(self) else {}
+            return self.pop(0) if len(self) else {}
 
     #dailyDelivery = DailyDelivery()
 

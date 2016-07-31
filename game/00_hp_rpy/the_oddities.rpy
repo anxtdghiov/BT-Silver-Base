@@ -423,19 +423,17 @@ label object_gift_block(item):
             
 label object_purchase_item(item, quantity):
     $ order_cost = quantity * item.cost
-    $ days_in_delivery2 = one_of_five  #Generating one number out of five for various porposes.
+    $ days_in_delivery2 = renpy.random.randint(1, 5)
     if gold >= order_cost:
         $ gold -= order_cost
         menu:
             "-add next day delivery (15 galleons)-" if gold >= 15:
                 $ days_in_delivery2 = 1
                 $ gold -= 15
-                $ next_day = True
             "{color=#858585}-add next day delivery (15 galleons)-{/color}" if gold < 15:
                 pass
             "-no thanks-":
                 pass
-        $ order_placed = True
         $ dailyDelivery.send(days_in_delivery2 - 1, 'Gift', item.name, quantity)
 
         call thx_4_shoping
