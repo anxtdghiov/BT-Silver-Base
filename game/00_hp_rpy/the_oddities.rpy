@@ -428,12 +428,12 @@ label object_gift_block(item):
 label object_purchase_item(item, quantity):
     $ order_quantity = quantity
     $ order_cost = quantity * item.cost
-    $ days = one_of_five - 1  #Generating one number out of five for various porposes.
+    $ days_in_delivery2 = one_of_five  #Generating one number out of five for various porposes.
     if gold >= order_cost:
         $ gold -= order_cost
         menu:
             "-add next day delivery (15 galleons)-" if gold >= 15:
-                $ days = 0
+                $ days_in_delivery2 = 1
                 $ gold -= 15
                 $ next_day = True
             "{color=#858585}-add next day delivery (15 galleons)-{/color}" if gold < 15:
@@ -589,7 +589,7 @@ label do_have_book:
 ### THANK YOU FOR shopping here.
 label thx_4_shoping:
 
-    if days ==  0:
+    if days_in_delivery2 == 1:
         dahr "Thank your for shopping at \"Dahr's oddities\". Your order shall be delivered tomorrow."
         hide screen gift
         with d3
