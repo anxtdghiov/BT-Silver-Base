@@ -658,7 +658,7 @@ label new_main_menu: # testing menu found in cheats or jumped to
                     label defined_outfits_menu:
                     python:
                         def_menu = []
-                        for i in hermione_outfits_list:
+                        for i in outfit_list:
                             def_menu.append((i.getMenuText(),i))
                         def_menu.append(("-Never mind-", "nvm"))
                         result = renpy.display_menu(def_menu)

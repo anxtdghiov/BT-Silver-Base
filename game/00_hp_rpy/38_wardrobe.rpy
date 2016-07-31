@@ -138,7 +138,7 @@ screen wardrobe_costumes:
         hotspot (480, 30, 67, 82) clicked Show("wardrobe_gifts")
         
         $ hg_purchased_outfits = []
-        for i in hermione_outfits_list:
+        for i in outfit_list:
             if i.purchased:
                 $ hg_purchased_outfits.append(i)
         

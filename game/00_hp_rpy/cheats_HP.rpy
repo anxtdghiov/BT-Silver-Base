@@ -29,7 +29,7 @@ label cheats_ht:
                     jump cheats_ht_hermione
                 "-Add all costumes-":
                     python:
-                        for i in hermione_outfits_list:
+                        for i in outfit_list:
                             i.purchased = True
                     "All of hermioine's costumes have been unlocked"
                     jump cheats_ht

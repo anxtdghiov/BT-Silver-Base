@@ -1,150 +1,6 @@
-label __init_variables:
-    if not hasattr(renpy.store,'hg_maid_OBJ'): #important!
-        $ hg_maid_OBJ = hermione_outfit()
-    $ hg_maid_OBJ.name = "Maid"
-    $ hg_maid_OBJ.cost = 100
-    $ hg_maid_OBJ.wait_time = 2
-    $ hg_maid_OBJ.store_image = "maid.png"
-    $ hg_maid_OBJ.outfit_layers = []
-    $ hg_maid_OBJ.outfit_layers.extend(("maid_stockings.png","maid_skirt.png","maid_top.png","maid_gloves.png"))
-    $ hg_maid_OBJ.top_layers = []
-    $ hg_maid_OBJ.top_layers.append("maid_hat.png")
-    
-    if not hasattr(renpy.store,'hg_gryffCheer_OBJ'):
-        $ hg_gryffCheer_OBJ = hermione_outfit()
-    $ hg_gryffCheer_OBJ.name = "Griffindor Cheerleader"
-    $ hg_gryffCheer_OBJ.cost = 200
-    $ hg_gryffCheer_OBJ.wait_time = 3
-    $ hg_gryffCheer_OBJ.store_image = "cheer.png"
-    $ hg_gryffCheer_OBJ.outfit_layers = []
-    $ hg_gryffCheer_OBJ.outfit_layers.extend(("cheer_stockings.png","cheer_pants.png","cheer_top.png"))
-    $ hg_gryffCheer_OBJ.actions = []
-    $ hg_gryffCheer_OBJ.action_images = []
-    $ hg_gryffCheer_OBJ.actions.append("lift_top")
-    $ hg_gryffCheer_OBJ.action_images.append("cherr_flash.png")
-    
-    if not hasattr(renpy.store,'hg_slythCheer_OBJ'):
-        $ hg_slythCheer_OBJ = hermione_outfit()
-    $ hg_slythCheer_OBJ.name = "Slythrin Cheerleader"
-    $ hg_slythCheer_OBJ.cost = 200
-    $ hg_slythCheer_OBJ.wait_time = 3
-    $ hg_slythCheer_OBJ.store_image = "s_cheer.png"
-    $ hg_slythCheer_OBJ.outfit_layers = []
-    $ hg_slythCheer_OBJ.outfit_layers.extend(("s_cheer_stockings.png","s_cheer_pants.png","s_cheer_top.png"))
-    $ hg_slythCheer_OBJ.actions = []
-    $ hg_slythCheer_OBJ.action_images = []
-    $ hg_slythCheer_OBJ.actions.append("lift_top")
-    $ hg_slythCheer_OBJ.action_images.append("cherr_flash.png")
-    
-    if not hasattr(renpy.store,'hg_heartDancer_OBJ'):
-        $ hg_heartDancer_OBJ = hermione_outfit()
-    $ hg_heartDancer_OBJ.name = "Heart Dancer"
-    $ hg_heartDancer_OBJ.cost = 300
-    $ hg_heartDancer_OBJ.wait_time = 4
-    $ hg_heartDancer_OBJ.store_image = "heart.png"
-    $ hg_heartDancer_OBJ.outfit_layers = []
-    $ hg_heartDancer_OBJ.outfit_layers.extend(("heart_legs.png","heart_top.png","heart_collar.png"))
-    
-    if not hasattr(renpy.store,'hg_silkNightgown_OBJ'):
-        $ hg_silkNightgown_OBJ = hermione_outfit()
-    $ hg_silkNightgown_OBJ.name = "Silk Nightgown"
-    $ hg_silkNightgown_OBJ.cost = 140
-    $ hg_silkNightgown_OBJ.wait_time = 2
-    $ hg_silkNightgown_OBJ.store_image = "nightgown.png"
-    $ hg_silkNightgown_OBJ.outfit_layers = []
-    $ hg_silkNightgown_OBJ.outfit_layers.append("silk_nightgown.png")
-    $ hg_silkNightgown_OBJ.breast_layer = "breasts_normal"
-    
-    if not hasattr(renpy.store,'hg_pirate_OBJ'):
-        $ hg_pirate_OBJ = hermione_outfit()
-    $ hg_pirate_OBJ.name = "Pirate"
-    $ hg_pirate_OBJ.cost = 75
-    $ hg_pirate_OBJ.wait_time = 2
-    $ hg_pirate_OBJ.store_image = "pirate.png"
-    $ hg_pirate_OBJ.outfit_layers = []
-    $ hg_pirate_OBJ.outfit_layers.extend(("pirate_legs.png","pirate_pants.png","pirate_top.png"))
-    
-    if not hasattr(renpy.store,'hg_powerGirl_OBJ'):
-        $ hg_powerGirl_OBJ = hermione_outfit()
-    $ hg_powerGirl_OBJ.name = "Power Girl"
-    $ hg_powerGirl_OBJ.cost = 350
-    $ hg_powerGirl_OBJ.wait_time = 3
-    $ hg_powerGirl_OBJ.store_image = "power.png"
-    $ hg_powerGirl_OBJ.outfit_layers = []
-    $ hg_powerGirl_OBJ.outfit_layers.append("power_costume.png")
-    $ hg_powerGirl_OBJ.hair_layer = "power_hair"
-    $ hg_powerGirl_OBJ.actions = []
-    $ hg_powerGirl_OBJ.action_images = []
-    $ hg_powerGirl_OBJ.actions.append("lift_top")
-    $ hg_powerGirl_OBJ.action_images.append("power_costume_2.png")
-    
-    if not hasattr(renpy.store,'hg_msMarvel_OBJ'):
-        $ hg_msMarvel_OBJ = hermione_outfit()
-    $ hg_msMarvel_OBJ.name = "Mrs Marvel"
-    $ hg_msMarvel_OBJ.cost = 250
-    $ hg_msMarvel_OBJ.wait_time = 5
-    $ hg_msMarvel_OBJ.store_image = "marvel.png"
-    $ hg_msMarvel_OBJ.outfit_layers = []
-    $ hg_msMarvel_OBJ.outfit_layers.extend(("marvel_pants.png","marvel_top.png","marvel_sash.png","marvel_gloves.png"))
-    
-    if not hasattr(renpy.store,'hg_harleyQuinn_OBJ'):
-        $ hg_harleyQuinn_OBJ = hermione_outfit()
-    $ hg_harleyQuinn_OBJ.name = "Harley Quinn"
-    $ hg_harleyQuinn_OBJ.cost = 300
-    $ hg_harleyQuinn_OBJ.wait_time = 4
-    $ hg_harleyQuinn_OBJ.store_image = "harley.png"
-    $ hg_harleyQuinn_OBJ.outfit_layers = []
-    $ hg_harleyQuinn_OBJ.outfit_layers.extend(("harley_pants.png","harley_top.png","harley_gloves.png","harley_collar.png"))
-    $ hg_harleyQuinn_OBJ.hair_layer = "harley_hair"
-    
-    if not hasattr(renpy.store,'hg_ballDress_OBJ'):
-        $ hg_ballDress_OBJ = hermione_outfit()
-    $ hg_ballDress_OBJ.name = "Ball Dress"
-    $ hg_ballDress_OBJ.cost = 15000
-    $ hg_ballDress_OBJ.wait_time = 7
-    $ hg_ballDress_OBJ.store_image = "ball_dress.png"
-    $ hg_ballDress_OBJ.outfit_layers = []
-    $ hg_ballDress_OBJ.outfit_layers.extend(("ball_dress_skirt.png","ball_dress_top.png"))
-    
-    if not hasattr(renpy.store,'hg_christmas_OBJ'):
-        $ hg_christmas_OBJ = hermione_outfit()
-    $ hg_christmas_OBJ.name = "Christmas Girl"
-    $ hg_christmas_OBJ.cost = 50
-    $ hg_christmas_OBJ.wait_time = 2
-    $ hg_christmas_OBJ.store_image = "christmas.png"
-    $ hg_christmas_OBJ.outfit_layers = []
-    $ hg_christmas_OBJ.outfit_layers.extend(("christmas_pants.png","christmas_top.png","christmas_gloves.png","christmas_collar.png"))
-    $ hg_christmas_OBJ.top_layers = []
-    $ hg_christmas_OBJ.top_layers.append("christmas_antlers.png")
-    $ hg_christmas_OBJ.breast_layer = "breasts_normal"
-    
-    if not hasattr(renpy.store,'hg_laraCroft_OBJ'):
-        $ hg_laraCroft_OBJ = hermione_outfit()
-    $ hg_laraCroft_OBJ.name = "Lara Croft"
-    $ hg_laraCroft_OBJ.cost = 270
-    $ hg_laraCroft_OBJ.wait_time = 2
-    $ hg_laraCroft_OBJ.store_image = "lara.png"
-    $ hg_laraCroft_OBJ.outfit_layers = []
-    $ hg_laraCroft_OBJ.outfit_layers.extend(("lara_pants.png","lara_top.png","lara_gloves.png"))
-    
-    $ hermione_outfits_list = []
-    $ hermione_outfits_list.append(hg_maid_OBJ)
-    $ hermione_outfits_list.append(hg_gryffCheer_OBJ)
-    $ hermione_outfits_list.append(hg_slythCheer_OBJ)
-    $ hermione_outfits_list.append(hg_heartDancer_OBJ)
-    $ hermione_outfits_list.append(hg_silkNightgown_OBJ)
-    $ hermione_outfits_list.append(hg_pirate_OBJ)
-    $ hermione_outfits_list.append(hg_powerGirl_OBJ)
-    $ hermione_outfits_list.append(hg_msMarvel_OBJ)
-    $ hermione_outfits_list.append(hg_harleyQuinn_OBJ)
-    $ hermione_outfits_list.append(hg_ballDress_OBJ)
-    $ hermione_outfits_list.append(hg_christmas_OBJ)
-    $ hermione_outfits_list.append(hg_laraCroft_OBJ)
-    
-    return
-    
 init python:
-    class hermione_outfit(object):
+
+    class Outfit(object):
         name = ""
         purchased = False
         cost = 0
@@ -156,12 +12,12 @@ init python:
         hair_layer = ""
         breast_layer = "breasts_nipfix"
         store_image = ""
-        
-        
+        def __init__(self, **kwargs):
+            self.__dict__.update(**kwargs)
         def getMenuText(self):
             return "-"+self.name+"-"
-        def getFullPath(self, passed_list):
-            return ["01_hp/13_characters/hermione/clothes/custom/" + i for i in passed_list]
+        def getFullPath(self, passed_list, character="hermione"):
+            return [("01_hp/13_characters/"+character+"/clothes/custom/" + i) for i in passed_list]
         def getOutfitLayers(self):
             return self.getFullPath(self.outfit_layers)
         def getTopLayers(self):
@@ -170,4 +26,54 @@ init python:
             return self.action_images[self.actions.index(action)]
         def getStoreImage(self):
            return "01_hp/23_clothes_store/cs_gui/"+self.store_image
-    
+
+    class OutfitList(list):
+        indexForName = {}
+
+        def append(self, **entry):
+            self.indexForName[entry['name']] = len(self)
+            super(OutfitList, self).append(Outfit(**entry))
+
+        def __call__(self, i): #allow () as [] with name lookup
+            if isinstance(i, (basestring, tuple)):
+                i = self.indexForName[i]
+            return self.__getitem__(i)
+
+    outfit_list = OutfitList()
+
+    outfit_list.append(cost=100, wait_time=2, name="Maid", store_image="maid.png",
+        outfit_layers=["maid_stockings.png", "maid_skirt.png", "maid_top.png", "maid_gloves.png"], top_layers=["maid_hat.png"])
+
+    outfit_list.append(cost=200, wait_time=3, name="Griffindor Cheerleader", store_image="cheer.png",
+        outfit_layers=["cheer_stockings.png", "cheer_pants.png", "cheer_top.png"], actions=["lift_top"], action_images=["cherr_flash.png"])
+
+    outfit_list.append(cost=200, wait_time=3, name="Slythrin Cheerleader", store_image="s_cheer.png",
+        outfit_layers=["s_cheer_stockings.png", "s_cheer_pants.png", "s_cheer_top.png"], actions=["lift_top"], action_images=["cherr_flash.png"])
+
+    outfit_list.append(cost=300, wait_time=4, name="Heart Dancer", store_image="heart.png",
+        outfit_layers=["heart_legs.png", "heart_top.png", "heart_collar.png"])
+
+    outfit_list.append(cost=140, wait_time=2, name="Silk Nightgown", store_image="nightgown.png",
+        outfit_layers=["silk_nightgown.png"], breast_layer="breasts_normal")
+
+    outfit_list.append(cost=75, wait_time=2, name="Pirate", store_image="pirate.png",
+        outfit_layers=["pirate_legs.png", "pirate_pants.png", "pirate_top.png"])
+
+    outfit_list.append(cost=350, wait_time=3, name="Power Girl", store_image="power.png",
+        outfit_layers=["power_costume.png"], hair_layer="power_hair", actions=["lift_top"], action_images=["power_costume_2.png"])
+
+    outfit_list.append(cost=250, wait_time=5, name="Mrs Marvel", store_image="marvel.png",
+        outfit_layers=["marvel_pants.png", "marvel_top.png", "marvel_sash.png", "marvel_gloves.png"])
+
+    outfit_list.append(cost=300, wait_time=4, name="Harley Quinn", store_image="harley.png",
+        outfit_layers=["harley_pants.png", "harley_top.png", "harley_gloves.png", "harley_collar.png"], hair_layer="harley_hair")
+
+    outfit_list.append(cost=15000, wait_time=7, name="Ball Dress", store_image="ball_dress.png",
+        outfit_layers=["ball_dress_skirt.png", "ball_dress_top.png"])
+
+    outfit_list.append(cost=50, wait_time=2, name="Christmas Girl", store_image="christmas.png",
+        outfit_layers=["christmas_pants.png", "christmas_top.png", "christmas_gloves.png", "christmas_collar.png"], top_layers=["christmas_antlers.png"], breast_layer="breasts_normal")
+
+    outfit_list.append(cost=270, wait_time=2, name="Lara Croft", store_image="lara.png",
+        outfit_layers=["lara_pants.png", "lara_top.png", "lara_gloves.png"])
+
