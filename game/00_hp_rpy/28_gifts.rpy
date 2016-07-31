@@ -22,7 +22,7 @@ init python:
 
         def append(self, **entry):
             self.indexForName[entry['name']] = len(self)
-            if not image in entry:
+            if not 'image' in entry:
                 entry['image'] = "01_hp/18_store/gifts/"+str(len(self.indexForName))+".png"
             super(GiftList, self).append(gift_item(**entry))
 
