@@ -446,7 +446,6 @@ label object_purchase_item(item, quantity):
         call thx_4_shoping
         jump shop_menu
     else:
-        $ order_item = 0
         call no_gold #Message: m "I don't have enough gold".
         jump gifts_menu
     
