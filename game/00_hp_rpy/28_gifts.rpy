@@ -22,7 +22,8 @@ init python:
 
         def append(self, **entry):
             self.indexForName[entry['name']] = len(self)
-            entry['image'] = "01_hp/18_store/gifts/"+str(len(self.indexForName))+".png"
+            if not image in entry:
+                entry['image'] = "01_hp/18_store/gifts/"+str(len(self.indexForName))+".png"
             super(GiftList, self).append(gift_item(**entry))
 
         def __call__(self, i): #allow () as [] with name lookup
