@@ -182,8 +182,6 @@ label __init_variables:
         $ skip_duel = False
     if not hasattr(renpy.store,'next_day'): #important!
         $ next_day = False
-    if not hasattr(renpy.store,'order_quantity'): #important!
-        $ order_quantity = 0
     if not hasattr(renpy.store,'force_unlock_pub_favors'): #important!
         $ force_unlock_pub_favors = False
     if not hasattr(renpy.store,'leg_pos'): #important!

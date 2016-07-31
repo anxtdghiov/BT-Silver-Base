@@ -426,7 +426,6 @@ label object_gift_block(item):
             call gifts_menu
             
 label object_purchase_item(item, quantity):
-    $ order_quantity = quantity
     $ order_cost = quantity * item.cost
     $ days_in_delivery2 = one_of_five  #Generating one number out of five for various porposes.
     if gold >= order_cost:
