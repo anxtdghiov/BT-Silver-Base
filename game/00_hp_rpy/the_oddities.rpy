@@ -404,7 +404,6 @@ label object_gift_block(item):
     $ the_gift = item.image
     show screen gift
     with d3
-    #$ tmp = item.description
     dahr "[item.description]"
     $ cost2 = item.cost * 2
     $ cost3 = item.cost * 4
@@ -412,41 +411,42 @@ label object_gift_block(item):
     menu:
         "-Buy 1 for ([item.cost] galleons)-":
             $ gift_order = item
-            $ order_quantity = 1
-            call object_purchase_item(item.cost)
+            call object_purchase_item(item, 1)
         "-Buy 2 for ([cost2] galleons)-":
             $ gift_order = item
-            $ order_quantity = 2
-            call object_purchase_item(cost2)
+            call object_purchase_item(item, 2)
         "-Buy 4 for ([cost3] galleons)-":
             $ gift_order = item
-            $ order_quantity = 4
-            call object_purchase_item(cost3)
+            call object_purchase_item(item, 4)
         "-Buy 8 for ([cost4] galleons)-":
             $ gift_order = item
-            $ order_quantity = 8
-            call object_purchase_item(cost4)
+            call object_purchase_item(item, 8)
         "-Never mind-":
             hide screen gift
             call gifts_menu
             
-label object_purchase_item(order_cost):
-    if gold >= (order_cost):
+label object_purchase_item(item, quantity):
+    $ order_quantity = quantity
+    $ order_cost = quantity * item.cost
+    $ days = one_of_five - 1  #Generating one number out of five for various porposes.
+    if gold >= order_cost:
+        $ gold -= order_cost
         menu:
-            "-add next day delivery (15 galleons)-" if gold >= order_cost + 15:
+            "-add next day delivery (15 galleons)-" if gold >= 15:
+                $ days = 0
                 $ gold -= 15
                 $ next_day = True
-            "{color=#858585}-add next day delivery (15 galleons)-{/color}" if gold < order_cost + 15:
+            "{color=#858585}-add next day delivery (15 galleons)-{/color}" if gold < 15:
                 pass
             "-no thanks-":
                 pass
-        $ gold -= order_cost
         $ order_placed = True
+
         call thx_4_shoping
         jump shop_menu
     else:
         $ order_item = 0
-        call no_gold #Massage: m "I don't have enough gold".
+        call no_gold #Message: m "I don't have enough gold".
         jump gifts_menu
     
     
@@ -588,9 +588,8 @@ label do_have_book:
     
 ### THANK YOU FOR shopping here.
 label thx_4_shoping:
-    $ days_in_delivery2 = one_of_five  #Generating one number out of three for various porpoises.
 
-    if one_of_five ==  1:
+    if days ==  0:
         dahr "Thank your for shopping at \"Dahr's oddities\". Your order shall be delivered tomorrow."
         hide screen gift
         with d3

@@ -33,9 +33,10 @@ label cupboard:
                     label possessions_gift_items:
                         $ choices = []
                         python:
-                            for i in gift_list:
-                                if gift_item_inv[i.id] > 0:
-                                    choices.append( ( ("-"+str(i.name)+"- ("+str(gift_item_inv[i.id])+")"), i) )
+                            for id in range(0, len(gift_list)):
+                                if gift_item_inv[id] > 0:
+                                    name = gift_list[id].name
+                                    choices.append( ( ("-"+str(name)+"- ("+str(gift_item_inv[id])+")"), gift_list[id]) )
                         $ choices.append(("-Never mind-", "nvm"))
                         $ result = renpy.display_menu(choices)
                         if result == "nvm":
@@ -372,69 +373,69 @@ label rummaging:
     if i_of_iv == 4: # Found something.
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             if one_of_tw == 20:
-                call rum_block(PlushOwl)
+                call rum_block("Plush owl")
             elif one_of_tw == 1 or one_of_tw == 2:
-                call rum_block(Lollipop)
+                call rum_block("Lollipop candy")
             elif one_of_tw >= 3 and one_of_tw <= 9  or one_of_tw == 18:
                 call rum_block("gold1")
             elif one_of_tw >= 10 and one_of_tw <= 16:
                 call rum_block("wine")
             elif one_of_tw == 17:
-                call rum_block(Chocolate)
+                call rum_block("Chocolate")
             elif one_of_tw == 19:
-                call rum_block(SexyLingerie)
+                call rum_block("Sexy lingerie")
         
         
         ### EVENT LEVEL 02 ###  ### ###  ### ###  ###  ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ###
         if whoring >= 6 and whoring <= 11: # Lv 3-4. 
             if one_of_tw == 20:
-                call rum_block(PornMagazines)
+                call rum_block("Porn magazines")
             elif one_of_tw == 1 or one_of_tw ==2:
-                call rum_block(Lollipop)
+                call rum_block("Lollipop candy")
             elif one_of_tw >= 3 and one_of_tw <= 10 or one_of_tw == 18:
                 call rum_block("gold2")
             elif one_of_tw >= 11 and one_of_tw <= 15:
                 call rum_block("wine")
             elif one_of_tw == 16:
-                call rum_block(SexyLingerie)
+                call rum_block("Sexy lingerie")
             elif one_of_tw == 17:
-                call rum_block(Chocolate)
+                call rum_block("Chocolate")
             elif one_of_tw == 19:
-                call rum_block(ViktorKrumPoster)
+                call rum_block("Viktor Krum Poster")
         
         
         ### EVENT LEVEL 03 ###  ### ###  ### ###  ###  ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ###
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             if one_of_tw == 20:
-                call rum_block(Vibrator)
+                call rum_block("Vibrator")
             elif one_of_tw >= 1 and one_of_tw <= 4:
-                call rum_block(PackOfCondoms)
+                call rum_block("A pack of condoms")
             elif one_of_tw == 5 or one_of_tw == 6:
-                call rum_block(1)
+                call rum_block("Lollipop candy")
             elif one_of_tw >= 7 and one_of_tw <= 14:
                 call rum_block("gold3")
             elif one_of_tw >= 15 and one_of_tw <= 18:
                 call rum_block("wine")
             elif one_of_tw == 19:
-                call rum_block(ViktorKrumPoster)
+                call rum_block("Viktor Krum Poster")
         
         
         ### EVENT LEVEL 04 ###  ### ###  ### ###  ###  ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ### ###  ###
         if whoring >= 18: # Lv 7+  
             if one_of_tw == 20:
-                call rum_block(SpeedStick2000)
+                call rum_block("Lady Speed Stick-2000")
             elif one_of_tw >= 1 and one_of_tw <= 4:
-                call rum_block(Butterbeer)
+                call rum_block("Butterbeer")
             elif one_of_tw >= 5 and one_of_tw <= 8:
-                call rum_block(Chocolate)
+                call rum_block("Chocolate")
             elif one_of_tw >= 9 and one_of_tw <= 16:
                 call rum_block("gold4")
             elif one_of_tw == 17:
-                call rum_block(AnalPlugs)
+                call rum_block("Anal plugs")
             elif one_of_tw == 18:
-                call rum_block(ViktorKrumPoster)
+                call rum_block("Viktor Krum Poster")
             elif one_of_tw == 19:
-                call rum_block(ThestralStrapon)
+                call rum_block("Thestral Strap-on")
             
             
     else: #Didn't find anything.
@@ -466,14 +467,16 @@ label disp_sacred_scrolls(scroll):
     return
         
 label rum_block(item = None):
-    if isinstance(item, gift_item):
+
+    if item in gift_list.indexForName:
         $ renpy.play('sounds/win2.mp3')   #Not loud.
-        $ gift_item_inv[item.id] += 1
-        $ the_gift = item.image
+        $ i = gift_list.indexForName[item]
+        $ gift_item_inv[i] += 1
+        $ the_gift = gift_list[i].image
         show screen gift
         with d3
-        ">You found [item.name]..."
-        ">[item.description]"
+        ">You found [item]..."
+        ">[gift_list(i).description]"
         hide screen gift
         with d3
     else:

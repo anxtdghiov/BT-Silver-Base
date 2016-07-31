@@ -1,206 +1,94 @@
 init python:
-    
+
     class gift_item(object):
-        id = 0
         cost = 0
         name = ""
         image = ""
         description = ""
         whoringNeeded = 0
         users = [] # characters that can use this item
-        
+        def __init__(self, **kwargs):
+            self.__dict__.update(**kwargs)
+
         def canUse(character_name):
             return character_name in users
-        
+
         def costOf(number_of_item):
             return cost * number_of_item
-    
-    
-label __init_variables:
-    
-    if not hasattr(renpy.store,'Lollipop'): #important!
-        $ Lollipop = gift_item()
-    $ Lollipop.id = 0
-    $ Lollipop.cost = 20
-    $ Lollipop.name = "lollipop candy"
-    $ Lollipop.image = "01_hp/18_store/gifts/1.png"
-    $ Lollipop.description = "A lollipop candy. An adult candy for kids or kids candy for adults?"
-    $ Lollipop.users = ["hermione"]
-    
-    
-    if not hasattr(renpy.store,'Chocolate'): #important!
-        $ Chocolate = gift_item()
-    $ Chocolate.id = 1
-    $ Chocolate.cost = 40
-    $ Chocolate.name = "Chocolate"
-    $ Chocolate.image = "01_hp/18_store/gifts/2.png"
-    $ Chocolate.description = "The recipe for this delicious milk chocolate is kept a secret. (Rumoured to contain dried faeries)."
-    
-    if not hasattr(renpy.store,'PlushOwl'): #important!
-        $ PlushOwl = gift_item()
-    $ PlushOwl.id = 2
-    $ PlushOwl.cost = 35
-    $ PlushOwl.name = "Plush owl"
-    $ PlushOwl.image = "01_hp/18_store/gifts/3.png"
-    $ PlushOwl.description = "a Toy owl stuffed with feathers of an actual owl. It's so cuddly!"
-    
-    if not hasattr(renpy.store,'Butterbeer'): #important!
-        $ Butterbeer = gift_item()
-    $ Butterbeer.id = 3
-    $ Butterbeer.cost = 50
-    $ Butterbeer.whoringNeeded = 3
-    $ Butterbeer.name = "Butterbeer"
-    $ Butterbeer.image = "01_hp/18_store/gifts/4.png"
-    $ Butterbeer.description = "Girls can't resist this beverage's buttery texture. Therefore it's always in high demand among the boys. \n{size=-4}Warning: no underage drinking is allowed without adults present.{/size}"
-    
-    if not hasattr(renpy.store,'EducationalMagazines'): #important!
-        $ EducationalMagazines = gift_item()
-    $ EducationalMagazines.id = 4
-    $ EducationalMagazines.cost = 30
-    $ EducationalMagazines.name = "Educational magazines"
-    $ EducationalMagazines.image = "01_hp/18_store/gifts/5.png"
-    $ EducationalMagazines.description = "Educational magazines. \nthe Trusty companions of every social outcast."
-    
-    if not hasattr(renpy.store,'GirlyMagazines'): #important!
-        $ GirlyMagazines = gift_item()
-    $ GirlyMagazines.id = 5
-    $ GirlyMagazines.cost = 45
-    $ GirlyMagazines.name = "Girly magazines"
-    $ GirlyMagazines.image = "01_hp/18_store/gifts/6.png"
-    $ GirlyMagazines.description = "Girly magazines. \nAll cool girls are reading these."
-    
-    if not hasattr(renpy.store,'AdultMagazines'): #important!
-        $ AdultMagazines = gift_item()
-    $ AdultMagazines.id = 6
-    $ AdultMagazines.cost = 60
-    $ AdultMagazines.name = "Adult magazines"
-    $ AdultMagazines.image = "01_hp/18_store/gifts/7.png"
-    $ AdultMagazines.description = "Your boyfriend is turning into a nice guy? \nYour husband won't abuse you anymore? \nAll you wanted to know about relationships, love and sex. Mostly about sex."
-    
-    if not hasattr(renpy.store,'PornMagazines'): #important!
-        $ PornMagazines = gift_item()
-    $ PornMagazines.id = 7
-    $ PornMagazines.cost = 80
-    $ PornMagazines.whoringNeeded = 3
-    $ PornMagazines.name = "Porn magazines"
-    $ PornMagazines.image = "01_hp/18_store/gifts/8.png"
-    $ PornMagazines.description = "Give these to your girlfriend to test her, to your wife to shame her and to your daughter to avoid \"the talk\"."
-    
-    if not hasattr(renpy.store,'ViktorKrumPoster'): #important!
-        $ ViktorKrumPoster = gift_item()
-    $ ViktorKrumPoster.id = 8
-    $ ViktorKrumPoster.cost = 25 #placeholder number
-    $ ViktorKrumPoster.name = "Viktor Krum Poster"
-    $ ViktorKrumPoster.image = "01_hp/18_store/gifts/9.png"
-    $ ViktorKrumPoster.description = "A skilled Quidditch Seeker, Viktor has been selected to play for the Bulgarian National Quidditch team despite still going to school, and is widely regarded as one of the best players in the world."
-    
-    if not hasattr(renpy.store,'SexyLingerie'): #important!
-        $ SexyLingerie = gift_item()
-    $ SexyLingerie.id = 9
-    $ SexyLingerie.cost = 75 #placeholder number
-    $ SexyLingerie.name = "Sexy lingerie"
-    $ SexyLingerie.image = "01_hp/18_store/gifts/10.png"
-    $ SexyLingerie.description = "Sexy lingerie \"Fairy Godmother\". Charm your wizard in bed or empress your sisters at a Sabbath."
-    
-    if not hasattr(renpy.store,'PackOfCondoms'): #important!
-        $ PackOfCondoms = gift_item()
-    $ PackOfCondoms.id = 0
-    $ PackOfCondoms.cost = 50
-    $ PackOfCondoms.whoringNeeded = 3
-    $ PackOfCondoms.name = "A pack of condoms"
-    $ PackOfCondoms.image = "01_hp/18_store/gifts/11.png"
-    $ PackOfCondoms.description = "\"Pink unicorn condoms\". \nUnleash the one-horned beast!\n{size=-4}May contain traces of actual unicorn saliva.{/size}"
-    
-    if not hasattr(renpy.store,'Vibrator'): #important!
-        $ Vibrator = gift_item()
-    $ Vibrator.id = 10
-    $ Vibrator.cost = 55
-    $ Vibrator.whoringNeeded = 3
-    $ Vibrator.name = "Vibrator"
-    $ Vibrator.image = "01_hp/18_store/gifts/12.png"
-    $ Vibrator.description = "A magnificent, magically enhanced vibrator made of vine wood, with a dragon heartstring core."
-    
-    if not hasattr(renpy.store,'JarOfLube'): #important!
-        $ JarOfLube = gift_item()
-    $ JarOfLube.id = 11
-    $ JarOfLube.cost = 60
-    $ JarOfLube.name = "Jar of anal lubricant"
-    $ JarOfLube.image = "01_hp/18_store/gifts/13.png"
-    $ JarOfLube.description = "A Jar of anal lube, Buy this for your loved one - show that you care."
-    
-    if not hasattr(renpy.store,'BallGagAndCuffs'): #important!
-        $ BallGagAndCuffs = gift_item()
-    $ BallGagAndCuffs.id = 12
-    $ BallGagAndCuffs.cost = 70
-    $ BallGagAndCuffs.name = "Ball gag and cuffs"
-    $ BallGagAndCuffs.image = "01_hp/18_store/gifts/14.png"
-    $ BallGagAndCuffs.description = "Ball gag and cuffs, Turn your soulmate into your cellmate."
-    
-    if not hasattr(renpy.store,'AnalPlugs'): #important!
-        $ AnalPlugs = gift_item()
-    $ AnalPlugs.id = 13
-    $ AnalPlugs.cost = 85
-    $ AnalPlugs.whoringNeeded = 3
-    $ AnalPlugs.name = "Anal plugs"
-    $ AnalPlugs.image = "01_hp/18_store/gifts/15.png"
-    $ AnalPlugs.description = "Anal plugs decorated with actual tails. \nSizes vary to satisfy expert practitioners and beginner alike."
-    
-    if not hasattr(renpy.store,'ThestralStrapon'): #important!
-        $ ThestralStrapon = gift_item()
-    $ ThestralStrapon.id = 14
-    $ ThestralStrapon.cost = 200
-    $ ThestralStrapon.whoringNeeded = 3
-    $ ThestralStrapon.name = "Thestral Strap-on"
-    $ ThestralStrapon.image = "01_hp/18_store/gifts/16.png"
-    $ ThestralStrapon.description = "Thestral strap-on.\nWhen you see it, you'll shit bricks."
-    
-    if not hasattr(renpy.store,'SpeedStick2000'): #important!
-        $ SpeedStick2000 = gift_item()
-    $ SpeedStick2000.id = 15
-    $ SpeedStick2000.cost = 500
-    $ SpeedStick2000.name = "Lady Speed Stick-2000"
-    $ SpeedStick2000.image = "01_hp/18_store/gifts/17.png"
-    $ SpeedStick2000.description = "The \"Lady Speed Stick-2000\", an elegant way of transportation for passionate witches. The trademarked saddle guarantees full satisfaction. Get one for your witch and she won't use her boring old broom ever again!"
-    
-    if not hasattr(renpy.store,'SexDollJoanne'): #important!
-        $ SexDollJoanne = gift_item()
-    $ SexDollJoanne.id = 16
-    $ SexDollJoanne.cost = 350
-    $ SexDollJoanne.name = "Sex doll \"Joanne\""
-    $ SexDollJoanne.image = "01_hp/18_store/gifts/18.png"
-    $ SexDollJoanne.description = "Sex doll \"Joanne\"... It's so realistic. Almost looks like a real human under the influence of a spell of some sort."
-    
-    if not hasattr(renpy.store,'AnalBeads'): #important!
-        $ AnalBeads = gift_item()
-    $ AnalBeads.id = 17
-    $ AnalBeads.cost = 65 #placeholder number
-    $ AnalBeads.name = "Anal beads"
-    $ AnalBeads.image = "01_hp/18_store/gift_anal_beads.png"
-    $ AnalBeads.description = "Anal beads engraved with a strange inscription \"Property of L.C.\"."
-    
-    
-    $ gift_list = []
-    $ gift_list.append(Lollipop)
-    $ gift_list.append(Chocolate)
-    $ gift_list.append(PlushOwl)
-    $ gift_list.append(Butterbeer)
-    $ gift_list.append(EducationalMagazines)
-    $ gift_list.append(GirlyMagazines)
-    $ gift_list.append(AdultMagazines)
-    $ gift_list.append(PornMagazines)
-    $ gift_list.append(ViktorKrumPoster)
-    $ gift_list.append(SexyLingerie)
-    $ gift_list.append(PackOfCondoms)
-    $ gift_list.append(Vibrator)
-    $ gift_list.append(JarOfLube)
-    $ gift_list.append(BallGagAndCuffs)
-    $ gift_list.append(AnalPlugs)
-    $ gift_list.append(ThestralStrapon)
-    $ gift_list.append(SpeedStick2000)
-    #$ gift_list.append(SexDollJoanne)
-    #$ gift_list.append(AnalBeads)
-    
-    return
+
+    # inherit from a standard list to get all its functions
+    class GiftList(list):
+        indexForName = {}
+
+        def append(self, **entry):
+            self.indexForName[entry['name']] = len(self)
+            entry['image'] = "01_hp/18_store/gifts/"+str(len(self.indexForName))+".png"
+            super(GiftList, self).append(gift_item(**entry))
+
+        def __call__(self, i): #allow () as [] with name lookup
+            if isinstance(i, (basestring, tuple)):
+                i = self.indexForName[i]
+            return self.__getitem__(i)
+
+    gift_list = GiftList()
+
+    gift_list.append(cost=20, name="Lollipop candy", users=["hermione"],
+        description="A lollipop candy. An adult candy for kids or kids candy for adults?")
+
+    gift_list.append(cost=40, name="Chocolate",
+        description="The recipe for this delicious milk chocolate is kept a secret. (Rumoured to contain dried faeries).")
+
+    gift_list.append(cost=35, name="Plush owl",
+        description="a Toy owl stuffed with feathers of an actual owl. It's so cuddly!")
+
+    gift_list.append(cost=50, name="Butterbeer", whoringNeeded=3,
+        description="Girls can't resist this beverage's buttery texture. Therefore it's always in high demand among the boys. \n{size=-4}Warning: no underage drinking is allowed without adults present.{/size}")
+
+    gift_list.append(cost=30, name="Educational magazines",
+        description="Educational magazines. \nthe Trusty companions of every social outcast.")
+
+    gift_list.append(cost=45, name="Girly magazines",
+        description="Girly magazines. \nAll cool girls are reading these.")
+
+    gift_list.append(cost=60, name="Adult magazines",
+        description="Your boyfriend is turning into a nice guy? \nYour husband won't abuse you anymore? \nAll you wanted to know about relationships, love and sex. Mostly about sex.")
+
+    gift_list.append(cost=80, name="Porn magazines", whoringNeeded=3,
+        description="Give these to your girlfriend to test her, to your wife to shame her and to your daughter to avoid \"the talk\".")
+
+    gift_list.append(cost=25, name="Viktor Krum Poster",
+        description="A skilled Quidditch Seeker, Viktor has been selected to play for the Bulgarian National Quidditch team despite still going to school, and is widely regarded as one of the best players in the world.")
+
+    gift_list.append(cost=75, name="Sexy lingerie",
+        description="Sexy lingerie \"Fairy Godmother\". Charm your wizard in bed or empress your sisters at a Sabbath.")
+
+    gift_list.append(cost=50, name="A pack of condoms", whoringNeeded=3,
+        description="\"Pink unicorn condoms\". \nUnleash the one-horned beast!\n{size=-4}May contain traces of actual unicorn saliva.{/size}")
+
+    gift_list.append(cost=55, name="Vibrator", whoringNeeded=3,
+        description="A magnificent, magically enhanced vibrator made of vine wood, with a dragon heartstring core.")
+
+    gift_list.append(cost=60, name="Jar of anal lubricant",
+        description="A Jar of anal lube, Buy this for your loved one - show that you care.")
+
+    gift_list.append(cost=70, name="Ball gag and cuffs",
+        description="Ball gag and cuffs, Turn your soulmate into your cellmate.")
+
+    gift_list.append(cost=85, name="Anal plugs", whoringNeeded=3,
+        description="Anal plugs decorated with actual tails. \nSizes vary to satisfy expert practitioners and beginner alike.")
+
+    gift_list.append(cost=200, name="Thestral Strap-on", whoringNeeded=3,
+        description="Thestral strap-on.\nWhen you see it, you'll shit bricks.")
+
+    gift_list.append(cost=500, name="Lady Speed Stick-2000",
+        description="The \"Lady Speed Stick-2000\", an elegant way of transportation for passionate witches. The trademarked saddle guarantees full satisfaction. Get one for your witch and she won't use her boring old broom ever again!")
+
+    gift_list.append(cost=350, name="Sex doll \"Joanne\"",
+        description="Sex doll \"Joanne\"... It's so realistic. Almost looks like a real human under the influence of a spell of some sort.")
+
+    gift_list.append(cost=65, name="Anal beads",image="01_hp/18_store/gift_anal_beads.png",
+        description="Anal beads engraved with a strange inscription \"Property of L.C.\".")
+
 
 label happy(sub_mad = 0):
     hide screen hermione_main
@@ -230,9 +118,11 @@ label upset(add_mad):
 label her_gift_menu:
     python:
         choices = []
-        for i in gift_list:
-            if gift_item_inv[i.id] > 0:
-                choices.append( ( ("-"+str(i.name)+"- ("+str(gift_item_inv[i.id])+")"), i) )
+        for id in range(0, len(gift_list)):
+            if gift_item_inv[id] > 0:
+                name = gift_list[id].name
+                choices.append( ( ("-"+name+"- ("+str(gift_item_inv[id])+")"), name) )
+
         
         choices.append(("-Never mind-", "nvm"))
         result = renpy.display_menu(choices)
@@ -247,7 +137,7 @@ label give_her_gift(gift_id):
     with d5
     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
     
-    if gift_id == Lollipop:#candy
+    if gift_id == "Lollipop candy":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A lollipop?","body_01")
             call give_gift(">You give the candy to Hermione...",gift_id)
@@ -273,7 +163,7 @@ label give_her_gift(gift_id):
             call her_main("Thank you, [genie_name].","body_74")
             call happy(5)
             $ h_body = "body_128"
-    if gift_id == Chocolate:#chocolate
+    if gift_id == "Chocolate":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A chocolate bar?","body_01")
             call give_gift(">You give the chocolate to Hermione...", gift_id)
@@ -299,7 +189,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give the chocolate to Hermione...", gift_id)
             call her_main("Thank you.","body_129")
             call happy(10)
-    if gift_id == PlushOwl:#plush owl
+    if gift_id == "Plush owl":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A stuffed owl?","body_01")
             call her_main("It's cute...","body_06")
@@ -330,7 +220,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give the owl to Hermione...",gift_id)
             $ h_body = "body_01"
             call happy(4)
-    if gift_id == Butterbeer:#butterbeer
+    if gift_id == "Butterbeer":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Butterbeer?","body_01")
             call her_main("Are you sure about that, [genie_name]?","body_08")
@@ -359,7 +249,7 @@ label give_her_gift(gift_id):
             call her_main("Err... I meant to say with the girls, of course.","body_189")
             call happy(20)
             $ h_body = "body_01"
-    if gift_id == EducationalMagazines:#edu mags
+    if gift_id == "Educational magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("\"Popular magic\" magazines?","body_01")
             call give_gift(">You give an assortment of educational magazines to Hermione...",gift_id)
@@ -386,7 +276,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give an assortment of educational magazines to Hermione...",gift_id)
             call her_main("Thank you.","body_13")
             call no_change 
-    if gift_id == GirlyMagazines:#girl mags
+    if gift_id == "Girly magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm?","body_15")
             call her_main("This is the sort of press some \"slytherin\" bimbo would appreciate.","body_17")
@@ -415,7 +305,7 @@ label give_her_gift(gift_id):
             call her_main("Thank you, [genie_name].","body_08")
             call happy(15)
             $ h_body = "body_06"
-    if gift_id == AdultMagazines:#adult mags
+    if gift_id == "Adult magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Are that...?","body_02")
             call her_main("Adult magazines, [genie_name]?","body_31")
@@ -444,7 +334,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give an assortment of adult magazines to Hermione...",gift_id)
             call her_main("thank you, [genie_name].","body_74")
             call happy(15)
-    if gift_id == PornMagazines:#porn mags
+    if gift_id == "Porn magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm... What is this?","body_01")
             call her_main("[genie_name], those are porn magazines!","body_130")
@@ -476,7 +366,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give an assortment of porn magazines to Hermione...",gift_id)
             call happy(15)
             $ h_body = "body_45"
-    if gift_id == ViktorKrumPoster:#krum poster
+    if gift_id == "Viktor Krum Poster":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A Quidditch poster?","body_73")
             call her_main("What am I supposed to do with it, [genie_name]?","body_185")
@@ -503,7 +393,7 @@ label give_her_gift(gift_id):
             call her_main("Can't wait to hang it over my bed!","body_46")
             call her_main("The girls will go green with envy...","body_64")
             call happy(25)
-    if gift_id == SexyLingerie:#lingerie
+    if gift_id == "Sexy lingerie":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("lingerie?","body_118")
             call her_main("[genie_name], I cannot accept a gift like this from you...","body_120")
@@ -525,7 +415,7 @@ label give_her_gift(gift_id):
             call her_main("Oh... I mean, thank you, [genie_name].","body_122")
             call give_gift(">You give the lingerie to Hermione...",gift_id)
             call happy(15)
-    if gift_id == PackOfCondoms:#condoms
+    if gift_id == "A pack of condoms":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Condoms?!","body_18")
             call her_main("[genie_name], I wouldn't even know what to do with them...","body_30")
@@ -549,7 +439,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give a pack of condoms to Hermione...", gift_id)
             call happy(4)
             $ h_body = "body_45"
-    if gift_id == Vibrator:#vibrator
+    if gift_id == "Vibrator":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A magic wand?","body_01")
             call her_main("No, it doesn't look like--","body_15")
@@ -580,7 +470,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give the vibrator to Hermione...",gift_id)
             call her_main("Thank you, [genie_name].","body_124")
             call happy(10)
-    if gift_id == JarOfLube:#anal lube
+    if gift_id == "Jar of anal lubricant":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("I don't know what this is...","body_02")
             call her_main("But I have the feeling that the jar is full of something vile and inappropriate...","body_05")
@@ -608,7 +498,7 @@ label give_her_gift(gift_id):
             call her_main("Thank for looking out for us, [genie_name].","body_128")
             call give_gift(">You give the jar to Hermione...", gift_id)
             call happy(5)
-    if gift_id == BallGagAndCuffs:#gag and cuffs
+    if gift_id == "Ball gag and cuffs":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("What is this?","body_118")
             call her_main("Is this like one of those adult toys?","body_141")
@@ -638,7 +528,7 @@ label give_her_gift(gift_id):
             call her_main("But a gift is a gift, right?","body_129")
             call give_gift(">You give the ball gag and cuffs to Hermione...",gift_id)
             call happy(15)
-    if gift_id == AnalPlugs:#anal plugs
+    if gift_id == "Anal plugs":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm...?","body_01")
             call her_main("Are those like key-chain toys?","body_15")
@@ -667,7 +557,7 @@ label give_her_gift(gift_id):
             call her_main("But I shall never use them of course...","body_127")
             call her_main("................","body_124")
             call happy(10)
-    if gift_id == ThestralStrapon:#strap on
+    if gift_id == "Thestral Strap-on":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("What is that?","body_18")
             call her_main("An artifact of some sort or a trophy?","body_14")
@@ -708,7 +598,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give the strap-on to Hermione...",gift_id)
             call her_main("Thank you for the gift, [genie_name].","body_129")
             call happy(30)
-    if gift_id == SpeedStick2000:#speed stick
+    if gift_id == "Lady Speed Stick-2000":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A broom...?","body_01")
             call her_main("Hm...","body_03")
@@ -745,7 +635,7 @@ label give_her_gift(gift_id):
             call give_gift(">You give the broom to Hermione...",gift_id)
             call her_main("Thank you, [genie_name].","body_128")
             call happy(30)
-    if gift_id == SexDollJoanne:#sex doll
+    if gift_id == "Sex doll \"Joanne\"":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Is this...","body_48")
             call her_main("A sex doll?!","body_34")
