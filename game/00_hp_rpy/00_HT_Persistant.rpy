@@ -205,8 +205,10 @@ label __init_variables:
         $ tentacle_owned = False
     if not hasattr(renpy.store,'tent_scroll'): #important!
         $ tent_scroll = False
-    
-    
+
+    if not hasattr(renpy.store,'dailyDelivery'): #important!
+        $ dailyDelivery = DailyDelivery()
+
     
     
     $ override_persistant = False

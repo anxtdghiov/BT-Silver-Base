@@ -441,6 +441,7 @@ label object_purchase_item(item, quantity):
             "-no thanks-":
                 pass
         $ order_placed = True
+        $ dailyDelivery.send(days_in_delivery2 - 1, 'Gift', item.name, quantity)
 
         call thx_4_shoping
         jump shop_menu

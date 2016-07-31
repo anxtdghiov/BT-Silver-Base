@@ -1,3 +1,28 @@
+init python:
+    from collections import deque, defaultdict, Counter
+
+    # lambda functions don't work with pickle (save/resume). This instead is ok.
+    def get_Counter():
+        return Counter()
+
+    class DailyDelivery(deque):
+
+        maxdays = 10 # safety limit: if you send mail in 100000000000 days then
+        # deliverylist grows and eats all your RAM (computer may crash)
+
+        def send(self, in_days, kind, itemName, quantity):
+
+            if in_days >= len(self) and in_days <= self.maxdays and in_days >= 0:
+                # to get quantity 0 defaults for each kind of unsent mail:
+                self.extend([defaultdict(get_Counter)] * (in_days - len(self) + 1))
+
+            self[in_days][kind].update({itemName: quantity}) # add quantities
+
+        def receive(self):
+            return self.popleft() if len(self) else {}
+
+    #dailyDelivery = DailyDelivery()
+
 label mail:
     if finished_report >= 1:
         $ letters -= 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
@@ -212,29 +237,45 @@ if work_unlock: # Send a letter that will unlock an ability to write reports
 label mail_02: #Packages only. <=====================================================================### PACKAGES ###=================================================== 
     
 ### ITEMS ###   
-    if gift_order != None:
-        $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-        $ days_in_delivery = 0 #Count's +1 every day when order_placed = True
-        
-        $ id = gift_list.indexForName[gift_order.name]
-        $ gift_item_inv[id] += order_quantity
-        
-        $ the_gift = gift_order.image
+    # must receive every day, even if it's empty.
+    $ delivery = dailyDelivery.receive()
+    if 'Gift' in delivery and gift_order != None:
+        python:
+            #FIXME: remove if no longer needed, also gift_order above.
+            package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
+            days_in_delivery = 0 #Count's +1 every day when order_placed = True
+
+            most_expensive = 0
+            prepend = ""
+            the_gift = None
+            for name, quantity in delivery['Gift'].items():
+
+                id = gift_list.indexForName[name]
+                gift_item_inv[id] += quantity
+                if prepend == "" and most_expensive != 0:
+                    prepend = "several items, including: "
+
+                # show the image for the most expensive asset
+                if quantity * gift_list[id].cost > most_expensive:
+
+
+                    if quantity > 1:
+                        listing = str(quantity) + " \"" + name + "'s\""
+                    else:
+                        listing = " a \"" + name + "\""
+
+                    listing += ", and have" if quantity > 1 else ", and has"
+
+                    the_gift = gift_list[id].image
+                    most_expensive = quantity * gift_list[id].cost
+
         show screen gift
         with d3
-        $ tmp_str = "\""+gift_order.name
-        if order_quantity > 1:
-            $ tmp_str += "'s\""
-            ">([order_quantity]) [tmp_str] have been added to your possessions."
-        else:
-            $ tmp_str += "\""
-            ">([order_quantity]) [tmp_str] has been added to your possessions."
+        ">A package arrived containing [prepend][listing] been added to your possessions."
         hide screen gift
         with d3
         $ gift_order = None
         call screen main_menu_01
-        
-        
  
     if order_item != 0:
         $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.

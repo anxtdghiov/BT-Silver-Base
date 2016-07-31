@@ -72,7 +72,7 @@ screen main_menu_01:
         # idle "01_hp/05_props/02_cupboard.png"
         # hover "01_hp/05_props/02_cupboard_02.png"
         # action [Hide("main_menu_01"), Hide("animation_feather"), Jump("cupboard")]
-        
+
     if package_is_here:
         imagebutton: # THE PACKAGE
                 xpos 260+140
