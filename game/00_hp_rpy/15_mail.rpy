@@ -239,9 +239,9 @@ label mail_02: #Packages only. <================================================
 ### ITEMS ###   
     # must receive every day, even if it's empty.
     $ delivery = dailyDelivery.receive()
-    if 'Gift' in delivery and gift_order != None:
+    if 'Gift' in delivery:
         python:
-            #FIXME: remove if no longer needed, also gift_order above.
+            #FIXME: remove if no longer needed.
             package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
             days_in_delivery = 0 #Count's +1 every day when order_placed = True
 
@@ -274,7 +274,6 @@ label mail_02: #Packages only. <================================================
         ">A package arrived containing [prepend][listing] been added to your possessions."
         hide screen gift
         with d3
-        $ gift_order = None
         call screen main_menu_01
 
     if bought_ball_dress:

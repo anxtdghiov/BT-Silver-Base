@@ -410,16 +410,12 @@ label object_gift_block(item):
     $ cost4 = item.cost * 8
     menu:
         "-Buy 1 for ([item.cost] galleons)-":
-            $ gift_order = item
             call object_purchase_item(item, 1)
         "-Buy 2 for ([cost2] galleons)-":
-            $ gift_order = item
             call object_purchase_item(item, 2)
         "-Buy 4 for ([cost3] galleons)-":
-            $ gift_order = item
             call object_purchase_item(item, 4)
         "-Buy 8 for ([cost4] galleons)-":
-            $ gift_order = item
             call object_purchase_item(item, 8)
         "-Never mind-":
             hide screen gift
