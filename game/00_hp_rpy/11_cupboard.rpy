@@ -468,9 +468,8 @@ label disp_sacred_scrolls(scroll):
         
 label rum_block(item = None):
 
-    if item in gift_list.indexForName:
+    if item, i in gift_list.indexForName.items():
         $ renpy.play('sounds/win2.mp3')   #Not loud.
-        $ i = gift_list.indexForName[item]
         $ gift_item_inv[i] += 1
         $ the_gift = gift_list[i].image
         show screen gift
