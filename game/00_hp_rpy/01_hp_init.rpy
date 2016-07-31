@@ -152,7 +152,6 @@ $ job_lvl = 1 #Show how many reports you are allowed to complete per week.
 
 ### MUGGLE ODDITIES ### =========================================================================
 $ order_placed = False #TRUE when and order has been placed on an item.
-$ days_in_delivery = 0 # +1 day, every day since the orer has been made (when order_placed = True).
 $ days_in_delivery2 = 0 # +1 day, every day since the orer has been made (when order_placed = True).
 $ package_is_here = False # Turns true when days_in_delivery >= 5. Package is displayed.
 

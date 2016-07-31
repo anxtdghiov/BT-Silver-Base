@@ -243,7 +243,6 @@ label mail_02: #Packages only. <================================================
         python:
             #FIXME: remove if no longer needed.
             package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-            days_in_delivery = 0 #Count's +1 every day when order_placed = True
 
             most_expensive = 0
             prepend = ""
@@ -279,11 +278,10 @@ label mail_02: #Packages only. <================================================
     if bought_ball_dress:
         $ bought_ball_dress = False
         $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-        $ days_in_delivery = 0 #Count's +1 every day when order_placed = True
-        
+
         #$ gifts12 += ["ball_dress"]
         $ bought_dress_already = True #Makes sure that you won't buy the dress twice.
-        
+
         $ gifts12.append("ball_dress")
         $ the_gift = "01_hp/18_store/01.png" # THE NIGHT DRESS.
         show screen gift
@@ -292,12 +290,11 @@ label mail_02: #Packages only. <================================================
         hide screen gift
         with d3
         call screen main_menu_01
-    
+
     if bought_miniskirt:
         $ bought_miniskirt = False #Affects 15_mail.rpy
         $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-        $ days_in_delivery = 0 #Count's +1 every day when order_placed = True
-        
+
         #$ gifts12 += ["ball_dress"]
         $ bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
         $ have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
@@ -308,12 +305,11 @@ label mail_02: #Packages only. <================================================
         hide screen gift
         with d3
         call screen main_menu_01
-    
+
     if bought_glasses:
         $ bought_glasses = False #Affects 15_mail.rpy
         $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-        $ days_in_delivery = 0 #Count's +1 every day when order_placed = True
-        
+
         $ glasses = True #Glasses owned
         $ glasses_worn = False
 
@@ -324,12 +320,11 @@ label mail_02: #Packages only. <================================================
         hide screen gift
         with d3
         call screen main_menu_01
-    
+
     if bought_badge_01:
         $ bought_badge_01 = False #Affects 15_mail.rpy
         $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-        $ days_in_delivery = 0 #Count's +1 every day when order_placed = True
-        
+
         $ badge_01 = 1 
 
         $ the_gift = "01_hp/18_store/29.png" # S.P.E.W. Badge.
@@ -339,12 +334,11 @@ label mail_02: #Packages only. <================================================
         hide screen gift
         with d3
         call screen main_menu_01
-    
+
     if bought_nets:
         $ bought_nets = False #Affects 15_mail.rpy
         $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-        $ days_in_delivery = 0 #Count's +1 every day when order_placed = True
-        
+
         $ nets = 1 
 
         $ the_gift = "01_hp/18_store/30.png" # FISHNETS.

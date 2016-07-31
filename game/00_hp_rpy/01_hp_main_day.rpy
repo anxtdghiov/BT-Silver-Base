@@ -128,16 +128,6 @@ if mad >= 1:
     $ mad -= 1
 
 
-
-### MUGGLE ODDITIES RELATED FLAGS ###
-#if order_placed: #TRUE when and order has been placed on an item.
-#    $ days_in_delivery +=1
-#    if days_in_delivery >= 3: # BY DEAFULT WAS 5. Changed for testing.
-#        $ package_is_here = True
-#        $ order_placed = False
-
-
-
 ### MUGGLE ODDITIES RELATED FLAGS ### VERSION TWO. This one randomizes delivery waiting days.
 if order_placed: #TRUE when and order has been placed on an item.
     $ days_in_delivery2 -=1
