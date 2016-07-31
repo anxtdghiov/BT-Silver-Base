@@ -468,14 +468,16 @@ label disp_sacred_scrolls(scroll):
         
 label rum_block(item = None):
 
-    if item, i in gift_list.indexForName.items():
+    if item in gift_list.indexForName:
         $ renpy.play('sounds/win2.mp3')   #Not loud.
+        $ i = gift_list.indexForName[item]
         $ gift_item_inv[i] += 1
         $ the_gift = gift_list[i].image
+        $ descr = gift_list[i].description
         show screen gift
         with d3
         ">You found [item]..."
-        ">[gift_list(i).description]"
+        ">[descr]"
         hide screen gift
         with d3
     else:
