@@ -241,11 +241,9 @@ label mail_02: #Packages only. <================================================
 ### ITEMS ###   
     # must receive every day, even if it's empty.
     $ delivery = dailyDelivery.receive()
+    $ package_is_here = False
     if 'Gift' in delivery:
         python:
-            #FIXME: remove if no longer needed.
-            package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-
             most_expensive = 0
             prepend = ""
             the_gift = None
@@ -258,7 +256,6 @@ label mail_02: #Packages only. <================================================
 
                 # show the image for the most expensive asset
                 if quantity * gift_list[id].cost > most_expensive:
-
 
                     if quantity > 1:
                         listing = str(quantity) + " \"" + name + "'s\""
@@ -275,80 +272,44 @@ label mail_02: #Packages only. <================================================
         ">A package arrived containing [prepend][listing] been added to your possessions."
         hide screen gift
         with d3
-        call screen main_menu_01
+    if 'One time item' in delivery:
+        python:
+            the_gift = None
+            descr = ""
+            for name in delivery['One time item'].keys():
+                the_gift = oneTimeItem[name].image
+                oneTimeItem[name].orderStatus = orderStatus['delivered']
+                if name == "Ball dress":
+                    descr = "A fancy nightdress has"
+                    gifts12.append("ball_dress")
+                    bought_ball_dress = False
 
-    if bought_ball_dress:
-        $ bought_ball_dress = False
-        $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
+                    bought_dress_already = True #Makes sure that you won't buy the dress twice.
+                elif name == "Mini Skirt":
+                    descr = "A School miniskirt has"
+                    bought_miniskirt = False #Affects 15_mail.rpy
+                    bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
+                    have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
+                elif name == "Glasses":
+                    descr = "Some fine reading glasses have"
+                    bought_glasses = False #Affects 15_mail.rpy
+                    glasses = True #Glasses owned
+                    glasses_worn = False
+                elif name == "S.P.E.W. Badge":
+                    descr = "A \"S.P.E.W.\" badge has"
+                    bought_badge_01 = False #Affects 15_mail.rpy
+                    badge_01 = 1
 
-        #$ gifts12 += ["ball_dress"]
-        $ bought_dress_already = True #Makes sure that you won't buy the dress twice.
+                    the_gift = "01_hp/18_store/29.png" # S.P.E.W. Badge.
+                elif name == "Fishnet stockings":
+                    descr = "A pair of fishnet stockings have"
+                    bought_nets = False #Affects 15_mail.rpy
+                    nets = 1
 
-        $ gifts12.append("ball_dress")
-        $ the_gift = "01_hp/18_store/01.png" # THE NIGHT DRESS.
         show screen gift
         with d3
-        ">A fancy nightdress has been added to your possessions."
+        ">[descr] been added to your possessions."
         hide screen gift
         with d3
-        call screen main_menu_01
-
-    if bought_miniskirt:
-        $ bought_miniskirt = False #Affects 15_mail.rpy
-        $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-
-        #$ gifts12 += ["ball_dress"]
-        $ bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
-        $ have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
-        $ the_gift = "01_hp/18_store/07.png" # MINISKIRT.
-        show screen gift
-        with d3
-        ">A School miniskirt has been added to your possessions."
-        hide screen gift
-        with d3
-        call screen main_menu_01
-
-    if bought_glasses:
-        $ bought_glasses = False #Affects 15_mail.rpy
-        $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-
-        $ glasses = True #Glasses owned
-        $ glasses_worn = False
-
-        $ the_gift = "01_hp/18_store/glasses.png" # MAGAZINE # 3
-        show screen gift
-        with d3
-        ">Some fine reading glasses have been added to your possession."
-        hide screen gift
-        with d3
-        call screen main_menu_01
-
-    if bought_badge_01:
-        $ bought_badge_01 = False #Affects 15_mail.rpy
-        $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-
-        $ badge_01 = 1 
-
-        $ the_gift = "01_hp/18_store/29.png" # S.P.E.W. Badge.
-        show screen gift
-        with d3
-        ">A \"S.P.E.W.\" badge has been added to your possessions."
-        hide screen gift
-        with d3
-        call screen main_menu_01
-
-    if bought_nets:
-        $ bought_nets = False #Affects 15_mail.rpy
-        $ package_is_here = False # Turns True when days_in_delivery >= 5. Package is displayed.
-
-        $ nets = 1 
-
-        $ the_gift = "01_hp/18_store/30.png" # FISHNETS.
-        show screen gift
-        with d3
-        ">A pair of fishnet stockings have been added to your possessions."
-        hide screen gift
-        with d3
-        call screen main_menu_01
-
+    call screen main_menu_01
 

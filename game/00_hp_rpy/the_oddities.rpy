@@ -458,6 +458,7 @@ label app:
                     else:
                         if gold >= 100:
                             $ gold -=100
+                            $ dailyDelivery.send(0, 'One time item', "S.P.E.W. Badge")
                             $ order_placed = True
                             $ bought_badge_01 = True #Affects 15_mail.rpy
                             call thx_4_shoping #Massage that says "Thank you for shopping here!".
@@ -480,6 +481,7 @@ label app:
                 "-Buy the item (60 gold)-":
                     if gold >= 60:
                         $ gold -= 60
+                        $ dailyDelivery.send(3, 'One time item', "Glasses")
                         $ order_placed = True
                         $ bought_glasses = True #Affects 15_mail.rpy
                         call thx_4_shoping #Massage that says "Thank you for shopping here!".
@@ -503,6 +505,7 @@ label app:
                     else:
                         if gold >= 800:
                             $ gold -= 800
+                            $ dailyDelivery.send(2, 'One time item', "Fishnet stockings")
                             $ order_placed = True
                             $ bought_nets = True #Affects 15_mail.rpy
                             call thx_4_shoping #Massage that says "Thank you for shopping here!".
@@ -524,6 +527,7 @@ label app:
             menu:
                 "-Buy the skirt- (---)":
                     if vouchers >= 1: #Shows the amount of DAHR's vouchers in your possession.
+                        $ dailyDelivery.send(6, 'One time item', "Mini Skirt")
                         $ vouchers -= 1 #Shows the amount of DAHR's vouchers in your possession.
                         $ order_placed = True
                         $ bought_miniskirt = True #Affects 15_mail.rpy
@@ -552,6 +556,7 @@ label app:
                 "-Buy the dress (1500 gold)-":
                     if gold >= 1500:
                         $ gold -=1500
+                        $ dailyDelivery.send(9, 'One time item', "Ball dress")
                         $ order_placed = True
                         $ bought_ball_dress = True #Affects 15_mail.rpy
                         call thx_4_shoping #Massage that says "Thank you for shopping here!".

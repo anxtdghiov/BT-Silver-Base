@@ -85,6 +85,14 @@ init python:
     gift_list.append(cost=65, name="Anal beads",image="01_hp/18_store/gift_anal_beads.png",
         description="Anal beads engraved with a strange inscription \"Property of L.C.\".")
 
+    orderStatus = {'unavailable':0, 'in stock':1, 'on its way':2, 'delivered':3}
+    #items that require delivery
+    oneTimeItem = GiftList()
+    oneTimeItem.append(name="Ball dress", image="01_hp/18_store/01.png", orderStatus=0)
+    oneTimeItem.append(name="Mini Skirt", image="01_hp/18_store/07.png", orderStatus=0)
+    oneTimeItem.append(name="Glasses", image="01_hp/18_store/glasses.png", orderStatus=0)
+    oneTimeItem.append(name="S.P.E.W. Badge", image="01_hp/18_store/29.png", orderStatus=0)
+    oneTimeItem.append(name="Fishnets", image="01_hp/18_store/30.png", orderStatus=0)
 
 label happy(sub_mad = 0):
     hide screen hermione_main
