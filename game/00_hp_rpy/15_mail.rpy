@@ -10,7 +10,7 @@ init python:
         maxdays = 10 # safety limit: if you send mail in 100000000000 days then
         # deliverylist grows and eats all your RAM (computer may crash)
 
-        def send(self, in_days, kind, itemName, quantity):
+        def send(self, in_days, kind, itemName, quantity=1):
 
             if in_days >= len(self) and in_days <= self.maxdays and in_days >= 0:
                 # to get quantity 0 defaults for each kind of unsent mail:
