@@ -282,28 +282,22 @@ label mail_02: #Packages only. <================================================
                 if name == "Ball dress":
                     descr = "A fancy nightdress has"
                     gifts12.append("ball_dress")
-                    bought_ball_dress = False
-
                     bought_dress_already = True #Makes sure that you won't buy the dress twice.
                 elif name == "Mini Skirt":
                     descr = "A School miniskirt has"
-                    bought_miniskirt = False #Affects 15_mail.rpy
                     bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
                     have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
                 elif name == "Glasses":
                     descr = "Some fine reading glasses have"
-                    bought_glasses = False #Affects 15_mail.rpy
                     glasses = True #Glasses owned
                     glasses_worn = False
                 elif name == "S.P.E.W. Badge":
                     descr = "A \"S.P.E.W.\" badge has"
-                    bought_badge_01 = False #Affects 15_mail.rpy
                     badge_01 = 1
 
                     the_gift = "01_hp/18_store/29.png" # S.P.E.W. Badge.
                 elif name == "Fishnet stockings":
                     descr = "A pair of fishnet stockings have"
-                    bought_nets = False #Affects 15_mail.rpy
                     nets = 1
 
         show screen gift

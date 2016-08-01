@@ -89,8 +89,6 @@ label start_ht:
 
 ### THE STORE ###
 
-
-    $ bought_ball_dress = False #Affects 15_mail.rpy
     $ bought_dress_already = False #Makes sure that you won't buy the dress twice.
     $ gave_the_dress = False #Turns True when Hermione has the dress.
 
@@ -203,9 +201,7 @@ label start_ht:
     $ krum = 0 #Amount.
     $ bought_krum = False #Affects 15_mail.rpy
     $ badge_01 = 0 #Amount.
-    $ bought_badge_01 = False #Affects 15_mail.rpy
     $ nets = 0 #Amount.
-    $ bought_nets = False #Affects 15_mail.rpy
 
 
     $ searched = False #Turns true after you search the cupboard. Turns back to False every day. Makes sure you can only search the cupboard once a day.
@@ -279,13 +275,10 @@ label start_ht:
     $ krum = 0 #Amount.
     $ bought_krum = False #Affects 15_mail.rpy
     $ badge_01 = 0 #Amount.
-    $ bought_badge_01 = False #Affects 15_mail.rpy
     $ nets = 0 #Amount.
-    $ bought_nets = False #Affects 15_mail.rpy
 
     ### MINISKIRT ###
     $ bought_skirt_already = False # Turns TRUE after you redeem the voucher and get the mini skirt.
-    $ bought_miniskirt = False #Affects 15_mail.rpy
     $ have_miniskirt = False # Turns TRUE when you have the skirt in your possession.
     $ gave_miniskirt = False #Turns True when Hermione has the miniskirt.
     
