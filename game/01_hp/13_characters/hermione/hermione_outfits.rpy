@@ -34,11 +34,6 @@ init python:
             self.indexForName[entry['name']] = len(self)
             super(OutfitList, self).append(Outfit(**entry))
 
-        def __call__(self, i): #allow () as [] with name lookup
-            if isinstance(i, (basestring, tuple)):
-                i = self.indexForName[i]
-            return self.__getitem__(i)
-
     outfit_list = OutfitList()
 
     outfit_list.append(cost=100, wait_time=2, name="Maid", store_image="maid.png",

@@ -26,11 +26,6 @@ init python:
                 entry['image'] = "01_hp/18_store/gifts/"+str(len(self.indexForName))+".png"
             super(GiftList, self).append(gift_item(**entry))
 
-        def __call__(self, i): #allow () as [] with name lookup
-            if isinstance(i, (basestring, tuple)):
-                i = self.indexForName[i]
-            return self.__getitem__(i)
-
     gift_list = GiftList()
 
     gift_list.append(cost=20, name="Lollipop candy", users=["hermione"],
