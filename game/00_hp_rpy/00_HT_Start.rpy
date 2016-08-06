@@ -89,7 +89,6 @@ label start_ht:
 
 ### THE STORE ###
 
-    $ bought_dress_already = False #Makes sure that you won't buy the dress twice.
     $ gave_the_dress = False #Turns True when Hermione has the dress.
 
 ### HEARTS ###
@@ -153,7 +152,6 @@ label start_ht:
 
 ### STORE BOOKS AND ITEMS ###
 
-    $ bought_book_05_b = False #Affects 15_mail.rpy
 
     $ dear_waifu_completed_once = False # Turns TRUE when complete the book for the first time with any ending. Makes sure you get +1 imagination only once.
     $ found_dahrs_ticket_once = False # Turns TRUE after you complete "My Dear Waifu" with the harem ending and "Dahr's voucher" fall out.
@@ -165,41 +163,23 @@ label start_ht:
     $ books_all = False # For cheats.rpy
     $ wine = 0 # Dumbledore's wine you find in the cupboard and use for "Snape dates".
     $ anal_lube = 0 #Amount of anal lubricant in possesion.
-    $ bought_anal_lube = False #Affects 15_mail.rpy
     $ condoms = 0 #Amount.
-    $ bought_condoms = False #Affects 15_mail.rpy
     $ candy = 0 #Amount.
-    $ bought_candy = False #Affects 15_mail.rpy
     $ chocolate = 0 #Amount.
-    $ bought_chocolate = False #Affects 15_mail.rpy
     $ vibrator = 0 #Amount.
-    $ bought_vibrator = False #Affects 15_mail.rpy
     $ strap_on = 0 #Amount.
-    $ bought_strapon = False #Affects 15_mail.rpy
     $ ballgag = 0 #Amount.
-    $ bought_ballgag = False #Affects 15_mail.rpy
     $ anal_plugs = 0 #Amount.
-    $ bought_plug = False #Affects 15_mail.rpy
     $ edu_mag = 0 #Amount.
-    $ bought_mag1 = False #Affects 15_mail.rpy
     $ girl_mag = 0 #Amount.
-    $ bought_mag2 = False #Affects 15_mail.rpy
     $ adult_mag = 0 #Amount.
-    $ bought_mag3 = False #Affects 15_mail.rpy
     $ porn_mag = 0 #Amount.
-    $ bought_mag4 = False #Affects 15_mail.rpy
     $ beer = 0 #Amount.
-    $ bought_beer = False #Affects 15_mail.rpy
     $ owl = 0 #Amount.
-    $ bought_owl = False #Affects 15_mail.rpy
     $ sex_doll = 0 #Amount.
-    $ bought_sexdoll = False #Affects 15_mail.rpy
     $ lingerie = 0 #Amount.
-    $ bought_lingerie = False #Affects 15_mail.rpy
     $ broom = 0 #Amount.
-    $ bought_broom = False #Affects 15_mail.rpy
     $ krum = 0 #Amount.
-    $ bought_krum = False #Affects 15_mail.rpy
     $ badge_01 = 0 #Amount.
     $ nets = 0 #Amount.
 
@@ -239,46 +219,27 @@ label start_ht:
      ### GIFTS ###
     $ wine = 0 # Dumbledore's wine you find in the cupboard and use for "Snape dates".
     $ anal_lube = 0 #Amount of anal lubricant in possesion.
-    $ bought_anal_lube = False #Affects 15_mail.rpy
     $ condoms = 0 #Amount.
-    $ bought_condoms = False #Affects 15_mail.rpy
     $ candy = 0 #Amount.
-    $ bought_candy = False #Affects 15_mail.rpy
     $ chocolate = 0 #Amount.
-    $ bought_chocolate = False #Affects 15_mail.rpy
     $ vibrator = 0 #Amount.
-    $ bought_vibrator = False #Affects 15_mail.rpy
     $ strap_on = 0 #Amount.
-    $ bought_strapon = False #Affects 15_mail.rpy
     $ ballgag = 0 #Amount.
-    $ bought_ballgag = False #Affects 15_mail.rpy
     $ anal_plugs = 0 #Amount.
-    $ bought_plug = False #Affects 15_mail.rpy
     $ edu_mag = 0 #Amount.
-    $ bought_mag1 = False #Affects 15_mail.rpy
     $ girl_mag = 0 #Amount.
-    $ bought_mag2 = False #Affects 15_mail.rpy
     $ adult_mag = 0 #Amount.
-    $ bought_mag3 = False #Affects 15_mail.rpy
     $ porn_mag = 0 #Amount.
-    $ bought_mag4 = False #Affects 15_mail.rpy
     $ beer = 0 #Amount.
-    $ bought_beer = False #Affects 15_mail.rpy
     $ owl = 0 #Amount.
-    $ bought_owl = False #Affects 15_mail.rpy
     $ sex_doll = 0 #Amount.
-    $ bought_sexdoll = False #Affects 15_mail.rpy
     $ lingerie = 0 #Amount.
-    $ bought_lingerie = False #Affects 15_mail.rpy
     $ broom = 0 #Amount.
-    $ bought_broom = False #Affects 15_mail.rpy
     $ krum = 0 #Amount.
-    $ bought_krum = False #Affects 15_mail.rpy
     $ badge_01 = 0 #Amount.
     $ nets = 0 #Amount.
 
     ### MINISKIRT ###
-    $ bought_skirt_already = False # Turns TRUE after you redeem the voucher and get the mini skirt.
     $ have_miniskirt = False # Turns TRUE when you have the skirt in your possession.
     $ gave_miniskirt = False #Turns True when Hermione has the miniskirt.
     

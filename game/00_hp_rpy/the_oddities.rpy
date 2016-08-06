@@ -512,7 +512,9 @@ label app:
                     hide screen gift
                     with d3
                     jump app
-        "-School Miniskirt- (---)" if not bought_skirt_already and not gave_miniskirt and whoring >= 3:
+        # FIXME: oneTimeItem["Mini Skirt"].orderStatus == orderStatus['in stock']
+        # (remove gave_miniskirt)
+        "-School Miniskirt- (---)" if oneTimeItem["Mini Skirt"].orderStatus != orderStatus['delivered'] and not gave_miniskirt and whoring >= 3:
             $ the_gift = "01_hp/18_store/07.png" # MINISKIRT
             show screen gift
             with d3
@@ -534,12 +536,12 @@ label app:
                     hide screen gift
                     with d3
                     jump app
-        "-Item Sold Out-" if bought_dress_already:
+        "-Item Sold Out-" if oneTimeItem["Ball dress"].orderStatus > orderStatus['in stock']:
             "This item has been sold out."
             jump app
         "{color=#858585}-Item is out of stock-{/color}" if not sorry_for_hesterics: # NIGHT DRESS.
             call out # Message "Item us out of stock".
-        "-The Ball Dress- (1500 gold)" if sorry_for_hesterics and not bought_dress_already:
+        "-The Ball Dress- (1500 gold)" if sorry_for_hesterics and not oneTimeItem["Ball dress"].orderStatus != orderStatus['delivered']:
             $ the_gift = "01_hp/18_store/01.png" # DRESS.
             show screen gift
             with d3

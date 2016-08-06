@@ -270,10 +270,8 @@ label package_gift:
         if name == "Ball dress":
             $ descr = "A fancy nightdress has"
             $ gifts12.append("ball_dress")
-            $ bought_dress_already = True #Makes sure that you won't buy the dress twice.
         elif name == "Mini Skirt":
             $ descr = "A School miniskirt has"
-            $ bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
             $ have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
         elif name == "Glasses":
             $ descr = "Some fine reading glasses have"
