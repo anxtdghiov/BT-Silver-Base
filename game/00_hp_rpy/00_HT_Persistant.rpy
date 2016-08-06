@@ -206,13 +206,13 @@ label __init_variables:
 
     # Character wrapper to enable inventory, body function, etc.
     if not hasattr(renpy.store,'her'): #important!
-        $ her = Caricature('Hermione', 'her_char', has_body=True)
+        $ her = Caricature('Hermione', 'her_char')
 
     if not hasattr(renpy.store,'l'): #important!
-        $ l = Caricature('Lola', 'l_char', has_body=True)
+        $ l = Caricature('Lola', 'l_char')
 
     if not hasattr(renpy.store,'lun'): #important!
-        $ lun = Caricature('Luna', 'lun_char', has_body=True)
+        $ lun = Caricature('Luna', 'lun_char')
 
     if not hasattr(renpy.store,'sna'): #important!
         $ sna = Caricature('Severus Snape', 'sna_char')

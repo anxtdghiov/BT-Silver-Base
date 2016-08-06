@@ -2,104 +2,116 @@ init -10 python:
     class Container(object):
 
         def __init__(self):
-            self.__dict__['#'] = {}
-            self.__dict__['.'] = ()
+            self._at = ()
+            self._has = {}
 
-        def _tupleChain(self, k):
-            d = self.__dict__
-            d['.'] += k
-            if d['.'] in d['#'] and isinstance(d['#'][d['.']], Container):
-                k = d['.']
-                d['.'] = ()
-                return d['#'][k]
+        def _keyChain(self, k):
+            self._at += k
+            if self._at in self._has and isinstance(self._has[self._at], Container):
+                k = self._at
+                self._at = ()
+                return self._has[k]
             return self
 
         def __getitem__(self, k):
-            return self._tupleChain(tuple(k.split(".")))
+            return self._keyChain(tuple(k.split(".")))
 
         def __getattr__(self, k):
-            return self._tupleChain((k,))
-
-        def _tupleSet(self, k, v):
-            if self.__dict__['.'] != None:
-                self.__dict__['#'][self.__dict__['.'] + k] = v
-            self.__dict__['.'] = ()
+            return self._keyChain((k,))
 
         def __setitem__(self, k, v):
-            self._tupleSet(tuple(k.split(".")), v)
+            if self._at != None:
+                if not isinstance(k, tuple):
+                    k = tuple(k.split("."))
+                self._has[self._at + k] = v
+            self._at = ()
 
         def __setattr__(self, k, v):
-            self._tupleSet((k,), v)
-
-        def __iadd__(self, other):
-            d = self.__dict__
-            k = d['.']
-            d['.'] = None # prevent second assignment for last tuple part
-            d['#'][k] = d['#'][k] + other if k in d['#'] else other
-            return d['#'][k]
+            if k[0] != '_':
+                self.__setitem__((k,), v)
+            else:
+                super(Container, self).__setattr__(k, v)
 
         def __add__(self, other):
-            other = self.__dict__['#'][self.__dict__['.']] + other
-            self.__dict__['.'] = ()
+            other = self._has[self._at] + other if k in self._has else other
+            self._at = ()
             return other
 
+        def __iadd__(self, other):
+            k = self._at
+            self._at = None # prevent second assignment for last tuple part
+            self._has[k] = self._has[k] + other if k in self._has else other
+            return self._has[k]
+
+        def __sub__(self, other): # -
+            other = self._has[self._at] - other if k in self._has else -other
+            self._at = ()
+            return other
+
+        def __isub__(self, other): # -=
+            k = self._at
+            self._at = None # prevent second assignment for last tuple part
+            self._has[k] = self._has[k] - other if k in self._has else other
+            return self._has[k]
+
         def __mul__(self, other): # *
-            other = self.__dict__['#'][self.__dict__['.']] * other
-            self.__dict__['.'] = ()
+            other = self._has[self._at] * other if k in self._has else 0
+            self._at = ()
+            return other
+
+        def __imul__(self, other): # -=
+            k = self._at
+            self._at = None # prevent second assignment for last tuple part
+            self._has[k] = self._has[k] * other if k in self._has else other
+            return self._has[k]
 
         def __delattr__(self, k):
-            self.__dict__['#'].pop(self.__dict__['.'] + (k,), None)
-            self.__dict__['.'] = ()
+            self._has.pop(self._at + (k,), None)
+            self._at = ()
 
-        def __repr__(self): # not needed?
-            k = self.__dict__['.']
-            self.__dict__['#'][()] = self.__dict__['#'][k]
-            #self.__dict__['.'] = ()
-            return repr(self.__dict__['#'][k])
+        def __repr__(self): # needed?
+            k = self._at
+            self._has[()] = self._has[k]
+            #self._at = ()
+            return repr(self._has[k])
 
-        def __str__(self): # not needed?
-            k = self.__dict__['.']
-            self.__dict__['#'][()] = self.__dict__['#'][k]
-            #self.__dict__['.'] = ()
-            return repr(self.__dict__['#'][k])
+        def __str__(self): # needed?
+            k = self._at
+            self._has[()] = self._has[k]
+            #self._at = ()
+            return repr(self._has[k])
 
         def __call__(self): # for testing
-            renpy.error(self.__dict__['#'])
+            renpy.error(self._has)
 
         def __lt__(self, other): # <
-            d = self.__dict__
-            k = d['.']
-            d['.'] = ()
-            return d['#'][k] < other if k in d['#'] else 0 < other
+            k = self._at
+            self._at = ()
+            return self._has[k] < other if k in self._has else 0 < other
 
         def __le__(self, other): # <=
-            d = self.__dict__
-            k = d['.']
-            d['.'] = ()
-            return d['#'][k] <= other if k in d['#'] else 0 <= other
+            k = self._at
+            self._at = ()
+            return self._has[k] <= other if k in self._has else 0 <= other
 
         def __eq__(self, other): # ==
-            d = self.__dict__
-            k = d['.']
-            d['.'] = ()
-            return d['#'][k] == other if k in d['#'] else 0 == other
+            k = self._at
+            self._at = ()
+            return self._has[k] == other if k in self._has else 0 == other
 
         def __ne__(self, other): # !=
-            d = self.__dict__
-            k = d['.']
-            d['.'] = ()
-            return d['#'][k] != other if k in d['#'] else 0 != other
+            k = self._at
+            self._at = ()
+            return self._has[k] != other if k in self._has else 0 != other
 
         def __ge__(self, other): # >=
-            d = self.__dict__
-            k = d['.']
-            d['.'] = ()
-            return d['#'][k] >= other if k in d['#'] else 0 >= other
+            k = self._at
+            self._at = ()
+            return self._has[k] >= other if k in self._has else 0 >= other
 
         def __gt__(self, other) : # >
-            d = self.__dict__
-            k = d['.']
-            d['.'] = ()
-            return d['#'][k] > other if k in d['#'] else 0 > other
+            k = self._at
+            self._at = ()
+            return self._has[k] > other if k in self._has else 0 > other
 
 

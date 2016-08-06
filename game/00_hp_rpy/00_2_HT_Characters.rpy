@@ -1,20 +1,25 @@
 ###HARRY POTTER CHARACTERS###
 init python:
-    class Caricature(object):
-        def __init__(self, name, real_char, has_body=None, **kwargs):
-            if has_body:
-                self.body = Container()
-            else:
-                self.body = None
-            self.inv = Container()
-            self.name = name
-            self.real_char = real_char
+
+    class Caricature(Container):
+        def __init__(self, name, real_char):
+            super(Caricature, self).__init__()
+            # cannot use attributes in Container type.
+            self._name = name
+            self._real_char = real_char
 
         def __call__(self, what, interact=True):
-            return getattr(store, self.real_char)(what, interact=interact)
+            return getattr(store, self._real_char)(what, interact=interact)
 
         def predict(self, what):
-            return getattr(store, self.real_char).predict(what)
+            return getattr(store, self._real_char).predict(what)
+
+        def giveTo(self, other, section=None):
+            if section == None:
+                section = self._at
+            other[section] += 1
+            self[self._at] -= 1
+
     # Character tables
     
     ### SNAPE HEAD ###
@@ -40,7 +45,7 @@ init python:
     sna_char = Character('Severus Snape', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     sna2 = Character('Severus Snape', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed")  #Text box used for "head only" speech. (Because it has padding).
     vol = Character('Lord Voldemort', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    l_char = Character('Lola', color="#402313", window_right_padding=230, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).    $ bought_mag3 = False #Affects 15_mail.rpy)
+    l_char = Character('Lola', color="#402313", window_right_padding=230, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
     g3_char = Character('Genie', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
 
     ###Custom Characters for WT:Silver
