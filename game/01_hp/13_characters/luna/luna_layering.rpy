@@ -9,7 +9,7 @@ screen luna:
     add luna_pupil xpos luna_xpos ypos luna_ypos #Add the pupil
     add luna_eye xpos luna_xpos ypos luna_ypos #Add the eye outline
     add luna_eyebrow xpos luna_xpos ypos luna_ypos #Add the eyebrow
-    ### CLOTHES 
+    ### CLOTHES
     if luna_wear_glasses:
         add luna_glasses xpos luna_xpos ypos luna_ypos # Add the glasses
     if luna_wear_bra:
@@ -28,7 +28,7 @@ screen luna_chibi:
     add luna_chibi_image xpos luna_chibi_xpos ypos luna_chibi_ypos
 
 init python: ###Method Definition for new characters
-    def luna_chibi( l_chibi=None, 
+    def luna_chibi( l_chibi=None,
                     l_xpos=None,
                     l_ypos=None):
 
@@ -48,9 +48,9 @@ init python: ###Method Definition for new characters
 
         if l_chibi is not None:
             if l_chibi == "stand":
-                luna_chibi_image = "01_hp/13_characters/luna/chibis/luna_stand.png" 
+                luna_chibi_image = "01_hp/13_characters/luna/chibis/luna_stand.png"
             if l_chibi == "stand_topless":
-                luna_chibi_image = "01_hp/13_characters/luna/chibis/luna_stand_topless.png" 
+                luna_chibi_image = "01_hp/13_characters/luna/chibis/luna_stand_topless.png"
             else:
                 luna_chibi_image = luna_chibi_image
 
@@ -58,11 +58,11 @@ init python: ###Method Definition for new characters
         renpy.show_screen("luna_chibi")
         renpy.with_statement(Dissolve(0.5))
 
-    def changeLuna( l_eye=None, 
-                    l_pupil=None, 
-                    l_eyebrow=None, 
-                    l_mouth=None, 
-                    x_pos=None, 
+    def changeLuna( l_eye=None,
+                    l_pupil=None,
+                    l_eyebrow=None,
+                    l_mouth=None,
+                    x_pos=None,
                     y_pos=None): # Luna
         ###DEFINE GLOBAL VARIABLES
         global luna_xpos
@@ -97,104 +97,104 @@ init python: ###Method Definition for new characters
 
         if l_eye is not None:
             if l_eye == 1:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_01.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_01.png"
             elif l_eye == 2:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_02.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_02.png"
             elif l_eye == 3:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_03.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_03.png"
             elif l_eye == 4:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_04.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_04.png"
             elif l_eye == 5:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_05.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_05.png"
             elif l_eye == 6:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_06.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_06.png"
             elif l_eye == 7:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_07.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_07.png"
             elif l_eye == 8:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_08.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_08.png"
             elif l_eye == 9:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_09.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_09.png"
             elif l_eye == 10:
-                luna_eye = "01_hp/13_characters/luna/eye/eye_10.png" 
+                luna_eye = "01_hp/13_characters/luna/eye/eye_10.png"
             else:
                 luna_eye = luna_eye
 
         if l_pupil is not None:
             if l_pupil == 1:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_01.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_01.png"
             elif l_pupil == 2:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_02.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_02.png"
             elif l_pupil == 3:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_03.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_03.png"
             elif l_pupil == 4:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_04.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_04.png"
             elif l_pupil == 5:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_05.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_05.png"
             elif l_pupil == 6:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_06.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_06.png"
             elif l_pupil == 7:
-                luna_pupil = "01_hp/13_characters/luna/eye/pupil_07.png" 
+                luna_pupil = "01_hp/13_characters/luna/eye/pupil_07.png"
             else:
                 luna_pupil = luna_pupil
 
         if l_eyebrow is not None:
             if l_eyebrow == 1:
-                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_01.png" 
+                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_01.png"
             elif l_eyebrow == 2:
-                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_02.png" 
+                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_02.png"
             elif l_eyebrow == 3:
-                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_03.png" 
+                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_03.png"
             elif l_eyebrow == 4:
-                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_04.png" 
+                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_04.png"
             elif l_eyebrow == 5:
-                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_05.png" 
+                luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_05.png"
             else:
                 luna_eyebrow = luna_eyebrow
 
         if l_mouth is not None:
             if l_mouth == 1:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_01.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_01.png"
             elif l_mouth == 2:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_02.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_02.png"
             elif l_mouth == 3:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_03.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_03.png"
             elif l_mouth == 4:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_04.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_04.png"
             elif l_mouth == 5:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_05.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_05.png"
             elif l_mouth == 6:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_06.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_06.png"
             elif l_mouth == 7:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_07.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_07.png"
             elif l_mouth == 8:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_08.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_08.png"
             elif l_mouth == 9:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_09.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_09.png"
             elif l_mouth == 10:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_10.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_10.png"
             elif l_mouth == 11:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_11.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_11.png"
             elif l_mouth == 12:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_12.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_12.png"
             elif l_mouth == 13:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_13.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_13.png"
             elif l_mouth == 14:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_14.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_14.png"
             elif l_mouth == 15:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_15.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_15.png"
             elif l_mouth == 16:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_16.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_16.png"
             elif l_mouth == 17:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_17.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_17.png"
             elif l_mouth == 18:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_18.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_18.png"
             elif l_mouth == 19:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_19.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_19.png"
             elif l_mouth == 20:
-                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_20.png" 
+                luna_mouth = "01_hp/13_characters/luna/mouth/mouth_20.png"
             else:
                 luna_mouth = luna_mouth
-            
+
         ###DISPLAY THE UPDATED SCREEEN
         renpy.show_screen("luna")
         renpy.with_statement(Dissolve(0.5))

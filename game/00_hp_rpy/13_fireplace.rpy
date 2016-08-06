@@ -16,16 +16,16 @@ label fireplace:
             hide screen desk
             with Dissolve(0.5)
             jump day_main_menu
-            
-            
-            
-            
-            
-            
-            
-            
+
+
+
+
+
+
+
+
         "-Get the fire going-" if not fire_in_fireplace and not day == 1:
-            #$ renpy.play('sounds/fire01.ogg')  
+            #$ renpy.play('sounds/fire01.ogg')
             #play bg_sounds "sounds/fire01.ogg" fadeout 1.0 fadein 1.0 #LOUD!
             #play bg_sounds "sounds/fire02.mp3" fadeout 1.0 fadein 1.0 #Quiet...
             $ fire_in_fireplace = True

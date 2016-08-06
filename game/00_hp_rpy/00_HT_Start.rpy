@@ -1,12 +1,12 @@
 label start_ht:
     # "this has been disabled"
     # jump start
-    
+
     $ daytime = True
     $ gold = 0
     $ rum_times = 0 # Counts how many times have you rummaged the cupboard. +1 every time you do that. Needed to make to grand 2 potions before the fight.
-    
-    
+
+
     ### HERMIONE_MAIN SCREN FLAGS ###
     $ only_upper = False #When true, legs are not displayed in the hermione_main screen.
     $ autograph = False #Displays professor Lockhart's autograph on Hermione's leg.
@@ -92,7 +92,7 @@ label start_ht:
     $ gave_the_dress = False #Turns True when Hermione has the dress.
 
 ### HEARTS ###
-    
+
     $  new_request_01_01 = False # Talk to me.
     $  new_request_01_02 = False
     $  new_request_01_03 = False
@@ -242,7 +242,7 @@ label start_ht:
     ### MINISKIRT ###
     $ have_miniskirt = False # Turns TRUE when you have the skirt in your possession.
     $ gave_miniskirt = False #Turns True when Hermione has the miniskirt.
-    
+
     show image "interface/blackfade.png"
     if persistent.game_complete: # Offer for game+
         menu:
@@ -251,7 +251,7 @@ label start_ht:
                 # Code needed here for adding persistant items across games
                 $ gold = gold + persistent.gold
                 ">[persistent.gold] gold has been added to your founds."
-                
+
                 if persistent.lolipop >= 1:
                     $ candy = candy + persistent.lolipop # LOLIPOP.
                     ">[persistent.lolipop] pieces of candy have been added to your possessions."

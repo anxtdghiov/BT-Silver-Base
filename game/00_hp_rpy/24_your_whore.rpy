@@ -1,14 +1,14 @@
 label your_whore:
     show screen end_u_1
     $ end_u_1_pic =  "01_hp/17_ending/02.png"
-    
+
     # $ badges = False
-    # $ hair_color = 10 
-    # $ collar = 0 
-    
+    # $ hair_color = 10
+    # $ collar = 0
+
     hide screen hermione_main
     hide screen room # MAIN BG (DAY).
-    
+
     hide screen notes #A bunch of notes poping out with a "win" sound effect.
     hide screen phoenix_food
     hide screen done_reading
@@ -20,8 +20,8 @@ label your_whore:
     hide screen cloud_night_02 #NIGHT CLOUDS.
     hide screen cloud_night_03 #NIGHT CLOUDS.
     hide screen bld1 #You know what this is. Just making sure it doesn't get stuck.
-     
-    hide screen main_menu_01  
+
+    hide screen main_menu_01
 
     with fade
     #hide screen end_u_1                                           #<---- SCREEN
@@ -36,15 +36,15 @@ label your_whore:
     hide screen ctc
     show screen bld1
     with d7
-        
-        
-        
-    
-    
-    
-    
-    
-  
+
+
+
+
+
+
+
+
+
     m "I'd better make sure to avoid being noticed..."
     m "......................"
     m "That's a whole lot of people out there..."
@@ -60,7 +60,7 @@ label your_whore:
     # FADE
     show screen blktone
     with d7
-    
+
     if public_whore_ending: #Students talking. Ending "Public whore".
         mal "Have you heard that rumour about Hermione Granger?"
         mal2 "That she is a major slut?"
@@ -93,15 +93,15 @@ label your_whore:
         fem "Guys...?"
         fem "........................."
         fem "Tsk... Men........"
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
+
+
+
     else: #Students talking. Ending "Your whore".
         mal "(Have you heard the rumours?)"
         mal2 "(Yeah. They say Hermione took one for the team.)"
@@ -119,13 +119,13 @@ label your_whore:
         mal "(Exactly! So don't you bad-mouth Hermione then!)"
         mal2 "(You said it, man.)"
         fem "(*Pouting*)"
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     hide screen blktone
     with d3
     hide screen bld1
@@ -133,8 +133,8 @@ label your_whore:
     show screen ctc
     pause
     hide screen ctc
-    
-    
+
+
     $ end_u_2_pic =  "01_hp/17_ending/01.png"
     show screen end_u_2
     with d7
@@ -144,30 +144,30 @@ label your_whore:
     show screen bld1
     with d5
     m "(There she is!)"
-    
+
     mal "Hermione, hey..."
     $ her_head_ypos = her_head_tits
-    call her_head("Oh, hello.","body_159")     
+    call her_head("Oh, hello.","body_159")
     mal "You look... so beautiful tonight, Hermione."
-    call her_head("Thank you, you are too sweet.","body_160") 
+    call her_head("Thank you, you are too sweet.","body_160")
     mal2 "Can I have the next dance?"
     mal "What? Back off buddy, I was here first!"
     mal2 "Like hell you were!"
     mal "Alright, pal! That does it!"
     mal2 "I'm not your \"pal\", buddy!"
-    call her_head("..............","body_161") 
-    
+    call her_head("..............","body_161")
+
     show screen blktone8
     with d3
     stop music fadeout 3.0
     m "Here is my chance!"
     m "(Pst! Girl!)"
-    call her_head("???","body_162")     
+    call her_head("???","body_162")
     m "(Girl, it's me! Over here!)"
-    call her_head("[genie_name]?","body_163")     
+    call her_head("[genie_name]?","body_163")
     #her "Professor Dumbledore?"
     m "(Shush! Keep your voice down and follow me.)"
-    call her_head("Oh?","body_163")     
+    call her_head("Oh?","body_163")
     pause.1
     $ end_u_1_pic =  "01_hp/17_ending/02.png"
     hide screen blktone8
@@ -182,10 +182,10 @@ label your_whore:
     with d3
 
 
-    
-    
-    # ALCOVE 
-    
+
+
+    # ALCOVE
+
     call her_head("Sir, what is going on? Why are you... lurking in the shadows?","body_162")
     m "Just be quiet and listen for a second! Can you do that for me?"
     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
@@ -214,14 +214,14 @@ label your_whore:
     m "But you are abusing your power, girl!"
     call her_head("*Giggle!*","body_168")
     m "And after we're done, we'll have that talk!"
-    
+
     # SUCKING
-    
+
     show screen blkfade
     with d7
     her "*Slurp!* *Slurp!* *Slurp!*"
     m "................."
-    
+
     $ end_u_1_pic =  "01_hp/17_ending/03.png" #<---- SCREEN
     hide screen blkfade
     hide screen bld1
@@ -311,22 +311,22 @@ label your_whore:
     her "*Slurp!* *Slurp!* *Gulp!*"
     m "Oh... This is magnificent..."
     her "*Slurp!* *Slurp!* *Gulp!*"
-    
+
     show screen bld1
     with d5
     sna "*Khem!*"
-    sna "Attention, maggots!" 
+    sna "Attention, maggots!"
     m "(Snape?)"
     sna "I said, quiet down everyone!"
     sna "It is time to announce who will be this year's queen of the annual \"Hogwarts autumn ball\"."
-    
-    
+
+
 #    ann "Quiet down everyone, quiet down..."
 #    ann "It is time to choose this year's queen of the annual \"Hogwarts autumn ball\"."
     hide screen bld1
     with d5
-    
-    
+
+
     her "Slurp--"
     $ end_u_2_pic =  "01_hp/17_ending/04.png" #<---- SCREEN
     show screen end_u_2                                           #<---- SCREEN
@@ -334,8 +334,8 @@ label your_whore:
     her "Oh no! I think they are about to start..."
     her "But I can't just leave you in this..."
     her "...condition, sir."
-    
-    
+
+
     her "What should I do?"
     m "Just go, girl. We can finish this up later."
     her "But... But you got me this dress, sir. And..."
@@ -357,7 +357,7 @@ label your_whore:
     with d5
     her "Alright. There is no time lose then."
     m "Yes! That's the spirit!"
-    
+
     if public_whore_ending: #Students talking. Ending "Public whore".
         $ end_u_1_pic =  "01_hp/17_ending/03.png" #<---- SCREEN
         show screen end_u_1                                           #<---- SCREEN
@@ -469,7 +469,7 @@ label your_whore:
         show screen end_u_2                                           #<---- SCREEN
         with d7                                                                       #<---- SCREEN
         her "*Slurp!* *Slurp!* *Gulp!* *Slurp!* *Slurp!*"
-        
+
         show screen bld1
         with d5
         sna "Miss Granger?"
@@ -477,7 +477,7 @@ label your_whore:
         ">A murmur is running though the crowd of students..."
         hide screen bld1
         with d5
-        
+
         her "*Slurp!* *Slurp!* *Gulp!*"
         her "*Gulp--"
         $ end_u_1_pic =  "01_hp/17_ending/91.png" #<---- SCREEN
@@ -530,13 +530,13 @@ label your_whore:
         show screen ctc
         pause
         hide ctc
-        show screen blkfade 
+        show screen blkfade
         with d7
         $ end_u_2_pic =  "01_hp/17_ending/102.png" #<---- SCREEN
         show screen end_u_2                                           #<---- SCREEN
         g4 "{size=+5}What the...!? Why did you stop?!{/size}"
         g4 "{size=+5}What the hell are you doing--{/size}"
-        hide screen blkfade 
+        hide screen blkfade
         with d7
         show screen ctc
         pause
@@ -557,7 +557,7 @@ label your_whore:
         with hpunch
         g4 "{size=+7}Argh!!!{/size}"
         g4 "{size=+7}Take this, then!!!{/size}"
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         with hpunch
@@ -566,11 +566,11 @@ label your_whore:
         show screen end_u_1                                           #<---- SCREEN
         with d7                                                                       #<---- SCREEN
         her "{size=+5}Ah! Yes, sir! Yes! cum for me!{/size}"
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         with hpunch
@@ -594,12 +594,12 @@ label your_whore:
         hide screen ctc
         show screen blkfade
         with d7
-        
+
         # CUMMING
         pause.5
         m "What on earth just happened, girl?!"
         $ her_head_ypos = her_head_tits
-        call her_head("What do you mean, sir?","body_165")  
+        call her_head("What do you mean, sir?","body_165")
         $ end_u_1_pic =  "01_hp/17_ending/02.png" #<---- SCREEN
         show screen end_u_1                                           #<---- SCREEN
         hide screen blkfade
@@ -615,7 +615,7 @@ label your_whore:
         m "And a hairdo full of cum is supposed to ensure that?"
         call her_head("Well... yes...","body_165")
         call her_head("You see, cum is a great hair fixative and--","body_163")
-        
+
         show screen bld1
         with d5
         stop music fadeout 1.0
@@ -624,11 +624,11 @@ label your_whore:
         sna "(Not that I care...)"
         hide screen bld1
         with d5
-        
+
         call her_head("The coronation! I must go now!","body_161")
         $ renpy.play('sounds/run_03.mp3')    #<--------------------Sound of running off.
         pause 3
-        
+
         m ".............................."
         m "................"
         m "..."
@@ -639,13 +639,13 @@ label your_whore:
         hide screen ctc
         show screen blkfade
         with d7
-        
+
 
         ">..............{w}..................{w}...................."
-        
-        
-        
-        
+
+
+
+
     else:
         $ end_u_1_pic =  "01_hp/17_ending/06.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
@@ -679,7 +679,7 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "???................"
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         pause.3
         $ end_u_1_pic =  "01_hp/17_ending/12.png" #<---- SCREEN
@@ -704,7 +704,7 @@ label your_whore:
         sna "Miss Granger?"
         hide screen bld1
         with d5
-        $ renpy.play('sounds/spit.mp3')    #<--------------------Sound of spiting. 
+        $ renpy.play('sounds/spit.mp3')    #<--------------------Sound of spiting.
         show screen white
         pause.3
         $ end_u_2_pic =  "01_hp/17_ending/14.png" #<---- SCREEN
@@ -733,7 +733,7 @@ label your_whore:
         her "*gobble!* *Lick!...* *Lick!...*"
         m "Yes! Keep at it and we will be done here in no time!"
         m "Oh, I almost forgot..."
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         pause.3
         $ end_u_2_pic =  "01_hp/17_ending/17.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
@@ -765,10 +765,10 @@ label your_whore:
         $ end_u_1_pic =  "01_hp/17_ending/19.png" #<---- SCREEN
         show screen end_u_1                                            #<---- SCREEN
         with d7                                                                        #<---- SCREEN
-        
-        
-        
-        
+
+
+
+
 
         show screen bld1
         with d5
@@ -777,7 +777,7 @@ label your_whore:
         ">A murmur is running though the crowd of students..."
         hide screen bld1
         with d5
-        
+
         m "Alright, listen up, whore."
         $ end_u_2_pic =  "01_hp/17_ending/20.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
@@ -790,7 +790,7 @@ label your_whore:
         with d7                                                                        #<---- SCREEN
         m "Yes, just like that."
         her "................"
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/22.png" #<---- SCREEN
         show screen end_u_2                                           #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -814,20 +814,20 @@ label your_whore:
         her "!!!"
         m "I know, I know, you can't really breathe..."
         g9 "But that's what makes this so much fun!"
-        
+
         with hpunch
         her "{size=+7}!!!!!!!!!!!!!!!!{/size}"
         m "Stop struggling, slut. You are not going anywhere!"
         with hpunch
         her "{size=+9}!!!!!!!!!!!!!!!!{/size}"
-        
+
         show screen bld1
         with d5
         sna "Miss Granger..................?"
         sna "You are about to miss your own coronation, girl!"
         hide screen bld1
         with d5
-        
+
         g9 "Heh..."
         g9 "Your queen is right here..."
         g4 "Chocking on my engorged cock!"
@@ -848,16 +848,16 @@ label your_whore:
         show screen end_u_2                                        #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "{size=+9}??!.....................{/size}"
-        
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         pause.5
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/29.png" #<---- SCREEN
         show screen end_u_1                                        #<---- SCREEN
        # with d7                                                                        #<---- SCREEN
         with vpunch
         her "{size=+9}*!!!!!!!!!!!!!!!!!!*{/size}" # 4 (EYE)
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/30.png" #<---- SCREEN
         show screen end_u_2                                        #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -915,10 +915,10 @@ label your_whore:
         m "............."
         #m "Still need to talk to her though..."
         ">..............{w}..................{w}...................."
-    
+
     pause 1
-    
-    
+
+
     if public_whore_ending: #Students talking. Ending "Public whore".
         $ s_head_xpos = 330 # x = 330,
         $ s_head_ypos = 340 #Right bottom corner: y = 340. y = 380 - no hand.
@@ -935,7 +935,7 @@ label your_whore:
         #her "Thank you, professor."
         call her_head("Thank you, professor.","body_160")
         pause.7
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/108.png" #<---- SCREEN
         hide screen blkfade
         with d7
@@ -943,7 +943,7 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         her "..............."
         her ".................................."
         $ end_u_2_pic =  "01_hp/17_ending/109.png" #<---- SCREEN
@@ -952,7 +952,7 @@ label your_whore:
         play music "music/11 Neville's Waltz.mp3" fadein 1 fadeout 1 # BALL THEME.
         her "Hello, everyone!"
         her "Thank you for making me your ball queen for two years in a row!"
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -964,12 +964,12 @@ label your_whore:
         hide screen blktone
         hide screen bld1
         with d3
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/110.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "I would like to dedicate my speech to every girl in this room..."
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -977,7 +977,7 @@ label your_whore:
         hide screen blktone
         hide screen bld1
         with d3
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/111.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -987,7 +987,7 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "But I am still very grateful to stand here before all of you tonight..."
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -1002,7 +1002,7 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "I would especially like to thank our esteemed teachers for their hard work."
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -1011,13 +1011,13 @@ label your_whore:
         hide screen blktone
         hide screen bld1
         with d3
-        
+
         her "Hogwarts truly did become a second home for all of us..."
         $ end_u_1_pic =  "01_hp/17_ending/114.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "I know that I speak for every student in this building when I say this."
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -1055,7 +1055,7 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
         her "I remember when I was just a little girl..."
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -1063,9 +1063,9 @@ label your_whore:
         hide screen blktone
         hide screen bld1
         with d3
-        
+
         her "Frightened of my power... confused..."
-        
+
         show screen blktone
         show screen bld1
         with d3
@@ -1074,7 +1074,7 @@ label your_whore:
         hide screen blktone
         hide screen bld1
         with d3
-        
+
         her "Who knows what would have become of me if not for Hogwarts!"
         show screen blktone
         show screen bld1
@@ -1084,7 +1084,7 @@ label your_whore:
         hide screen blktone
         hide screen bld1
         with d3
-        
+
         her "I am so lucky to be a student here..."
         show screen ctc
         pause
@@ -1096,11 +1096,11 @@ label your_whore:
         with d7                                                                        #<---- SCREEN
         show screen ctc
         pause
-        
+
         hide screen ctc
         # TIT BARES
         # MUSIC STOPS
-        
+
         show screen blktone
         show screen bld1
         with hpunch
@@ -1126,7 +1126,7 @@ label your_whore:
         pause
         hide screen ctc
         # SEX MUSIC STARTS TO PLAY
-        
+
         show screen blktone
         with d7
         #play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
@@ -1139,7 +1139,7 @@ label your_whore:
         fem "(But...!!)"
         hide screen blktone
         with d7
-        
+
         show screen ctc
         pause
         hide screen ctc
@@ -1155,7 +1155,7 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         show screen blktone
         with d7
         g4 "The whore is blushing! She is well aware of what's going on!"
@@ -1164,7 +1164,7 @@ label your_whore:
         m "(By the great desert sands... What have I unleashed!?)"
         hide screen blktone
         with d7
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/120.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -1173,7 +1173,7 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         show screen blktone
         with d7
         mal "(Now she just sorta stands there...)"
@@ -1190,7 +1190,7 @@ label your_whore:
         fem "{size=+7}Gryffindor whore!!!{/size}"
         hide screen blktone
         with d7
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/121.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -1199,7 +1199,7 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         show screen bld1
         with d7
         cr1 "Show us both of them, Hermione!"
@@ -1208,7 +1208,7 @@ label your_whore:
         cr2 "Cover up, you slut!"
         hide screen bld1
         with d7
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/122.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -1228,7 +1228,7 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         show screen bld1
         with d7
         $ s_sprite = "01_hp/13_characters/snape/main/snape_12.png"
@@ -1241,7 +1241,7 @@ label your_whore:
         pause.1
         hide screen bld1
         with d7
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/122.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
@@ -1261,14 +1261,14 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         show screen bld1
         with d7
         cr1 "Whore!"
         cr2 "Gryffindor slut!"
         cr1 "I love you, Hermione!"
         cr2 "Gryffindor rules!!!"
-        
+
         $ s_sprite = "01_hp/13_characters/snape/main/snape_18.png"
         show screen s_head2
         sna "Miss Granger, I said that's enough!"
@@ -1313,12 +1313,12 @@ label your_whore:
         pause 1
         stop music fadeout 3.0
         ">.......................{w}....................{w}......................."
-        
+
         # BACK AT THE ALCOVE (BLACK SCREEN STILL).
         $ end_u_2_pic =  "01_hp/17_ending/02.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
-        
+
         hide screen blkfade
         with d7
         show screen bld1
@@ -1326,7 +1326,7 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ her_head_ypos = her_head_tits
         call her_head("[genie_name]...","body_165")
         #her "Professor Dumbledore..."
@@ -1339,26 +1339,26 @@ label your_whore:
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
         call her_head("Of course, sir...","body_181")
         # INSERTION
-        
+
         $ renpy.play('sounds/gltch.mp3')
         with hpunch
         with kissiris
         pause.5
         g4 "{size=+7}OH YEEEES!{/size}"
-        
-        
+
+
         $ end_u_1_pic =  "01_hp/17_ending/46.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d2                                                                        #<---- SCREEN
         hide screen blkfade
         hide screen bld1
         with d7
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
-        
+
+
         her "Aaah!!!"
         g4 "Your acceptance speech was a disgrace, girl!"
         $ end_u_2_pic =  "01_hp/17_ending/50.png" #<---- SCREEN
@@ -1384,7 +1384,7 @@ label your_whore:
         her "You fucked her out of me with your enormous cock, sir!"
         g4 "Argh! You whore!"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         with hpunch
@@ -1395,18 +1395,18 @@ label your_whore:
         her "Ah!!!"
         g4 "Quiet, whore! Someone will hear you!"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         with hpunch
         # SLAP!
-        
+
         #her "Ah! Professor!"
         her "Ah! [genie_name]!"
         g4 "I said, be quiet!"
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         with hpunch
@@ -1442,54 +1442,54 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "Ah! Yes! Yes! I am a mudblood whore!"
         g4 "Whatever!"
-        
+
         #SLAP
         #SLAP
         #SLAP
         #SLAP
-        
-        
+
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.5
         hide screen white
         with hpunch
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.4
         hide screen white
         with hpunch
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.2
         hide screen white
         with hpunch
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         with hpunch
 
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/64.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
-        
+
         her "AAAAAAAAAAAAAAAAH!"
         her "Yes!!! Yeeees! Ah!"
         $ end_u_2_pic =  "01_hp/17_ending/63.png" #<---- SCREEN
@@ -1509,9 +1509,9 @@ label your_whore:
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "What?!"
-        
+
         # STUDENTS
-        
+
         sly1 "Well, well, well... What have we here?"
         $ end_u_1_pic =  "01_hp/17_ending/126.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
@@ -1570,29 +1570,29 @@ label your_whore:
         #her "Professor Dumbled--"
         her "[genie_name]--"
         sly1 "Shut up, filth!"
-        
+
         # FACE SPIT
-        
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         $ end_u_2_pic =  "01_hp/17_ending/132.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         pause.2
         hide screen white
         with hpunch
-        
 
-        
+
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/133.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "!!!"
         m "There you go!"
-        
+
         sly2 "Ha-ha-ha! Nice one! Look at her stupid face!"
         $ end_u_2_pic =  "01_hp/17_ending/134.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
@@ -1604,7 +1604,7 @@ label your_whore:
         sly1 "Wasn't meant for us? What are you, stupid?"
         sly1 "You bared your filthy, muggle-born flesh on stage! In front of the entire school!"
         sly1 "{size=+7}Of course it was for everyone, you dumb cunt!{/size}"
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/135.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
@@ -1627,11 +1627,11 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "Aahah!!!"
         sly1 "Yes... You are ours now, slut!"
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         # DICKS OUT
         $ end_u_1_pic =  "01_hp/17_ending/136.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
@@ -1652,44 +1652,44 @@ label your_whore:
         her "[genie_name]!"
         m "Huh? Oh, don't you mind me girl."
         m "Imagine that I'm not even here..."
-        
+
         # SPIT!
-        
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         $ end_u_1_pic =  "01_hp/17_ending/139.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         pause.2
         hide screen white
         with hpunch
-        
 
-        
+
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/140.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "Stop it! Stop spitting in my face, you bastards!"
         sly1 "Make us, whore!"
         her "I am warning--"
-        
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         $ end_u_2_pic =  "01_hp/17_ending/141.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         pause.2
         hide screen white
         with hpunch
-        
 
-        
+
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         # SPIT!
         $ end_u_1_pic =  "01_hp/17_ending/142.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
@@ -1703,31 +1703,31 @@ label your_whore:
         her "That's was an accident!"
         sly1 "Was it? Let's see."
         her "Huh?"
-        
+
         # SPIT!
-        
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         $ end_u_2_pic =  "01_hp/17_ending/141.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         pause.2
         hide screen white
         with hpunch
-        
 
-        
+
+
         show screen ctc
         pause
         hide screen ctc
 
-        
+
         # SPIT!
         $ end_u_1_pic =  "01_hp/17_ending/142.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "{size=+5}*GULP!*{/size}"
-        
-        
+
+
 
         sly2 "She did it agagin!"
         $ end_u_2_pic =  "01_hp/17_ending/140.png" #<---- SCREEN
@@ -1746,26 +1746,26 @@ label your_whore:
         $ end_u_1_pic =  "01_hp/17_ending/143.png" #<---- SCREEN
         show screen end_u_1                                                #<---- SCREEN
         with hpunch                                                                        #<---- SCREEN
-        
+
         # DICK IN MOUTH
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         her "!!!........................................................."
         sly2 "Cool! I'm next!"
         her "*Gulp!*"
         sly1 "Suck my cock, bitch! Suck it I said!"
         m "Do what the boy tells you, girl."
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
-        
+
         # SLAP!
-        
+
         m "Come on!"
         $ end_u_2_pic =  "01_hp/17_ending/144.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
@@ -1778,12 +1778,12 @@ label your_whore:
         sly1 "Oh yes... Yes..."
         sly1 "Oh... You are so good at this, whore!"
         sly1 "It's... I..."
-        
-        show screen white 
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/145.png" #<---- SCREEN
@@ -1791,13 +1791,13 @@ label your_whore:
         with hpunch
         her "{size=+7}*gobble?!?*{/size}"
         sly1 "{size=+5}Yes, yes! Swallow it all!!!{/size}"
-        
+
 
         $ end_u_2_pic =  "01_hp/17_ending/146.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         # CUMMING
-        
+
         her "{size=+5}*Gulp-gulp-gulp-gulp!*{/size}"
         her "*{size=+3}Gulp-gulp-gulp...*{/size}"
         her "*Gulp-gulp-gulp...*"
@@ -1818,11 +1818,11 @@ label your_whore:
         $ end_u_1_pic =  "01_hp/17_ending/148.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with hpunch                                                                       #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/149.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
@@ -1852,12 +1852,12 @@ label your_whore:
         her "*Slurp-Slurp-Slurp-Slurp-Slurp!!*"
         with hpunch
         sly2 "{size=+7}I'm cummiiiiiiiiing!{/size}"
-        
-        show screen white 
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_2_pic =  "01_hp/17_ending/150.png" #<---- SCREEN
@@ -1891,34 +1891,34 @@ label your_whore:
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "Fuck you!"
-        
+
         # Spit!
-        
-                
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         $ end_u_2_pic =  "01_hp/17_ending/141.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         pause.2
         hide screen white
         with hpunch
-        
 
-        
+
+
         show screen ctc
         pause
         hide screen ctc
 
-        
+
         # SPIT!
         $ end_u_1_pic =  "01_hp/17_ending/142.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "{size=+5}*GULP!*{/size}"
-        
-        
-        
-        
+
+
+
+
 
         sly1 "That's what I thought!"
         $ end_u_2_pic =  "01_hp/17_ending/154.png" #<---- SCREEN
@@ -1985,14 +1985,14 @@ label your_whore:
         sly1 "I don't know how much longer I... oh..."
         sly1 "Argh!"
         sly1 "{size=+3}Take this, whore!{/size}"
-        
-        
-        
-        show screen white 
+
+
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/159.png" #<---- SCREEN
@@ -2000,13 +2000,13 @@ label your_whore:
         with hpunch
         her "{size=+7}*gobble?!?*{/size}"
         sly1 "{size=+5}Yes, yes! Swallow it all!!!{/size}"
-        
+
 
         $ end_u_2_pic =  "01_hp/17_ending/160.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         # CUMMING
-        
+
         her "{size=+5}*Gulp-gulp-gulp-gulp!*{/size}"
         her "*{size=+3}Gulp-gulp-gulp...*{/size}"
         her "*Gulp-gulp-gulp...*"
@@ -2038,69 +2038,69 @@ label your_whore:
         sly2 "I don't think I can last much longer!"
         sly1 "Me neither!"
         sly2 "ARGH!"
-        
-        show screen white 
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/162.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with hpunch
-        
+
         show screen ctc
         pause
         hide screen ctc
 
-        
+
         her "{size=+8}AAAAAAAAAAAAH!{/size}"
         her "{size=+3}My face!!{/size}"
         sly1 "Take this, whore!"
-        
-        show screen white 
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/163.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with hpunch
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         her "{size=+5}AAAAAAAAAAAAH!{/size}"
         sly2 "Argh! Here! Me too!"
-        
-        
-        show screen white 
+
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/164.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with hpunch
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/165.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d7                                                                        #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         her "{size=+4}I'm cumming!{/size}"
         m "Well, don't mind if I do!"
         $ end_u_1_pic =  "01_hp/17_ending/166.png" #<---- SCREEN
@@ -2109,23 +2109,23 @@ label your_whore:
         #her "{size=+3}No professor, I............!{/size}"
         her "{size=+3}No [genie_name], I............!{/size}"
         g4 "Argh!"
-        
-        show screen white 
+
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/167.png" #<---- SCREEN
         show screen end_u_1                                             #<---- SCREEN
         with hpunch
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
-        
+
+
         her "{size=+8}AAAAAAAAAAAAH!{/size}"
         $ end_u_2_pic =  "01_hp/17_ending/168.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
@@ -2135,8 +2135,8 @@ label your_whore:
         sly2 "Whore!"
         sly1 "Mudblood!"
         her "{size=+8}AAAAAAAAAAAAH!{/size}"
-        
-        $ renpy.play('sounds/spit.mp3') #Sound of spiting. 
+
+        $ renpy.play('sounds/spit.mp3') #Sound of spiting.
         show screen white
         pause.3
         $ end_u_1_pic =  "01_hp/17_ending/169.png" #<---- SCREEN
@@ -2155,24 +2155,24 @@ label your_whore:
         show screen end_u_1                                            #<---- SCREEN
         #with d3                                                                        #<---- SCREEN
         her "{size=+8}I'll go insane!{/size}"
-        
+
         # SPIT!
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         show screen white
         with d9
         pause 1
-        
-        
+
+
         # WHITE FADE
-        
+
         ">.............{w}......................{w}....................."
-        
+
         # Character sprites.
-        
+
         m "Well, thank you for your cooperation, boys."
         sly1 "Of course, sir, professor Dumbledore."
         sly2 "Glad to be of help, sir."
@@ -2184,14 +2184,14 @@ label your_whore:
         call her_head("..........................","body_176")
         $ renpy.play('sounds/footsteps.mp3') #Walking away sound
         # Walking away sound...."
-        
+
         $ end_u_1_pic =  "01_hp/17_ending/02.png" #<---- SCREEN
-        
+
         pause 2
-        
+
         hide screen white
         with d9
-        
+
         sly1 "{size=-4}(Man, professor Dumbledore sure is one cool dude.){/size}"
         sly2 "{size=-4}(Yeah... Who would have thought.){/size}"
         sly1 "{size=-4}(True. I can't help but respect the man...){/size}"
@@ -2199,7 +2199,7 @@ label your_whore:
         sly2 "{size=-4}(Yeah... I hope I will be as agile as he is when I am that ancient.){/size}"
         g4 "I'm not ancient, you young punks!"
         m "Although I suppose in a way I am..."
-        
+
         call her_head("..........................","body_176")
         m "Whore! Why so quiet?"
         call her_head("I...","body_177")
@@ -2235,36 +2235,36 @@ label your_whore:
         call her_head("Good bye... sir...","body_176")
         m "............."
         m "Farewell, girl."
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
-        show screen blkfade 
+
+        show screen blkfade
         $ end_u_2_pic =  "01_hp/17_ending/90.png" #<---- SCREEN
         show screen end_u_2                                             #<---- SCREEN
         with d9                                                                        #<---- SCREEN
         pause.5
         hide screen blkfade
         with d5
-        
+
         show screen ctc
         play music "music/07 Introducing Colin2.mp3" fadein 1 fadeout 1 # BALL THEME 02.
         pause
         hide screen ctc
-        
+
         m "Hm..."
         m "Maybe I should stay and watch Hermione's post-multiple-orgasm dancing?"
         m "No... This ball is almost over. This is my only chance to sneak out unnoticed."
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
-        show screen blkfade 
+
+        show screen blkfade
         with d7
         pause.5
-    
+
     else: # Ending "Your whore".
         $ s_head_xpos = 330 # x = 330,
         $ s_head_ypos = 340 #Right bottom corner: y = 340. y = 380 - no hand.
@@ -2285,18 +2285,18 @@ label your_whore:
         sna "And the stage is yours..."
         hide screen s_head2
         pause.7
-        
-        
-        
+
+
+
         $ end_u_2_pic =  "01_hp/17_ending/37.png" #<---- SCREEN
         hide screen blkfade
         with d7
-        
+
         $ renpy.play('sounds/applause01.ogg')
         show screen ctc
         pause
         hide screen ctc
-        
+
         her "..............."
         her ".................................."
         her ".........................................................................."
@@ -2312,7 +2312,7 @@ label your_whore:
         g4 "What the hell is she doing?"
         hide screen bld1
         with d5
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/39.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         with d3                                                                        #<---- SCREEN
@@ -2382,13 +2382,13 @@ label your_whore:
         ">A few rather feeble applauses..."
         hide screen bld1
         with d3
-        
+
         show screen ctc
         pause
         hide screen ctc
         show screen blktone
         with d5
-        
+
         mal "(So it's Hermione Granger again this year...)"
         fem "(Tsk... Why am I not surprised?)"
         mal2 "(Maybe because she deserves it?)"
@@ -2431,7 +2431,7 @@ label your_whore:
         mal "(They do be crazy...)"
 
 
-        
+
         hide screen blktone
         with d5
         $ end_u_1_pic =  "01_hp/17_ending/43.png" #<---- SCREEN
@@ -2464,21 +2464,21 @@ label your_whore:
         m "Great speech..."
         m "Very arousing... Ehm, I mean inspiring."
         $ tiara = True #Tiara is displayed.
-        call her_head("Thank you, sir.","body_165")   
+        call her_head("Thank you, sir.","body_165")
         m "Swallowing my load in front of the entire school?"
         g9 "Very nice touch."
-        call her_head("........................................................","body_168")                     
-        
+        call her_head("........................................................","body_168")
+
         play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/02.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         with d3                                                                        #<---- SCREEN
-        hide screen blkfade 
+        hide screen blkfade
         with d3
-        show screen bld1 
+        show screen bld1
         with d3
-        m "Alright, girl. Let's have that talk now..." 
+        m "Alright, girl. Let's have that talk now..."
         call her_head("....................","body_162")
         m "There is something I need to tell you..."
         m "Not sure where to start though..."
@@ -2502,23 +2502,23 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-        show screen blkfade 
+        show screen blkfade
         with d7
-        
+
         # INSERTION
-        
+
         $ renpy.play('sounds/gltch.mp3')
         with hpunch
         with kissiris
-        
+
         $ her_head_ypos = her_head_only
-        call her_head("{size=+5}Ahh!!!{/size}","body_172")            
+        call her_head("{size=+5}Ahh!!!{/size}","body_172")
         g4 "Oh, yes!"
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/46.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         with d3                                                                        #<---- SCREEN
-        hide screen blkfade 
+        hide screen blkfade
         hide screen bld1
         with d7
         show screen ctc
@@ -2560,11 +2560,11 @@ label your_whore:
         m "I think that's because you want to get spanked!"
         her "What!?"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         with hpunch
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/52.png" #<---- SCREEN
         #show screen end_u_2                                            #<---- SCREEN
         #with d5                                                                        #<---- SCREEN
@@ -2574,9 +2574,9 @@ label your_whore:
         show screen end_u_1                                            #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "Sir, I--"
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
@@ -2588,9 +2588,9 @@ label your_whore:
         m "Be quiet, I said!"
         m "Or do you want to get caught like this? On your headmaster's cock?"
         m "Do you, Miss queen of the autumn ball?"
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
@@ -2603,7 +2603,7 @@ label your_whore:
         her ".............."
         g4 "Answer me, slut!"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
@@ -2614,78 +2614,78 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "Spank me harder, sir! I deserve it!"
         m "That's the spirit!"
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         $ end_u_1_pic =  "01_hp/17_ending/55.png" #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         $ end_u_1_pic =  "01_hp/17_ending/55.png" #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         $ end_u_1_pic =  "01_hp/17_ending/58.png" #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         $ end_u_1_pic =  "01_hp/17_ending/58.png" #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         $ end_u_1_pic =  "01_hp/17_ending/59.png" #<---- SCREEN
-        
-        
+
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         $ end_u_2_pic =  "01_hp/17_ending/59.png" #<---- SCREEN
-        
+
         show screen ctc
         pause
         hide screen ctc
-        
+
         her "{size=+7}Aaaaaah............................{/size}"
 
 
@@ -2693,9 +2693,9 @@ label your_whore:
         with d3
         sna "Attention, maggots!"
         sna "The \"Hogwarts Autumn Ball\" formal dance is about to begin..."
-        hide screen blktone 
+        hide screen blktone
         with d3
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/60.png" #<---- SCREEN
         show screen end_u_2                                          #<---- SCREEN
         with d5                                                                        #<---- SCREEN
@@ -2728,29 +2728,29 @@ label your_whore:
         show screen blkfade
         with d7
         m "Let me take my dick out of your pussy first..."
-        
+
         $ renpy.play('sounds/boing.mp3') #Sound of # POP!
         with hpunch
         pause.3
         call her_head("Ah...","body_172")
-        call her_head("Sir, no. You must listen to me--","body_167")     
+        call her_head("Sir, no. You must listen to me--","body_167")
         $ renpy.play('sounds/gltch.mp3')
         with hpunch
         with kissiris
-        
+
         # INSERTION
         call her_head("{size=+7}!!!!!!!!!!!!!!!!!{/size}","body_173")
         call her_head("My...{w} My...{w} My...")
         m "Shut it, girl! You are being loud."
         with hpunch
-        call her_head("{size=+7}My anus!!!!!!!!!!!!!{/size}","body_173")  
+        call her_head("{size=+7}My anus!!!!!!!!!!!!!{/size}","body_173")
         g4 "Dammit, girl. I said, be quiet."
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/63.png" #<---- SCREEN
         show screen end_u_2                                          #<---- SCREEN
         with d5                                                                        #<---- SCREEN
-        
-        hide screen blkfade 
+
+        hide screen blkfade
         with d9
         her "{size=+7}I can't! I don't care! It hurts!!!{/size}"
         g4 "Maybe you don't care, but I do, you whore!"
@@ -2759,8 +2759,8 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "{size=+5}Your cock is so huge!{/size}"
         g4 "We'll get caught because of you, you stupid slut!"
-        m "Maybe this will help you shut up..." 
-        
+        m "Maybe this will help you shut up..."
+
         # Fishhooking.
         $ end_u_2_pic =  "01_hp/17_ending/65.png" #<---- SCREEN
         show screen end_u_2                                          #<---- SCREEN
@@ -2778,7 +2778,7 @@ label your_whore:
         her "Ah... blah... ah..."
         g4 "You are drooling allover my hand, you nasty slut!"
         her "Ah... Blah-blhah... ah... bla-ah..."
-        
+
         show screen blktone
         with d5
         stop music fadeout 1.0
@@ -2818,7 +2818,7 @@ label your_whore:
         her "{size=+10}I'm a whoooooooore!!!{/size}"
         g4 "Yes you are!"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         $ end_u_1_pic =  "01_hp/17_ending/72.png" #<---- SCREEN
@@ -2826,14 +2826,14 @@ label your_whore:
         her "{size=+5}I'm a whore!!!{/size}"
         g4 "Yes you are!"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
         her "{size=+5}I'm a whore!!!{/size}"
         g4 "Yes you are!"
         $ renpy.play('sounds/slap.mp3')
-        show screen white 
+        show screen white
         pause.3
         hide screen white
         with hpunch
@@ -2841,7 +2841,7 @@ label your_whore:
         show screen end_u_2                                            #<---- SCREEN
         with d5                                                                        #<---- SCREEN
         her "{size=+5} I'm cumming!!!{/size}"
-        
+
         with hpunch
         g4 "Argh! My cock!"
         $ end_u_1_pic =  "01_hp/17_ending/74.png" #<---- SCREEN
@@ -2850,8 +2850,8 @@ label your_whore:
         her "{size=+10}I'M CUMMING! I'm a whore!{/size}"
         g4 "I can't fucking move it anymore!"
         her "{size=+10}I'm CUMMING!{/size}"
-        
-        
+
+
         g4 "My cock is stuck in your asshole, slut!"
         her "{size=+10}I'm a whooore!!!{/size}"
         g4 "I said relax your muscles a little, dammit!"
@@ -2865,31 +2865,31 @@ label your_whore:
         with d5                                                                        #<---- SCREEN
         her "Huh?"
         # POP
-        
+
         show screen blkfade
         with d7
         g4 "Can't pull out!"
         g4 "Relax your damn anus, girl!..."
-        
+
         $ renpy.play('sounds/boing.mp3') #Sound of # POP!
         with hpunch
         pause.3
-        call her_head("...........","body_175")                       
+        call her_head("...........","body_175")
         m "There..."
-        
-     
+
+
     #    $ renpy.play('sounds/gltch.mp3')
     #    with hpunch
     #    with kissiris
-        
+
     #    # INSERTION
     #    show screen h_head2                                                             # HERMIONE
     #    $ h_body = "01_hp/13_hermione_main/body_175.png" # HERMIONE
     #    her "{size=+7}!!!!!!!!!!!!!!!!!{/size}"
 
-        
-        
-        
+
+
+
         $ renpy.play('sounds/gltch.mp3')
         with hpunch
         with kissiris
@@ -2915,7 +2915,7 @@ label your_whore:
         g4 "You will not. Just ride the wave."
         g4 "Enjoy the sensation while I keep on pounding your pussy!"
         her "{size=+5}Ah!!!{/size}"
-        
+
         $ end_u_2_pic =  "01_hp/17_ending/81.png" #<---- SCREEN
         show screen end_u_2                                            #<---- SCREEN
         with d5                                                                        #<---- SCREEN
@@ -2928,43 +2928,43 @@ label your_whore:
         g4 "Argh!"
         $ d_flag_01 = False #Came into pussy
         $ d_flag_02 = False #Came into asshole
-        
+
         $ menu_x = 0.5 #Menu is moved to the left side.
 
-                    
+
         menu:
             "-Cum inside Hermione's pussy-":
                 $ d_flag_01 = True #Came into pussy
                 g4 "You think your pussy is ready for this, whore!?"
                 her "Sir?!"
                 g4 "Take this, then!"
-                show screen white 
+                show screen white
                 pause.1
                 hide screen white
                 pause.2
-                show screen white 
+                show screen white
                 pause .1
                 hide screen white
                 $ end_u_2_pic =  "01_hp/17_ending/86.png" #<---- SCREEN
                 with hpunch
                 her "{size=+5}Ah! AAaaah!!{/size}"
                 g4 "{size=+15}ARGH!!!!!!!!!!!!!!!!{/size}"
-                
-               
+
+
                 her "{size=+5}Ah! I can feel it! It's so hot!{/size}"
                 g4 "Argh! Yes!"
                 $ end_u_1_pic =  "01_hp/17_ending/87.png" #<---- SCREEN
                 show screen end_u_1                                         #<---- SCREEN
                 with d5                                                                        #<---- SCREEN
-                
-                
-                
-                
+
+
+
+
                 her "{size=+5}It's filling me up! It's filling me up!!!{/size}"
                 g4 "Yes! You whore! I'll pump your british cunt full of my cum!"
-                
-              
-                
+
+
+
                 $ end_u_2_pic =  "01_hp/17_ending/88.png" #<---- SCREEN
                 show screen end_u_2                                             #<---- SCREEN
                 with d5                                                                        #<---- SCREEN
@@ -2979,18 +2979,18 @@ label your_whore:
                 her "{size=+5}I'm sorry! Your whore is sorry!!!!{/size}"
                 g4 "Yes! Much better!"
                 g4 "Oh......."
-        
+
             "-Cum inside Hermione's butt-":
                 $ d_flag_02 = True #Came into asshole.
                 g4 "Your butthole should better be ready for this, whore!"
                 her "What?!"
                 $ renpy.play('sounds/gltch.mp3')
-                
+
                 pause.5
                 her "Ah..."
-                
+
                 #Pop
-                
+
                 #INSERTION
                 $ renpy.play('sounds/boing.mp3') #Sound of # POP!
                 with hpunch
@@ -3009,16 +3009,16 @@ label your_whore:
                 g4 "You will orgasm like crazy. Maybe even pass out for a while, but that's all..."
                 her "No, sir, please... I'm scared..."
                 g4 "Take this, whore!"
-                show screen white 
+                show screen white
                 pause.1
                 hide screen white
                 pause.2
-                show screen white 
+                show screen white
                 pause .1
                 hide screen white
                 with hpunch
                 g4 "{size=+15}ARGH!!!!!!!!!!!!!!!!{/size}"
-                
+
                 $ end_u_1_pic =  "01_hp/17_ending/82.png" #<---- SCREEN
                 show screen end_u_1                                         #<---- SCREEN
                 with d5                                                                        #<---- SCREEN
@@ -3042,10 +3042,10 @@ label your_whore:
                 with d5                                                                        #<---- SCREEN
                 her "{size=+5}I'm sorry! Your whore is sorry!!!!{/size}"
                 g4 "Yes! Much better!"
-        
-                
+
+
         $ her_head_ypos = her_head_tits
-                
+
         show screen ctc
         pause
         hide screen ctc
@@ -3060,24 +3060,24 @@ label your_whore:
         call her_head("...orgasm so hard...")
     #    her "But I must, go... The dance..."
     #    m "Go then..."
-        call her_head("Sir... That thing you wanted to discuss with me...","body_176")     
+        call her_head("Sir... That thing you wanted to discuss with me...","body_176")
         m "Yeah... You know what? I actually wrote you a little letter on the matter..."
-        call her_head("A letter?","body_178")     
+        call her_head("A letter?","body_178")
         m "Yeah... It should explain a couple of things..."
-        call her_head("Oh... Alright...","body_177")     
+        call her_head("Oh... Alright...","body_177")
         m "Just read it tomorrow morning..."
         m "Or whenever..."
         m "Or don't read it at all, I don't care..."
         g4 "............."
-        call her_head("Sir...?","body_179")     
+        call her_head("Sir...?","body_179")
         m "Stop it with the eyes! You're making me feel uncomfortable..."
         m "I wrote you a letter, so what?"
-        call her_head("I think it's sweet.............","body_179") 
+        call her_head("I think it's sweet.............","body_179")
         g4 "I said, stop gawking at me girl. I thought you were late for your dance or something!"
         call her_head("THE DANCE!","body_180")
         call her_head("I'm sorry, I have to go!")
         call her_head("I will see you later, sir!")
-        
+
         $ renpy.play('sounds/run_03.mp3')    #<--------------------Sound of running off.
         pause 3
         m "......................"
@@ -3085,16 +3085,16 @@ label your_whore:
         m "Farewell... Hermione..."
         pause.7
         ">..................................{w}.....................................{w}................................"
-    
+
         play music "music/11 Neville's Waltz.mp3" fadein 1 fadeout 1 # BALL THEME.
-        
+
         if d_flag_01: #Came into pussy
             show screen end_u_1                                             #<---- SCREEN
             $ end_u_1_pic =  "01_hp/17_ending/89.png" #<---- SCREEN
         else:
             show screen end_u_1                                             #<---- SCREEN
             $ end_u_1_pic =  "01_hp/17_ending/90.png" #<---- SCREEN
-            
+
         ">You linger at the alcove for a short while longer..."
         ">You watch Hermione participate in the formal dance..."
         hide screen blkfade
@@ -3124,99 +3124,99 @@ label your_whore:
         show screen ctc
         pause
         hide screen ctc
-    
-    
+
+
     #FINAL SCENE. GENIE IS LEAVING.
-    
-    
-    
+
+
+
     show screen blkfade
     with d7
     pause 1
     stop music fadeout 1.0
-    
+
     centered "{size=+7}{color=#cbcbcb}Outskirts of hogwarts{/color}{/size}"
 
-    
+
     $ end_u_1_pic =  "01_hp/17_ending/171.png" #<---- SCREEN
     show screen end_u_1                                           #<---- SCREEN
     pause.3
-    hide screen blkfade 
+    hide screen blkfade
     with d7
-    
+
     play music "sounds/night.mp3" fadein 1 fadeout 1 #NIGHT SOUNDS.
-    
+
     show screen ctc
     pause
     hide screen ctc
-    
+
     $ renpy.play('sounds/steps_grass.mp3') # SOUNDS OF STEPS IN THE GRESS.
     m "......."
     pause.5
-    
+
     $ end_u_3_pic =  "01_hp/17_ending/172.png" #<---- SCREEN
     show screen end_u_3                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
-    
-    
-    
+
+
+
     m "Well, now it is really time for me to go..."
-    
+
     $ end_u_4_pic =  "01_hp/17_ending/173.png" #<---- SCREEN
     show screen end_u_4                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
     pause.5
-    
-    
+
+
     m "Good bye world of bizzare magic..."
     m "Good bye my who--......"
     m "Good bye, Hermione..."
     m "............"
     m "......"
-    
+
     $ renpy.play('sounds/magic4.ogg')
     with hpunch
     $ end_u_3_pic =  "01_hp/17_ending/174.png" #<---- SCREEN
     hide screen end_u_4                                           #<---- SCREEN
     show screen end_u_3                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
-    
+
     pause.2
-    
+
     $ end_u_4_pic =  "01_hp/17_ending/175.png" #<---- SCREEN
     show screen end_u_4                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
-    
+
     pause.2
-    
+
     hide screen end_u_3                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
-    
+
     pause.2
-    
+
     hide screen end_u_4                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
-    
+
 
     show screen ctc
     pause
     hide screen ctc
-    
+
     show screen blktone
     with d7
-    
+
     show screen blktone8
     with d7
 #    $ end_u_4_pic =  "title2.jpg" #<---- SCREEN
 #    show screen end_u_3                                           #<---- SCREEN
 #    with fade                                                                     #<---- SCREEN
-    
-    
-#    show screen blkfade 
+
+
+#    show screen blkfade
 #    with d9
     pause .5
-    
-    
+
+
     ## FINAL CREDITS ###
     stop music fadeout 1.0
     if public_whore_ending: # PUBLIC WHORE ENDING
@@ -3225,21 +3225,21 @@ label your_whore:
     else: # YOUR PERSONAL WHORE
         centered "{size=+7}{color=#cbcbcb}Congratulations on completing the game!{/color}{/size}\n\n
               {size=+5}{color=#cbcbcb}This is ending \"01\" of \"02\".{/color}{/size}"
-        
+
     hide screen blktone8
     with d7
-    
+
     play music "music/02 - Shanghai Honey.mp3" fadein 1 fadeout 1 # ORANGE RANGE THEME.
-    
-    
-    #play music "music/Real Talk by Brix.MP3" fadein 1 fadeout 1 
-    #play music "music/03_2_Voicemail Freestyle Mike Wiebe.mp3" fadein 3 fadeout 1  
+
+
+    #play music "music/Real Talk by Brix.MP3" fadein 1 fadeout 1
+    #play music "music/03_2_Voicemail Freestyle Mike Wiebe.mp3" fadein 3 fadeout 1
     #scene image "08_ending/e05.png" with Dissolve(2)
     # show akaani with d5
     #$ dermo = "genie_attack"
     #$ dermo = "snape_attack_guard"
     $ dermo = "ch_sna defend"
-    
+
     show screen credits_chibi
     centered "{cps=20}{size=+5}{color=#ea91b0}-Witch Trainer-{/color}{/size}\n\n
     {color=#e5e297}-\{Written and directed by\}-{/color}\n{size=+5}{color=#cbcbcb}AKABUR{/color}{/size}\n\n
@@ -3249,37 +3249,37 @@ label your_whore:
     {color=#e5e297}-\{Texts proofread and edited by\}-{/color}\n   {size=+5}{color=#cbcbcb}LYK.D9{/color}{/size}\n\n
     {color=#e5e297}-\{Technical advisor\}-{/color}\n   {size=+5}{color=#cbcbcb}XALJIO{/color}{/size}\n\n
     {color=#e5e297}-\{Game testers\}-{/color}\n   {size=+5}{color=#cbcbcb}XALJIO\nLYK.D9\nDAHR\nAKABUR{/color}{/size}\n\n{/cps}"
-    
 
-    
-    
+
+
+
     #nvl clear
 
 
     #$ dermo = "ch_hem run_f"
 #    $ dermo = "jerking_off_03_ani"
 #    show screen credits_chibi
-   
-  
+
+
     $ xder = 160
     $ yder = 160
     $ dermo = "jerking_off_03_ani"
     show screen uni_cr
     hide screen credits_chibi
-   
-    
-    
-    
+
+
+
+
     centered "{cps=40}{size=+5}{color=#e5e297}-\{Sound Effects\}-{/color}{/size}\n    {color=#cbcbcb}http://www.freesound.org/{/color}\n\n
-              
+
     {size=+5}{color=#e5e297}-\{Music provided by\}-{/color}{/size}\n    {color=#cbcbcb}http://incompetech.com/{/color}\n\n
-    
-    
-    
-    
+
+
+
+
     {size=+5}{color=#e5e297}-\{MUSIC\}-{/color}{/size}\n
 
-              
+
 
     {color=#e5e297}\"(Orchestral) Playful Tension\" {/color}{color=#cbcbcb}by Shadow16nh.{/color}\n
     {color=#e5e297}\"Prologue\" {/color}{color=#cbcbcb}Harry Potter OST.{/color}\n
@@ -3299,8 +3299,8 @@ label your_whore:
     {color=#e5e297}\"Music for Manatees\" {/color}{color=#cbcbcb}by  Kevin MacLeod.{/color}\n
     {color=#e5e297}\"Plaint\" {/color}{color=#cbcbcb}by  Kevin MacLeod.{/color}\n
     {color=#e5e297}\"Under-the-Radar\" {/color}{color=#cbcbcb}by  PhobyAk.{/color}{/cps}"
- 
-    
+
+
     $ xder = 670
     $ yder = 410
     $ dermo = "ch_hem run_f"
@@ -3313,55 +3313,55 @@ label your_whore:
     {color=#cbcbcb}{size=+5}Lyk.D9 (a.k.a. Silentchill){/size}{/color}\n {color=#e5e297}for toiling tirelessly over my texts full of typos and broken grammar. {/color}\n\n
     {color=#cbcbcb}{size=+5}Bookfisher{/size}{/color}\n{color=#e5e297}For everything.\n\n
     {color=#cbcbcb}{size=+5}The fate (universe or higher power){/size}{/color}\n{color=#e5e297}For giving me an opportunity to release another game while retaining complete creative freedom.\n\n\n
-              
+
     {color=#cbcbcb}{size=-1}A whole bunch of other people who helped me with development of this game in one way or another,\n but whom I forgot to mention.{/color}\n
     {color=#cbcbcb}And of course to everyone else who supports\nme and my work.\n\n\n
-              
+
     {/color}{/size}{/cps}"
 
     hide screen uni_cr
-    
+
     #nvl clear
 
     centered "{cps=70}{color=#cbcbcb}This is not a commercial video game. The entire project was independently founded solely through\nhttp://www.patreon.com/ and\nby \"Hentai United\" subscribers.{/color}\n\n\n
-    
+
     {size=-1}{color=#e5e297}-People who supported development of this game with extraordinary amount of money-{/size}\n
     {color=#cbcbcb}Lawrence Dash, Wirefull, Dorago, Benoit Yan Larose, Talisca{/color}\n\n
-              
+
     {size=-1}{color=#e5e297}-\"INVESTOR\" pledges-{/size}\n
     {color=#cbcbcb}Ace, Linus Furtenbach (Bluue), Eduardo Pereira Carneiro, Vicente Sampedro Burgos, Morning Dawnstar, Wolo, John Layon, stefan mitrano, Gavin Spears, sergio.{/color}\n\n
-    
-                        
+
+
     {size=-1}{color=#e5e297}-\"AGENT\" pledges-{/size}\n
-    {color=#cbcbcb}Cameron MacDowell, Zarsher, Guynonymous, Nerzha, Silvanus2004, Xipomus, Carpy Rex, Adler, Deitan-Baruch St-Amand, Martin Neal, wetrx, mark howard, 
+    {color=#cbcbcb}Cameron MacDowell, Zarsher, Guynonymous, Nerzha, Silvanus2004, Xipomus, Carpy Rex, Adler, Deitan-Baruch St-Amand, Martin Neal, wetrx, mark howard,
 Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexandre Rouleau, thomas taylor, Alexander, Redmoonx22, Valdee, Alexander Lykke Landkildehus, Lucas Ferrari, Dom, derek zhang,Charlatan, Preston C T, waylan, Forrest, Loopy, JohnnyBB, Phantom Void, Kyaa, Stephen Richardson, mark herzog, will newton, Sascha Klug, Joshua McDonald, Undying S, John Cawley III, KitsuneEyes, Slingthatcat, Kieran James, Homod saleh al-shammri, randomuser89, Paul Keating, Antonio B, Marko, Tobias, Akhil Chokshi, Smiling_Jack, Clif Morgan, Derek Heynsbergen, Jack Cartwright, Damien Zaid, callmemusashi Mozambiqued, Nemesis Valentine Vanyar, Stalker, Jason, 4nubis, Curtis, Michael Simon, AB, The Wanderer (Mark Hawker), paul, JEB, Voe, Aselobar, Elgrangato82, froste, YllegaL, Bisongun, Skye Tomlinson, Parad0x, Eric Chen, Destiny, Podchamawa Petrovitch, Will, lc, Sathyan Mathai, Lisandro Gil, bill tedd, Tommy Turner, Marcel Kral, Oric13, Ren Ashjiro, anthony donihee, Honey Withers, Christopher, TofuCats, Drake King, Bookfisher Herring, Dustpan, dusty parrott, Bjorn, Robert Jolly, wilson yang, Tudor G, Arzaz, Etienne Ngo, xazathothx, Robert L Schliff, RO, DavidB, Daedilus, david green, Matt, Ketil, ALEXANDER KOVALEV, Oa, John, PG, largo_leet, David, Artemsgvozdem, heyPert.{/color}{/size}\n\n{/cps}"
-         
-         
+
+
     #nvl clear
     centered "{cps=70}{size=-1}{color=#e5e297}-\"REBEL\" pledges-{/size}\n
     {size=-4}{color=#cbcbcb}1234ghumm, A. R., AJ Ferolie, Catalyst Greenhorn, Abraham Benitio, Actafool812, Adam, Casax5, Adam, FearTheDee, Akasection, Alejandro Luna, Aleksandr, Alex Odoul, Alex P., Alexander Randolph, Maidaniuk Yurii, Alexander, Alexei, Alkosh, Allan Pineda, Altagar, Andreas Janning, Andrei Kuz, Andrey Nikolaev, Anton Belyankin, Anton Tropicflames, Antonio Jos Mucoz Gonzalez, Antonio Rivera, Artur Kevorkov, Baran, BearPerson, BeepBep, Benjamin Drew, Bernard Winters, Bob Mannaro, Boyko, Brad, Brandon Gauthier, Brandon Mirr, Brent, Brett Williams, Bruce Gates, Byakuya36, Cirrus, Calmea, Carez, Carnosaur, Chad Dunkerley, Charles Able, Chemmy, Chris, Christopher Coulter, Christopher Woo, Christopher, Conner Owen, Conrad Boucher, Cruise Russo, Cyanide Sam, DMetal, Dakota Rude, Damian Boggs, Daniel Beard, Daniel Nathans, Daniel Smith, Daniel Szczuka, Daniel Torres, Danno, Danny Johansson, Danny Nguyen, Darkflame256, David Lestina, David Ruskin, David, Dean, Devin Barr, Dirk Delva, Donaj88, Donoth Aveano, DoornailsAreJealous, Demodraken, Double A, Drity, Edward le coyte, Eldar Scum, Eric Hsu, Evan waleske, Fabian, Faux, Fetsch Sebastian, Finrock, Fix, Formless, FoxPrince623, Frank Pietsch, Fraziel, Frederic Chen, Garrett Smith, Geoff Levario, Georgika, Gregc, Greg Hartley, Gregory G, Gunderson, Harm Harm, Harry Tizard, Hooverspleen, Ian W, Innes French, Jacob Thompson, Jacob, Jake Smith, Janis Feldbergs, Janus, Jared Whisenand, Jarred Leverton, Jason Buisman, Jason Chong, Jeff Abrams, Jeff, Jeremiah, John F, John S, John doe, John, Jonathan Backer, Jonathan, Joseph Balbuena, Joseph Oliveira, Josh Stegmaier, Juan Gomez, Jurdia, Justin Golden, Karl Stevenson, Karolis, Kenneth Guevarra, Kenneth Jackson, Kenny Huang, Kimo Linder-Fattah, Kolkina, Kristian Lund Jensen, Kryssler, Kurrel, Kyle Sarty, Kyuubi43, LIndy, Levone W., Jonathan Liu, Lockkaliber, Lord G, Lord Rayek, Lothvarthian Malik, Lukas Vystup, Luke Arrowsmith, Magmanox, Majushi, Mario Mueller, Mark Walrusburg, Martino Livio Martinello, Mason Davis, Matt Sullivan, Matthew Young, Michael Klepper, Michael McPherson, Michael O'Hara, Michael, Mike M., Mike Orlando, MinoCrossing, Miran, Mitchell Goodwin, Monky of Space, Morten Brunebjerg Hansen, Myers, N Metso, Naintoxe, Nairolf, Nathan S, Neo Savoric, Niels T, NugLord, Number37, Nym Nemo, Oliver Pirie, Oscar Lan, PS, Passionately Odd Syntax, Patrick Fochler, Patrick, Paul Allen, Peter Grnlykke, Professor Snape, PuddingPowder, Pel-Tore, Rabe, Raglan Strom, Randolph Carter, Random, Reaver78, Rekoar, Reny Frederiksen, Richard Buettner, RickRub, Rightmind, Rob, Robert Doughty, Robert Simmons, Rodrigo Das Flores, Rune Daugaard Lundsteen, Runkle, Russell, SJ M, SYukito, Sane 300, Sayting, Sinedd, Scorch289, Sean Carstensen, Sebastian Tauch, Sehad, Shane Fitzsimons, Shawn Aiken, Skellman, Skull616, SlaveToTheSound, Smaug, Some Guy, Steffen Nissen, Stephen Krieger, Steve Jones, Steven Cunningham, Syr, TGriz, Talon Grant, Teemu, Thae, The Masked Masturbator, This Isntmahname, Thomas Frobish, Thomas Grimes, Thomas Vazquez, Timmothy Firewood, Tom Arne Vestby2, Tony Taylor, Tony Veliz, Truvor, Tuki, Tyler, Venron, Vervalsen, Vi9, Visp, Wanderer, Weenie Beenie, Wesley Gamble, XDrakeX, Xev, YummyTiger, Yuu Yi, Zach Rzepiela, Zakmonster, Zeath, Zenzard, Zim outside, Zoggy, alvin suryaputra, am1tg3, andrew gardiner, artisticMink, barry r king, bloodangel99, butts, caleb4532, charles turnbull, cvonsuela28, dingo egret, dingo1489, eXotic, fernando frias, gliph13, ippherita, izys, jabix, jassem dashti, john smith, josiah richter, karkazin, kyle mock, lia sven, lucas2684, n1ghtfox, nobody, potatohead, progste, randellspec, retchedegg, robster, silvarius2000, srt20022003, strider19, tehcalipwnt, terribleplan, thegreatbambe, timmy turner, varoksa, xenus, ziric.{/color}{/size}\n\n{/cps}"
-    
+
     #nvl clear
     centered "{cps=70}{size=-1}{color=#e5e297}-\"ACTIVIST\" pledges-{/size}\n
     {size=-4}{color=#cbcbcb}Adam, Alvin, AmateurArtist98, Anders Sandahl, Naqqash Chaudhry, Andre, Andrew E., Bayushi, Ben Belcastro, Brandon Louie, Brandon Robinet, Brian Wilson, Carmen Williams, Chad Bennett, Dan George, Darklogic, Darknezzz, Dave Shevlin, David Crosby, David Sparkes, Douglas Jones, Draconic Paragon, DragonTamer, Ervin, Francis Dixson, Fredinator, Gene Boglin, George Craig, Greg, Guillaume Mroz, Gustaf Johansson, Hirin, Ian Lindop, IanDasein, Inge, Izzy Sabur, JBTClown, JP, Jack, Jacob Kain, Jan Hanenkamp, Jan M., Jan, Johannes Uwer, John Turner, Joshua Baadsgaard, KiSwordsman, Krux2022, L, Legio 20th, Marconi Ribeiro, Mike, Marius L, Mathias Frandsen, Matthew Marqueta, Max, Michael Webb, Miha Antauer, Mikhail V. Platonov, Mitch, Mountainj6, MrDurper, Sean Hill, Sam, Muirewedd, Neogeta, Nick Foronda, Nick, Noah Gerhards, Oren Barzilai, Pashike, Peeves, Phil Fairbanks, Philip G Honore, Riu Bas, Robert, Reinis Aleksejevs, Rougespartan181, Robert Lesundak, SO, SYH, Sacs, Sapherin, Sayyid, Sean, Shawn MacInnis, Simanith, Soda Zero, Speculations, Stephen Evans, Stonedrake, TRONboy, Tamenund Jones, Tintron, Victor Jd, Vincent McCool, Vitaliy Kasianenko, Vorcai0, Wolfcub, X.p., X39, Yan Luong, Zaker, chippy, joesco726, kurorol2, lambroll, ljennia, matthew lampell, moonwalkin, nh, raaq, six2make4, zack, Andry Sidorov.{/color}{/size}\n\n
-              
-              
-              
-    
+
+
+
+
     {size=-1}{color=#e5e297}-\"SUPPORTER\" pledges-{/size}\n
     {size=-4}{color=#cbcbcb}AS84, Aaron Gregory, Gianfranco Calzoni, Aarvil Kemph, Aestus, Alex Martin, Andrea, Andreas, Andrew, Antilles, Antonboeg, Aran, Armando Soto, Azuliar, Batman, Balint Sule, Ben Rog-Wilhelm, Benjamin Cathey, Beth, Brad Hingston, Brandon Grant, Brendan, Brian Borden, Bru, Canyon, Capperroff, Chaintan, Christian Wong, Colton Clayton, Corey S., D, Damian Paradis, Daniel Chai, Daniel Geach, Daniel, Danny Mullay, Darpy, Dave doedry, David Leitner, Dax, Doctor Worm, Dragonman, Edd Holmes, Erebe, Eric Speaker, Fattycakes, FearTheDee, FeyOne, Filip Jaromin, Florian Eberle, FooldiverDX, Fortifel, Frank Bull, G V, Gaetano, Gary Tinsley, Gerald, Gerald, Gerhalt, Gregoire Fauconnier, Gregory, Happy Days, Hellomellowyellow, Hurf durf, Ian Sayer, Ilya, Ivan Nadasaki, J Solomon, Jack Simons, Jack Trebles, James Brown, James Do, Jan-Kristoffer Brekke, Jayro Zipzapili, Jesse Doerksen, Jim, John Jon'zz, John Smith, Jonas Högman, Jose Gonzalez, Joshua West, Julian Silva, KC maps, Kabuto, Kasper Nohr, Kenny Bailey, Kevin McKie, Kuroguma, Lanthanio, Louie Castro, MaiconMM, Majinken, Malcom Reynolds, Marc Voigt, Marcel Muller, Marius Thomassen, MarkAurel, Martin Ax, Matri, Matt, Matthew Lam, Max Robitzsch, MehMonkeys, MercuryTwins, Messor Marra, Michael Troseth, Michael, Michael, Michael, Mike Bow, Mike Jones, Mike Moperz, Mikhail, N0body, NalfeinDoUrden, Nate A, Nicholas Alan McGuire, Nikuss, Nils Harder, Nitrat, Nordicberserk, Notsutos, Oberon, Onyxdime, Oxion1988, Ozzy, Paradosi, Pasi Huttunen, Patrick Gill, Paul Coad, patrick welsh, Paul, Pshenitsyn, PeeM, Peter Nikolas, Peter Ryskin, Pitt85, Preator, Pulimanne, Randall Lively, Richard Dumont, Richard Heying, Richard Soderberg, Riley Heffernan, Robert Bodo, Robert Davis, Rodrigo Rosado, Ronald, Roy Zimmermann, Ryan Bossard, Ryan Calhoun, Salvadore Broadfoot, Scott Barrie, Sebastien Elie, Sebastien Jalbert, SgtAfro, Shadefalcon, Stefano Sottocorna, SilverAxe, Sixxiie, Sky Valverde, Sodajuice, Steffen Sloth, TK, TP Samblanet, Taylor Patton, Taylor, Tenebrys Hentai Flash Games, Matthew Pruter, John Stanko, craig chadwick, TheOriginalJ, Thomas, Timeyy, Tony Li, TonyNinja, Tracy Scops, Travis Haapala, TrikJoker, Tyler Jones, Tyson, Urza Viderico, VC, Vasder, Vay Jay, Victor Sarosi, Warren P Nelson, Wayne Chattillon, William Farris, William Golding, Wlodzimierz Donatowicz, Xaljio, Xisis, brett, bronzeRanger, clerk4470, ghosti1, gillen, ismael torres, jaron uecker, levi tibbals, oakland, otakuguy01, rip_cpu, severin, sirpoffalot, teh_cabbage, tenko, trajor white, wilhelm, winsloven, Arkadii Terentiev, xxx, DAHR.{/color}{/size}\n\n
-              
+
     {color=#e5e297}{size=-4}-\{Thank you, Joseph Antoni, for organizing all these 750+ names for me.\}-{/size}{/color}{/cps}"
-              
-              
-              
-              
-              
-              
+
+
+
+
+
+
     pause 1
-    
+
     show screen ctc
-    pause 
+    pause
     hide screen ctc
     show screen blkfade
     with d9
@@ -3369,7 +3369,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     ">................................{w}...........................{w}................................."
     pause.5
     centered "{size=+7}{color=#cbcbcb}The morning after...{/color}{/size}"
-    
+
     hide screen end_u_1                                           #<---- SCREEN
     hide screen end_u_2                                           #<---- SCREEN
     hide screen end_u_3                                           #<---- SCREEN
@@ -3389,18 +3389,18 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     hide screen cloud_night_02 #NIGHT CLOUDS.
     hide screen cloud_night_03 #NIGHT CLOUDS.
     hide screen bld1 #You know what this is. Just making sure it doesn't get stuck.
-     
-    show screen new_window # CLEAR WEATHER.
-    
-    hide screen room_night #Hiding NIGHT BG from last night.
-    show screen room #Showing main room BG. 
 
-    hide screen door   
+    show screen new_window # CLEAR WEATHER.
+
+    hide screen room_night #Hiding NIGHT BG from last night.
+    show screen room #Showing main room BG.
+
+    hide screen door
     hide screen cupboard
     hide screen chair
     hide screen fireplace
     hide screen phoenix
-    hide screen candle_01    
+    hide screen candle_01
     hide screen candle_02
     hide screen genie
     hide screen owl
@@ -3408,43 +3408,43 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     hide screen with_snape #Genie hangs out with Snape in front of the fireplace.
     hide screen with_snape_animated #Genie hangs out with Snape in front of the fireplace.
 
-        
-    show screen door   
+
+    show screen door
     show screen cupboard
     show screen chair
     show screen fireplace
     show screen phoenix
-    show screen candle_01    
+    show screen candle_01
     show screen candle_02
     show screen dumbledore
 
     hide screen blkfade
     with d9
-    
+
     show screen ctc
     pause
     hide screen ctc
-    
+
     show screen bld1
     with d3
     dum "................................"
     hide screen bld1
     with d3
-    
-    
+
+
     if public_whore_ending: # PUBLIC WHORE ENDING
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
         $ snape_speed = 02.0 #The speed of moving the walking animation across the screen.
         $ walk_xpos=470 #Animation of walking chibi. (From)
         $ walk_xpos2=360 #Coordinates of it's movement. (To)
-        show screen snape_walk_01 
+        show screen snape_walk_01
         with d3
         pause 1.5
         show screen snape_02 #Snape stands still.
         pause.1
         show screen bld1
         with Dissolve(.3)
-        
+
         play music "music/Dark Fog.mp3" fadein 1 fadeout 1 # SNAPE'S THEME
         dum "Good morning, Severus."
         $ s_head_xpos = 330 # x = 330,                                                                              # SNAPE
@@ -3452,17 +3452,17 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "......................................."
-        hide screen s_head2              
+        hide screen s_head2
         dum "I have the most extraordinary tale to share with you, old friend."
         $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "......................................"
-        hide screen s_head2     
+        hide screen s_head2
         dum "But before I do..."
         $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "........................................"
-        hide screen s_head2     
+        hide screen s_head2
         dum2 "Ehm... Severus?"
         $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
@@ -3470,46 +3470,46 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "Who rules?"
-        hide screen s_head2     
+        hide screen s_head2
         dum2 "I beg your pardon?"
         $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "Who rules?" # T_T
-        hide screen s_head2     
+        hide screen s_head2
         dum2 "...who rules what?"
         $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "A...?"
-        hide screen s_head2     
+        hide screen s_head2
         dum2 "A?"
         $ s_sprite = "01_hp/13_characters/snape/main/snape_27.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "Aka-a....?"
-        hide screen s_head2     
+        hide screen s_head2
         dum2 "You don't make any sense, Severus."
         $ s_sprite = "01_hp/13_characters/snape/main/snape_29.png"                                         # SNAPE
         show screen s_head2                                                                                                 # SNAPE
         sna "Ah, bloody hell..................."
-        hide screen s_head2     
+        hide screen s_head2
         pause.5
         show screen ctc
         pause
         hide screen ctc
         stop music fadeout 1.0
-        
+
         show screen blkfade
         with d7
         pause 2
-        
-        
-        
-        
-        
 
-        
-        
-    
-    else: # PERSONAL WHORE ENDING 
+
+
+
+
+
+
+
+
+    else: # PERSONAL WHORE ENDING
 
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
         call her_walk(610,400,3)
@@ -3518,7 +3518,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         pause.5
         show screen bld1
         with d3
-        
+
         show screen ctc
         pause
         hide screen ctc
@@ -3528,11 +3528,11 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         call her_head("Sir, if this is about yesterday...","body_120")
         #her "You wanted to see me, sir?"
         dum "Good morning, miss Granger."
-        call her_head("It's not like I actually enjoyed it or anything, you know...","body_79")  
+        call her_head("It's not like I actually enjoyed it or anything, you know...","body_79")
         dum "Miss Granger, I found this letter on my desk..."
         dum "It's addressed to you..."
         call her_head("A letter, sir?","body_15")
-        call her_head("Oh, of course! The one you wrote for me, sir.","body_24")  
+        call her_head("Oh, of course! The one you wrote for me, sir.","body_24")
         dum "This letter is not from me, miss Granger."
         call her_head("It is not?","body_17")
         call her_head("Oh, I see...","body_24")
@@ -3542,9 +3542,9 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         call her_head("Let's see....","body_73")
         stop music fadeout 7.0
         pause.1
-        
+
         $ letter_text = "{size=-7}To: Hermione Granger\n\n{/size}{size=-4}Dear [word_01]. \nI am not who you think I am... Not even human so to speak. For months now I have been posing as a person known to you as Professor Dumbledore. But it is time for me to go back [word_02]. By the time you will receive this letter I shall be long gone. We shall never cross paths again, but I promise you that I will cherish the memories of my brief time in your strange world. \n\nFarewell, my little [word_03]. {size=-3}\n\n-[word_04]-{/size}"
-        
+
         label last_letter:
         show screen letter
         show screen ctc
@@ -3553,22 +3553,22 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         pause
         menu:
             "-Done reading-":
-                pass    
+                pass
             "-Not yet-":
                 jump last_letter
         hide screen letter
         hide screen ctc
         hide screen bld1
         with Dissolve(.3)
-        
-        
-     
+
+
+
         show screen bld1
         with d3
-        call her_head(".............................................................................................................................................................","body_197")  
+        call her_head(".............................................................................................................................................................","body_197")
         dum "I assume the sender of this letter is that Genie fellow?"
         dum "The one who has been impersonating me for the past several months?"
-        call her_head(".............................................................................................................................................................","body_197")  
+        call her_head(".............................................................................................................................................................","body_197")
         dum "Well, now that I am back..."
         dum "I will be putting an end to all that \"favour-selling-business\" of course."
         call her_main("","body_86",xpos=370)
@@ -3606,32 +3606,32 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         call her_main("And I mean {size=+9}ANYTHING!!!{/size}","body_86")
         hide screen hermione_main
         with d3
-        
+
         hide screen bld1
         with d3
         $ walk_xpos=400 #Animation of walking chibi. (From)
         $ walk_xpos2=280 #Coordinates of it's movement. (To)
         $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
-        show screen hermione_walk_01 
+        show screen hermione_walk_01
         pause 1
         show screen blkfade
         with Dissolve(0.3)
-        $ renpy.play('sounds/08_hop_on_desk.mp3') #Sound of the desk squeaking. 
+        $ renpy.play('sounds/08_hop_on_desk.mp3') #Sound of the desk squeaking.
         pause.7
-        
+
         dum4 "Oh, dear... {image=textheart} "
         pause 1
-        
+
     $ renpy.play('sounds/win2.mp3')   #Not loud.
     centered "{size=+7}{color=#cbcbcb}-\{Thank you for playing!\}-{/color}{/size}\n\n
               {size=+1}{color=#cbcbcb}-AKABUR 2014-{/color}{/size}"
-    
+
     pause 2
-    
+
     $ persistent.game_complete = True # Turns TRUE after you beat the game. Unlocks the gallery.
-    
+
     # SILVER Items
-    
+
     # scroll invintory
     $ persistent.sscroll_ = []
     $ persistent.sscroll_ = sscroll_
@@ -3643,44 +3643,44 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     $ persistent.book_done = book_done
     $ persistent.books = []
     $ persistent.books = books
-    
-    
+
+
     if public_whore_ending:
         $ persistent.ending_02 = True # Unlocked ending 01.
     else:
         $ persistent.ending_01 = True # Unlocked ending 01.
-        
+
     $ persistent.gold = 0
     $ persistent.gold = persistent.gold + gold
-        
+
     ### THE SKIRT ###
     if gave_miniskirt: #Turns True when Hermione has the miniskirt.
         $ persistent.haveskirt = True # Makes sure you only need to buy the skirt once. Checked at the +new game screen.
-   
-    
+
+
     ### POSSESSIONS ###
-    
+
     $ persistent.lolipop = 0
     $ persistent.lolipop = persistent.lolipop + candy # LOLIPOP.
-    
+
     $ persistent.choco = 0
     $ persistent.choco = persistent.choco + chocolate # CHOCOLATE.
-                    
+
     $ persistent.owl = 0
     $ persistent.owl = persistent.owl + owl # PLUSH OWL.
-                
+
     $ persistent.beer = 0
     $ persistent.beer = persistent.beer + beer # BUTTERBEER
-                
+
     $ persistent.mag1 = 0
     $ persistent.mag1 = persistent.mag1 + mag1 #MAGAZINE # 1
-    
+
     $ persistent.mag2 = 0
     $ persistent.mag2 = persistent.mag2 + mag2 #MAGAZINE #  2
-    
+
     $ persistent.mag3 = 0
     $ persistent.mag3 = persistent.mag3 + mag3 #MAGAZINE # 3
-    
+
     $ persistent.mag4 = 0
     $ persistent.mag4 = persistent.mag4 + mag4 #MAGAZINE # 1
 
@@ -3690,37 +3690,37 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     $ persistent.lin = 0
     $ persistent.lin = persistent.lin + lingerie # LENGERIE.
 
-    $ persistent.con = 0 
+    $ persistent.con = 0
     $ persistent.con = persistent.con + condoms # CONDOMS.
-       
+
     $ persistent.vib = 0
     $ persistent.vib = persistent.vib + vibrator # VIBRATOR.
-        
+
     $ persistent.lube = 0
     $ persistent.lube = persistent.lube + anal_lube # Anal lubricant.
 
     $ persistent.gag = 0
     $ persistent.gag = persistent.gag + ballgag # BALL GAG.
-          
+
     $ persistent.plug = 0
     $ persistent.plug = persistent.plug + plug # ANAL PLUG.
-          
+
     $ persistent.strap = 0
     $ persistent.strap = persistent.strap + strapon # STRAP-ON.
-           
+
     $ persistent.broom = 0
     $ persistent.broom = persistent.broom + broom # BROOM.
-              
+
     $ persistent.doll = 0
     $ persistent.doll = persistent.doll + sexdoll  # SEX DOLL.
 
     $ persistent.wine = 0
     $ persistent.wine = persistent.wine + wine # WINE.
 
-            
-           
+
+
     ### SACRED SCROLLS ###
-    
+
     if sscroll_[1]:
         $ persistent.ss_01 = True # Sacred Scroll 01 will be unlocked in the gallery.
     if sscroll_[2]:
@@ -3741,7 +3741,7 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $ persistent.ss_09 = True # Sacred Scroll 09 will be unlocked in the gallery.
     if sscroll_[10]:
         $ persistent.ss_10 = True # Sacred Scroll 10 will be unlocked in the gallery.
-        
+
     if sscroll_[11]:
         $ persistent.ss_11 = True # Sacred Scroll 11 will be unlocked in the gallery.
     if sscroll_[12]:
@@ -3762,8 +3762,8 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $ persistent.ss_19 = True # Sacred Scroll 19 will be unlocked in the gallery.
     if sscroll_[20]:
         $ persistent.ss_20 = True # Sacred Scroll 11 will be unlocked in the gallery.
-            
-             
+
+
     if sscroll_[21]:
         $ persistent.ss_21 = True # Sacred Scroll 21 will be unlocked in the gallery.
     if sscroll_[22]:
@@ -3784,13 +3784,13 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
         $ persistent.ss_29 = True # Sacred Scroll 29 will be unlocked in the gallery.
     if sscroll_[30]:
         $ persistent.ss_30 = True # Sacred Scroll 12 will be unlocked in the gallery.
-        
-        
-        
-        
-        
-        
-        
 
-        
-        
+
+
+
+
+
+
+
+
+

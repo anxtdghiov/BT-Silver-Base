@@ -13,16 +13,16 @@ label start:
     scene black
     call select_start
     return
- 
+
 label after_load:
     $ init_variables()
     return
- 
-    
+
+
 init:
-    
+
     $ commentaries = False # In the GALLERY turns commentaries ON and OFF.
-    
+
     ### Disposable flags ###
     $ d_flag_01 = False
     $ d_flag_02 = False
@@ -35,18 +35,18 @@ init:
     $ d_flag_09 = False
 
     $ d_points = 0
-    
+
     ### MENU PLACEMENT ###
     $ menu_x = 0.5
-    
+
     $ who = Character('Female voice', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ whom = Character('Male voice', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     $ who2 = Character('???', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    
+
     $ aa = Character('AKABUR', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    
+
     $ teleport = ImageDissolve("id_teleport.png", 1.0, 0)
-    
+
     $ renpy.music.register_channel("bg_sounds", "sfx", True)
     $ renpy.music.register_channel("weather", "sfx", True)
 
@@ -82,7 +82,7 @@ init:
     $ black_magic = Fade(0.2, 0.0, 0.5, color='#7f3590')
     $ blackfade = Fade(0.9, 0.5, 1, color='#000000')
 
-    
+
     # MUSIC / SOUNDS
     $ galm = "music/GrapeSodaIsFuckingRawbyjrayteam6.mp3"
     $ JafarsHour = "music/JafarsHour.mp3"
@@ -98,8 +98,8 @@ init:
     $ title = "music/RollIntheLeaves.mp3"
     $ swat = "music/025SWAT.mp3"
     $ hemanmusic = "music/HeMan.mp3"
-    
-    
+
+
 ###TRANSITIONS###########
 define d1 = Dissolve(0.1)
 define d2 = Dissolve(0.2)
@@ -709,7 +709,7 @@ image whitefade = "interface/whitefade.png"
 image con1 = "interface/cont1.png"
 image blk50 = im.Alpha("interface/blackfade.png", 0.5)
 image blk50 = im.Alpha("interface/blackfade.png", 0.5)
-    
+
 image ctc3 = Animation("interface/ctc00.png", 0.2, "interface/ctc01.png", 0.2, "interface/ctc02.png", 0.2, "interface/ctc03.png", 0.2, "interface/ctc04.png", 0.5, "interface/ctc03.png", 0.2, "interface/ctc02.png", 0.2, "interface/ctc01.png", 0.2, xpos=0.97, ypos=0.929, xanchor=1.0, yanchor=1.0)
 image ctc4 = Animation("interface/ctc00.png", 0.2, "interface/ctc01.png", 0.2, "interface/ctc02.png", 0.2, "interface/ctc03.png", 0.2, "interface/ctc04.png", 0.5, "interface/ctc03.png", 0.2, "interface/ctc02.png", 0.2, "interface/ctc01.png", 0.2, xpos=0.99, ypos=0.995, xanchor=0.8, yanchor=1.0)
 image ctc7 = Animation("interface/ctc00.png", 0.2, "interface/ctc01.png", 0.2, "interface/ctc02.png", 0.2, "interface/ctc03.png", 0.2, "interface/ctc04.png", 0.5, "interface/ctc03.png", 0.2, "interface/ctc02.png", 0.2, "interface/ctc01.png", 0.2)
@@ -793,8 +793,8 @@ label masterstart2:
 
 
 
-    
-    
+
+
 
 image splash:
     "logo/logo00.jpg"
@@ -848,9 +848,9 @@ label splashscreen2:
 
     return
 
-    
 
-    
+
+
 
 
 

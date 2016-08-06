@@ -162,7 +162,7 @@ label rcement:
             hide screen hermione_main
             $ h_body = "03_hp/13_hermione_main/rcement/13_bukkake.png"
             show screen hermione_main
-            
+
         "-cum outside-":
             $ bukkake = 1
             "-you start hosing her down with semen-"
@@ -218,7 +218,7 @@ label rcement:
     m "Miss Granger?"
     her "Yes?"
     m "Might you be interested in earning more points at some point?"
-    
+
     hide screen hermione_main
     $ badges = True
     $ only_upper = False

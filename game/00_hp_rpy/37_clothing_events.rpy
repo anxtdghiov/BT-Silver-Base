@@ -25,7 +25,7 @@ label equip_jeans:
        call her_main("But they're not part of the school uniform... I'd get suspended... I don't have permission!","body_18")
        m "I'm the head master, [hermione_name]. I'm giving you permission"
        m "15 points?"
-       call her_main("............")   
+       call her_main("............")
        call her_main("... How on earth am I going to explain this to my classmates?","body_21")
        show screen bld1
        with d3
@@ -64,7 +64,7 @@ label equip_jeans:
        with d3
        pause
        call her_main("","body_01",xpos=410)
-    elif whoring >= 9 and whoring <= 15: 
+    elif whoring >= 9 and whoring <= 15:
        call her_main("Jeans?","body_02")
        m "Yup"
        call her_main("Aren't they a little... plain?","body_66")
@@ -89,7 +89,7 @@ label equip_jeans:
        call her_main("(ahh... i thought about it again... naughty [hermione_name]!)","body_188")
        g9 "....."
        call her_main("","body_188",xpos=410)
-    elif whoring > 15: 
+    elif whoring > 15:
         call her_main("...Jeans?","body_02")
         m "Yup"
         call her_main("*sigh*...are you serious?","body_04")
@@ -119,9 +119,9 @@ label equip_jeans:
         call her_main("If you still have time, [genie_name], we could test how long it takes to get out of these things?","body_205")
         g9 "(I love my job)"
         call her_main("","body_209",xpos=410)
-    
+
     jump day_request_clothing
-    
+
 ### Gryffindor Stockings ###
 label equip_gryyf_stockings:
     if whoring < 3:
@@ -156,12 +156,12 @@ label equip_gryyf_stockings:
        call her_main("Thanks again, [genie_name]! You're too kind","body_01",xpos=410)
        g9 "(We'll see)"
        $ request_gryyf_stockings = True
-    
+
     elif whoring >= 3 and whoring <= 6:
-    
+
        $ hermione_wear_skirt = True
        $ hermione_wear_top = True
-       
+
        call her_main("Is that...","body_11")
        $ hermione_emote_exclam = True
        call her_main("A pair of Gryffindor stockings!?","body_48")
@@ -248,7 +248,7 @@ label equip_gryyf_stockings:
                 call her_main("(phew. why does it feel like a dodged a bullet, though?)","body_209")
                 $ hermione_emote_hearts = False
                 $mad = 0
-            
+
             "Cute is boring. Break her.":
                m "That was certainly adequate, [hermione_name]..."
                call her_main("(Adequate...?)","body_81",xpos=120)
@@ -289,7 +289,7 @@ label equip_gryyf_stockings:
                $mad += 55
                ">With tears rolling down her soft cheeks, Hermione begins to unzip her skirt"
                ">Her trembling hands make it difficult just to keep hold of the zipper"
-               ">Eventually she gets it, and after hooking her thumb over her panties, she lowers the rest of her dignity to the floor"    
+               ">Eventually she gets it, and after hooking her thumb over her panties, she lowers the rest of her dignity to the floor"
                $ hermione_wear_skirt = False
                #$ h_request_wear_panties = False
                call update_her_uniform
@@ -401,7 +401,7 @@ label equip_gryyf_stockings:
                $ hermione_wetpanties = True
                $ dribble_equippable = True
                $ wetpanties_equippable = True
-       
+
        hide screen blktone
        hide screen bld1
        hide screen hermione_main
@@ -411,7 +411,7 @@ label equip_gryyf_stockings:
        $ request_gryyf_stockings = True
        ">Gryffindor stockings now equip-able!"
        #call reset_hermione_main
-       
+
        jump end_hg_pf
-    
+
     jump day_request_clothing

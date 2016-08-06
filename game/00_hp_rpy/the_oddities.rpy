@@ -3,7 +3,7 @@ label __init_variables:
         $ shop_found = False
     if not hasattr(renpy.store,'sscroll_'): #important!
         $ sscroll_ = [False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False]
-    
+
     $ scroll_name = []
     $ scroll_name.append("null")
     $ scroll_name.append("The room")
@@ -37,7 +37,7 @@ label __init_variables:
     $ scroll_name.append("New clothes 02")
     $ scroll_name.append("The gang")
     return
-    
+
 label shop_intro:
     show screen shop_screen
     if shop_found:
@@ -81,13 +81,13 @@ label shop_intro:
         m "Just making sure that there isn't a cheaper alternative."
         sna_[1] "There isn't, now are you going to buy anything or not?"
         jump shop_menu
-    
+
 label shop_menu:
     show screen shop_screen
     call screen shop_screen
-    
-    
-    
+
+
+
 label sscrolls:
     show screen shop_screen
     menu:
@@ -138,7 +138,7 @@ label sscrolls:
             jump sscrolls
         "-Never mind-":
             jump shop_menu
-    
+
 label sscrolls2:
     show screen shop_screen
     menu:
@@ -189,7 +189,7 @@ label sscrolls2:
             jump sscrolls2
         "-Never mind-":
             jump shop_menu
-    
+
 label scroll_block(scroll_id, scroll_cost):
     $ the_gift = "01_hp/18_store/31.png" # SACRED SCROLL.
     show screen gift
@@ -213,8 +213,8 @@ label scroll_block(scroll_id, scroll_cost):
         "-Never mind-":
             hide screen gift
             return
-    
-    
+
+
 label shop_books:
     show screen shop_screen
     sna_[1] "What type of book would you like?"
@@ -242,7 +242,7 @@ label shop_books:
                 else:
                     call purchase_book(result)
         "-Fiction books-":
-            sna_[1] "These books are mostly light erotica..." 
+            sna_[1] "These books are mostly light erotica..."
             sna_[20] "Some of the girls insisted that I order them in."
             label fiction_menu:
                 python:
@@ -263,7 +263,7 @@ label shop_books:
                     call purchase_book(result)
         "-Never mind-":
             call screen shop_screen
-    
+
 label purchase_book(BookOBJ):
     $ the_gift = BookOBJ.picture
     show screen gift
@@ -290,8 +290,8 @@ label purchase_book(BookOBJ):
         "-Never mind-":
             hide screen gift
             return
-    
-    
+
+
 label shop_potion_menu:
     show screen shop_screen
     menu:
@@ -313,7 +313,7 @@ label shop_potion_menu:
                     m "Do you know where I can find \"Niffler's Fancy\""
                     sna_[6] "hmm i think i heard that it's found by the lake"
                     jump shop_potion_menu
-                
+
         "{color=#858585}-Polyjuice Potion-{/color}" if whoring < 5:
             call cust_excuse("Hermione mus be \"Trained\" more before you can purchase this.")
             call screen shop_screen
@@ -376,8 +376,8 @@ label shop_potion_menu:
                     call screen shop_screen
         "-Never mind-":
             call screen shop_screen
-    
-    
+
+
 label gifts_menu:
     python:
         choices = []
@@ -388,14 +388,14 @@ label gifts_menu:
                 choices.append( ( ("-"+str(i.name)+"- ("+str(i.cost)+" g.)"), i) )
         choices.append(("-Never mind-", "nvm"))
         result = renpy.display_menu(choices)
-        
+
     if result == "nvm":
         jump shop_menu
     elif result == "oos":
         call out
     else:
         call object_gift_block(result)
-    
+
 label object_gift_block(item):
     $ the_gift = item.image
     show screen gift
@@ -416,7 +416,7 @@ label object_gift_block(item):
         "-Never mind-":
             hide screen gift
             call gifts_menu
-            
+
 label object_purchase_item(item, quantity):
     $ order_cost = quantity * item.cost
     $ days_in_delivery2 = renpy.random.randint(1, 5)
@@ -437,8 +437,8 @@ label object_purchase_item(item, quantity):
     else:
         call no_gold #Message: m "I don't have enough gold".
         jump gifts_menu
-    
-    
+
+
 label app:
     menu:
         "-\"S.P.E.W.\" badge (100 gold)-" if not badge_01 == 7:
@@ -485,7 +485,7 @@ label app:
                         jump app
                 "-Never mind-":
                     hide screen gift
-                    jump app            
+                    jump app
         "-Fishnet stokings (800 gold)-" if not nets == 7:
             $ the_gift = "01_hp/18_store/30.png" # FISHNETS.
             show screen gift
@@ -565,9 +565,9 @@ label app:
                     jump app
         "-Never mind-":
                 jump shop_menu
-    
-    
-    
+
+
+
 ### ALREADY HAVE THIS BOOK
 label do_have_book:
     show screen bld1
@@ -576,7 +576,7 @@ label do_have_book:
     hide screen gift
     with d3
     return
-    
+
 ### THANK YOU FOR shopping here.
 label thx_4_shoping:
 
@@ -590,21 +590,21 @@ label thx_4_shoping:
         hide screen gift
         with d3
         return
-    
+
 ### THANK YOU FOR shopping here. IMMEDIATE DELIVERY.
 label thx_4_shoping2:
     dahr "Thank your for shopping at \"Dahr's oddities\"."
     hide screen gift
     with d3
     return
-    
+
 ### NOT ENOUGH GOLD ###
 label no_gold:
     m "I don't have enough gold... This is depressing..."
     hide screen gift
     with d3
     return
-    
+
 ### ITEM IS OUT OF STOCK ###
 label out:
     show screen bld1
@@ -613,4 +613,4 @@ label out:
     hide screen bld1
     with d3
     jump gifts_menu
-    
+

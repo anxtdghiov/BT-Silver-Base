@@ -41,7 +41,7 @@ label door:
                     ".............................."
                     hide screen blktone8
                     with d3
-                    m "This door could take a thousand kicks like that and it still wouldn't break..." 
+                    m "This door could take a thousand kicks like that and it still wouldn't break..."
                     m "It doesn't look like it's locked though..."
                     jump examining_the_door
                 "-Leave it alone-":
@@ -62,7 +62,7 @@ label door:
                 m "I would almost certainly get lost without a map"
                 m "Maybe there is one hidden somewhere in this room"
                 jump day_main_menu
-                
+
         "{color=#858585}-Summon Hermione-{/color}" if summoning_hermione_unlocked and hermione_takes_classes or hermione_sleeping:
             if hermione_takes_classes:
                 show screen bld1
@@ -81,7 +81,7 @@ label door:
                 hide screen bld1
                 with d3
                 jump night_main_menu
-        
+
         "-Summon Hermione-" if summoning_hermione_unlocked and not hermione_takes_classes and not hermione_sleeping:
             if hermione_takes_classes:
                 show screen bld1
@@ -97,18 +97,18 @@ label door:
                 hide screen bld1
                 with d3
                 jump night_main_menu
-                
+
             else:
                 call update_her_uniform
-                
-                #play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+
+                #play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
                 #stop music fadeout 2.0
-                
+
                 $ menu_x = 0.2 #Menu is moved to the left side.
-                
+
                 $ hermione_xpos = 410+140
                 $ hermione_ypos = 0
-                
+
                 $ renpy.play('sounds/door.mp3') #Sound of a door opening.
                 $ hermione_chibi_xpos = 400+140 #Near the desk.
                 show screen hermione_blink #Hermione stands still.
@@ -137,7 +137,7 @@ label door:
                     ">Hermione hates your guts."
                 else:
                     call her_main("Yes, [genie_name]?","body_01")
-                
+
                 label day_time_requests:
                 menu:
                     "-Talk-":
@@ -148,36 +148,36 @@ label door:
                                 if mad <= 7:
                                     jump chit_chat
                                 else:
-                                    her "I have nothing to say to you sir..."    
+                                    her "I have nothing to say to you sir..."
                                     jump hermione_talk
-                            
+
                             "-Working-":
                                 label working_menu:
                                 menu:
                                     "-Work as a maid-" if g3.inv.outfit["maid"] == True and daytime:
                                         jump job_1
-                                        
+
                                     "{color=#858585}-Work as a maid-{/color}" if not daytime and g3.inv.outfit["maid"] == True:
                                         "This job is only available during the day."
                                         jump working_menu
-                                    
+
                                     "-Work as a cheerleader for Gryffindor-" if daytime and g3.inv.outfit["gryffindor_cheerleader"] == True:
                                         jump job_3
-                                    
+
                                     "{color=#858585}-Work as a cheerleader for Gryffindor-{/color}" if not daytime:
                                         "This job is only available during the day."
                                         jump working_menu
-                                    
+
                                     "-Work as a cheerleader for Slytherin-" if daytime and g3.inv.outfit["slytherin_cheerleader"] == True:
                                         jump job_4
-                                    
+
                                     "{color=#858585}-Work as a cheerleader for Slytherin-{/color}" if not daytime:
                                         "This job is only available during the day."
                                         jump working_menu
-                                          
+
                                     "-Never mind-":
-                                        jump hermione_talk     
-                            
+                                        jump hermione_talk
+
                             "-Address me only as-":
                                 menu:
                                     "-Sir-":
@@ -240,7 +240,7 @@ label door:
                                             jump genie_change_fail
                                     "-Never mind-":
                                         jump hermione_talk
-                            
+
                             "-From now on I will refer to you as-":
                                 menu:
                                     "-Miss Granger-":
@@ -303,10 +303,10 @@ label door:
                                             jump hermione_change_fail
                                     "-Never mind-":
                                         jump hermione_talk
-                            
+
                             "-Never mind":
                                 jump day_time_requests
-                    
+
                     "-Tutoring-" if not daytime:
                         if mad >=1 and mad < 3:
                             her "I'm sorry, maybe tomorrow..."
@@ -320,7 +320,7 @@ label door:
                             jump day_time_requests
                         else:
                             jump l_tutoring_check
-                    
+
                     "-Buy sexual favours-" if buying_favors_from_hermione_unlocked:
                         if mad >=1 and mad < 3:
                             her "I'm sorry, [genie_name], Maybe some other time..."
@@ -345,19 +345,19 @@ label door:
                             jump day_time_requests
                         else:
                             jump silver_requests
-                    
+
                     "-Inventory-":
                         call her_main("",xpos=410)
                         call screen wardrobe
 
-                        
+
 #                    "-Ending \"Your whore\"-":
 #                        jump your_whore
-#                        
+#
 #                    "-Ending \"Public whore\"-":
 #                        $ public_whore_ending = True #If TRUE the game will end with "Public Whore Ending".
 #                        jump your_whore
-                    
+
                     "-Dismiss her-":
                         $ menu_x = 0.5 #Menu position is back to default. (Center).
                         if daytime:
@@ -370,7 +370,7 @@ label door:
                                 her "Oh, alright. I will go to classes then."
                             hide screen bld1
                             hide screen hermione_main
-                            hide screen blktone 
+                            hide screen blktone
                             hide screen hermione_blink
                             hide screen ctc
                             with d3
@@ -384,41 +384,41 @@ label door:
                                 her "Oh, alright. I will go to bed then."
                             hide screen bld1
                             hide screen hermione_main
-                            hide screen blktone 
+                            hide screen blktone
                             hide screen hermione_blink
                             hide screen ctc
                             with d3
                             $ hermione_sleeping = True
                             jump night_main_menu
-                            
+
         "{color=#858585}-Summon Snape-{/color}" if hanging_with_snape and snape_busy:
             ">Professor Snape is unavailable."
             if daytime:
                 jump day_main_menu
-            else: 
+            else:
                 jump night_main_menu
-            
+
         "-Summon Snape-" if hanging_with_snape and not snape_busy:
             play music "music/Dark Fog.mp3" fadein 1 fadeout 1 # SNAPE'S THEME
             jump summon_snape
         "-Never mind-":
             jump day_main_menu
-    
+
 label genie_change:
     call her_main("Ok, from now on I'll call you [genie_name]","body_01")
     jump hermione_talk
-    
+
 label genie_change_fail:
     call her_main("I'm not calling you that!","body_30")
     jump hermione_talk
-    
+
 label hermione_change:
     call her_main("Fine, call me whatever you want [genie_name]","body_01")
     jump hermione_talk
-    
+
 label hermione_change_fail:
     call her_main("I'm not letting you call me that!","body_30")
     jump hermione_talk
-    
+
 
 

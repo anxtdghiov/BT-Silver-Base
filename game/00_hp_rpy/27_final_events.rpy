@@ -1,16 +1,16 @@
 
 #hermione asks genie about who will be in-charge of the ball
 label want_to_rule:
-    
+
     $ event_chairman_happened = True #Turns True after an event where Hermione comes and says that she wants to be in the Autumn Ball committee.
-    
+
     call hg_event_EnterRoom_block
-    
+
     hide screen hermione_main
     with d3
     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-    
+
     #her "Professor Dumbledore?"
     call her_main("[genie_name]?","body_15")
     m "Miss Granger, how can I help you?"
@@ -39,14 +39,14 @@ label want_to_rule:
                 call her_main("Thank you, sir.","body_06")
             m "There is one condition, though..."
             call her_main("A conditions, sir?","body_07")
-            
+
             $ d_flag_04 = False
             label no_sleeping_with_professor:
                 pass
             $ d_flag_01 = False
             $ d_flag_02 = False
             $ d_flag_03 = False
-            menu:  
+            menu:
                 m "..."
                 "\"Show me your tits first.\"":
                     $ mad += 9
@@ -81,19 +81,19 @@ label want_to_rule:
                     m "Got it. Let's just forget I said anything."
                     call her_main("{size=-5}(I wish I could...){/size}","body_141")
                     jump no_sleeping_with_professor
-    
-                    
-                    
-                    
-       
+
+
+
+
+
                 "\"Never mind. the Position is yours.\"":
                     hide screen hermione_main                                                                                                                                                                                 #HERMIONE
-                    with d3         
-                    show screen blkfade 
+                    with d3
+                    show screen blkfade
                     with d5
                     pause.7
                     pass
-    
+
 
             if d_flag_01 or d_flag_02 or d_flag_03:
                 call her_main("What?!","body_14")
@@ -128,7 +128,7 @@ label want_to_rule:
                 call her_main("I must do this. Everyone depends on me.","body_120")
                 call her_main("Just give me a second please...","body_128")
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
-                with d5   
+                with d5
                 m "............"
                 if d_flag_01: # SHOW ME TITS
                     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
@@ -146,10 +146,10 @@ label want_to_rule:
                     pause
                     show screen bld1
                     with d3
-                    
+
                     $ lift_shirt = True
                     $ badges = False
-                    
+
                     call her_main("","body_82")
                     show screen ctc
                     pause
@@ -161,18 +161,18 @@ label want_to_rule:
                     pause
                     hide screen ctc
                     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
-                    with d5   
-                    show screen blkfade 
+                    with d5
+                    show screen blkfade
                     with d5
                     pause.7
                     $ lift_shirt = False
                     $ badges = True
                 elif d_flag_02: # SHOW ME PUSSY
                     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
-                    
+
                     $ skirt_up = True
                     $ panties = False
-                    
+
                     hide screen blkfade
                     with d3
                     hide screen bld1
@@ -187,14 +187,14 @@ label want_to_rule:
                     pause
                     show screen bld1
                     with d3
-            
-                    
+
+
                     call her_main("","body_60")
-                    
+
                     show screen ctc
                     pause
                     hide screen ctc
-                    
+
                     her ".............................."
                     with hpunch
                     g4 "What are you doing, girl?!"
@@ -211,30 +211,30 @@ label want_to_rule:
                     pause
                     hide screen ctc
                     hide screen hermione_main                                                                                                                                                                                 #HERMIONE
-                    with d3         
-                    show screen blkfade 
+                    with d3
+                    show screen blkfade
                     with d5
                     pause.7
                     $ skirt_up = False
                     $ panties = True
-                
+
                 elif d_flag_03: # STRIP NAKED
                     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
                     # (Hermione locks the door).
                     hide screen bld1
                     with d3
                     pause.3
-                    
-                    
+
+
                     #Walks to the door
                     call her_walk(400,650,2)
                     show screen hermione_stand_f
-                    
+
                     #Locks the door
                     pause.5
                     $ tt_xpos=670
                     $ tt_ypos=200
-                    show screen thought 
+                    show screen thought
                     with Dissolve(.3)
                     pause.5
                     hide screen thought
@@ -243,7 +243,7 @@ label want_to_rule:
                     pause.4
                     show screen ctc
                     pause
-                    
+
                     #Returns from the door
                     m "??!"
                     hide screen hermione_stand_f
@@ -252,8 +252,8 @@ label want_to_rule:
                     show screen hermione_blink #Hermione stands still.
                     show screen bld1
                     with d3
-                    
-                    
+
+
                     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
                     $ h_ypos=0
                     call her_main("Just in case...","body_69")
@@ -265,27 +265,27 @@ label want_to_rule:
                     m ".........................."
                     ">Hermione is taking her clothes off, one piece after another..."
                     ">Vest, shirt, her skirt and finally... the panties."
-                    
+
                     #$ only_upper = True
-                    
-                    
+
+
                     hide screen hermione_main
                     $ badges = False # Turns off badges layer.
                     $ wear_shirts = False
                     $ wear_skirts = False
-                    
+
                     $ hermione_chibi_xpos = 310 # Default 360
                     #$ hermione_chibi_ypos = 210
-                    $  h_c_u_pic = "01_hp/16_hermione_chibi/01.png" #Hermione naked. 
-                    show screen h_c_u 
-                    
+                    $  h_c_u_pic = "01_hp/16_hermione_chibi/01.png" #Hermione naked.
+                    show screen h_c_u
+
                     hide screen blkfade
                     with d7
                     show screen ctc
                     pause
                     hide screen ctc
-                    
-                    
+
+
                     #add h_c_u_pic at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
                     g9 "Ni-i-i-ce!"
                     call her_main("","body_105")
@@ -294,10 +294,10 @@ label want_to_rule:
                     hide screen ctc
                     her "*Sob!*"
                     m "Huh?"
-                    
+
                     $ display_h_tears = True
                     $ u_tears_pic = "01_hp/13_hermione_main/tears_01.png"
-                    
+
                     call her_main("Oh, please, don't mind me, sir.","body_107")
                     call her_main("Just enjoy the... {w}the... {w}the view...","body_105")
                     m "Are you... crying?"
@@ -310,7 +310,7 @@ label want_to_rule:
                     call her_main("Please keep on looking at my naked body... *Sob!*","body_104")
                     g4 "(What the...?)"
                     call her_main("Sir, I am begging you!","body_191")
-                    m "Kind of sounds like an order--"       
+                    m "Kind of sounds like an order--"
                     call her_main("I need it!","body_192")
                     her "...I need to shamelessly present my naked body before you like this!"
                     m ".............?"
@@ -334,46 +334,46 @@ label want_to_rule:
                     hide screen ctc
                     m "Just put your clothes back on, Miss Granger. You're making me feel uncomfortable."
                     call her_main("As you wish, sir...","body_103")
-                    
+
                     show screen ctc
-                    pause 
+                    pause
                     hide screen ctc
-                    
+
                     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
                     with d3                                                                                                                                                                                                                        #HERMIONE
-                    
+
                     show screen ctc
-                    pause 
+                    pause
                     hide screen ctc
-                    
+
                     $  u_tears_pic = "01_hp/13_hermione_main/tears_03.png"
-                    show screen blkfade 
+                    show screen blkfade
                     with d5
                     pause.7
-                
-                    
-                    
-                    
-                    
-                    
-                             
-                        
-                    
-                    
-                    
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.             
-                    
+
+
+
+
+
+
+
+
+
+
+
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
+
     $ hermione_chibi_xpos = 360 # Default 360
     show screen hermione_blink #Hermione stands still.
     hide screen blkfade
     with d5
-    
+
     $ badges = True
     $ wear_shirts = True
     $ wear_skirts = True
-    
+
     show screen ctc
-    pause 
+    pause
     hide screen ctc
     show screen bld1
     with d3
@@ -386,8 +386,8 @@ label want_to_rule:
     m "By all means, Miss Granger. Have a nice day."
     hide screen hermione_main
     hide screen bld1
-    with d3 
-    
+    with d3
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
@@ -404,25 +404,25 @@ label want_to_rule:
     $ days_without_an_event = 0
 
     $ display_h_tears = False
-    
+
     call music_block
-    
+
     return
-    
+
 #==========================
 
 #snape confronts genie about his ABOC decision
 label against_the_rule:
     play music "music/Dark Fog.mp3" fadein 1 fadeout 1 # SNAPE'S THEME
-    
+
     $ snape_against_chairman_hap = True # Turns TRUE after Snape comes and complains that appointing Hermione in the Autumn Ball committee was a mistake.
     $ days_without_an_event = 0
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     $ snape_speed = 02.0 #The speed of moving the walking animation across the screen.
     $ walk_xpos=470 #Animation of walking chibi. (From)
     $ walk_xpos2=360 #Coordinates of it's movement. (To)
-    show screen snape_walk_01 
+    show screen snape_walk_01
     with d3
     pause 1.5
     show screen snape_02 #Snape stands still.
@@ -433,12 +433,12 @@ label against_the_rule:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_01.png"
     show screen snape_main
     with Dissolve(.3)
-    
-    
-                
+
+
+
     sna "Are you bloody insane?!"
     m "You know, sometimes I think I may be..."
-    
+
     hide screen snape_main                                                                                                                   #SNAPE
     with d3                                                                                                                                                  #SNAPE
     $ tt_xpos=120 #Defines position of the Snape's full length sprite. Right - 300                      #SNAPE
@@ -518,25 +518,25 @@ label against_the_rule:
     hide screen chair
     hide screen desk
     show screen desk
-    
+
     hide screen snape_02 #Snape stands still.
     hide screen bld1
     hide screen snape_main
     with d3
 
-    
+
     hide screen blkfade
     with d3
     $ fire_in_fireplace = True
-    
+
     show screen bld1
     with d3
     "Professor Snape spends the day in your chamber, drinking the stress away."
-    
+
     if not sfmax:# Turns TRUE when friendship with Snape been maxed out.
         ">Your relationship with him has improved."
         $ snape_friendship +=1
-   
+
     show screen blkfade
     with d3
     hide screen with_snape_animated
@@ -546,24 +546,24 @@ label against_the_rule:
     show screen chair
     show screen desk
     hide screen desk
-    
+
     hide screen bld1
 
     stop bg_sounds #Stops playing the fire SFX.
-   
+
     jump night_start
-         
+
 #    hide screen snape_main
 #    hide screen bld1
 #    with d3
-    
+
 #    $ walk_xpos=360 #Animation of walking chibi. (From desk) 360
 #    $ walk_xpos2=610 #Coordinates of it's movement. (To the door) 610
-    
+
 #    $ snape_speed = 03.0 #The speed of moving the walking animation across the screen.
-#    show screen snape_walk_01_f 
+#    show screen snape_walk_01_f
 #    pause 3
-#    hide screen snape_walk_01_f 
+#    hide screen snape_walk_01_f
 #    show screen snape_01_f #Snape stands still. (Mirrored).
 #    pause.2
 #    who2 "................."
@@ -580,22 +580,22 @@ label against_the_rule:
 #    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 
 #    return
-    
+
 #============================
 
 label crying_about_dress:
-    
+
     $ have_no_dress_hap = True #Turns TRUE after Hermione comes and cries about having no proper dress for the Ball.
     $ days_without_an_event = 0
-    
+
     call hg_event_EnterRoom_block
-    
+
     hide screen hermione_main
     with d3
     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
-    
+
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-    
+
     call her_main("My parents sent me the wrong dress!","body_22")
     m "are You kidding me!?"
     call her_main("They sent me the dress I wore to the ball last year...","body_21")
@@ -619,22 +619,22 @@ label crying_about_dress:
     call her_main("I think I'd better go now...*sob*","body_145")
     m "Well, don't let me keep you a moment longer, miss Granger...."
     # Walks to the door.
-    
- 
-    
 
-    
-    
+
+
+
+
+
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
-    
+
     call her_walk(400,610,2)
     show screen hermione_stand_f #Hermione stands still.
-    
+
     pause.3                                                                                                                                                      # HERMIONE HEAD
     $ her_head_ypos = her_head_only
     show screen bld1
@@ -642,37 +642,37 @@ label crying_about_dress:
     call her_head("(My life is ruined...)","body_145")
     hide screen hermione_stand_f #Hermione stands still.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
-   
-    
+
+
+
     pause.5
     m "Hm... I don't remember ever seeing the girl this desperate..."
     m "And that says a lot, all things considered..."
     m "I suppose whoring herself out for house points is a significantly smaller problem than not having a proper prom dress..."
     m ".............."
     m "Schoolgirls..."
-       
+
     hide screen bld1
     with d3
-    
+
     $ hermione_takes_classes = True
-    
+
     call music_block
-    
-    return 
-    
+
+    return
+
 #===========================
 label sorry_about_hesterics:
     $ sorry_for_hesterics = True # Turns TRUE after Hermione comes and apologizes for the day (event) before.
     $ days_without_an_event = 0
-    
+
     $ have_no_dress_hap = True #Turns TRUE after Hermione comes and cries about having no proper dress for the Ball.
     $ days_without_an_event = 0
-    
+
     call hg_event_EnterRoom_block
-    
+
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
-    
+
     m "Miss Granger?"
     call her_main("Sorry to disturb you sir...","body_11")
     call her_main("I came to apologize for my...","body_10")
@@ -694,12 +694,12 @@ label sorry_about_hesterics:
     call her_main("To... *SOB!*","body_143")
     call her_main("Excuse me sir!","body_145")
     hide screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3  
+    with d3
     hide screen no_groping_02
     hide screen bld1
     show screen genie
     with d1
-    
+
     $ walk_xpos=370 #Animation of walking chibi. (From) 300
     $ walk_xpos2=750 #Coordinates of it's movement. (To) 610
     $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen. 0.02
@@ -711,26 +711,26 @@ label sorry_about_hesterics:
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 
     pause.5
-    
+
     show screen bld1
     with d3
-    
+
     m "......................................."
     m "Hm..."
     $ hermione_takes_classes = True
     hide screen bld1
     with d3
-    
+
     call music_block
-    
+
     return
-    
-    
+
+
 #=========================
 label giving_the_dress:
     hide screen wardrobe_gifts
     "Are you sure you wish to start this event?"
-    menu: 
+    menu:
         "Yes!":
             jump giving_thre_dress
         "No.":
@@ -742,8 +742,8 @@ label giving_thre_dress:
     $ days_without_an_event = 0
     hide screen hermione_main
     with d5
-    
-    
+
+
     $ mad = 0
     stop music fadeout 1.0
     m "Here... This is for you..."
@@ -790,23 +790,23 @@ label giving_thre_dress:
     m "Just take your dress and leave."
     call her_main("Of course... I am sorry, sir!","body_145")
     hide screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3          
-    
-    
-    
-    
-    
-    
-    
-    
-  
-   
-   
-   
-   
-   
+    with d3
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     $ hermione_chibi_xpos = 400 #Near the desk.
     $ hermione_chibi_ypos = 250 #Default: 250
     show screen hermione_blink #Hermione stands still.
@@ -821,15 +821,15 @@ label giving_thre_dress:
 
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen ctc
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.8
-    
+
     show screen bld1
     with d3
     m "......................"
@@ -838,30 +838,30 @@ label giving_thre_dress:
     with d3
 
     call music_block
-    
+
     if daytime:
         $ hermione_takes_classes = True
         jump night_main_menu
     else:
         $ hermione_sleeping = True
-        jump day_main_menu            
-    
-    
-    
+        jump day_main_menu
+
+
+
 ###======================================================================
-    
-    
+
+
 label good_bye_snape:
 
     $ days_without_an_event = 0
-    
+
     play music "music/Dark Fog.mp3" fadein 1 fadeout 1 # SNAPE'S THEME
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     $ snape_speed = 02.0 #The speed of moving the walking animation across the screen.
     $ walk_xpos=470 #Animation of walking chibi. (From)
     $ walk_xpos2=360 #Coordinates of it's movement. (To) 360
-    show screen snape_walk_01 
+    show screen snape_walk_01
     #with d3
     pause 1.5
     show screen snape_02 #Snape stands still.
@@ -872,7 +872,7 @@ label good_bye_snape:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_01.png"
     show screen snape_main
     with Dissolve(.1)
-    
+
 
     sna "Genie..."
     m "Severus?"
@@ -905,10 +905,10 @@ label good_bye_snape:
     m "I will be able to go home... finally..."
     call sna_main("Yes, and the best time to do that would be tonight...","snape_02")
     call sna_main("While everyone is preoccupied with that bloody \"Autumn ball\" you could sneak out unnoticed...","23")
-    
+
     hide screen snape_main                                                                                                                  #SNAPE
     with d3                                                                                                                                                   #SNAPE
-    
+
     show screen blkfade
     with d5
     hide screen genie
@@ -929,7 +929,7 @@ label good_bye_snape:
     show screen s_head2
     sna_[17] "Seems like it..."
     hide screen s_head2
-    hide screen blkfade 
+    hide screen blkfade
     with d3
     pause.5
 
@@ -966,7 +966,7 @@ label good_bye_snape:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"
     sna "I'd better go now..."
     #Goes to the door, stops and turns around.
-    
+
     hide screen s_head2
     show screen blkfade
     with d5
@@ -977,36 +977,36 @@ label good_bye_snape:
 
     pause.5
     # SNAPE LEAVES
-    
+
     hide screen ctc
-    
+
     hide screen bld1
     with d3
     $ walk_xpos=360 #Animation of walking chibi. (From desk)
     $ walk_xpos2=610 #Coordinates of it's movement. (To the door)
     $ snape_speed = 03.0 #The speed of moving the walking animation across the screen.
-    show screen snape_walk_01_f 
-    hide screen blkfade 
+    show screen snape_walk_01_f
+    hide screen blkfade
     with d3
     pause 3
-    
-    hide screen snape_walk_01_f 
+
+    hide screen snape_walk_01_f
 
 
     show screen snape_01_f #Snape stands still near the door. (Mirrored).
     pause.5
     show screen snape_01#Snape stands still.
-    
-    
-    
-    
-    
+
+
+
+
+
     show screen ctc
     pause
     hide screen ctc
     show screen bld1
     with d5
-    
+
     show screen s_head2
     $ s_sprite = "01_hp/13_characters/snape/main/snape_01.png"
     sna "One more thing though..."
@@ -1062,7 +1062,7 @@ label good_bye_snape:
     hide screen bld1
     with d3
     pause.3
-    
+
     stop music fadeout 1.0
 
     show screen snape_01_f#Snape stands still.
@@ -1071,14 +1071,14 @@ label good_bye_snape:
     hide screen snape_01#Snape stands still.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     hide screen snape_01_f#Snape stands still.
-    
+
     pause 1
     show screen ctc
     pause
     hide screen ctc
-    
-    
-    
+
+
+
     m "............................"
     m "So this is it then...?"
     play music "music/Despair_by_erenik.mp3" fadein 1 fadeout 1 # SAD THEME.
@@ -1097,7 +1097,7 @@ label good_bye_snape:
         m "I don't like long goodbyes..."
         m "Hm..."
         m "I suppose I could leave her a note or something..."
-        
+
         m "Let's see..."
         show screen bld1
         with d3
@@ -1112,7 +1112,7 @@ label good_bye_snape:
         menu:
             m "Dear..."
             "\"Miss Granger\"":
-                 $ word_01 = "Hermione Granger" 
+                 $ word_01 = "Hermione Granger"
             "\"Nasty whore\"":
                 $ word_01 = "nasty whore"
             "\"Slut\"":
@@ -1211,7 +1211,7 @@ label good_bye_snape:
     hide screen bld1
     with d3
     m "Well, off I go then..."
-    
+
     show screen blkfade
     with d5
 
@@ -1226,23 +1226,23 @@ label good_bye_snape:
     pause.5
     hide screen blkfade
     with d5
-    
-    
-    
-    m "........."
-        
-    
 
-    
+
+
+    m "........."
+
+
+
+
 
     $ walk_xpos=270 #Animation of walking chibi. (From desk)
     $ walk_xpos2=610 #Coordinates of it's movement. (To the door)
     $ snape_speed = 03.0 #The speed of moving the walking animation across the screen.
     hide screen g_c_u
     show screen genie_walk
-    hide screen blkfade 
+    hide screen blkfade
     pause 3
-    
+
     hide screen genie_walk
 
 
@@ -1251,7 +1251,7 @@ label good_bye_snape:
     pause 1
     m "...................."
     m "Agrabah... here I come..."
-    
+
     show screen ctc
     pause
     hide screen ctc
@@ -1266,71 +1266,71 @@ label good_bye_snape:
     show screen blkfade
     with d7
     pause 1
-    
+
     stop music fadeout 1.0
-    
+
     centered "{size=+7}{color=#cbcbcb}Outskirts of hogwarts{/color}{/size}"
 
     play music "sounds/night.mp3" fadein 1 fadeout 1 #NIGHT SOUNDS.
-    
+
     $ end_u_1_pic =  "01_hp/17_ending/171.png" #<---- SCREEN
     show screen end_u_1                                           #<---- SCREEN
     pause.3
-    hide screen blkfade 
+    hide screen blkfade
     with d7
-    
+
     show screen ctc
     pause
     hide screen ctc
-    
 
-    
+
+
     m "Severus was right..."
     pause.5
     $ renpy.play('sounds/steps_grass.mp3') # SOUNDS OF STEPS IN THE GRASS.
     $ end_u_3_pic =  "01_hp/17_ending/172.png" #<---- SCREEN
     show screen end_u_3                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
-    
-    
-    
+
+
+
     m "The farther away I get from the school grounds..."
     m "The more powerful I'm starting to feel..."
-    
+
     $ end_u_4_pic =  "01_hp/17_ending/173.png" #<---- SCREEN
     show screen end_u_4                                           #<---- SCREEN
     with d7                                                                       #<---- SCREEN
     pause.5
-    
+
     m "I think  this is far enough..."
     m "Time to undo the spell and go back home..."
     m ".........."
     m "...................."
     m "Agrabah, here I come..."
-    if not persistent.game_complete: # FIRST PLAYTHOURGH. 
+    if not persistent.game_complete: # FIRST PLAYTHOURGH.
         show screen ctc
         pause
         hide screen ctc
-        
-        show screen blkfade 
+
+        show screen blkfade
         with d9
         pause .5
-        
+
         play music "music/Plaint.mp3" fadein 1 fadeout 1 #SAD CREDITS MUSIC.
-        
+
         centered "{size=+7}{color=#cbcbcb}Congratulations on completing the game!{/color}{/size}\n\n
                   {size=+5}{color=#cbcbcb}This is ending \"00\" out of \"02\".{/color}{/size}"
-        
+
         centered "{size=+7}{color=#cbcbcb}Thank you for playing!{/color}{/size}\n\n
                   {size=+5}{color=#cbcbcb}AKABUR 2014{/color}{/size}"
-        
-        
-        #play music "music/Real Talk by Brix.MP3" fadein 1 fadeout 1 
-        #play music "music/03_2_Voicemail Freestyle Mike Wiebe.mp3" fadein 3 fadeout 1  
+
+
+        #play music "music/Real Talk by Brix.MP3" fadein 1 fadeout 1
+        #play music "music/03_2_Voicemail Freestyle Mike Wiebe.mp3" fadein 3 fadeout 1
         #scene image "08_ending/e05.png" with Dissolve(2)
         # show akaani with d5
 
-        
+
         centered "{cps=20}{size=+5}{color=#ea91b0}-Hermione Trainer-{/color}{/size}\n\n
         {size=+5}{color=#e5e297}-Producer-{/color}{/size}\n{color=#cbcbcb}AKABUR{/color}\n\n
         {size=+5}{color=#e5e297}-Head programmer-{/color}{/size}\n     {color=#cbcbcb}AKABUR{/color}\n\n
@@ -1349,7 +1349,7 @@ label good_bye_snape:
     #    {color=#e5e297}\"Sleep Walking\" {/color}{color=#cbcbcb}by hektikmusic.{/color}{/cps}"
         #nvl clear
     #    hide akaani
-        
+
         $ renpy.play('sounds/scratch.wav')
         stop music
         with hpunch
@@ -1357,32 +1357,32 @@ label good_bye_snape:
         centered "{size=+7}{color=#cbcbcb}WHAT?!{/color}{/size}"
         g4 "I said I am still here, dammit!"
         centered "{size=+7}{color=#cbcbcb}Oh... :({/color}{/size}"
-        
-        
-        
+
+
+
         hide screen end_u_4                                           #<---- SCREEN
         with d1
-        hide screen blkfade 
+        hide screen blkfade
         with d9
         play music "sounds/night.mp3" fadein 1 fadeout 1 #NIGHT SOUNDS.
-        
+
     m "....................."
     if persistent.game_complete:
         m "No, I can't just leave like this!"
     else:
         m "I can't just leave like this!"
-    
+
     m "I must see the girl one last time..."
-    
+
     show screen ctc
     pause
     hide screen ctc
-    
+
     show screen blkfade
     with d7
-    
+
     stop music fadeout 1.0
-    
+
     if not persistent.game_complete: # FIRST PLAY THROUGH.
         centered "{size=+7}{color=#cbcbcb}Fine whatever...{/color}{/size}"
     play music "music/11 Neville's Waltz.mp3" fadein 1 fadeout 1 # BALL THEME.
@@ -1390,13 +1390,13 @@ label good_bye_snape:
 
     hide screen end_u_4                                           #<---- SCREEN
     jump your_whore
-    
+
     return
-    
-    
-    
-    
-    
+
+
+
+
+
 
 label hg_event_EnterRoom_block:
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1408,26 +1408,26 @@ label hg_event_EnterRoom_block:
     show screen hermione_blink
     with d3
     return
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

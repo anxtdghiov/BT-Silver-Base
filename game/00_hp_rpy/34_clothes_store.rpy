@@ -35,15 +35,15 @@ label __init_variables:
         $ cs_existing_stock = [False,False,False,False,False]
     if not hasattr(renpy.store,'cs_existing_stock_gifted'): #important!
         $ cs_existing_stock_gifted = []
-    
+
     $ clothes_store_order_choice = "null"
     $ clothes_store_selection = 0
-    
+
     $ cs_gui_OBJ = cs_gui_class()
-    
-    
+
+
     return
-    
+
 label cs_select:
     #DEBUG#"You picked item [clothes_store_selection.name]!"
     if clothes_store_selection == "null":
@@ -54,7 +54,7 @@ label cs_select:
 
     $ clothes_store_order_choice = clothes_store_selection
     jump cs_select_done
-    
+
 label clothes_store:
     if outfit_ready:
         maf "here to pick up your order?"
@@ -67,7 +67,7 @@ label clothes_store:
         jump clothes_intro
     maf "Well what can I get for you today?"
     jump clothes_menu
-    
+
 label clothes_intro:
     ">You enter to see an old woman busy sewing together too pieces of long dark fabric."
     ">The woman is dressed almost entirely in pink and has a warm, approachable air to her."
@@ -88,7 +88,7 @@ label clothes_intro:
     m "Well, while your making up your mind, feel free to browse the store."
     $ clothes_intro_done = True
     jump clothes_menu
-    
+
 label clothes_menu:
     menu:
         "{color=#858585}-Custom Orders-{/color}"if outfit_order_placed:
@@ -273,8 +273,8 @@ label custom_orders:
                 jump clothes_menu
     else:
         jump clothes_menu
-        
-        
+
+
 label place_outfit_order:
     $ outfit_OBJ = clothes_store_order_choice
     if gold >= outfit_OBJ.cost:
@@ -296,16 +296,16 @@ label outfit_purchase_check:
     else:
        $ outfit_wait_time -= 1
 return
-    
+
 label pickup_outfit:
-    
+
     if outfit_order_placed: # OUTFIT
         $ outfit_order.purchased = True
         $ g3.inv.outfit[outfit_order.name] = True
         call display_package(">A "+outfit_order.name+R" outfit has been added to your possessions.")
         call receive_package
         call screen main_menu_01
-        
+
 return
 
 label display_package(str1):
@@ -465,7 +465,7 @@ label existing_stock:
                     jump existing_stock
         "-Return-":
             jump clothes_menu
-    
+
 label cs_buy_stock(item_id = "", cost):
     if gold >= cost and item_id != "":
         if item_id in cs_existing_stock:
@@ -479,7 +479,7 @@ label cs_buy_stock(item_id = "", cost):
     else:
         m "I don't have enough."
         return
-    
+
 label clothes_store_gui:
     call screen cs_gui
 label cs_select:

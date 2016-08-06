@@ -6,21 +6,21 @@ label __init_variables:
     $ heretic_busy = False
     $ hermione_desperate_done = False
     return
-    
+
 label heritic_intro:
     $ ce_base = True
     $ ce_top = True
     $ ce_arms = True
     $ ce_head_ypos = 235
     return
-    
+
 label heritic_event:
     $ ce_base = False
     $ ce_top = False
     $ ce_arms = False
     return
 
-    
+
 label heretic:
     $ ce_name = "heretic"
     $ menu_x = 0.5
@@ -79,7 +79,7 @@ label heretic:
         m "Nonsense, keep trying."
         ">Changing her strategy, Hermione drops to her knees and rests the base of the cock against the floor. She starts rocking back and forth to wiggle the dick deeper inside her."
         g9 "Lift your skirt, bitch, I want to watch."
-        
+
         call heritic_event
         show screen blktone
         call ce_her_main("","p_jt",140)
@@ -88,7 +88,7 @@ label heretic:
         hide screen custom_event_h
         with d3
         call heritic_intro
-        
+
         ">Complying, Hermione flips her skirt up to reveal her engorged snatch."
         call ce_her_head("Oh my god... mmmmhh","v")
         g9 "Enjoying yourself?"
@@ -104,7 +104,7 @@ label heretic:
         ">With that, Hermione's motions become frantic. Bouncing up and down, tears of frustration well up in the corners of her eyes."
         call ce_her_head("I can't... it won't go any deeper.","e")
         m "Allow me."
-        
+
         call heritic_event
         show screen blktone
         call ce_her_main("","p_di",140)
@@ -113,7 +113,7 @@ label heretic:
         hide screen custom_event_h
         with d3
         call heritic_intro
-        
+
         ">With a few idle movements of your one free hand, you forces the dildo to shoot up inside of Hermione."
         call ce_her_head("AAAAHHH!","a")
         ">Hermione falls sideways onto the floor as a puddle of her fluids pools around her."
@@ -137,7 +137,7 @@ label heretic:
                     m "That's exactly what I expect."
                     call ce_her_head("...","e")
                     g9 "You had better hurry. Wouldn't want to be late for class."
-                    
+
                     call heritic_event
                     show screen blktone
                     call ce_her_main("","p_us",140)
@@ -146,7 +146,7 @@ label heretic:
                     hide screen custom_event_h
                     with d3
                     call heritic_intro
-                    
+
                     call ce_her_head("Sir, it's sticking out of the bottom of my skirt!","e")
                     g9 "I know. Off you go."
                     call ce_her_head("{size=-4}(Oh god... I can barely walk... What if somebody notices?){/size}","e")
@@ -157,7 +157,7 @@ label heretic:
                 m "Alright, you can go. Fifty points to Gryffindor."
                 $ gryffindor +=50
                 call ce_her_head("Uh, sir... Could you help me?","e")
-                
+
                 call heritic_event
                 show screen blktone
                 call ce_her_main("","p_jt",140)
@@ -166,7 +166,7 @@ label heretic:
                 hide screen custom_event_h
                 with d3
                 call heritic_intro
-                
+
                 ">You wave your hand. The dildo erupts out of Hermione, who begins spasming in ecstacy again."
                 m "Now say thank you."
                 call ce_her_head("Th...thaan...thank you...siiir.","a")
@@ -180,11 +180,11 @@ label heretic:
         hide screen hermione_02
         hide screen ctc
         with d3
-        
+
         call her_walk(400,610,2)
         $ renpy.play('sounds/door.mp3') #Sound of a door opening.
         with Dissolve(.3)
-        
+
         call music_block
         $ hermione_takes_classes = True
         $ only_upper = False
@@ -197,16 +197,16 @@ label heretic_night:
     call her_walk(520,400,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     show screen hermione_02
     pause 0.5
     show screen bld1
     with Dissolve(.3)
     $ exposure = renpy.random.randint(1, 10)
-    
+
     if exposure <= 3: #Caught By Harry
         m "Good evening Miss Granger."
-        
+
         call heritic_event
         show screen blktone
         call ce_her_main("","p_nd",140)
@@ -215,14 +215,14 @@ label heretic_night:
         hide screen custom_event_h
         with d3
         call heritic_intro
-        
+
         call ce_her_head("Hello sir.","n")
         m "So I see you didn't live up to you end of the bargain."
         call ce_her_head("Sir! I would never cheat!","i")
         call ce_her_head("Especially when Gryffindor's honor is at stake!")
         g4 "Then where is the dildo, girl?!"
         call ce_her_head("It's... err...","n")
-        
+
         call heritic_event
         show screen blktone
         call ce_her_main("","p_dd",140)
@@ -231,7 +231,7 @@ label heretic_night:
         hide screen custom_event_h
         with d3
         call heritic_intro
-        
+
         ">Hermione pulls up her skirt to reveal the dildo lodged deeply in her cunt."
         g4 "Would you care to explain yourself, or are you ready to admit what a whore you are?"
         call ce_her_head("I had no choice, sir.","na")
@@ -347,16 +347,16 @@ label heretic_night:
                 hide screen hermione_02
                 hide screen ctc
                 with d3
-                
+
                 call her_walk(400,610,2)
                 $ renpy.play('sounds/door.mp3') #Sound of a door opening.
                 with Dissolve(.3)
-                
+
                 call music_block
                 $ heretic_busy = False
                 $ hermione_sleeping = True
                 jump night_main_menu
-                
+
     elif exposure >= 4 and exposure <=9: #Accidental Exposure
         m "Hello, Miss Granger."
         call ce_her_head("Hello sir.","pe")
@@ -398,18 +398,18 @@ label heretic_night:
                     m "Hm? Wha? Right, uh... 50 points to Gryffindor."
                     $ gryffindor +=50
                     call ce_her_head("Good night, sir.","i")
-                    
+
                     hide screen bld1
                     hide screen custom_event_h
                     hide screen blktone
                     hide screen hermione_02
                     hide screen ctc
                     with d3
-                    
+
                     call her_walk(400,610,2)
                     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
                     with Dissolve(.3)
-                    
+
                     call music_block
                     $ heretic_busy = False
                     $ hermione_sleeping = True
@@ -441,7 +441,7 @@ label heretic_night:
                 jump q7y8f5
     else: #Caught By Draco
         m "Good evening, Miss Granger."
-        
+
         call heritic_event
         show screen blktone
         call ce_her_main("","p_m",140)
@@ -450,7 +450,7 @@ label heretic_night:
         hide screen custom_event_h
         with d3
         call heritic_intro
-        
+
         m "My goodness, interesting day?"
         call ce_her_head("Can I just get paid, sir?","mash")
         m "You're going to have to do better than that."
@@ -518,11 +518,11 @@ label heretic_night:
                             hide screen hermione_02
                             hide screen ctc
                             with d3
-                            
+
                             call her_walk(400,610,2)
                             $ renpy.play('sounds/door.mp3') #Sound of a door opening.
                             with Dissolve(.3)
-                            
+
                             call music_block
                             $ heretic_busy = False
                             $ hermione_sleeping = True
@@ -572,11 +572,11 @@ label heretic_night:
                     hide screen hermione_02
                     hide screen ctc
                     with d3
-                    
+
                     call her_walk(400,610,2)
                     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
                     with Dissolve(.3)
-                    
+
                     call music_block
                     $ heretic_busy = False
                     $ hermione_sleeping = True

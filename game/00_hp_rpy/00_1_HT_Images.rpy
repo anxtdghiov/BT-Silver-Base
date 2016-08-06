@@ -3,21 +3,21 @@ init:
 
     image check_07 = "interface/check_07.png"
     image check_08 = "interface/check_08.png"
-    
+
     image heart_00 = "interface/heart_00.png"
     image heart_01 = "interface/heart_01.png"
     image heart_02 = "interface/heart_02.png"
     image heart_03 = "interface/heart_03.png"
     image heart_04 = "interface/heart_04.png"
-    
+
     image textheart = "interface/textheart.png"
-    
+
     # image side dum1 = "01_hp/26_dum/dum_01.png"
     # image side dum2 = "01_hp/26_dum/dum_02.png"
     # image side dum3 = "01_hp/26_dum/dum_03.png"
     # image side dum4 = "01_hp/26_dum/dum_04.png"
     # image side dum5 = "01_hp/26_dum/dum_05.png"
-    
+
     ### ADDING HOUSE POINTS ###
     image what_01_points:
         "01_hp/11_misc/01_points.png"
@@ -521,7 +521,7 @@ init:
         im.Alpha("01_hp/11_misc/50.png", 0.0)
 
     #############################################################
-    
+
 ### UNIVERSAL ANIMATION ###
 label __init_variables:
     $ u_ani_pause_img = ""
@@ -529,7 +529,7 @@ label __init_variables:
     $ u_ani_xpos = 0
     $ u_ani_ypos = 0
     return
-    
+
 label set_u_ani(play = u_ani_play_img, pause = u_ani_pause_img, xpos = u_ani_xpos, ypos = u_ani_ypos):
     if play != u_ani_play_img:
         $ u_ani_play_img = play
@@ -540,7 +540,7 @@ label set_u_ani(play = u_ani_play_img, pause = u_ani_pause_img, xpos = u_ani_xpo
     if ypos != u_ani_ypos:
         $ u_ani_ypos = ypos
     return
-    
+
 label u_play_ani:
     hide screen u_ani_pause
     show screen u_ani_play
@@ -551,17 +551,17 @@ label u_pause_ani:
     show screen u_ani_pause
     with d3
     return
-    
+
 label u_end_ani:
     hide screen u_ani_play
     hide screen u_ani_pause
     with d3
     return
-    
-screen u_ani_pause: 
+
+screen u_ani_pause:
     tag u_animation
     add u_ani_pause_img at Position(xpos=u_ani_xpos, ypos=u_ani_ypos)
 
-screen u_ani_play: 
+screen u_ani_play:
     tag u_animation
     add u_ani_play_img at Position(xpos=u_ani_xpos, ypos=u_ani_ypos)

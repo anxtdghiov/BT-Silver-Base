@@ -2,24 +2,24 @@ label sexy_tutoring:
     $ dates += 1
     if dates == 3:
         jump date_01
-       
-        
+
+
 #    if dates >=3:
 #        menu:
 #            "Touch her thigh."
 #            "Touch yourself."
 #            "Touch her tits."
-            
-        
-        
-        
+
+
+
+
     "You tutor Hermione."
-    jump day_start 
-    
-    
-    
-    
-    
+    jump day_start
+
+
+
+
+
 
 ###DATE - 1#######
 label date_01:
@@ -28,11 +28,10 @@ label date_01:
     her "Alright, I'll let you touch my leg, but only if you promise me 5 points in exchange."
     "You promise her 5 points and keep touching her thigh."
     "The Tutoring session is over."
-    jump day_start 
+    jump day_start
 
 ###DATE - 2#######
 label date_02:
-    
 
 
 
@@ -54,10 +53,11 @@ label date_02:
 
 
 
-    
-    
-    
-    
+
+
+
+
+
     menu:
         "Touch her leg with yours.":
             if whoring < 3:
@@ -68,7 +68,7 @@ label date_02:
                 "Hermione gets closer to you. Her legs move ever slightly in response to your touch."
             "Tutoring is over. Hermione leaves."
             $ whoring +=1
-            jump day_start 
+            jump day_start
         "Touch her leg with your hand." if whoring >= 7:
             pass
         "{color=#858585}...(LOCKED)...{/color}" if whoring <=7:
@@ -103,8 +103,8 @@ label date_02:
             jump locked
         "-Cancel-":
             jump home_assignment
-            
-            
+
+
 ###LOCKED MASSAGE###
 label locked:
     "Not enough whoring."

@@ -9,7 +9,7 @@ label hg_pr_FlirtClassmate:
             pass
         "\"(Not right now.)\"":
             jump new_personal_request
-    
+
     m "[hermione_name]?"
     call her_main("Yes?","body_13",xpos=140)
     if hg_pr_FlirtClassmate_OBJ.points == 0 and whoring <= 5: ### LEVEL 01 and LEVEL 02
@@ -39,7 +39,7 @@ label hg_pr_FlirtClassmate:
         m "Exactly... Just looking out for you [hermione_name]."
         her "Em... Thank you [genie_name]..."
         call music_block
-        
+
     else:
         if whoring <= 2: ### LEVEL 01
             m "I need you to go make some new friends at \"Slytherin\" house."
@@ -53,18 +53,18 @@ label hg_pr_FlirtClassmate:
             m "Nobody is forcing you, [hermione_name]..."
             call her_main("You don't need to remind me of that, [genie_name]...","body_05")
             call her_main("Alright if I must... [genie_name]...","body_07")
-            
+
         else: #if whoring >= 3 and whoring >= 6: ### LEVEL 02 and higher ## <=========================================================== SECOND EVENT!
             m "I need you to flirt with some boys of the \"Slytherin\" house today."
             her "I will see what I can do, [genie_name]."
             m "Great. I'll be expecting your report today after classes."
     her "Well, I'd better go now. Classes are about to start..."
-    
+
     $ hg_pr_FlirtClassmate_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_FlirtClassmate_complete:
     call hg_pr_EnterRoom_block
     call her_main("Good evening, [genie_name].","body_01",xpos=370,ypos=0)
@@ -114,7 +114,7 @@ label hg_pr_FlirtClassmate_complete:
                             m "Get out of my sight..."
                             call her_main("Yes, [genie_name]...Sorry, [genie_name]...","body_09")
                             jump could_not_flirt
-                
+
                 elif one_out_of_three == 2: ### EVENT (B)
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     call her_main("Well, I tried to complement an upperclassman...","body_10",xpos=370)
@@ -150,7 +150,7 @@ label hg_pr_FlirtClassmate_complete:
                             call her_main("But, you promised!","body_21")
                             call her_main("................","body_20")
                             jump could_not_flirt
-                
+
                 elif one_out_of_three == 3: ### EVENT (C)
                     stop music fadeout 1.0
                     call her_main("Well, the \"Slytherin\" quidditch team was practicing in the stadium today...","body_10",xpos=370)
@@ -167,13 +167,13 @@ label hg_pr_FlirtClassmate_complete:
                     menu:
                         m "Hm..."
                         "\"Well, here are your points.\"":
-                            call her_main("Thank you, [genie_name]...","body_16")               
-                            
+                            call her_main("Thank you, [genie_name]...","body_16")
+
                         "\"Favour failed! No points for you!\"":
                             stop music fadeout 1.0
                             call her_main("I don't feel like I deserved any this time anyway...","body_12")
                             jump could_not_flirt
-            
+
             elif whoring >= 3 and whoring <= 5: ### LEVEL 02
                 if one_out_of_three == 1: ### EVENT (A)
                     stop music fadeout 1.0
@@ -205,7 +205,7 @@ label hg_pr_FlirtClassmate_complete:
                     her "Just an hour ago or so I ran into Draco Malfoy, [genie_name]."
                     m "No way!!! (No idea who that is...)"
                     her "I forced myself to be friendly with him and..."
-                    call her_main("We ended up having a decent conversation for a change.","body_74") 
+                    call her_main("We ended up having a decent conversation for a change.","body_74")
                     m "I see... That \"Dark-oh\" guy..."
                     m "Was he looking at your legs at all?"
                     call her_main("What?","body_02")
@@ -215,7 +215,7 @@ label hg_pr_FlirtClassmate_complete:
                     call her_main("[genie_name]!!!","body_47")
                     m "Fine. You get your points. Keep up the good work."
                     call her_main("","body_29")
-                
+
                 elif one_out_of_three == 2: ### EVENT (B)
                     stop music fadeout 1.0
                     call her_main("Well...","body_10",xpos=370)
@@ -241,7 +241,7 @@ label hg_pr_FlirtClassmate_complete:
                         "\"Could what make what?\"":
                             call her_main("Oh, nevermind me, [genie_name].","body_13")
                             her "Everyone knows that the \"Sorting Hat\" is never wrong."
-                
+
                 elif one_out_of_three == 3: ### EVENT (C)
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     call her_main("Five guys, [genie_name]!","body_75",xpos=370)
@@ -288,7 +288,7 @@ label hg_pr_FlirtClassmate_complete:
                     m "Yeah, I'm sure that wins them over."
                     m "Great job, [hermione_name]."
                     call her_main("","body_68")
-                    
+
                 elif one_out_of_three == 2: ### EVENT (B)
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     call her_main("Two dates, seven quite pleasant conversations...","body_75",xpos=370)
@@ -305,7 +305,7 @@ label hg_pr_FlirtClassmate_complete:
                     m "Oh, absolutely."
                     call her_main("Then I would like to receive my payment now...","body_30")
                     call her_main("","body_33")
-                    
+
                 elif one_out_of_three == 3: ### EVENT (C)
                     stop music fadeout 1.0
                     call her_main("[genie_name], I am sorry, but...","body_33",xpos=370)
@@ -343,26 +343,26 @@ label hg_pr_FlirtClassmate_complete:
                             m "You are free to leave."
                             call her_main("{size=-4}(Stubborn old man!){/size}","body_47")
                             jump could_not_flirt
-            
+
     $ gryffindor +=5
     m "The \"Gryffindor\" house gets 5 points!"
     her "Thank you, [genie_name]."
-    
+
     $ hg_pr_FlirtClassmate_OBJ.points += 1
     $ hg_pr_FlirtClassmate_OBJ.complete = True
     $ hg_pr_FlirtClassmate_OBJ.inProgress = False
-    
+
     if whoring <= 2:
         $ whoring +=1
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 ##(Level 02) (15 pt.) (Flirt with teachers). (Available during daytime only).
 label hg_pr_FlirtTeacher:
-    
-    hide screen hermione_main 
+
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to be flirtatious with her teachers today?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -375,30 +375,30 @@ label hg_pr_FlirtTeacher:
     m "[hermione_name], I want you to be especially flirtatious with your teachers today."
     if whoring <=2 or hg_pr_FlirtClassmate_OBJ.points <= 1:
         jump too_much
-   
+
 
     if hg_pr_FlirtTeacher_OBJ.points == 0 and whoring <= 8: ### up to LEVEL 03
     ### LEVEL 03 ### <===============================================================FIRST EVENT!
         call her_main("I will do my best, [genie_name]!","body_01",xpos=140)
         call her_main("I am glad you finally decided to act, [genie_name]!","body_02")
         m "Huh?"
-        call her_main("You are finally ready to investigate the teachers who made a habit out of buying favours from the students, aren't you?","body_07") 
+        call her_main("You are finally ready to investigate the teachers who made a habit out of buying favours from the students, aren't you?","body_07")
         call her_main("I am honoured to pose as bait in this noble endeavor.","body_16")
         m "Ehm... Yeah, that's exactly what I'm doing."
         call her_main("Splendid! You can count on me, [genie_name]!","body_07")
     else:
         call her_main("I shall provide you with a detailed report later tonight, [genie_name].","body_07",xpos=140)
         m "I will be waiting..."
-    
 
-    
+
+
     her "Well, I'd better go now. Classes are about to start..."
-    
+
     $ hg_pr_FlirtTeacher_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_FlirtTeacher_complete:
     call hg_pr_EnterRoom_block
     call her_main("Good evening, [genie_name].","body_01",xpos=370,ypos=0)
@@ -415,7 +415,7 @@ label hg_pr_FlirtTeacher_complete:
             m "Give me the details."
             show screen blktone
             with d3
-    
+
             if  whoring >= 3 and whoring <= 5: ### LEVEL 02 <===================================================================== EVENT LEVEL 01
                 if one_out_of_three == 1: ### EVENT (A) Flitwick
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
@@ -453,7 +453,7 @@ label hg_pr_FlirtTeacher_complete:
                         "\"Here are your point's though.\"":
                             call her_main("Really?","body_28")
                             call her_main("Thank you so much [genie_name]!","body_75")
-                           
+
                 elif one_out_of_three == 2: ### EVENT (B) Snape
                     call her_main("..................","body_13",xpos=140)
                     her "............................"
@@ -498,7 +498,7 @@ label hg_pr_FlirtTeacher_complete:
                             jump could_not_flirt_02
                         "\"Here are your points, [hermione_name].\"":
                             pass
-                
+
                 elif one_out_of_three == 3: ### EVENT (C) Filch
                     stop music fadeout 1.0
                     call her_main("I tried to flirt with mr.Filch, [genie_name]...","body_10",xpos=140)
@@ -513,7 +513,7 @@ label hg_pr_FlirtTeacher_complete:
                     m "Gotcha... Mr.Fil{size=+7}TH{/size} is off the list then."
                     call her_main("It's \"Mr.Filch\", [genie_name]...","body_07")
                     m "What did I say?"
-            
+
             elif whoring >= 6 and whoring <= 8: ### LEVEL 03 <======================================================================================= EVENT LEVEL 02
                 if one_out_of_three == 1: ### EVENT (A) Slughorn
                     stop music fadeout 1.0
@@ -534,7 +534,7 @@ label hg_pr_FlirtTeacher_complete:
                     call her_main("That is preposterous!","body_69")
                     m "Here are your points..."
                     her "...................."
-                
+
                 elif one_out_of_three == 2: ### EVENT (B) Lockhart
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     call her_main("I had an amazing day, [genie_name]!","body_80",xpos=140)
@@ -556,7 +556,7 @@ label hg_pr_FlirtTeacher_complete:
                     her "Well, it's not {size=+5}that{/size} private..."
                     m "Show it to me then!"
                     call her_main("No, [genie_name]! That would be inappropriate!","body_66")
-                    menu: 
+                    menu:
                         "{size=-3}\"Lockhart will be out of this school in no time!\"{/size}":
                             call her_main("Because of me?","body_72")
                             call her_main("[genie_name], please!","body_67")
@@ -576,7 +576,7 @@ label hg_pr_FlirtTeacher_complete:
                                     with d5
                                     call her_head("Here....","head_exp\12")
                                     m "Hm..."
-                                    hide screen blktone8 
+                                    hide screen blktone8
                                     with d5
                                     call set_hermione_action("lift_skirt")
                                     #$ only_upper = True #Skirt lifted.
@@ -592,7 +592,7 @@ label hg_pr_FlirtTeacher_complete:
                                     her "He is not \"dirty\"."
                                     m "Ah, what do I care..."
                                     call her_main("............?","body_51")
-                                    hide screen hermione_main 
+                                    hide screen hermione_main
                                     with d3
                                     call reset_hermione_main
                                     #$ only_upper = False #Skirt lifted.#no legs bug
@@ -603,7 +603,7 @@ label hg_pr_FlirtTeacher_complete:
                                     $ mad += 18
                         "\"FIne... Here are your points.\"":
                             call her_main("Thank you for understanding, [genie_name].","body_74")
-                            
+
                 elif one_out_of_three == 3: ### EVENT (C) Filch
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     call her_main("Well, I spent quite some time by flirting with mr.Filch today.","body_15",xpos=370)
@@ -632,7 +632,7 @@ label hg_pr_FlirtTeacher_complete:
                             m "You are dismissed, [hermione_name]."
                             call her_main(".........................................","body_05")
                             jump could_not_flirt_02
-            
+
             elif whoring >= 9: ### LEVEL 04 <============================================================================ EVENT LEVEL04
                 if one_out_of_three == 1: ### EVENT (A) Filch
                     stop music fadeout 1.0
@@ -678,14 +678,14 @@ label hg_pr_FlirtTeacher_complete:
                     m "Yes, first thing tomorrow."
                     call her_main("Thank you [genie_name].","body_16")
                     call her_main("Can I have my points now?","body_75")
-    
+
                 elif one_out_of_three == 2: ### EVENT (B) Snape
                     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
                     call her_main("Professor Snape!","body_76",xpos=370)
                     m "Ehm... Yeah, I'm pretty sure it's Dumbledore or something..."
                     hide screen hermione_main
                     with d3
-                    
+
                     g4 "{size=-5}(Wait, did {size=+7}he{/size} just put me under another disguise?){/size}"
                     g4 "{size=-5}(So do I look like that Professor Snape guy now?){/size}"
                     g4 "{size=-5}(By the great desert sands! Akabur, you need to learn restrain yourself!){/size}"
@@ -702,12 +702,12 @@ label hg_pr_FlirtTeacher_complete:
                     m "Yes, yes, [hermione_name], I'm listening."
                     call her_main("I just confirmed that professor Snape is corrupted and \"dirty\", [genie_name]!","body_04")
                     m "Tell me what happened."
-                    
+
                     hide screen blktone
                     with d3
                     show screen snape_groping
                     with d5
-                    
+
                     call her_main("Well, during the classes today...","body_02")
                     her "I have been doing my best to attract professor Snape's attention..."
                     her "I have been giving him \"dreamy looks\"..."
@@ -722,16 +722,16 @@ label hg_pr_FlirtTeacher_complete:
                     m "The fiend!"
                     m "Did you enjoy it, though?"
                     call her_main("[genie_name], I am only doing this--","body_30")
-                    
+
                     hide screen snape_groping
                     with d5
                     show screen blktone
                     with d3
-                    
+
                     m "Go \"Gryffindors\"! honour and all that. Yes, I remember."
                     m "Here are your points."
                     call her_main("","body_66")
-  
+
                 elif one_out_of_three == 3: ### EVENT (C) Lockhart
                     stop music fadeout 1.0
                     call her_main("Professor Lockhart!","body_09",xpos=370)
@@ -747,7 +747,7 @@ label hg_pr_FlirtTeacher_complete:
                     hide screen hermione_main
                     with d3
                     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
-                    m "{size=-4}(Agh! The suspense is killing me!){/size}" 
+                    m "{size=-4}(Agh! The suspense is killing me!){/size}"
                     m "{size=-4}(Did he force her to blow him?){/size}"
                     m "{size=-4}(Did he rape her?){/size}"
                     g4 "What was it, [hermione_name]? Speak up!"
@@ -786,25 +786,25 @@ label hg_pr_FlirtTeacher_complete:
                     m "Well, I bet it was a traumatizing experience for you, [hermione_name]."
                     call her_main("It was, [genie_name]...","body_31")
                     m "Well, I hope these points will make you feel better."
-    
+
     $ gryffindor +=15
     m "The \"Gryffindors\" gets 15 points!"
     her "Thank you, [genie_name]."
-    
+
     $ hg_pr_FlirtTeacher_OBJ.points += 1
     $ hg_pr_FlirtTeacher_OBJ.complete = True
     $ hg_pr_FlirtTeacher_OBJ.inProgress = False
-    
+
     if whoring <= 5:  # (if whoring >= 3 and whoring <= 5) - LEVEL 02
         $ whoring +=1
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 ##(Level 03) (25 pt.) (Let a classmate touch you). (Available during daytime only).
 label hg_pr_ClassmateTouchYou:
-    hide screen hermione_main 
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to go get touched by one of her classmates?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -813,7 +813,7 @@ label hg_pr_ClassmateTouchYou:
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if hg_pr_ClassmateTouchYou_OBJ.points == 0: # <================================================================================ FIRST TIME
         m "[hermione_name]?"
         call her_main("[genie_name]?","body_01",xpos=140)
@@ -856,7 +856,7 @@ label hg_pr_ClassmateTouchYou:
         call her_main("I'd better go now. The classes are about to start...","body_05")
         hide screen hermione_main
     else:
-        if whoring >= 6 and whoring <= 8: # LEVEL 03 
+        if whoring >= 6 and whoring <= 8: # LEVEL 03
             m "[hermione_name]?"
             call her_main("[genie_name]?","body_01",xpos=140)
             m "How about you go let one of your classmates molest you a little again?"
@@ -887,16 +887,16 @@ label hg_pr_ClassmateTouchYou:
             call her_main("I wonder who it should be this time...","body_68")
             call her_main("More than one boy, is not a problem, is it, [genie_name]?","body_117")
             m "A problem? Of course not!"
-            m "If anything - it is encouraged." 
+            m "If anything - it is encouraged."
             call her_main("Great. I will see you after the classes then, [genie_name]. As usual.","body_122")
             m "Yes. Good luck."
             hide screen hermione_main
-    
+
     $ hg_pr_ClassmateTouchYou_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_ClassmateTouchYou_complete:
     call hg_pr_EnterRoom_block
     call her_main("Good evening, [genie_name].","body_01",xpos=370,ypos=0)
@@ -912,14 +912,14 @@ label hg_pr_ClassmateTouchYou_complete:
             m "Give me the details."
             show screen blktone
             with d3
-            
+
             if whoring >= 6 and whoring <= 8: # LEVEL 03 # EVENT LEVEL 01.
                 stop music fadeout 3.0
                 call her_main("......","body_12")
                 call her_main("Well... Em...","body_13")
                 m "Speak up, [hermione_name]."
                 m "Did you let some lucky guy feel you up or what?"
-                    
+
                 if one_out_of_three == 1: ### EVENT (A)
                     her "I did, [genie_name]..."
                     m "So? Tell me more."
@@ -939,7 +939,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     call her_main("I'm sorry, [genie_name]...","body_34")
                     m "Nothing to be sorry about, [hermione_name]."
                     m "You did good. This will do for now."
-                    
+
                 elif one_out_of_three == 2: ### EVENT (B)
                     stop music fadeout 3.0
                     call her_main("I did, [genie_name].","body_69")
@@ -956,7 +956,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     her "So, I decided to leave..."
                     m "I see..."
                     call her_main(".............","body_33")
-                    
+
                 elif one_out_of_three == 3: ### EVENT (C)
                     her "I did, [genie_name]..."
                     play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 # SEX THEME.
@@ -986,7 +986,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     m "Of course... Ten extra points to \"Gryffindor\"."
                     call her_main("Thank you [genie_name]...","body_140")
                     m "And the rest of your payment..."
-            
+
             elif whoring >= 9 and whoring <= 11: # LEVEL 04
                 if one_out_of_three == 1: ### EVENT (A)
                     call her_main("Well... There is not much to tell...","body_16")
@@ -1006,7 +1006,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     her "Well, he was rather handsome I suppose..."
                     call her_main("I didn't hate it, if that's what you mean, [genie_name]...","body_120")
                     m "I see..."
-                    
+
                 elif one_out_of_three == 2: ### EVENT (B)
                     call her_main("Well...","body_16")
                     her "I'm not sure whether or not this counts, but..."
@@ -1025,7 +1025,7 @@ label hg_pr_ClassmateTouchYou_complete:
                         "\"Kudos on doing this during class.\"":
                             call her_main("Thank you, [genie_name].","body_74")
                             m "I say you deserve to get paid."
-                            
+
                 elif one_out_of_three == 3: ### EVENT (C)
                     stop music fadeout 1.0
                     call her_main(".................","body_69")
@@ -1047,7 +1047,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     m "Happy to help, [hermione_name]."
                     call her_main("I led him to the library...","body_87")
                     her "We found a secluded spot behind one of the book shelves..."
-                    her "And I told him that he can touch me wherever he wants..."                 
+                    her "And I told him that he can touch me wherever he wants..."
                     her "And...."
                     call her_main("..........","body_88")
                     m "What?"
@@ -1073,7 +1073,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     call her_main("*Sob!* I wish he would have just touched my breasts like a descent boy would, [genie_name]... *Sob!*","body_145")
                     m "There, there..."
                     m "You earned you pay today..."
-            
+
             elif whoring >= 12: # LEVEL 05+
                 if one_out_of_three == 1: ### EVENT (A)
                     stop music fadeout 1.0
@@ -1105,11 +1105,11 @@ label hg_pr_ClassmateTouchYou_complete:
                     call her_main("There were hands under my skirt, under my shirt...","body_128")
                     her "And then I started to breathe heavily..."
                     call her_main("So one of them just put his hand over my mouth...","body_121")
-                    her "And their hands were so... thorough..." 
+                    her "And their hands were so... thorough..."
                     her "My head started to spin..."
                     call her_main("It was most exhilarating, [genie_name].","body_128")
                     m "Very good, [hermione_name]. Very good indeed."
-                
+
                 if one_out_of_three == 2: ### EVENT (B)
                     call her_main("Actually something quite unexpected happened to me today, [genie_name]...","body_01")
                     her "Right after the Defence Against the Dark Arts class..."
@@ -1123,7 +1123,7 @@ label hg_pr_ClassmateTouchYou_complete:
                     her "I let him fondle my breasts..."
                     call her_main("All the usual things...","body_128")
                     m "Well done, [hermione_name]."
-                    
+
                 if one_out_of_three == 3: ### EVENT (C)
                     stop music fadeout 1.0
                     call her_main("Well...","body_44")
@@ -1157,25 +1157,25 @@ label hg_pr_ClassmateTouchYou_complete:
                     her "And they kissed..."
                     her "I suddenly felt like the third wheel in that situation, so I just slipped away quietly..."
                     m "I see..."
-    
+
     $ gryffindor +=25
     m "The \"Gryffindor\" house gets 25 points!"
     her "Thank you, [genie_name]."
-    
+
     $ touched_by_boy = True #Makes sure that Public favours do not get locked after reaching Whoring level 05.
-    
+
     $ hg_pr_ClassmateTouchYou_OBJ.points +1
     $ hg_pr_ClassmateTouchYou_OBJ.complete = True
     $ hg_pr_ClassmateTouchYou_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 ##(Level 04) (35 pt.) (Flash your tits to a boy). (Available during daytime only).
 label hg_pr_FlashClassmate: #LV.4 (Whoring = 9 - 11)
-    
-    hide screen hermione_main 
+
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to flash her tits to one of her classmates?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -1184,7 +1184,7 @@ label hg_pr_FlashClassmate: #LV.4 (Whoring = 9 - 11)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if hg_pr_FlashClassmate_OBJ.points == 0: # <================================================================================ FIRST TIME
         m "[hermione_name]..."
         m "I would like to award \"Gryffindor\" with 25 house points today."
@@ -1224,7 +1224,7 @@ label hg_pr_FlashClassmate: #LV.4 (Whoring = 9 - 11)
         m "A pretty nifty deal, wouldn't you agree?"
         her "I suppose..."
         her "Well alright, I'll see what I can do..."
-    
+
     else: # <================================================================================ NOT FIRST TIME
         if whoring >= 9 and whoring <= 11: # LEVEL 04 FIRST EVENT.
             m "I think you need to show off your tits some more, [hermione_name]."
@@ -1237,7 +1237,7 @@ label hg_pr_FlashClassmate: #LV.4 (Whoring = 9 - 11)
             m "Thirty five house points. The usual rate..."
             call her_main(".................","body_69")
             call her_main("Well alright... I will see what I can do, [genie_name]...","body_66")
-        
+
         elif whoring >= 12 and whoring <= 14: # LEVEL 05
             m "[hermione_name]. I have a question for you."
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
@@ -1260,7 +1260,7 @@ label hg_pr_FlashClassmate: #LV.4 (Whoring = 9 - 11)
             her "my classes are about to start..."
             m "Thirty five house points will be waiting for you here upon your return, [hermione_name]."
             call her_main("..............","body_79")
-        
+
         elif whoring >= 15: # LEVEL 06+
             m "[hermione_name] I need you to go out there and flash your tits to one of your classmates."
             call her_main("I will do my best [genie_name].","body_127",xpos=140)
@@ -1274,16 +1274,16 @@ label hg_pr_FlashClassmate: #LV.4 (Whoring = 9 - 11)
             g9 "{size=-3}(I'm so good at this training thing that it's starting to get creepy!){/size}"
             call her_main("Classes are about to start... I'd better leave now.","body_45")
             her "I will see you later tonight, [genie_name]."
-    
+
     $ hg_pr_FlashClassmate_OBJ.inProgress = True
 
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_FlashClassmate_complete:
     call hg_pr_EnterRoom_block
-    
-    if whoring >= 9 and whoring <= 11: # LEVEL 04 <=============================================================EVENT LEVEL 01                    
+
+    if whoring >= 9 and whoring <= 11: # LEVEL 04 <=============================================================EVENT LEVEL 01
         if one_out_of_three == 1: ### EVENT (A)
                 call her_main("Good evening, [genie_name]...","body_31",xpos=370)
                 m "[hermione_name]..."
@@ -1304,7 +1304,7 @@ label hg_pr_FlashClassmate_complete:
                 her "I'd better go now."
                 $ hg_pr_FlashClassmate_OBJ.inProgress = False
                 jump could_not_flirt #Sent here when choose "Favor failed! No points for you!" (Hermione is leaving without getting any points).
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             m "[hermione_name], did you complete your task?"
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
@@ -1334,7 +1334,7 @@ label hg_pr_FlashClassmate_complete:
             m "That's alright..."
             m "I wouldn't expect you to perform perfectly this early in your training..."
             call her_main("(My training?)","body_117")
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name], did you complete your task?"
@@ -1356,7 +1356,7 @@ label hg_pr_FlashClassmate_complete:
             call her_main("After I showed him my breasts it got too embarrassing for me to stay there any longer...","body_118")
             call her_main("So I just gathered all my books and left...","body_117")
             m "I see..."
-    
+
     elif whoring >= 12 and whoring <= 14: # LEVEL 05 <=============================================================EVENT LEVEL 02
         if one_out_of_three == 1: ### EVENT (A)
             stop music fadeout 1.0
@@ -1395,7 +1395,7 @@ label hg_pr_FlashClassmate_complete:
             her "........"
             m "Oh, whatever. Just take your points and go."
             call her_main("Thank you, [genie_name].","body_120")
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name]..."
@@ -1432,10 +1432,10 @@ label hg_pr_FlashClassmate_complete:
             her "I'm planning to meet that awful boy after we are done here, [genie_name]."
             m "I see..."
             m "Well, I shouldn't keep you waiting then, should I?"
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             m "[hermione_name], did you complete your task?"
-            show screen blktone 
+            show screen blktone
             with d3
             call her_main("I did [genie_name]...","body_14",xpos=370)
             m "I'm listening..."
@@ -1461,7 +1461,7 @@ label hg_pr_FlashClassmate_complete:
             call her_main("....","body_117")
             m "Hm..."
             m "Well, alright... I think this counts..."
-    
+
     elif whoring >= 15: # LEVEL 06+ <=============================================================EVENT LEVEL 03
         if one_out_of_three == 1: ### EVENT (A)
             m "[hermione_name], did you complete your task?"
@@ -1491,7 +1491,7 @@ label hg_pr_FlashClassmate_complete:
             call her_main("A few girls as well...","body_29")
             her "I think the school librarian may have seen me too..."
             m "Hm... Well, I'd say that's a job well done."
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             stop music fadeout 1.0
             m "[hermione_name], did you complete your task?"
@@ -1537,7 +1537,7 @@ label hg_pr_FlashClassmate_complete:
             call her_main("And that's all that happened, [genie_name]...","body_15")
             m "I see..."
             m "I still prefer this to some made up stories..."
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             m "[hermione_name], did you complete your task?"
             show screen blktone
@@ -1565,28 +1565,28 @@ label hg_pr_FlashClassmate_complete:
             call her_main("Yes, [genie_name]?","body_31")
             g9 "That was very well done."
             call her_main("Thank you, [genie_name].","body_128")
-    
+
     $ gryffindor +=35
     m "The \"Gryffindor\" house gets 35 points!"
     her "Thank you, [genie_name]."
-    
+
     $ hg_pr_FlashClassmate_OBJ.points += 1
     $ hg_pr_FlashClassmate_OBJ.complete = True
     $ hg_pr_FlashClassmate_OBJ.inProgress = False
-    
+
     $ hermione_sleeping = True
-    
+
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
-    
+
     call her_walk(400,610,2)
     show screen hermione_stand_f #Hermione stands still.
     pause.3
-    
+
     if one_out_of_three == 2 and whoring >= 12 and whoring <= 14: #Event level 02.
         $ her_head_ypos = her_head_only
         call her_head("\"Slytherin\"...","body_120")
@@ -1603,19 +1603,19 @@ label hg_pr_FlashClassmate_complete:
     if whoring >= 15 and one_out_of_three == 1: # LEVEL 06+ <=============================================================EVENT LEVEL 03
         $ her_head_ypos = her_head_only
         call her_head(".........................","body_123")
-    
+
     hide screen hermione_stand_f #Hermione stands still.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with d3
     call music_block
-    
+
     return
-    
-    
+
+
 ##(Level 05) (45 pt.) (MAKE OUT WITH A GIRL). (Available during daytime only).
 label hg_pr_KissAGirl: #LV.5 (Whoring = 12 - 14)
-    
-    hide screen hermione_main 
+
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to go make out with one of her female classmates?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -1624,7 +1624,7 @@ label hg_pr_KissAGirl: #LV.5 (Whoring = 12 - 14)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if hg_pr_KissAGirl_OBJ.points == 0: # <================================================================================ FIRST TIME
         m "Have You ever kissed another girl, [hermione_name]?"
         call her_main("?!","body_07",xpos=140)
@@ -1643,7 +1643,7 @@ label hg_pr_KissAGirl: #LV.5 (Whoring = 12 - 14)
         call her_main("[genie_name]!......","body_07")
         m "I said you're dismissed."
         call her_main("*Humph!*...","body_09")
-    
+
     else: # <================================================================================ NOT FIRST TIME
         m "A forty five house points worth of favour is up for grabs!"
         m "Are you interested, [hermione_name]?"
@@ -1662,7 +1662,7 @@ label hg_pr_KissAGirl: #LV.5 (Whoring = 12 - 14)
             call her_main("I will see what I can do, [genie_name]...","body_69")
             m "Great. See you after your classes then."
             call her_main("................","body_79")
-        
+
         elif whoring >= 15 and whoring <= 17: # LEVEL 06. Event level 02.
             call her_main("I suppose...","body_70",xpos=140)
             m "Great. All you need to do is make out with another girl."
@@ -1670,7 +1670,7 @@ label hg_pr_KissAGirl: #LV.5 (Whoring = 12 - 14)
             m "Up for the task, [hermione_name]?"
             call her_main("I suppose...","body_29")
             m "Great. See you after your classes then."
-        
+
         elif whoring >= 18: # LEVEL 07+ Event level 03.
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             call her_main("Sure, why not?","body_06",xpos=140)
@@ -1679,16 +1679,16 @@ label hg_pr_KissAGirl: #LV.5 (Whoring = 12 - 14)
             call her_main("Alright.","body_45")
             call her_main("I know a couple of girls who are hungry for attention and wouldn't mind putting on a little show.","body_64")
             m "Great. See you after your classes then."
-    
+
     $ hg_pr_KissAGirl_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_KissAGirl_complete:
     call hg_pr_EnterRoom_block
-    
-    if whoring >= 12 and whoring <= 14: # LEVEL 05                    
+
+    if whoring >= 12 and whoring <= 14: # LEVEL 05
         if one_out_of_three == 1: ### EVENT (A)
             stop music fadeout 1.0
             m "[hermione_name]..."
@@ -1721,7 +1721,7 @@ label hg_pr_KissAGirl_complete:
             call her_main("I don't care...","body_30")
             $ mad +=25
             jump could_not_flirt #Sent here when choose "Favor failed! No points for you!" (Hermione is leaving without getting any points).
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name], did you complete your task?"
@@ -1742,7 +1742,7 @@ label hg_pr_KissAGirl_complete:
             her "Can I just get my payment now?"
             call her_main("Please, [genie_name]...","body_69")
             m "Well, alright..."
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name], did you complete your task?"
@@ -1782,11 +1782,11 @@ label hg_pr_KissAGirl_complete:
                     call her_main("......","body_21")
                     $ mad +=25
                     jump could_not_flirt #Sent here when choose "Favor failed! No points for you!" (Hermione is leaving without getting any points).
-                            
+
                 "\"Fine. Here is your payment, girl.\"":
                     pass
-    
-    elif whoring >= 15 and whoring <= 17: # LEVEL 06. Event level 02.     
+
+    elif whoring >= 15 and whoring <= 17: # LEVEL 06. Event level 02.
         if one_out_of_three == 1: ### EVENT (A)
             m "[hermione_name], did you complete your task?"
             show screen blktone
@@ -1816,7 +1816,7 @@ label hg_pr_KissAGirl_complete:
             call her_main("And it sort of felt as if she was taking advantage of me...","body_31")
             m "Oh... Well, in that case..."
             call her_main("","body_45")
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             m "[hermione_name]. Did you complete your task?"
             show screen blktone
@@ -1850,7 +1850,7 @@ label hg_pr_KissAGirl_complete:
             call her_main("I suppose I am, [genie_name]...","body_128")
             her "I changed that poor girl's life..."
             m "Now you are just pulling on my heartstrings..."
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             show screen blktone
             with d3
@@ -1896,8 +1896,8 @@ label hg_pr_KissAGirl_complete:
             call her_main("Tongue and everything, [genie_name].","body_29")
             m "Nicely done."
             call her_main("","body_45")
-    
-    elif whoring >= 18: # LEVEL 07+                  
+
+    elif whoring >= 18: # LEVEL 07+
         if one_out_of_three == 1: ### EVENT (A) # Snowballing
             label snowballing:
                 pass
@@ -1977,7 +1977,7 @@ label hg_pr_KissAGirl_complete:
             m "Schoolgirls \"snowballing\" in the courtyard..."
             m "Well done, [hermione_name]."
             call her_main("","body_68")
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             m "[hermione_name], did you complete your task?"
             show screen blktone
@@ -2009,7 +2009,7 @@ label hg_pr_KissAGirl_complete:
             m "Now you are just being cruel, you little witch."
             call her_main("My points please.","body_64") # :)
             m "Fine..."
-        
+
         elif one_out_of_three == 3: ### EVENT (C) Only takes place once
             if lazy_aka_not_yet:
                 pass
@@ -2025,7 +2025,7 @@ label hg_pr_KissAGirl_complete:
             show screen blktone
             with d3
             call her_main("Of course.","body_64")
-            her "I decided to go for a different approach today..."                                                                                                                                                                                                              
+            her "I decided to go for a different approach today..."
             stop music
             call her_main("I figured that iffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff","body_63",xpos=500)
             m "Huh?"
@@ -2040,7 +2040,7 @@ label hg_pr_KissAGirl_complete:
             a4 "Huh...? WHAT?!! What do you want from me?"
             a4 "There is no release date set! Stop asking me!"
             g4 "What are you talking about?"
-            a5 "I mean, I'm not sleeping..." 
+            a5 "I mean, I'm not sleeping..."
             a7 "*Yawn*..."
             a5 "................"
             m "So Is Hermione going to stutter from now on? Is that what this is?"
@@ -2072,25 +2072,25 @@ label hg_pr_KissAGirl_complete:
             aa "Zzz.... Lola? no... Put your tits away I said... Zzzz....."
             aa "Zzz.... And don't call me that.... Zzz...."
             m "*Sigh...* That's just sad..."
-    
+
     $ gryffindor +=45
     m "The \"Gryffindor\" house gets 45 points!"
     her "Thank you, [genie_name]."
-    
+
     $ hg_pr_KissAGirl_OBJ.points += 1
     $ hg_pr_KissAGirl_OBJ.complete = True
     $ hg_pr_KissAGirl_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 ##(Level 06) (55 pt.) (Give handjob to a classmate). (Available during daytime only).
 label hg_pr_HandjobClassmate: #LV.6 (Whoring = 15 - 17)
-    
+
     $ current_payout = 55 #Used when haggling about price of the favour.
-    
-    hide screen hermione_main 
+
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to give a handjob to one of her classmates?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -2099,7 +2099,7 @@ label hg_pr_HandjobClassmate: #LV.6 (Whoring = 15 - 17)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if hg_pr_HandjobClassmate_OBJ.points == 0: # <================================================================================ FIRST TIME
         if whoring <=14 or hg_pr_KissAGirl_OBJ.points <= 1:
             m "[hermione_name], I want you to do something different today..."
@@ -2141,7 +2141,7 @@ label hg_pr_HandjobClassmate: #LV.6 (Whoring = 15 - 17)
         m "Are you up for it then?"
         call her_main("I am willing to give it a try...","body_69")
         m "Splendid... See you tonight then."
-    
+
     else: # <================================================================================ NOT FIRST TIME
         if whoring >= 15 and whoring <= 17: # LEVEL 06 FIRST EVENT.
             m "Today's favour shall be..."
@@ -2154,7 +2154,7 @@ label hg_pr_HandjobClassmate: #LV.6 (Whoring = 15 - 17)
             m "So... Are you up for that, [hermione_name]?"
             call her_main("I will see what I can do...","body_69")
             m "Splendid!"
-        
+
         elif whoring >= 18 and whoring <= 20: # LEVEL 07
             m "Ready to go have sex with one of your classmates yet?"
             stop music fadeout 1.0
@@ -2167,7 +2167,7 @@ label hg_pr_HandjobClassmate: #LV.6 (Whoring = 15 - 17)
             her "Fifty five house points?"
             m "Naturally."
             call her_main("Well, alright... I'll see what I can do...","body_118")
-        
+
         elif whoring >= 21: # LEVEL 08+
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name]..."
@@ -2178,16 +2178,16 @@ label hg_pr_HandjobClassmate: #LV.6 (Whoring = 15 - 17)
             m "Great. Go have fun then!"
             m "And report back to me after your classes, as usual."
             call her_main("Of course, [genie_name].","body_74")
-    
+
     $ hg_pr_HandjobClassmate_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_HandjobClassmate_complete:
     call hg_pr_EnterRoom_block
-    
-    if whoring >= 15 and whoring <= 17: # LEVEL 06                    
+
+    if whoring >= 15 and whoring <= 17: # LEVEL 06
         if one_out_of_three == 1: ### EVENT (A)
             m "[hermione_name], how did it go?"
             show screen blktone
@@ -2210,7 +2210,7 @@ label hg_pr_HandjobClassmate_complete:
             m "Did his \"wee-wee\" shoot white stuff at you, [hermione_name]?"
             call her_main("Well...","body_29")
             call her_main("No, it did not...","body_33")
-            menu: 
+            menu:
                 "\"Well, this doesn't count then.\"":
                     stop music fadeout 4.0
                     call her_main("What?","body_119",xpos=140)
@@ -2238,7 +2238,7 @@ label hg_pr_HandjobClassmate_complete:
                     call her_main("Thank you, [genie_name]!","body_87")
                     call her_main("I promise, I will try harder next time!","body_45")
                     call her_main("Ehm... Should you request a similar favour in the future, I mean...","body_44")
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             m "[hermione_name], how did it go?"
             show screen blktone
@@ -2264,7 +2264,7 @@ label hg_pr_HandjobClassmate_complete:
             call her_main("What?","body_48")
             call her_main("[genie_name], I am not a prostitute!","body_118")
             m "Well, in that case..."
-        
+
         elif one_out_of_three == 3: ### EVENT (C) Event level: 01.
             # HERMIONE HAVE A CUM-STAIN ON HER SHOULDER.
             m "[hermione_name], how did it go?"
@@ -2280,7 +2280,7 @@ label hg_pr_HandjobClassmate_complete:
             call her_main("Oh, no! I thought I got it all off...","body_189")
             show screen ctc
             pause
-            show screen blkfade 
+            show screen blkfade
             with d3
             pause.5
             $ uni_sperm = False  #Universal sperm.
@@ -2300,8 +2300,8 @@ label hg_pr_HandjobClassmate_complete:
             call her_main("And he did that on purpose, I know he did!","body_30")
             call her_main("Nasty, good for nothing \"ravenclaws\"...","body_29")
             m "Well, I'd say a job well done."
-    
-    elif whoring >= 18 and whoring <= 20: # LEVEL 07                    
+
+    elif whoring >= 18 and whoring <= 20: # LEVEL 07
         if one_out_of_three == 1: ### EVENT (A)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name], did you complete your task?"
@@ -2350,7 +2350,7 @@ label hg_pr_HandjobClassmate_complete:
                     her "I knew you would understand."
                     m "Just make sure you finish your job properly this time."
                     call her_main("Of course, [genie_name]. I will give him the wank of his life, I promise!","body_74")
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             m "[hermione_name], did you complete your task?"
             show screen blktone
@@ -2408,7 +2408,7 @@ label hg_pr_HandjobClassmate_complete:
             call her_main("Then I would like to get paid now, please.","body_184")
             m "........"
             m "Fine..."
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             m "[hermione_name], did you complete your task?"
             show screen blktone
@@ -2462,8 +2462,8 @@ label hg_pr_HandjobClassmate_complete:
                     m "All goes according to keik-... I mean, the plan..."
                     call her_main("Hm...","body_120")
                     $ mad += 11
-    
-    elif whoring >= 21: # LEVEL 08+                    
+
+    elif whoring >= 21: # LEVEL 08+
         if one_out_of_three == 1: ### EVENT (A)
             if sucked_off_ron: #In public events. Give a handjob to classmate. Event level 03. Event # 1. "Jerked of and suked of Ron Weasley". Turns True after that.
                 jump blowjob_ron
@@ -2518,7 +2518,7 @@ label hg_pr_HandjobClassmate_complete:
                 her "..."
                 call her_main("Will I get paid for this, [genie_name]?","body_06")
                 m "Of course."
-        
+
         elif one_out_of_three == 2: ### EVENT (B) (WANK DURING CLASS). Event level: 03.
             label blowjob_ron: #Sent here if sucked off Ron already.
                 pass
@@ -2571,7 +2571,7 @@ label hg_pr_HandjobClassmate_complete:
             call her_main("Oh god, I'm sorry [genie_name], I was thinking of something else.","body_119")
             m "Yes... sure, OK."
             call her_main("","body_01")
-        
+
         elif one_out_of_three == 3: ### EVENT (C) Event level: 03. (Wanked off 5 boys).
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "[hermione_name], did you complete your task?"
@@ -2598,26 +2598,26 @@ label hg_pr_HandjobClassmate_complete:
             call her_main("...yes.","body_121")
             m "Well done, miss Garnger."
             call her_main("","body_128")
-    
+
     $ gryffindor += current_payout #55
     m "The \"Gryffindor\" house gets [current_payout] points!"
     her "Thank you, [genie_name]."
-    
+
     $ uni_sperm = False  #Universal sperm.
     $ aftersperm = False #Shows stains on Hermione's uniform.
-    
+
     $ hg_pr_HandjobClassmate_OBJ.points += 1
     $ hg_pr_HandjobClassmate_OBJ.complete = True
     $ hg_pr_HandjobClassmate_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 ##(Level 07) (65 pt.) (Blowjob to a boy). (Available during daytime only).
 label hg_pr_BlowjobClassmate: #LV.7 (Whoring = 18 - 20)
-    
-    hide screen hermione_main 
+
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to go give a blowjob to one of her classmates?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -2626,7 +2626,7 @@ label hg_pr_BlowjobClassmate: #LV.7 (Whoring = 18 - 20)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if hg_pr_BlowjobClassmate_OBJ.points == 0: # <================================================================================ FIRST TIME
         m "[hermione_name], I will be buying another favour from you today."
         call her_main("Thank you, [genie_name]. I really appreciate it.","body_16",xpos=140)
@@ -2642,7 +2642,7 @@ label hg_pr_BlowjobClassmate: #LV.7 (Whoring = 18 - 20)
         call her_main("[genie_name], I...","body_120")
         call her_main("I refuse to sell you a depraved favour like that, [genie_name].","body_186")
         call her_main("Can't I just kiss another girl instead?","body_131")
-        her "I do not mind that..." 
+        her "I do not mind that..."
         m "[hermione_name], please stop wasting my time..."
         m "If you are not in the mood to sell favours today..."
         m "Then there is the door."
@@ -2661,7 +2661,7 @@ label hg_pr_BlowjobClassmate: #LV.7 (Whoring = 18 - 20)
         her "......................................................................"
         m "You may leave, [hermione_name]."
         her "........."
-    
+
     else: # <================================================================================ NOT FIRST TIME
         if whoring >= 18 and whoring <= 20: # LEVEL 07 FIRST EVENT.
             m "Go give some lucky boy another blowjob, [hermione_name]."
@@ -2682,16 +2682,16 @@ label hg_pr_BlowjobClassmate: #LV.7 (Whoring = 18 - 20)
             call her_main(".....................","body_79") # :(
             m "Report back to me after your classes as usual..."
             call her_main("Of course...","body_69")
-    
+
     $ hg_pr_BlowjobClassmate_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_BlowjobClassmate_complete:
     call hg_pr_EnterRoom_block
-    
-    if whoring >= 18 and whoring <= 20: # LEVEL 07                    
+
+    if whoring >= 18 and whoring <= 20: # LEVEL 07
         if one_out_of_three == 1: ### EVENT (A)
             play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
             m "You know the drill, [hermione_name]. Start talking."
@@ -2710,7 +2710,7 @@ label hg_pr_BlowjobClassmate_complete:
             m "[hermione_name], did you swallow the load properly?"
             call her_main("Yes I did, [genie_name].","body_47")
             m "Well, I suppose that will do for now..."
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             m "[hermione_name], did you complete your task?"
             show screen blktone
@@ -2740,11 +2740,11 @@ label hg_pr_BlowjobClassmate_complete:
             m "Hm... Well, this will be all then."
             her "Have a good night, [genie_name]."
             hide screen hermione_main                                                                                                                                                                                 #HERMIONE
-            with d3   
+            with d3
             $ display_h_tears = False
             $ hg_pr_BlowjobClassmate_OBJ.inProgress = False
             jump could_not_flirt #Sent here when choose "Favor failed! No points for you!" (Hermione is leaving without getting any points).
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             #play music "music/Despair_by_erenik.mp3" fadein 1 fadeout 1 # SAD THEME.
             m "[hermione_name], how did it go?"
@@ -2762,8 +2762,8 @@ label hg_pr_BlowjobClassmate_complete:
             her "I told you - I gave the boy a proper blowjob."
             call her_main("The least I could do for someone who treated me with respect for a change...","body_118")
             m "Well, in that case."
-            
-    if whoring >= 21: # LEVEL 08 =+               
+
+    if whoring >= 21: # LEVEL 08 =+
         if one_out_of_three == 1: ### EVENT (A)
             stop music fadeout 1.0
             # HERMIONE ALL MESSED UP, WITH RUNNING MASCARA.
@@ -2811,7 +2811,7 @@ label hg_pr_BlowjobClassmate_complete:
             call her_main("Excuse me, [genie_name].","body_118")
             call her_main("{size=-3}(He just kept on cumming... My stomach feels so full...){/size}","body_34")
             call her_main("Can I get my payment now, please?","body_31")
-        
+
         elif one_out_of_three == 2: ### EVENT (B)
             # HERMIONE COVERED IN CUM
             label suked_off_them_both:
@@ -2849,7 +2849,7 @@ label hg_pr_BlowjobClassmate_complete:
             show screen ctc
             pause
             hide screen ctc
-        
+
         elif one_out_of_three == 3: ### EVENT (C)
             if  suked_off_ron_and_har:
                 jump suked_off_them_both
@@ -2878,28 +2878,28 @@ label hg_pr_BlowjobClassmate_complete:
             call her_main("I don't know, [genie_name]... Maybe...","body_74")
             her "Could I get paid now please?"
             m "Sure..."
-    
+
     $ gryffindor += 65 #65
     m "The \"Gryffindor\" house gets 65 points!"
     her "Thank you, [genie_name]."
-    
+
     $ display_h_tears = False
     $ aftersperm = False
     $ uni_sperm = False
-    
+
     $ public_whore_ending = True #Activates "Public Whore" ending.
-    
+
     $ hg_pr_BlowjobClassmate_OBJ.points += 1
     $ hg_pr_BlowjobClassmate_OBJ.complete = True
     $ hg_pr_BlowjobClassmate_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 ##(Level ??) (?? pt.) (Blowjob to a teacher). (Available during daytime only).
 label hg_pr_BlowjobTeacher:# "teacher blowjob" (Level ??)
-    hide screen hermione_main 
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to give a blowjob to one of her teachers?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -2908,7 +2908,7 @@ label hg_pr_BlowjobTeacher:# "teacher blowjob" (Level ??)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if whoring < 15:
         jump too_much
     else:
@@ -2923,15 +2923,15 @@ label hg_pr_BlowjobTeacher:# "teacher blowjob" (Level ??)
         m "Great. Go have fun then!"
         m "And report back to me after your classes, as usual."
         call her_main("Of course, sir.",74)
-    
+
     $ hg_pr_BlowjobTeacher_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_BlowjobTeacher_complete:
     call hg_pr_EnterRoom_block
-    
+
     call her_main("Good evening, sir...","body_01",xpos=370,ypos=0)
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
     m "You know the drill, girl. Start talking."
@@ -2984,24 +2984,24 @@ label hg_pr_BlowjobTeacher_complete:
     call her_main("Are you satisfied with that [genie_name]?","body_68")
     m "That miss Granger, was better than I had initially expected."
     $ gryffindor +=70
-    m "Seventy points to \"Gryffindor\" miss Granger." 
+    m "Seventy points to \"Gryffindor\" miss Granger."
     her "Thank you, sir..."
     m "You can go now."
     her "Good night, sir."
     #m "Yes, good night..."
-    
+
     $ hg_pr_BlowjobTeacher_OBJ.points += 1
     $ hg_pr_BlowjobTeacher_OBJ.complete = True
     $ hg_pr_BlowjobTeacher_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
-    return    
-    
-    
+    return
+
+
 ##(Level 08) (75 pt.) (FUCK A CLASSMATE). (Available during daytime only).
 label hg_pr_SexWithClassmate: #LV.8 (Whoring = 21 - 23)
 
-    hide screen hermione_main 
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to fuck one of her classmates?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -3010,7 +3010,7 @@ label hg_pr_SexWithClassmate: #LV.8 (Whoring = 21 - 23)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-    
+
     if hg_pr_SexWithClassmate_OBJ.points == 0: # <================================================================================ FIRST TIME
         m "[hermione_name]..."
         m "Today I need you to have sex with a classmate of your choice."
@@ -3031,14 +3031,14 @@ label hg_pr_SexWithClassmate: #LV.8 (Whoring = 21 - 23)
         call her_main("Again, [genie_name]?","body_117",xpos=140)
         m "Yes. And you will get 75 points again as well."
         call her_main("Well, alright...","body_79")
-    
+
     $ hg_pr_SexWithClassmate_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_SexWithClassmate_complete:
-    # LEVEL 08+                
+    # LEVEL 08+
     if one_out_of_three == 1: ### EVENT (A)
         if fucked_ron_and_har:
             jump returns_next_morning
@@ -3054,7 +3054,7 @@ label hg_pr_SexWithClassmate_complete:
         $ hg_pr_SexWithClassmate_AltFlag = True #Turns True when hermione fails to show up after her "Fuck a classmate" favour. Runs an event next morning.
         return
         # NEXT MORNING
-    
+
     elif one_out_of_three == 2: ### EVENT (B)
         call hg_pr_EnterRoom_block
         m "[hermione_name], did you complete your task?"
@@ -3078,7 +3078,7 @@ label hg_pr_SexWithClassmate_complete:
         m "Oh really?"
         call her_main("Yes... I find not wearing any underwear very empowering.","body_79")
         m "Good for you, [hermione_name]."
-    
+
     elif one_out_of_three == 3: ### EVENT (C)
         label returns_next_morning:
             pass
@@ -3101,22 +3101,22 @@ label hg_pr_SexWithClassmate_complete:
         m ".............."
         call her_main("No, sorry, please disregard what I just said, [genie_name].","body_120")
         m "Hm..."
-    
+
     $ gryffindor += 75 #75
     m "\"Gryffindor\" gets 75 points!"
     her "Thank you, [genie_name]."
-    
+
     $ hg_pr_SexWithClassmate_OBJ.points += 1
     $ hg_pr_SexWithClassmate_OBJ.complete = True
     $ hg_pr_SexWithClassmate_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
     return
-    
+
 label hg_pr_SexWithClassmate_Alt: #Hermione does not show up. This is label where she shows up next morning.
     $ hg_pr_SexWithClassmate_AltFlag = False #Turns True when hermione fails to show up after her "Fuck a classmate" favour. Runs an event next morning.
     call hg_pr_EnterRoom_block
-    
+
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
     m "[hermione_name], you missed your debriefing yesterday."
     call her_main("Yes, [genie_name], I apologize... *yawn*...","body_16",xpos=370)
@@ -3136,23 +3136,23 @@ label hg_pr_SexWithClassmate_Alt: #Hermione does not show up. This is label wher
     her "And everything I wanted to be done to me has been done..."
     call her_main(".................","body_121")
     call her_main("Will I get paid for this, [genie_name]?","body_122")
-    
+
     $ gryffindor += 75 #75
     m "\"Gryffindor\" gets 75 points!"
     her "Thank you, [genie_name]."
-    
+
     $ hg_pr_SexWithClassmate_OBJ.points += 1
     $ hg_pr_SexWithClassmate_OBJ.complete = True
     $ hg_pr_SexWithClassmate_OBJ.inProgress = False
-    
+
     call hg_pr_transition_block
     return
-    
-    
+
+
 
 ##(Level ??) (?? pt.) (Sex with teacher). (Available during daytime only).
 label hg_pr_SexWithTeacher:# "teacher sex" (Level 09)
-    hide screen hermione_main 
+    hide screen hermione_main
     with d3
     m "{size=-4}(Tell her to have sex with one of her teachers?){/size}"
     $ menu_x = 0.5 #Default position of the menu (0.5). Version B is $ menu_x = 0.2
@@ -3161,7 +3161,7 @@ label hg_pr_SexWithTeacher:# "teacher sex" (Level 09)
             pass
         "\"(Not right now.)\"":
             jump silver_requests
-            
+
     if whoring < 20:
         jump too_much
     else:
@@ -3177,15 +3177,15 @@ label hg_pr_SexWithTeacher:# "teacher sex" (Level 09)
         ">Nah..."
         m "Excellent i expect a very detailed report this evening."
         call her_main("Of course, sir.","body_74")
-    
+
     $ hg_pr_SexWithTeacher_OBJ.inProgress = True
-    
+
     call hg_pr_transition_block
     jump day_main_menu
-    
+
 label hg_pr_SexWithTeacher_complete:
     call hg_pr_EnterRoom_block
-    
+
     call her_main("Good evening, sir...","body_01",xpos=370,ypos=0)
     play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 # HERMIONE'S THEME.
     m "You're a bit late this evening."
@@ -3240,25 +3240,25 @@ label hg_pr_SexWithTeacher_complete:
     m "That miss Granger, was an experience."
     ">Hermione rubs her legs together subtly."
     her "[genie_name] if I could get my points and be excused, I would love to get back to my dorm."
-    
+
     $ gryffindor +=80
-    m "Eighty points to \"Gryffindor\" miss Granger. Well deserved." 
+    m "Eighty points to \"Gryffindor\" miss Granger. Well deserved."
     her "Thank you, sir..."
     m "You can go now."
     her "Good night, sir."
     m "Yes, good night..."
-    
+
     $ hg_pr_SexWithTeacher_OBJ.points += 1
     $ hg_pr_SexWithTeacher_OBJ.complete = True
     $ hg_pr_SexWithTeacher_OBJ.inProgress = False
-    
-    
+
+
     call hg_pr_transition_block
     return
-    
-    
-    
-    
+
+
+
+
 label hg_pr_transition_block:
     hide screen bld1
     hide screen hermione_main
@@ -3266,19 +3266,19 @@ label hg_pr_transition_block:
     hide screen hermione_blink
     hide screen ctc
     with d3
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     call music_block
-    
+
     if daytime:
         $ hermione_takes_classes = True
     else:
         $ hermione_sleeping = True
     return
-    
+
 label hg_pr_EnterRoom_block:
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     call her_walk(520,400,2)
@@ -3289,12 +3289,12 @@ label hg_pr_EnterRoom_block:
     show screen hermione_blink
     with d3
     return
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     call her_walk(520,400,2)
     show screen hermione_blink
     show screen bld1
     with d3
     pause.5
-    
-    
+
+

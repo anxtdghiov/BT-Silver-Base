@@ -29,7 +29,7 @@ label map_forest: #Label controlling what happens when you go to the forest
             if day_random >= 7:
                 ">You search around the forest and manage to find an odd looking herb."
                 m "This must be wormwood."
-                menu: 
+                menu:
                     "-Take the wormwood-":
                         ">You gain 1 wormwood."
                         $ p_inv.append("Wormwood")
@@ -40,7 +40,7 @@ label map_forest: #Label controlling what happens when you go to the forest
             elif day_random > 5:
                 ">You search around the forest and manage to find an odd looking herb."
                 m "This must be Knotgrass."
-                menu: 
+                menu:
                     "-Take the Knotgrass-":
                         ">You gain 1 Knotgrass."
                         $ p_inv.append("Knotgrass")
@@ -51,14 +51,14 @@ label map_forest: #Label controlling what happens when you go to the forest
             else:
                 ">You search around the forest but find nothing of interest."
                 jump return_office
-   
+
 label map_lake: #Label controlling what happens when you go to the lake
     menu:
         "-Search the area-":
             if day_random >= 7:
                 ">You search around the lake and manage to find an slender, green vine."
                 m "This must be Niffler's fancy."
-                menu: 
+                menu:
                     "-Take the Niffler's fancy-":
                         ">You gain 1 Niffler's fancy."
                         $ p_inv.append("Niffler's fancy")
@@ -69,7 +69,7 @@ label map_lake: #Label controlling what happens when you go to the lake
             elif day_random > 5:
                 ">You search around the lake and manage to find an exposed root that looks similar to ginger."
                 m "This must be Root of Aconite."
-                menu: 
+                menu:
                     "-Take the Root of Aconite-":
                         ">You gain 1 Root of Aconite."
                         $ p_inv.append("Root of Aconite")
@@ -79,7 +79,7 @@ label map_lake: #Label controlling what happens when you go to the lake
                 jump return_office
             else:
                 ">You search around the lake but find nothing of interest."
-                jump return_office  
+                jump return_office
 
 label map_dorms: #Label controlling what happens when you go to the dorms
     menu:
@@ -87,7 +87,7 @@ label map_dorms: #Label controlling what happens when you go to the dorms
             if day_random >= 7:
                 ">You search around the dorms and manage to find a clump for bright orange fur."
                 m "This must belong to some sort of animal."
-                menu: 
+                menu:
                     "-Take the Fur-":
                         ">You gain 1 Cat Fur."
                         $ p_inv.append("Cat Hair")
@@ -98,7 +98,7 @@ label map_dorms: #Label controlling what happens when you go to the dorms
             elif day_random > 5:
                 ">You search around the dorms and manage to find an comb with some hair in it."
                 m "This must be someones hair."
-                menu: 
+                menu:
                     "-Take the hair-":
                         ">You gain 1 Luna's Hair."
                         $ p_inv.append("Luna's Hair")
@@ -108,8 +108,8 @@ label map_dorms: #Label controlling what happens when you go to the dorms
                 jump return_office
             else:
                 ">You search around the dorms but find nothing of interest."
-                jump return_office         
-            
+                jump return_office
+
 label map_pitch: #Label controlling what happens when you go to the quidditch pitch
     if pitch_open:
         hoo "Hello Professor Dumbledore, nice to see you out of your office today."
@@ -142,7 +142,7 @@ label map_pitch: #Label controlling what happens when you go to the quidditch pi
         ">You look around the open field but can't see any students or teachers"
         m "Mustn't be a practice day."
         jump return_office
-            
+
 label return_office:
     ">You return to your office."
     if daytime:
@@ -215,7 +215,7 @@ label maid_responses:
             $ gold += payment
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -265,7 +265,7 @@ label barmaid_responses:
             $ gold += payment
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -379,7 +379,7 @@ label gryffindor_cheer_responses:
             $ gold += payment
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -399,7 +399,7 @@ label slytherin_cheer_responses:
     show screen bld1
     with d3
     if day_random >=9 and lock_public_favors == False:
-        $ uni_sperm = True 
+        $ uni_sperm = True
         call her_main("","body_78")
     else:
         call her_main("","body_01")
@@ -494,7 +494,7 @@ label slytherin_cheer_responses:
             $ gold += payment
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -502,7 +502,7 @@ label slytherin_cheer_responses:
     $ stockings = 0
     $ custom_outfit_old = 0
     $ current_job = 0
-    $ uni_sperm = False 
+    $ uni_sperm = False
     jump night_main_menu
 
 
@@ -517,7 +517,7 @@ label job_1:
         her "As you wish [genie_name]."
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -535,7 +535,7 @@ label job_2:
         her "As you wish [genie_name]."
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -552,7 +552,7 @@ label job_3:
         her "As you wish [genie_name]."
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -569,7 +569,7 @@ label job_4:
         her "As you wish [genie_name]."
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
@@ -598,4 +598,3 @@ label job_4:
 
 
 
-        

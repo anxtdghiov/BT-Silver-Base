@@ -1,14 +1,14 @@
 label __init_variables:
-    
+
     #place save variables here
     if not hasattr(renpy.store,'request_jeans'):
         $ request_jeans = False
     if not hasattr(renpy.store,'dribble_equippable'):
         $ dribble_equippable = False
     if not hasattr(renpy.store,'hermione_wetpanties'):
-        $ hermione_wetpanties = False        
+        $ hermione_wetpanties = False
     if not hasattr(renpy.store,'wetpanties_equippable'):
-        $ wetpanties_equippable = False            
+        $ wetpanties_equippable = False
     if not hasattr(renpy.store,'request_gryyf_stockings'):
         $ request_gryyf_stockings = False
     if not hasattr(renpy.store,'hermione_dribble'):
@@ -137,8 +137,8 @@ label __init_variables:
     ###Define Luna variables
     if not hasattr(renpy.store,'luna_wear_glasses'): #important!
         call luna_init
-    
-    
+
+
     if not hasattr(renpy.store,'new_request_01_heart'): #important!
         $ new_request_01_heart = 0
     if not hasattr(renpy.store,'new_request_02_heart'): #important!
@@ -163,7 +163,7 @@ label __init_variables:
         $ new_request_29_heart = 0
     if not hasattr(renpy.store,'new_request_31_heart'): #important!
         $ new_request_31_heart = 0
-    
+
     if not hasattr(renpy.store,'pub_q_sex_teach'): #important!
         $ pub_q_sex_teach = False
     if not hasattr(renpy.store,'hg_pf_TheGamble_Flag'): #important!
@@ -174,7 +174,7 @@ label __init_variables:
         $ hg_pf_TheGamble_FlagB = False
     if not hasattr(renpy.store,'hg_pf_TheGamble_FlagC'): #important!
         $ hg_pf_TheGamble_FlagC = False
-    
+
 
     if not hasattr(renpy.store,'hair_style'): #important!
         $ hair_style = "A"
@@ -221,10 +221,10 @@ label __init_variables:
         $ g3 = Caricature('Genie', 'g3_char')
 
 
-    
+
     $ override_persistant = False
-    
-    
+
+
     ### Personal Favor ID's ###
     $ hg_pf_TalkToMe_ID = 0        #00 Genie touches himself.
     $ hg_pf_NicePanties_ID = 1     #01 "Lift your skirt".
@@ -246,8 +246,8 @@ label __init_variables:
         $ hg_pf_hearts = [0] * 12
     if override_persistant or not hasattr(renpy.store,'hg_pf_complete'): #important!
         $ hg_pf_complete = [False] * 12
-        
-        
+
+
     ### Public Request ID's ###
     $ hg_pr_FlirtClassmate_ID = 0 #00 "Flirt with 3 classmates".
     $ hg_pr_FlirtTeacher_ID = 1 #01 "Flirt with a teacher".
@@ -259,7 +259,7 @@ label __init_variables:
     $ hg_pr_BlowjobTeacher_ID = 7 #07 (Blow a teacher)
     $ hg_pr_SexWithClassmate_ID = 8 #08 (sex with classamate).
     $ hg_pr_SexWithTeacher_ID = 9 #09 (sex with teacher)
-    
+
     #Public Request Points
     if override_persistant or not hasattr(renpy.store,'hg_pr_points'): #important!
         $ hg_pr_points = [0] * 11
@@ -267,31 +267,31 @@ label __init_variables:
         $ hg_pr_complete = [False] * 11
     if override_persistant or not hasattr(renpy.store,'hg_pr_InProgress'): #important!
         $ hg_pr_InProgress = [False] * 11
-    
+
     #Public Request Vars.
     if override_persistant or not hasattr(renpy.store,'hg_pr_SexWithClassmate_AltFlag'): #important!
         $ hg_pr_SexWithClassmate_AltFlag = False
-    
+
     #Public Shaming Flags
     if override_persistant or not hasattr(renpy.store,'hg_ps_PantyThief_SoakedPantiesFlag'): #important!
         $ hg_ps_PantyThief_SoakedPantiesFlag = False
-        
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
     $ wardrobe_hair_style = "A"
     $ wardrobe_hair_color = 1
     $ wardrobe_gift_item = 0
     $ wardrobe_costume_selection = 0
     $ wardrobe_uniform_selection = ""
-    
-    
+
+
     $ her_path = "01_hp/13_hermione_main/"
-    
-    
+
+
     $ emote_anger = False
     $ emote_exclam = False
     $ emote_hearts = False
@@ -304,7 +304,7 @@ label __init_variables:
     $ question = []
     $ sweat = ["body_24","body_34","body_57","body_108","body_208","body_340"]
     $ suprize = ["body_80","body_80b","body_335"]
-    
+
     $ h_body = "body_01"
     $ h_xpos = 370
     $ h_ypos = 0
@@ -314,21 +314,21 @@ label __init_variables:
     $ her_head_tits = 235
     $ her_chibi_dance_xpos = 210
     $ her_chibi_dance_ypos = 180
-    
+
     $ hermione_chibi_zorder = 3
-    
+
     $ s_head_xpos = 330
     $ s_head_ypos = 380
     $ snape_chibi_xpos=610
     $ snape_chibi_ypos=210
     $ snape_speed = 2.0
-    
+
     $ luna_chibi_xpos = 400
     $ luna_chibi_ypos = 400
     $ luna_speed = 2.0
-    
-    
+
+
     $ row_index_selected = 0
     $ column_index_selected = 0
-    
+
     return

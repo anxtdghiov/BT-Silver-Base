@@ -2,7 +2,7 @@
 label start_collar_event:
     hide screen wardrobe_gifts
     "Are you sure you wish to start this event?"
-    menu: 
+    menu:
         "Yes!":
             $ collar = 5
         "No.":
@@ -36,7 +36,7 @@ label collar_scene:
             jump slave_scene
         "-Of course not, you're a good girl-":
             jump good_girl_scene
-        
+
 label slut_scene: #Locked to her being your slut
     m "Of course you're a slut."
     call her_main("!!!","body_21")
@@ -64,7 +64,7 @@ label slut_scene: #Locked to her being your slut
     $ h_c_u_pic = "hand_ani"
     show screen chair_02
     show screen h_c_u
-    
+
     hide screen hermione_blink #Hermione stands still.
     hide screen blkfade
     hide screen blktone
@@ -354,7 +354,7 @@ label whore_scene: #(locked behind the public whoring flag)
 label whore_scene_2:
 
 
-label slave_scene: 
+label slave_scene:
     m "Don't be silly [hermione_name], you're not a slut."
     call her_main("Thank yo-","body_45")
     m "You're a slave."
@@ -407,7 +407,7 @@ label slave_scene:
     call her_main("Professor Dumbledore.","body_68")
     hide screen hermione_main
     $ renpy.play('sounds/slap.mp3')
-    show screen white 
+    show screen white
     pause.1
     hide screen white
     with hpunch
@@ -417,7 +417,7 @@ label slave_scene:
     call her_main("Yes.","body_22")
     hide screen hermione_main
     $ renpy.play('sounds/slap.mp3')
-    show screen white 
+    show screen white
     pause.1
     hide screen white
     with hpunch
@@ -432,7 +432,7 @@ label slave_scene:
     call her_main("A slave.","body_67")
     hide screen hermione_main
     $ renpy.play('sounds/slap.mp3')
-    show screen white 
+    show screen white
     pause.1
     hide screen white
     with hpunch
@@ -445,7 +445,7 @@ label slave_scene:
     call her_main("I think I'm about to cum master.","body_118")
     hide screen hermione_main
     $ renpy.play('sounds/slap.mp3')
-    show screen white 
+    show screen white
     pause.1
     hide screen white
     with hpunch
@@ -469,7 +469,7 @@ label slave_scene:
     call her_main("Thank you sir.","body_121")
     hide screen hermione_main
     $ renpy.play('sounds/slap.mp3')
-    show screen white 
+    show screen white
     pause.1
     hide screen white
     with hpunch

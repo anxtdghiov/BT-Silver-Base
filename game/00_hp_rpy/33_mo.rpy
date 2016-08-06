@@ -13,7 +13,7 @@ label tentacle_shop_scene:
         call screen shop_screen
     m "What's this scroll?"
     sna_[1] "This is the recipe for a powerful and forbidden potion."
-    m "What does it do?" 
+    m "What does it do?"
     sna_[1] "It transforms you into any magical creature you desire."
     m "Like what?"
     sna_[1] "Anything you can secure a sample of."
@@ -46,7 +46,7 @@ label tentacle_shop_scene:
             m "No thanks, not right now"
             sna_[1] "Perhaps later then"
             call screen shop_screen
-    
+
 label tentacle_scene_intro: #Public tentacle scene
     show screen blkfade
     spo "Today class, I have been requested by the Headmaster to teach you about a plant called Devil's Snare."
@@ -103,7 +103,7 @@ label tentacle_scene_intro: #Public tentacle scene
     if lock_public_favors == False:
         jump tentacle_1
     jump tentacle_2
-            
+
 
 label tentacle_1: #Public tentacle scene
     $ cg("01_hp/28_cg/p1.png")
@@ -265,7 +265,7 @@ label tentacle_2: #Enjoyable tentacle scene
     hide screen cg
     $ hermione_takes_classes = True
     jump day_main_menu
-    
+
 
 
 ###COSTUME SCENES

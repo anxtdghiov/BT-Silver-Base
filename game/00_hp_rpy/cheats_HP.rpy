@@ -13,7 +13,7 @@ label cheats_ht:
                     $ whoring = 24
                     "Hermione is now a giant slut"
                     jump cheats_ht_hermione
-                    
+
                 "-Increase Whoring-":
                     $ whoring += 1
                     "Hermione became more depraved"

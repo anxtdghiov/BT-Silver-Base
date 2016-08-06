@@ -11,7 +11,7 @@ label jerk_off:
 #            pass
 #        "-Cancel-":
 #            jump desk
-    m "How should I finish this thing?"   
+    m "How should I finish this thing?"
     label how_to_finish:
     menu:
         "{color=#858585}...(LOCKED)...{/color}" if not hg_ps_PantyThief_OBJ.inProgress:
@@ -42,14 +42,14 @@ if cum_on_panties:
     $ hg_ps_PantyThief_SoakedPantiesFlag = True #TRUE when you have the panties in your possession (before you return them to Hermione).
     ">You cum all over Hermione's panties, and then use them to wipe the cum off the floor..."
     ">You received the item: \"Cum-soaked panties\"."
- 
+
 hide screen blkfade
 with d5
 #m "This was a pretty sweet jerk-off session..."
-    
+
 ### SETTING ALL THE FLAGS BACK TO DEFAULT ###
 $ jerking_off_to_jasmine = False #Turns TRUE when Princess Jasmine has been chosen as a target for a jerk-off session.
-$ jerking_off_to_lara = False 
+$ jerking_off_to_lara = False
 $ cum_on_the_floor = False #TRUE when chosen to cum on the floor.
 $ cum_on_panties = False #True when choose to cum on Hermione's panties.
 
@@ -57,5 +57,5 @@ $ cum_on_panties = False #True when choose to cum on Hermione's panties.
 
 if daytime:
     jump night_start
-else: 
+else:
     jump day_start

@@ -69,7 +69,7 @@ image ch_hem blink_a_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_a_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_b:    #shirt 00.1
     "01_hp/16_hermione_chibi/walk/h_walk_b_01.png"
     pause.08
@@ -207,7 +207,7 @@ image ch_hem blink_c_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_c_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_d:    #shirt 01
     "01_hp/16_hermione_chibi/walk/h_walk_d_01.png"
     pause.08
@@ -276,7 +276,7 @@ image ch_hem blink_d_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_d_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_e:    #shirt 02
     "01_hp/16_hermione_chibi/walk/h_walk_e_01.png"
     pause.08
@@ -345,7 +345,7 @@ image ch_hem blink_e_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_e_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_f:    #shirt 03
     "01_hp/16_hermione_chibi/walk/h_walk_f_01.png"
     pause.08
@@ -414,7 +414,7 @@ image ch_hem blink_f_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_f_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_g:    #shirt 04
     "01_hp/16_hermione_chibi/walk/h_walk_g_01.png"
     pause.08
@@ -483,7 +483,7 @@ image ch_hem blink_g_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_g_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_h:    #shirt 05
     "01_hp/16_hermione_chibi/walk/h_walk_h_01.png"
     pause.08
@@ -552,7 +552,7 @@ image ch_hem blink_h_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_h_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_n:    #no shirt
     "01_hp/16_hermione_chibi/walk/h_walk_n_01.png"
     pause.08
@@ -621,7 +621,7 @@ image ch_hem blink_n_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_n_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_robe: #hermione walking in robe
     "01_hp/16_hermione_chibi/walk/h_walk_robe_01.png"
     pause.08
@@ -690,7 +690,7 @@ image ch_hem blink_robe_blink_flip:
     im.Flip("01_hp/16_hermione_chibi/walk/h_walk_robe_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_hem walk_robe_n: #hermione walking in robe naked
     "01_hp/16_hermione_chibi/walk/h_walk_robe_n_01.png"
     pause.08
@@ -762,7 +762,7 @@ image ch_hem blink_robe_n_flip:
 
 
 ### HERMIONE FAVOR ANIMATIONS ###
-    
+
 ### HERMIONE GROPE BREASTS (w/ top) ###
 image ani_her_grope_breasts_top_a:
     "01_hp/animation/molest_01.png"
@@ -782,7 +782,7 @@ image ani_her_grope_breasts_top_a:
     "01_hp/animation/molest_08.png"
     pause.2
     repeat
-    
+
 ### HERMIONE DANCING ###
 image clothed_dance_ani:### HERMIONE DANCING FULLY CLOTHED ###
     "01_hp/16_hermione_chibi/dance/01_dancing_01.png"
@@ -874,7 +874,7 @@ image no_panties_dance_ani:### HERMIONE DANCING NO PANTIES###
     "01_hp/16_hermione_chibi/dance/07_dance_09.png"
     pause.1
     repeat
-    
+
 ## HERMIONE GROPE BREASTS (nude) ###
 image ani_her_grope_breasts_lift_top:
     "01_hp/animation/tit_molester_naked_01.png"
@@ -912,7 +912,7 @@ image ani_her_grope_breasts_no_top:
     "01_hp/animation/tit_molester_naked_00_08.png"
     pause.2
     repeat
-    
+
 ### HERMIONE HANDJOB ###
 image ani_her_handjob:
     "01_hp/08_animation_02/12_handjob_01.png"
@@ -1622,7 +1622,7 @@ image ani_her_sex_cum_outside_blink_naked:
     "01_hp/08_animation_02/22_cum_n_19.png"
     pause 2
     repeat
-    
+
 ### HERMIONE SEX CUM INSIDE###
 image ani_her_sex_cum_inside: #sex_cum_in_ani
     "01_hp/08_animation_02/23_cum_01.png"
@@ -1752,9 +1752,9 @@ image ani_her_sex_cum_inside_blink_naked:
     "01_hp/08_animation_02/23_cum_n_19.png"
     pause 2
     repeat
-    
+
 ### SCREENS
-    
+
 screen hermione_blank_main:
     tag hermione_main
     zorder hermione_chibi_zorder
@@ -1764,8 +1764,8 @@ screen hermione_blank_head:
 screen hermione_blank_chibi:
     tag hermione_chibi
     zorder hermione_chibi_zorder
-    
-    
+
+
 ### HERMIONE CHIBI ###
 screen hermione_walk:
     tag hermione_chibi
@@ -1791,21 +1791,21 @@ screen hermione_stand_f: #Hermione stands still facing right. (Leaving tower).
     tag hermione_chibi
     add im.Flip(hermione_chibi_stand, horizontal=True) at Position(xpos=hermione_chibi_xpos, ypos=hermione_chibi_ypos)
     zorder hermione_chibi_zorder
-    
+
 screen hermione_chibi_lift_skirt:
     tag hermione_chibi
     if whoring < hg_NoPanties_lvl:
         add "01_hp/16_hermione_chibi/panties_00.png" at Position(xpos=350+140, ypos=190)
     else:
         add "01_hp/16_hermione_chibi/panties_01.png" at Position(xpos=350+140, ypos=190)
-    
+
 # label to be called to display the hermione chibi walking in a given direction
 #
 # @param pos1 starting position for the chibi, defaults to the value of walk_xpos
 # @param pos2 ending position for the chibi, defaults to the value of walk_xpos2
 # @param speed the the time it will take the chibi to move from pos1 to pos2 in seconds, defaults to the value of hermione_speed
 # @param loiter boolean flag to detetermine weather to show the chibi when the animation ends, defaults to False
-# @param redux_pause value to decrease the time to pause before hideing the animation early 
+# @param redux_pause value to decrease the time to pause before hideing the animation early
 label her_walk(pos1 = walk_xpos, pos2 = walk_xpos2, speed = hermione_speed, loiter = False,redux_pause = 0):
     hide screen hermione_walk
     hide screen hermione_walk_f
@@ -1834,7 +1834,7 @@ label her_walk(pos1 = walk_xpos, pos2 = walk_xpos2, speed = hermione_speed, loit
         if loiter:
             show screen hermione_blink_f
     return
-    
+
 # label to be called to remove hermiones chibi from the screen
 #
 # @param dissolveTime how long to use the desolve transition for i.e.(2=d2, 3=d3)
@@ -1851,5 +1851,5 @@ label her_walk_end_loiter(dissolveTime = 3):
         hide screen hermione_blink
         hide screen hermione_blink_f
     return
-    
-    
+
+

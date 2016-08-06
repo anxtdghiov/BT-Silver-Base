@@ -34,29 +34,29 @@ label mail:
         ">You read your mail."
         play sound "sounds/money.mp3"  #Quiet...
         if finished_report == 1:
-            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing one report this week.\nHere is your payment:{/size} \n{size=+4}40 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing one report this week.\nHere is your payment:{/size} \n{size=+4}40 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"
             $ gold += 40
-        
+
         if finished_report == 2:
-            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing two reports this week.\nHere is your payment:{/size} \n{size=+4}70 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing two reports this week.\nHere is your payment:{/size} \n{size=+4}70 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"
             $ gold += 70
-    
+
         if finished_report == 3:
-            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing three reports this week.\nHere is your payment:{/size} \n{size=+4}90 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing three reports this week.\nHere is your payment:{/size} \n{size=+4}90 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"
             $ gold += 90
-            
+
         if finished_report == 4:
-            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing four reports this week.\nHere is your payment:{/size} \n{size=+4}110 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing four reports this week.\nHere is your payment:{/size} \n{size=+4}110 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"
             $ gold += 110
-        
+
         if finished_report == 5:
-            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing five reports this week.\nHere is your payment:{/size} \n{size=+4}150 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing five reports this week.\nHere is your payment:{/size} \n{size=+4}150 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"
             $ gold += 150
-            
+
         if finished_report >= 6:
-            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing six reports this week.\nHere is your payment:{/size} \n{size=+4}200 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"    
+            $ letter_text = "{size=-7}From:Ministry of Magic\nTo: Professor Dumbledore\n\n\n{/size}{size=-2}Thank you for completing six reports this week.\nHere is your payment:{/size} \n{size=+4}200 gold coins.{/size}\n\n\n{size=-3}-With deepest respect-{/size}"
             $ gold += 200
-        
+
         show screen bld1
         show screen letter
         show screen ctc
@@ -65,35 +65,35 @@ label mail:
         hide screen bld1
         hide screen ctc
 
-            
+
 #            ">Thank you for completing two reports this week. Here is your payment (40 gold)."
 #            $ gold += 40
 
 #        if finished_report >= 3:
 #            "Thank you for completing three reports this week. Here is your payment (60 gold)."
 #            $ gold += 60
-            
+
 #        if finished_report >= 4:
 #            "Thank you for completing four reports this week. Here is your payment (80 gold)."
 #            $ gold += 80
-        
+
 #        if finished_report >= 5: #Maximum amount per week.
 #            "Thank you for completing five reports this week. Here is your payment (100 gold)."
 #            $ gold += 100
-        
+
 #        if finished_report >= 6:
 #            "Thank you for completing six reports this week. Here is your payment (20 gold)."
 #            $ gold += 20
-            
+
 #        if finished_report >= 7:
 #            "Thank you for completing seven reports this week. Here is your payment (20 gold)."
 #            $ gold += 20
-            
+
         $ finished_report = 0
 
         call screen main_menu_01
-    
-    
+
+
 ### MAIL FROM HERMIONE ###
 #place after ### MAIL FROM HERMIONE ###
 
@@ -109,7 +109,7 @@ if outfit_ready:
     pause
     menu:
         "-Done reading-":
-            pass    
+            pass
         "-Not yet-":
             jump letter_outfit
     $ letters -= 1
@@ -118,10 +118,10 @@ if outfit_ready:
     hide screen bld1
     with Dissolve(.3)
     call screen main_menu_01
-    
+
 if day == 1:
     #$ letter_text = "{size=-4}-To professor Dumbledore-\n\nI am writing you to bring the current situation in our school to your attention.\n I'm afraid I'll need your help to sort this out.\n\n\n-Sincerely yours Hermione Granger-{/size}"
-    $ letter_text = "{size=-7}From: Hermione Granger\nTo: Professor Dumbledore\n\n{/size}{size=-4}I am sure that you remember the reason why I'm writing you this letter from my last one, sir.\n\nI beg of you, please hear my plea this time. This injustice simply cannot go on...\nNot in this day and age, not in our school.\n\nPlease take action.\n\n{size=-3}With deepest respect,\nHermione Granger{/size}"    
+    $ letter_text = "{size=-7}From: Hermione Granger\nTo: Professor Dumbledore\n\n{/size}{size=-4}I am sure that you remember the reason why I'm writing you this letter from my last one, sir.\n\nI beg of you, please hear my plea this time. This injustice simply cannot go on...\nNot in this day and age, not in our school.\n\nPlease take action.\n\n{size=-3}With deepest respect,\nHermione Granger{/size}"
     hide screen owl
     show screen owl_02
     #$ mail_from_her = False #Comented out because replaced with $ letters += 1
@@ -134,7 +134,7 @@ if day == 1:
     pause
     menu:
         "-Done reading-":
-            pass    
+            pass
         "-Not yet-":
             jump letter01_agagin
     hide screen letter
@@ -150,7 +150,7 @@ if day == 1:
     with d3
     jump event_00
     #call screen main_menu_01
-    
+
 
 
 if letter_from_hermione_02: #Letter from Hermione #02.
@@ -169,7 +169,7 @@ if letter_from_hermione_02: #Letter from Hermione #02.
     pause
     menu:
         "-Done reading-":
-            pass    
+            pass
         "-Not yet-":
             jump letter02_agagin
     hide screen letter
@@ -198,7 +198,7 @@ if work_unlock: # Send a letter that will unlock an ability to write reports
     pause
     menu:
         "-Done reading-":
-            pass    
+            pass
         "-Not yet-":
             jump letter_work
     hide screen letter
@@ -235,10 +235,10 @@ if work_unlock: # Send a letter that will unlock an ability to write reports
 
 
 
-    
-label mail_02: #Packages only. <=====================================================================### PACKAGES ###=================================================== 
-    
-### ITEMS ###   
+
+label mail_02: #Packages only. <=====================================================================### PACKAGES ###===================================================
+
+### ITEMS ###
     # must receive every day, even if it's empty.
     $ delivery = dailyDelivery.receive()
     $ package_is_here = False

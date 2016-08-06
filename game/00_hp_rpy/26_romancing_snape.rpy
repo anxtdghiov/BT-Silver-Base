@@ -11,13 +11,13 @@ label date_with_snape_01:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_02.png"                                        # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Or I could tell you some more about those teenage \"slytherin\" sluts..."
-    hide screen s_head2              
+    hide screen s_head2
     g9 "The latter, please."
     $ s_head_xpos = 330 # x = 330,                                                                              # SNAPE
     $ s_sprite = "01_hp/13_characters/snape/main/snape_13.png"                                        # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Great... Get a load of this then..."
-    hide screen s_head2  
+    hide screen s_head2
     pause.1
     show screen blktone
     with d3
@@ -33,10 +33,10 @@ label date_with_snape_01:
 
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
-    
+
     return
-    
-    
+
+
 label date_with_snape_02:
     show screen bld1
     with d3
@@ -52,7 +52,7 @@ label date_with_snape_02:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                        # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Could take time though..."
-    hide screen s_head2 
+    hide screen s_head2
     m "Take time?"
     m "Why not just award a couple of hundred points to \"Slytherin\" and be done with it?"
     $ s_sprite = "01_hp/13_characters/snape/main/24.png"                                        # SNAPE
@@ -61,7 +61,7 @@ label date_with_snape_02:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                        # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Awarding a whole bunch of points to my house without any reason could draw in unnecessary attention..."
-    hide screen s_head2 
+    hide screen s_head2
     m "Hm... I see your point..."
     show screen blktone
     with d3
@@ -71,12 +71,12 @@ label date_with_snape_02:
     hide screen blktone
     hide screen bld1
     with d3
-    
+
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
-    
+
     return
-    
+
 label date_with_snape_03:
     show screen bld1
     with d3
@@ -92,12 +92,12 @@ label date_with_snape_03:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Lately I am starting to feel very doubtful about our whole plan..."
-    hide screen s_head2 
+    hide screen s_head2
     m "You shouldn't though..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Is that so..."
-    hide screen s_head2 
+    hide screen s_head2
     m "It may take some time, but I {size=+5}will{/size} break her."
     m "Just trust me."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
@@ -106,7 +106,7 @@ label date_with_snape_03:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "What choice do I have but to hope for the best...?"
-    hide screen s_head2 
+    hide screen s_head2
     show screen blktone
     with d3
     ">You spend the evening by dreading the uncertain future with professor Snape."
@@ -115,14 +115,14 @@ label date_with_snape_03:
     hide screen blktone
     hide screen bld1
     with d3
-    
-    
+
+
 
     $ snapes_support += 1 #Controls how many points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
-  
+
     return
-    
+
 label date_with_snape_04:
     show screen bld1
     with d3
@@ -131,12 +131,12 @@ label date_with_snape_04:
     $ s_sprite = "01_hp/13_characters/snape/main/24.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Tell me something, Genie..."
-    hide screen s_head2            
+    hide screen s_head2
     m "Yes?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_25.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Do you believe in the theory of parallel worlds?"
-    hide screen s_head2    
+    hide screen s_head2
     m "Well, it is hard not to. All things considered."
     $ s_sprite = "01_hp/13_characters/snape/main/23.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -144,23 +144,23 @@ label date_with_snape_04:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "So you think somewhere out there is another version of me?"
-    hide screen s_head2    
+    hide screen s_head2
     m "Probably..."
     $ s_sprite = "01_hp/13_characters/snape/main/23.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Hm..."
     sna "Severus Snape - the ever cheerful white mage..."
-    hide screen s_head2    
+    hide screen s_head2
     m "Sure, why not?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_03.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "What unsettling imagery you put into my mind..."
-    hide screen s_head2    
+    hide screen s_head2
     m "How about another version of that Granger girl?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_02.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Yes! Hermione Granger - the repulsive slut without any dignity! Yes, I like it!"
-    hide screen s_head2    
+    hide screen s_head2
     m "And what if in that other world the cheerful Severus teams up with some bizarre version of me?"
     m "And maybe together we train the slut Hermione to be a proper girl and a good student?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_28.png"                                         # SNAPE
@@ -176,14 +176,14 @@ label date_with_snape_04:
     hide screen blktone
     hide screen bld1
     with d3
-    
+
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
-    
+
     return
 
-    
-    
+
+
 label date_with_snape_05:
     show screen bld1
     with d3
@@ -193,7 +193,7 @@ label date_with_snape_05:
     show screen s_head2                                                                                                 # SNAPE
     sna2 "So... How is our little plan coming along?"
     sna2 "Is that wretched girl giving you trouble?"
-    hide screen s_head2    
+    hide screen s_head2
     menu:
         "\"Yeah. She's stubborn.\"":
             $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
@@ -207,7 +207,7 @@ label date_with_snape_05:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_01.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "But you are positive you will be able to break her?"
-    hide screen s_head2    
+    hide screen s_head2
     m "Oh, absolutely."
     m "It may take some time though..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
@@ -216,17 +216,17 @@ label date_with_snape_05:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "I mean you are still pretty much powerless, right?"
-    hide screen s_head2    
+    hide screen s_head2
     m "Yeah, pretty much..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_02.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Splendid!"
-    hide screen s_head2    
+    hide screen s_head2
     m "......................."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_29.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "I mean it is bad for {size=+5}you{/size}, but good for {size=+5}us{/size}, right?"
-    hide screen s_head2    
+    hide screen s_head2
     m "Right..."
     show screen blktone
     with d3
@@ -236,11 +236,11 @@ label date_with_snape_05:
     hide screen blktone
     hide screen bld1
     with d3
-    
+
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
+
 label date_with_snape_06:
     show screen bld1
     with d3
@@ -253,7 +253,7 @@ label date_with_snape_06:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_22.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "These days I have a whole harem of skimpy students to choose from."
-    hide screen s_head2  
+    hide screen s_head2
     g9 "Nice!"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_02.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -262,7 +262,7 @@ label date_with_snape_06:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_13.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Whoever the hell I want!"
-    hide screen s_head2  
+    hide screen s_head2
     m "Seriously?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -274,7 +274,7 @@ label date_with_snape_06:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_22.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Or even for the mere promise of good grades..."
-    hide screen s_head2  
+    hide screen s_head2
     pause.1
     show screen blktone
     with d3
@@ -284,13 +284,13 @@ label date_with_snape_06:
     hide screen blktone
     hide screen bld1
     with d3
-    
-    
+
+
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
-    
+
+
 label date_with_snape_07:
     show screen bld1
     with d3
@@ -299,12 +299,12 @@ label date_with_snape_07:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "So, back in your world you are some kind of all-powerful being?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Yeah, sort of..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Then how come you do the bidding of that Jasmine woman?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Oh... Well..."
     m "...she is a princess."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
@@ -312,7 +312,7 @@ label date_with_snape_07:
     sna "So?"
     sna "Is she your princess? You are not even human."
     sna "Did you swear your loyalty to her?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Not really..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -320,7 +320,7 @@ label date_with_snape_07:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "The way I see it, you are an all-powerful being and she is just some muggle..."
-    hide screen s_head2  
+    hide screen s_head2
     m "She's a what?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_25.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -328,22 +328,22 @@ label date_with_snape_07:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "So why bother trying to please her?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Well it's complicated..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna ".............."
-    hide screen s_head2  
+    hide screen s_head2
     m ".................."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_02.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "She's hot, isn't she?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Smoking..."
     $ s_sprite = "01_hp/13_characters/snape/main/23.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Gotcha."
-    hide screen s_head2  
+    hide screen s_head2
     pause.1
     show screen blktone
     with d3
@@ -356,8 +356,8 @@ label date_with_snape_07:
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
-    
+
+
 label date_with_snape_08:
     show screen bld1
     with d3
@@ -367,7 +367,7 @@ label date_with_snape_08:
     show screen s_head2                                                                                                 # SNAPE
     sna "do you think if we wanted to..."
     sna "We could bring the public flogging back?"
-    hide screen s_head2  
+    hide screen s_head2
     m "What do you mean?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -380,7 +380,7 @@ label date_with_snape_08:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_22.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Especially the girls..."
-    hide screen s_head2  
+    hide screen s_head2
     m "Hm... Fine by me..."
     m "But won't a reform like that attract unnecessary attention towards us?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_29.png"                                         # SNAPE
@@ -391,7 +391,7 @@ label date_with_snape_08:
     show screen s_head2                                                                                                 # SNAPE
     sna "I'm getting drunk with power, my friend!"
     sna2 "And this exquisite wine does not improve my judgment in the slightest either!"
-    hide screen s_head2  
+    hide screen s_head2
     pause.1
     show screen blktone
     with d3
@@ -414,7 +414,7 @@ label date_with_snape_09:
     $ s_sprite = "01_hp/13_characters/snape/main/24.png"                                                     # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "...so, after that I return back to Russia, right?"
-    hide screen s_head2  
+    hide screen s_head2
     g4 "Back to Russia?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_01.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -422,7 +422,7 @@ label date_with_snape_09:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Apparently I am fluent in Russian now."
-    hide screen s_head2 
+    hide screen s_head2
     g4 "Wait, what?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -431,7 +431,7 @@ label date_with_snape_09:
     $ s_sprite = "01_hp/13_characters/snape/main/24.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "And that is so bizarre because I don't even know what a \"Ren'Py\" is!"
-    hide screen s_head2  
+    hide screen s_head2
     m "Hm... Then what happened?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
@@ -449,23 +449,23 @@ label date_with_snape_09:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "...................."
-    hide screen s_head2  
+    hide screen s_head2
     m "......................"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "What do you think all of that means?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Sounds like another one of Akabur's self-inserts."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "What?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Just ignore the whole thing."
     m "A silly dream, nothing more."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_29.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Felt more like a nightmare..."
-    hide screen s_head2  
+    hide screen s_head2
     pause.1
     show screen blktone
     with d3
@@ -475,12 +475,12 @@ label date_with_snape_09:
     hide screen blktone
     hide screen bld1
     with d3
-    
+
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
-    
+
+
 label date_with_snape_10:
     show screen bld1
     with d3
@@ -489,44 +489,44 @@ label date_with_snape_10:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_29.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "What is the meaning of life, Genie?"
-    hide screen s_head2  
+    hide screen s_head2
     g4 "What?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Since you are an all-powerful being, you've got to know things like that, right?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Maybe..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Great. Tell me then."
-    hide screen s_head2  
+    hide screen s_head2
     m "Hm... You sure you're ready for this?"
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Yes. Lay it on me, friend."
-    hide screen s_head2  
+    hide screen s_head2
     m "Alright then..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_01.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "................!"
-    hide screen s_head2  
+    hide screen s_head2
     m "It's plastic..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "I beg your pardon?"
-    hide screen s_head2  
+    hide screen s_head2
     m "it's plastic..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_25.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "I don't get it..."
-    hide screen s_head2  
+    hide screen s_head2
     m "This planet plans to evolve into something else in a million years or so..."
     m "In order to do that it needs a special kind of material that it can't produce on it's own."
     m "So it spawns a new form of life - humans."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_11.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna ".............."
-    hide screen s_head2 
+    hide screen s_head2
     m "You wanted to know the purpose of your existence?"
     m "It's to produce plastic. Simple as that."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_30.png"                                         # SNAPE
@@ -535,17 +535,17 @@ label date_with_snape_10:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "No, no... That can't be it..."
-    hide screen s_head2  
+    hide screen s_head2
     g9 "He-he..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_25.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "Are you pulling my leg?"
-    hide screen s_head2  
+    hide screen s_head2
     g9 "You should've seen your face."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_15.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "You really got me worried there, you bloody non-human bastard!"
-    hide screen s_head2  
+    hide screen s_head2
     g9 "I know! It was hard to resist..."
     show screen blktone
     with d3
@@ -568,18 +568,18 @@ label date_with_snape_11:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_05.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "So... Back in your world, do you people have a country named England?"
-    hide screen s_head2  
+    hide screen s_head2
     m "We used to..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "What happened?"
-    hide screen s_head2  
+    hide screen s_head2
     m "\"The great catastrophe\"..."
     m "It incinerated most of the worlds population in a matter of hours..."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_26.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna "................"
-    hide screen s_head2  
+    hide screen s_head2
     m "Turning about eighty percent of the planet's surface into a scorching desert..."
     m "And the remaining twenty percent into an icy wasteland..."
     m "............."
@@ -592,10 +592,10 @@ label date_with_snape_11:
     $ s_sprite = "01_hp/13_characters/snape/main/snape_25.png"                                         # SNAPE
     show screen s_head2                                                                                                 # SNAPE
     sna2 "Are you sure that you want to return to that place?"
-    hide screen s_head2  
+    hide screen s_head2
     m "Of course."
     m "It may be a bit barbaric, but hey... it's home."
-    show screen blktone 
+    show screen blktone
     with d3
     ">Professor Snape finds a new level of respect for you..."
     ">The bond of friendship between you two solidifies."
@@ -603,11 +603,11 @@ label date_with_snape_11:
     hide screen blktone
     hide screen bld1
     with d3
-    
+
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
+
 label date_with_snape_12:
     show screen bld1
     with d3
@@ -664,7 +664,7 @@ label date_with_snape_12:
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
+
 label date_with_snape_13:
     show screen bld1
     with d3
@@ -722,7 +722,7 @@ label date_with_snape_13:
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
+
 label date_with_snape_14:
     $ s_head_xpos = 330 # x = 330,                                                                              # SNAPE
     $ s_head_ypos = 380 #Right bottom corner: y = 340. y = 380 - no hand.       # SNAPE
@@ -781,7 +781,7 @@ label date_with_snape_14:
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
     return
-    
+
 label date_with_snape_15:
     $ s_head_xpos = 330 # x = 330,                                                                              # SNAPE
     $ s_head_ypos = 380 #Right bottom corner: y = 340. y = 380 - no hand.       # SNAPE
@@ -860,23 +860,23 @@ label date_with_snape_15:
 
     $ snapes_support += 1 #Controls how much points is awarded to SLYTHERIN daily.
     $ snape_events += 1 #Makes sure this event will happen only once. Also triggers next event with Snape.
-    
+
     $ sfmax = True # Turns TRUE when friendship with Snape been maxed out.
     return
 
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
 #    show screen bld1
 #    with d3
 #    $ renpy.play('sounds/win_04.mp3')   #Not loud.
@@ -888,13 +888,13 @@ label date_with_snape_15:
 #    with d3
 
 #    return
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
 label sly_plus:
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
     hide screen notes

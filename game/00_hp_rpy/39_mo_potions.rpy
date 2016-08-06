@@ -44,14 +44,14 @@ label potion_scene_1: #catears (keep in mind Genie is trying to transform her in
 
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen ctc
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     $ ears = True
     if hair_color == 5:
         $ hair_color = 0
@@ -86,15 +86,15 @@ label potion_scene_1_2: #Scene where Hermione comes back after classes angry and
             call her_main("Goodnight [genie_name].","body_120")
             hide screen bld1
             hide screen hermione_main
-            hide screen blktone 
+            hide screen blktone
             hide screen ctc
             with Dissolve(.3)
             $ ears = False
-            
+
             call her_walk(400,610,2)
             $ renpy.play('sounds/door.mp3') #Sound of a door opening.
             with Dissolve(.3)
-            
+
             $ hermione_sleeping = True
             jump night_main_menu
         "-Make her suck you off-" if whoring >= 17:
@@ -118,7 +118,7 @@ label potion_scene_1_2: #Scene where Hermione comes back after classes angry and
     $ g_c_u_pic = "blowjob_ani"
     show screen chair_02
     show screen g_c_u
-    
+
     hide screen hermione_blink #Hermione stands still.
     hide screen blkfade
     hide screen blktone
@@ -129,7 +129,7 @@ label potion_scene_1_2: #Scene where Hermione comes back after classes angry and
     show screen bld1
     with d3
     m "Good god what is with your tongue?! It feels like velcro."
-    her "*Slurp?*"    
+    her "*Slurp?*"
     $ hermione_chibi_xpos = -150 #-185 behind the desk. (Also 5 is something).
     $ hermione_chibi_ypos = 10
     $ h_c_u_pic = "hand_ani"
@@ -154,8 +154,8 @@ label potion_scene_1_2: #Scene where Hermione comes back after classes angry and
     show screen h_c_u
     hide screen g_c_u
     with d3
-    call her_main("Of course [genie_name].","body_128")     
-    hide screen hermione_main  
+    call her_main("Of course [genie_name].","body_128")
+    hide screen hermione_main
     $ g_c_u_pic = "blowjob_ani"
     show screen chair_02
     hide screen h_c_u
@@ -200,7 +200,7 @@ label potion_scene_1_2: #Scene where Hermione comes back after classes angry and
     $ g_c_u_pic = "cum_in_mouth_ani"
     hide screen h_c_u   # SUCKING
     show screen g_c_u # SUCKING
-    with d3 
+    with d3
     call her_main("","body_125")
     pause .1
     call her_main("*gulp* *Purr* *Purr*","body_126")
@@ -232,15 +232,15 @@ label potion_scene_1_2: #Scene where Hermione comes back after classes angry and
     hide screen h_c_u
     hide screen g_c_u
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen hermione_blink
     hide screen ctc
     with d3
     $ hermione_sleeping = True
     $ hermione_chibi_ypos = 250
     jump night_main_menu
-    
-    
+
+
 label potion_scene_2_1: #breast expansion - Until chibis are added for it tifucking won't be written
     m "Guess what I have for you today."
     call her_main("Is it another foul tasting potion that will try transform me into a hideous animal?","body_04")
@@ -309,14 +309,14 @@ label potion_scene_2_1: #breast expansion - Until chibis are added for it tifuck
             call her_main("...Yes [genie_name].","body_79")
             hide screen bld1
             hide screen hermione_main
-            hide screen blktone 
+            hide screen blktone
             hide screen ctc
             with Dissolve(.3)
-            
+
             call her_walk(400,610,2)
             $ renpy.play('sounds/door.mp3') #Sound of a door opening.
             with Dissolve(.3)
-            
+
             $ hermione_takes_classes = True
             jump day_main_menu
         "-Play with her breasts-":
@@ -391,15 +391,15 @@ label potion_scene_2_1: #breast expansion - Until chibis are added for it tifuck
     hide screen bld1
     hide screen hermione_main
     hide screen groping_naked_tits
-    hide screen blktone 
+    hide screen blktone
     hide screen ctc
     show screen genie
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     $ hermione_takes_classes = True
     jump day_main_menu
 
@@ -432,16 +432,16 @@ label potion_scene_2_2: #ass expansion
     call her_main("And my ass, it feels so... good.","body_121")
     ">You start to notice her ass increase in size."    ###Use bigger butt from Captain Nemo
     call her_main("It feels too sensitive... I have to take my skirt off","body_119") ###changed so to too
-    
+
     hide screen hermione_main
-    show screen blktone 
+    show screen blktone
     show screen ctc
     with d3
     call h_action("expand_ass")
     call her_main("","body_118",xpos=140,ypos=0)
-    
+
     pause
-    
+
     call her_main("ughhh, has it gotten bigger?","body_118")
     call her_main("Is that what this potion's supposed to do? Makes my ass bigger?","body_120")
     m "Evidently."
@@ -453,7 +453,7 @@ label potion_scene_2_2: #ass expansion
     ">Hermione hops over to your desk, her ass bouncing as she moves, and presents herself to you."
     hide screen bld1
     with d3
-    
+
     call her_walk(400,280,3,redux_pause=2)
     show screen blkfade
     with Dissolve(1)
@@ -595,11 +595,11 @@ label potion_scene_2_2: #ass expansion
             $ g_c_u_pic = "sex_cum_out_ani"
             show screen chair_02
             show screen g_c_u
-            show screen white 
+            show screen white
             pause.1
             hide screen white
             pause.2
-            show screen white 
+            show screen white
             pause .1
             hide screen white
             with hpunch
@@ -638,9 +638,9 @@ label potion_scene_2_2: #ass expansion
             $ custom_skirt = 0
             ">Your cum is still visible on her ass."
             call her_main("...","body_127")
-    
-    
-    show screen blktone 
+
+
+    show screen blktone
     show screen ctc
     with d3
 
@@ -648,12 +648,12 @@ label potion_scene_2_2: #ass expansion
     hide screen hermione_main
     $ uni_sperm = False
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
-    
+
     $ hermione_takes_classes = True
     hide screen groping_02
     hide screen hermione_main
@@ -661,7 +661,7 @@ label potion_scene_2_2: #ass expansion
 
     jump day_main_menu
         #will add this later
-        #"-Fuck her ass-" if whoring >= 22:    
+        #"-Fuck her ass-" if whoring >= 22:
 
 label potion_scene_3: #cum addiction - work in progress, has some scenes adjusted for it
     m "[hermione_name], today I have a very special potion that I would like you to drink."
@@ -692,17 +692,17 @@ label potion_scene_3: #cum addiction - work in progress, has some scenes adjuste
     call her_main("Is that all then [genie_name]?","body_69")
     m "Yes [hermione_name], 20 points to Gryffindor."
     call her_main("Thank you [genie_name].","body_08")
-    ">Hermione leaves the room with the remaining potion firmly in her grasp."    
+    ">Hermione leaves the room with the remaining potion firmly in her grasp."
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen ctc
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     $ addicted = True
     $ hermione_takes_classes = True
     jump day_main_menu
@@ -737,7 +737,7 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
     $ h_c_u_pic = "hand_ani"
     show screen chair_02
     show screen g_c_u
-    
+
     hide screen hermione_blink #Hermione stands still.
     hide screen blkfade
     hide screen blktone
@@ -755,80 +755,80 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
     $ h_c_u_pic = "hand_ani"
     show screen h_c_u
     hide screen g_c_u
-    with d3      
+    with d3
     her "Do you have any idea how hard it was sitting \nthrough classes today?"
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3      
+    with d3
     her "*Slurp!* *Slurp!* *Slurp!*"    ###start sucking etc....
     call her_main("","body_69")
     show screen h_c_u
     hide screen g_c_u
-    with d3   
+    with d3
     her "Being this aroused."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3   
+    with d3
     her "*Slurp!* *Gobble!* *Slurp!*"
     call her_main("","body_68")
     show screen h_c_u
     hide screen g_c_u
-    with d3   
+    with d3
     her "With no way to relieve myself."
     her "I tried everything."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3   
+    with d3
     her "*Gobble!* *Slurp!* *Slurp!*"
     call her_main("","body_64")
     show screen h_c_u
     hide screen g_c_u
-    with d3 
+    with d3
     her "I even masturbated in the girls bathroom."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3   
+    with d3
     her "*Gobble!!* *Gltch!!* *Gobble!!!*"
     call her_main("","body_79")
     show screen h_c_u
     hide screen g_c_u
-    with d3 
+    with d3
     her "But nothing worked."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3   
+    with d3
     her "*Slurp!* *Gulp!* *Slurp!*"
     call her_main("","body_78")
     show screen h_c_u
     hide screen g_c_u
-    with d3 
+    with d3
     her "All I could think about was the taste of your \nfilthy cum."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3   
+    with d3
     her "*Slurp!* *Gulp!* *Gulp!*"
     m "My my, someone is becoming quite the slut wouldn't you say [hermione_name]"
     her "*Slurp!* *Gulp!* *Slurp!*"
     call her_main("","body_65")
     show screen h_c_u
     hide screen g_c_u
-    with d3 
+    with d3
     her "You know why this is happening to me."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3  
+    with d3
     her "*Slurp!* *Slurp!* *Gulp!*"
     call her_main("","body_64")
     show screen h_c_u
     hide screen g_c_u
-    with d3 
+    with d3
     her "Whatever was in that delicious potion you made \nme drink this morning."
     hide screen hermione_main
     m "Delicious? I thought you said it was just a bottle full of my cum?"
@@ -839,12 +839,12 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
     call her_main("","body_129")
     show screen h_c_u
     hide screen g_c_u
-    with d3 
+    with d3
     her "..."
     hide screen h_c_u
     hide screen hermione_main
     show screen g_c_u
-    with d3   
+    with d3
     her "*Slurp!* *Slurp!* *Gulp!*"
     ">She is incredibly enthusiastic. You can feel your load building."
     menu:
@@ -875,7 +875,7 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
             call her_main("I-I can't stop cumming [genie_name]...","body_117")
             hide screen hermione_main
             ">The stimulation proves too much and she passes out."
-            
+
         "-Cum in her mouth-":
             m "This is it girl. Get ready."
             ">Hermione starts swirling her tongue and focusing on the tip of your shaft."
@@ -910,7 +910,7 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
             m "Not so quick [hermione_name]."
             show screen h_c_u
             hide screen g_c_u
-            with d3 
+            with d3
             ">You quickly pull your penis out from her mouth."
             call her_main("What are you doing [genie_name]?","body_48")
             hide screen hermione_main
@@ -918,7 +918,7 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
             $ g_c_u_pic = "cum_on_face_ani"
             hide screen h_c_u
             show screen g_c_u
-            with d3 
+            with d3
             $ uni_sperm = True
             ">You start pumping your cock quickly and explode all over the young witch's face"
             m "Take it you filthy cum slut!"
@@ -945,7 +945,7 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
             ">She goes to bury her face into her crouch but you put your palm on her forehead and push her away."
             show screen h_c_u
             hide screen g_c_u
-            with d3 
+            with d3
             call her_main("[genie_name], what are you doing?","body_119")
             hide screen hermione_main
             m "giving you your reward"
@@ -1001,14 +1001,14 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
     hide screen hermione_main
     ">Hermione is in an unconscious heap on the floor."
     menu:
-        "-Carry her back to her room as is-":   
+        "-Carry her back to her room as is-":
             ">You pick her limp body up and carry her to her room."
             ">As you enter the dormitory you hear her talk in her sleep."
             call her_main("Of course I swallow... just form a line...","body_131")
             hide screen hermione_main
             ">You place her carefully back into her bed."
             m "Sleep tight slut."
-        "-Clean her up and take her back to her room-":   
+        "-Clean her up and take her back to her room-":
             $ uni_sperm = False
             ">You pick her limp body up and carry her to her room."
             ">As you enter the dormitory you hear her mumble in her sleep."
@@ -1036,7 +1036,7 @@ label potion_scene_3_2: #Scene where Hermione comes back addicted to your cum (r
     hide screen hermione_main
 
     jump night_main_menu
-        
+
 label potion_scene_4: #Transparent uniform
     m "[hermione_name], I have another potion for you."
     call her_main("I'm not sure that I like these potions [genie_name].","body_07")
@@ -1059,18 +1059,18 @@ label potion_scene_4: #Transparent uniform
     her "Can I go now?"
     m "Yes you may. 20 points to Gryffindor"
     call her_main("Thank you [genie_name].","body_16")
-    
+
     $ gryffindor += 20
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen ctc
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     $ hermione_takes_classes = True
     if whoring <= 7:
         $ transparency = 0.8
@@ -1162,17 +1162,17 @@ label potion_scene_4_2: #Scene where Hermione comes back after classes angry and
     $ transparency = 1
     hide screen bld1
     hide screen hermione_main
-    hide screen blktone 
+    hide screen blktone
     hide screen ctc
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
-    
+
     $ hermione_sleeping = True
     jump night_main_menu
-        
+
 label potion_scene_5: #Lamia potion
     call her_main("That's dumb.","body_32")
     m "I literally don't know."
@@ -1233,7 +1233,7 @@ label potion_scene_6: #Luna potion
     $ changeLuna(1, 1, 4, 1)
     her "Ughhh... I feel like I'm going to throw up! Did the Polyjuice work??"
     m "Like a charm."
-    ">Hermione starts examining herself, feeling out her outfit and pausing at her breasts." 
+    ">Hermione starts examining herself, feeling out her outfit and pausing at her breasts."
     $ changeLuna(5, 1, 5, 1)
     her "Apparently I'm still a girl. Someone from Ravenclaw?"
     m "Keen powers of observation, Miss Granger"
@@ -1298,14 +1298,14 @@ label potion_scene_6: #Luna potion
     hide screen bld1
     hide screen blkfade
     hide screen luna
-    $ menu_x = 0.5 
+    $ menu_x = 0.5
     $ hermione_takes_classes = True
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     hide screen luna_chibi
     with d3
     $ luna_known = True
     jump day_main_menu
-    
+
 label potion_scene_7: #hyper sensitivity potion
     m "I'd like you to drink a potion today."
     her "Alright then."
@@ -1381,11 +1381,11 @@ label potion_scene_7_1: #Hyper sensitive breasts
     m "I told you I'm good."
     her "No [genie_name], this is the best thing I've ever felt."
     her ""
-    
+
 label potion_scene_7_2: #Hyper sensitive mouth/throat
-    
+
 label potion_scene_7_3: #Hyper sensitive pussy
-    
-    
-    
-    
+
+
+
+

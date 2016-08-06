@@ -22,24 +22,24 @@ label luna_init:
     $ luna_arrousal = 0
     $ luna_corruption = 0
 
-    $ luna_base = "01_hp/13_characters/luna/base/base_01.png" 
+    $ luna_base = "01_hp/13_characters/luna/base/base_01.png"
     $ luna_cheeks = "01_hp/13_characters/luna/base/cheeks_01.png"
-    $ luna_hair = "01_hp/13_characters/luna/base/hair_01.png" 
+    $ luna_hair = "01_hp/13_characters/luna/base/hair_01.png"
     $ luna_xpos = 300
     $ luna_ypos = 0
-    $ luna_mouth = "01_hp/13_characters/luna/mouth/mouth_01.png" 
-    $ luna_eye = "01_hp/13_characters/luna/eye/eye_01.png" 
-    $ luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_01.png" 
-    $ luna_pupil = "01_hp/13_characters/luna/eye/pupil_01.png" 
-    $ luna_glasses = "01_hp/13_characters/luna/misc/glasses.png" 
-    $ luna_top = "01_hp/13_characters/luna/clothes/uniform/top.png" 
-    $ luna_acc = "01_hp/13_characters/luna/misc/jewel.png" 
-    $ luna_skirt = "01_hp/13_characters/luna/clothes/uniform/skirt.png" 
-    $ luna_panties = "01_hp/13_characters/luna/clothes/underwear/panties.png" 
-    $ luna_bra = "01_hp/13_characters/luna/clothes/underwear/bra.png" 
+    $ luna_mouth = "01_hp/13_characters/luna/mouth/mouth_01.png"
+    $ luna_eye = "01_hp/13_characters/luna/eye/eye_01.png"
+    $ luna_eyebrow = "01_hp/13_characters/luna/eye/eyebrow_01.png"
+    $ luna_pupil = "01_hp/13_characters/luna/eye/pupil_01.png"
+    $ luna_glasses = "01_hp/13_characters/luna/misc/glasses.png"
+    $ luna_top = "01_hp/13_characters/luna/clothes/uniform/top.png"
+    $ luna_acc = "01_hp/13_characters/luna/misc/jewel.png"
+    $ luna_skirt = "01_hp/13_characters/luna/clothes/uniform/skirt.png"
+    $ luna_panties = "01_hp/13_characters/luna/clothes/underwear/panties.png"
+    $ luna_bra = "01_hp/13_characters/luna/clothes/underwear/bra.png"
     $ luna_zorder = 5
 
-    $ luna_chibi_image = "01_hp/13_characters/luna/chibis/luna_stand.png" 
+    $ luna_chibi_image = "01_hp/13_characters/luna/chibis/luna_stand.png"
     $ luna_chibi_xpos = 400
     $ luna_chibi_ypos = 250
 
@@ -86,7 +86,7 @@ label luna_walk(pos1 = walk_xpos, pos2 = walk_xpos2, speed = luna_speed, loiter 
         if loiter:
             show screen luna_blink_f
     return
-    
+
 label luna_walk_end_loiter(dissolveTime = 3):
     if dissolveTime > 0:
         hide screen luna_02
@@ -181,7 +181,7 @@ label luna_intro_1:
     m "(Damn, she’s fine!) Yes girl, what is it?"
     lun "I’ve asked the other teachers and they all laugh at me, but I need help with some wrackspurts."
 
-    menu: 
+    menu:
         "\"Wrackspurts?... Is that some sort of wizard STD?\"":
             lun "Hahaha, I guess you could say that, Professor! "
             lun "Wrackspurts are invisible creatures which float into a person’s ear and make their brain go fuzzy."

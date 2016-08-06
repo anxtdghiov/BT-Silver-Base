@@ -5,24 +5,24 @@ label __init_variables:
         $ shea_waifu = False #Turns True if you finish the book with Shea.
     if not hasattr(renpy.store,'complited_shea_already'): #important!
         $ complited_shea_already = False #Turns TRUE when you finish with Shea once. Need so that when you finish with Shea again you don get +1 Imagination.
-    
+
     if not hasattr(renpy.store,'victoria'): #important!
         $ victoria = 0
     if not hasattr(renpy.store,'victoria_waifu'): #important!
         $ victoria_waifu = False #Turns True if you finish the book with ms.Victoria.
     if not hasattr(renpy.store,'complited_stevens_already'): #important!
         $ complited_stevens_already = False #Turns TRUE when you finish with Ms.Stevens once. Need so that when you finish with Shea again you don get +1 Imagination.
-    
+
     if not hasattr(renpy.store,'leena'): #important!
         $ leena = 0
     if not hasattr(renpy.store,'leena_waifu'): #important!
         $ leena_waifu = False #Completed the book with Leena.
     if not hasattr(renpy.store,'complited_leena_already'): #important!
         $ complited_leena_already = False #Turns TRUE when you finish with Leena once. Need so that when you finish with Shea again you don get +1 Imagination.
-    
+
     if not hasattr(renpy.store,'waifu_book_completed'): #important!
         $ waifu_book_completed = False #Turns TRUE when you unlock the harem ending.
-    
+
     return
 
 label waifu:
@@ -50,10 +50,10 @@ label waifu:
         "Chapter [Dear_Wifu_OBJ.progress]" "{size=-2}Another boring class. You ignore the teacher completely and daydream about getting a degree in art and becoming a professional hentai-manga artist.{/size}"
         call school_ended
     if Dear_Wifu_OBJ.progress == 8:
-        "Chapter [Dear_Wifu_OBJ.progress]" "{size=-2}Another terribly generic school day, Ms.Stevens' modest green suit does little to conceal her attractive figure. You couldn't care less about the topic of her class though.{/size}" 
+        "Chapter [Dear_Wifu_OBJ.progress]" "{size=-2}Another terribly generic school day, Ms.Stevens' modest green suit does little to conceal her attractive figure. You couldn't care less about the topic of her class though.{/size}"
         call school_ended
     if Dear_Wifu_OBJ.progress == 9:
-        "Chapter [Dear_Wifu_OBJ.progress]" "{size=-2}You ditch your classes and roam through the deserted school corridors, pretending to be the sole survivor of some deadly virus. The janitor spots you, He's infected! You run for your life.{/size}" 
+        "Chapter [Dear_Wifu_OBJ.progress]" "{size=-2}You ditch your classes and roam through the deserted school corridors, pretending to be the sole survivor of some deadly virus. The janitor spots you, He's infected! You run for your life.{/size}"
         call school_ended
     if Dear_Wifu_OBJ.progress == 10:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The same bully takes your money again. An hour later an ambulance parks before school, Some guy broke his hand. You recognize your bully... Did Shea do this to him?{/size}"
@@ -64,7 +64,7 @@ label waifu:
     if Dear_Wifu_OBJ.progress == 12:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You have no classes with ms.Stevens today. So why even bother? You fall asleep behind your desk.{/size}"
         call school_ended
-    if Dear_Wifu_OBJ.progress == 13:   
+    if Dear_Wifu_OBJ.progress == 13:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Your classmates all seem to be very excited about the upcoming prom, but You couldn't care less for the stupid thing.{/size}"
         call school_ended
     if Dear_Wifu_OBJ.progress == 14:
@@ -74,7 +74,7 @@ label waifu:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You overhear one of your classmates talking about starting a secret \"Ms.Stevens fan club\". Not very surprising, considering how attractive she is.{/size}"
         call school_ended
     if Dear_Wifu_OBJ.progress == 16:
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Everyone's excitement about the upcoming prom grows with every day. You toy with an idea of asking someone to the prom, but decide to save yourself the awkwardness.{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Everyone's excitement about the upcoming prom grows with every day. You toy with an idea of asking someone to the prom, but decide to save yourself the awkwardness.{/size}"
         call school_ended
     if Dear_Wifu_OBJ.progress == 17:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens is wearing her skintight business suit again today. All the guys in your class look very eager to learn, while many of the girls are pouting.{/size}"
@@ -105,7 +105,7 @@ label waifu:
                 "What would you like to do for the rest of the day?"
                 "-Hang around the school building (Page 78)-":
                     if victoria >= 7:
-                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Ms.Stevens is the head of the decorating committee, she seems very busy.{/size}" 
+                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Ms.Stevens is the head of the decorating committee, she seems very busy.{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You tell ms.Stevens about your plan to skip the prom. She gets mad, then grabs your crotch and whispers that she will let you cum on her face if you change your mind.{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Later that night you show up for the prom. You dance with Ms.Stevens, she then takes you to the janitor's closet and let's you jerk off on her face. You plaster it with cum.{/size}"
                         $ victoria_waifu = True #Completed the book with ms.Stevens.
@@ -114,13 +114,13 @@ label waifu:
                         "\"Epilogue\"" "{size=-2}-Ending 03 of 05-{/size}" #Ms.Stevens IS ENDING # 3.
                         return
                     if victoria >= 4:
-                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Ms.Stevens is the head of the decorating committee, she seems very busy.{/size}" 
+                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The School gym is full of all sorts of decorations for tonight's prom. Ms.Stevens is the head of the decorating committee, she seems very busy.{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}She notices you. You tell her about your plan to bail on the prom, but it Doesn't look like she cares.{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You return home and go to bed early.{/size}"
                         call epilogue
                         return
                     if victoria < 4:
-                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}School gym is full of all sorts of declarations for the tonights prom. What of time the whole thing is...{/size}" 
+                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}School gym is full of all sorts of declarations for the tonights prom. What of time the whole thing is...{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You return home and go to sleep early.{/size}"
                         call epilogue
                         return
@@ -144,32 +144,32 @@ label waifu:
                         return
                 "-Hang around the library (page 97)-":
                     if leena >= 8:
-                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You ignore the prom and head towards the library. It's deserted, so You take your usual seat. You're surprised to see the dark haired girl crouching under your desk.{/size}" 
+                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You ignore the prom and head towards the library. It's deserted, so You take your usual seat. You're surprised to see the dark haired girl crouching under your desk.{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Two men in black suits appear just as she puts your dick into her mouth. They take her away and you just stand there stupefied and confused with your pants down. What the heck?{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The girl shows up at your doorstep Early on the next morning. She says that she's in the witness protection program, and that her cover has now been compromised because of you...{/size}"
                         $ leena_waifu = True #Completed the book with Leena.
-                        "\"Epilogue\"" "{size=-2}It's been two years now. You and the \"library girl\" got married. You live in a beach-house at a secret location with new names.{/size}" 
+                        "\"Epilogue\"" "{size=-2}It's been two years now. You and the \"library girl\" got married. You live in a beach-house at a secret location with new names.{/size}"
                         "\"Epilogue\"" "{size=-2}You are very much in love with her and left your past behind for her. she's so grateful that, more often than not, you find your cock deep down her throat. -The End-{/size}"
                         "\"Epilogue\"" "{size=-2}-Ending 04 of 05-{/size}" #LEENA IS ENDING # 4.
                         return
                     if leena >= 4:
-                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You ignore the prom and head towards the library. It's deserted, so You take your usual seat. A girl appears out of nowhere and sits beside you.{/size}" 
+                        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You ignore the prom and head towards the library. It's deserted, so You take your usual seat. A girl appears out of nowhere and sits beside you.{/size}"
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}She starts talking to you and says her name is Leena, but Suddenly two men in black suits appear. You see fear on her face as They take her away. You wish you could do something...{/size}"
                         call epilogue
                         return
-                    if leena < 4: 
+                    if leena < 4:
                         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You ignore the prom and head towards the library. It's deserted, so You take your usual seat. After a while you return home and go to bed.{/size}"
                         call epilogue
                         return
-        
-    return       
-        
+
+    return
+
 
 ###
 label school_ended:
-    $ page_01 = renpy.random.randint(1, 30)  
-    $ page_02 = renpy.random.randint(31, 60) 
-    $ page_03 = renpy.random.randint(61, 100) 
+    $ page_01 = renpy.random.randint(1, 30)
+    $ page_02 = renpy.random.randint(31, 60)
+    $ page_03 = renpy.random.randint(61, 100)
     menu:
         "Chapter [Dear_Wifu_OBJ.progress]" "{size=-2}The school is over for today. How would you like to spend the rest of your day?{/size}"
         "-Hang at the school building (Page [page_03])-":
@@ -213,7 +213,7 @@ label school_ended:
                 call at_school
             if Dear_Wifu_OBJ.progress == 20:
                 call home_victoria #Date10
-                
+
         "-Go home (Page [page_01])-":
             if Dear_Wifu_OBJ.progress == 1:
                 call home_shea #1
@@ -298,15 +298,15 @@ label school_ended:
                 call at_library
             if Dear_Wifu_OBJ.progress == 20:
                 call home_leena #8
-    
-    
-    
-    
-    
+
+
+
+
+
     return
 
-        
-        
+
+
 ### DATES ###
 label home_shea:
     if shea == 0: #1
@@ -314,7 +314,7 @@ label home_shea:
     if shea == 1: #2
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}At home, Shea cooks supper for you. You catch a glimpse of her panties and she knocks you out cold again with one of her trademark punches.{/size}"
     if shea == 2: #3
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You return home and The house is empty, so You decide to watch an adult movie in the living room. Shea walks in on you... and knocks you out with one of her trademark punches.{/size}"        
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You return home and The house is empty, so You decide to watch an adult movie in the living room. Shea walks in on you... and knocks you out with one of her trademark punches.{/size}"
     if shea == 3: #4
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}It's a stormy night with rain and thunder. Frightened, Shea crawls into your bed. Your manhood gets hard and Shea knocks you out with one of her trademark punches.{/size}"
     if shea == 4: #5
@@ -322,12 +322,12 @@ label home_shea:
     if shea == 5: #6
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The house is empty. You decide to watch an adult movie in the living room, but Shea walks in on you again. You expect another punch but she just runs off.{/size}"
     if shea == 6: #7
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You come to Shea's room to apologize for the last time. She is wearing her pajamas. You get a little hard during your apology. She accepts your apology blushing.{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You come to Shea's room to apologize for the last time. She is wearing her pajamas. You get a little hard during your apology. She accepts your apology blushing.{/size}"
     if shea == 7: #8
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}It's raining again, so Shea sneaks into your bed at night. She kisses you and asks you to take her anal virginity. You have anal sex with your little step sister.{/size}"
     if shea == 8: #9
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Shea sneaks into your room after supper. While your parents finish eating downstairs, you drill your sister's little asshole with your cock and she takes it ecstatically{/size}"
-    $ shea += 1            
+    $ shea += 1
     return
 
 ### DATES ###
@@ -343,14 +343,14 @@ label home_victoria:
     if victoria == 4: #5
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You try to avoid Ms.Stevens but fail. Your assignment is not completed yet and You grow tired of her droning on about \"how terrible pupils like you fail at life\".{/size}"
     if victoria == 5: #6
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens lectures you again. While doing so she Accidentally spills her tea on your lap. Afterwards She uses a tissue to rub it off, even though You get aroused by that she pretends not to notice.{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens lectures you again. While doing so she Accidentally spills her tea on your lap. Afterwards She uses a tissue to rub it off, even though You get aroused by that she pretends not to notice.{/size}"
     if victoria == 6: #7
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens lectures you once again. Suddenly she kisses your lips, apologizes and asks you to keep this a secret. You return home very confused.{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens lectures you once again. Suddenly she kisses your lips, apologizes and asks you to keep this a secret. You return home very confused.{/size}"
     if victoria == 7: #8
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You decide to roam the school after your classes again in hopes of running into Ms.Stevens, but you can't find her anywhere...{/size}"  
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You decide to roam the school after your classes again in hopes of running into Ms.Stevens, but you can't find her anywhere...{/size}"
     if victoria == 8: #9
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens invites you to her office. She grabs your crotch and fondles your hard cock for a while, but then just sends you on your way. You return home in a daze.{/size}"   
-    $ victoria += 1            
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Ms.Stevens invites you to her office. She grabs your crotch and fondles your hard cock for a while, but then just sends you on your way. You return home in a daze.{/size}"
+    $ victoria += 1
     return
 
 
@@ -361,9 +361,9 @@ label home_leena:
     if leena == 1: #2
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You're at the library. There is that girl with the glasses again. You read your sci-fi book and catch the girl staring at you A couple of timesng. What's her problem?{/size}"
     if leena == 2: #3
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Seems like the girl is always here. You look at her properly for the first time: long dark hair, glasses, with a well-formed body. She is sort of cute, but this time she catches you staring.{/size}"       
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}Seems like the girl is always here. You look at her properly for the first time: long dark hair, glasses, with a well-formed body. She is sort of cute, but this time she catches you staring.{/size}"
     if leena == 3: #4
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The girl is here, just as always. She looks very shy, so You decide to talk to her, but she just ignores you at first and then simply leaves. She's a weird one.{/size}"    
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The girl is here, just as always. She looks very shy, so You decide to talk to her, but she just ignores you at first and then simply leaves. She's a weird one.{/size}"
     if leena == 4: #5
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}The silent, dark haired girl is absent today, so You just take your usual seat. But There is a note from her in which She apologizes, then says that she actually likes you and apologizes again.{/size}"
     if leena == 5: #6
@@ -373,15 +373,15 @@ label home_leena:
     if leena == 7: #8
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You pretend to read while you wait for the girl. She takes the seat beside you again and starts rubbing your crotch under the desk. What's the matter with her?!{/size}"
     if leena == 8: #9
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}As soon as you show up the girl drags you behind a bookshelf and begs you to fuck her. You comply, cum inside of her and she returns to her desk, while you just keep on standing there, confused and speechless.{/size}"   
-    $ leena += 1            
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}As soon as you show up the girl drags you behind a bookshelf and begs you to fuck her. You comply, cum inside of her and she returns to her desk, while you just keep on standing there, confused and speechless.{/size}"
+    $ leena += 1
     return
-        
-        
+
+
 
 ### HOME ###
 label im_home:
-$ random_home = renpy.random.randint(1, 5)      
+$ random_home = renpy.random.randint(1, 5)
 if random_home == 1:
     "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You return home. The house is empty. You decide to play some video games till the evening.{/size}"
 if random_home == 2:
@@ -393,30 +393,30 @@ if random_home == 4:
 if random_home == 5:
     "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You return home. The house is empty. You decide to use this precious moment of solitude to take a nap.{/size}"
 return
-    
+
 
 ### SCHOOL ###
 label at_school:
-    $ random_home = renpy.random.randint(1, 5)      
+    $ random_home = renpy.random.randint(1, 5)
     if random_home == 1:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You go to the school stadium and relax on the bleachers, while you watch cheerleaders practice in the distance...{/size}"
     if random_home == 2:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You sneak to your secret place: the school building's rooftop and watch heavy clouds creep closer slowly high above, hoping that it's gonna rain tonight.{/size}"
     if random_home == 3:
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You roam through the deserted school hallways and run into the janitor. He gives you the stink eye and goes on about his business. You head home.{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You roam through the deserted school hallways and run into the janitor. He gives you the stink eye and goes on about his business. You head home.{/size}"
     if random_home == 4:
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You buy a chocolate bar from a vending machine, then sneak into one of the empty classrooms and spend a couple of hours with reading one of your favorite sci-fi novels.{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You buy a chocolate bar from a vending machine, then sneak into one of the empty classrooms and spend a couple of hours with reading one of your favorite sci-fi novels.{/size}"
     if random_home == 5:
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You roam through the deserted school hallways for a while. It's starting to rain. Your stepsister Shea is terrified of thunder so You hope for a stormy night.{/size}"                               
-return 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You roam through the deserted school hallways for a while. It's starting to rain. Your stepsister Shea is terrified of thunder so You hope for a stormy night.{/size}"
+return
 
 ### LIBRARY ###
 label at_library:
-    $ random_home = renpy.random.randint(1, 5)      
+    $ random_home = renpy.random.randint(1, 5)
     if random_home == 1:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You head towards the school library and notice a man in a black suit near the entrance, half expecting him to prevent you from entering, but he ignores you.{/size}"
     if random_home == 2:
-        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You spend the rest of the day at the school library, read your sci-fi book, take a nap, buy candy from the vending machine and then read some more. Life is great!{/size}" 
+        "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You spend the rest of the day at the school library, read your sci-fi book, take a nap, buy candy from the vending machine and then read some more. Life is great!{/size}"
     if random_home == 3:
         "\"Chapter [Dear_Wifu_OBJ.progress]\"" "{size=-2}You browse through ancient-looking bookshelves, hoping to stumble on a long forgotten book of spells or something, but You just get bored soon and decide to head home.{/size}"
     if random_home == 4:
@@ -431,25 +431,25 @@ label epilogue:
     "\"Epilogue\"" "{size=-2}It's been a year. You attend a university abroad and actually enjoy learning for a change, so you seldom think about the past and have high hopes for your future.{/size}"
     "\"Epilogue\"" "{size=-2}-Ending 01 of 04-{/size}"
     return
-        
-        
-### HAREM ###        
-        
+
+
+### HAREM ###
+
 
 label chapter_check_waifu: #Checks if the chapter just finished was the last one.
     if Dear_Wifu_OBJ.progress >= 20:
         if fire_in_fireplace:
-            show screen done_reading_02  
+            show screen done_reading_02
             hide screen reading_near_fire
         else:
-            show screen done_reading  
+            show screen done_reading
             hide screen reading
 
-      
+
         ">That was the last chapter. You finished the entire book."
         if complited_leena_already and complited_shea_already and complited_stevens_already and victoria >= 1 and shea >= 1 and leena >= 1: #Harem ending. The DAHR's ticket.
             m "Wow! What a great book! That was intense!"
-            
+
             #m "No, I mean it! What a great peace of fiction! That Akabur dude must be a genius!"
             if not found_dahrs_ticket_once:
                 m "Hm...?"
@@ -465,7 +465,7 @@ label chapter_check_waifu: #Checks if the chapter just finished was the last one
                 $ vouchers += 1 #Shows the amount of DAHR's vouchers in your possession.
                 $ found_dahrs_ticket_once = True # Turns TRUE after you complete "My Dear Waifu" with the harem ending and "Dahr's voucher" fall out.
                 $ waifu_book_completed = True
-        elif shea_waifu and shea >= 8: 
+        elif shea_waifu and shea >= 8:
             if not complited_shea_already: #Finished with Shea for the first time.
                 m "Not bad. I really grew to care about that Shea girl..."
                 g9 "Well, her and her anal virginity..."
@@ -491,7 +491,7 @@ label chapter_check_waifu: #Checks if the chapter just finished was the last one
         else:
             m "Hm... What an anticlimactic ending..."
             #m "Maybe I should read it again sometime."
-        
+
         if not dear_waifu_completed_once:
             $ dear_waifu_completed_once = True # Turns TRUE when complete the book for the first time with any ending. Makes sure you get +1 imagination only once.
             $ renpy.play('sounds/win_04.mp3')   #Not loud.
@@ -507,10 +507,10 @@ label chapter_check_waifu: #Checks if the chapter just finished was the last one
             hide screen reading_near_fire
         else:
             hide screen reading
-        
+
         if daytime:
             jump night_start
-        else: 
+        else:
             jump day_start
     else:
         return

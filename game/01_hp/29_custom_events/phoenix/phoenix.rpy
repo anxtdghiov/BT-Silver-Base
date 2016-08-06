@@ -26,7 +26,7 @@ label phoenix_menu:
             jump talkingfawkes
         "-Never mind-":
             call screen main_menu_01
-        
+
 ### FEEDING ###
 label feeding:
     $ bird_interact += 1 # Counts how many times you have interacted with the bird.
@@ -54,7 +54,7 @@ label feeding:
     hide screen feeding
     with Dissolve(0.3)
     call screen main_menu_01
-    
+
 ### PETTING ###
 label petting:
     $ ce_name = "phoenix"

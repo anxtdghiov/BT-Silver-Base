@@ -1,10 +1,10 @@
 label __init_variables:
     if not hasattr(renpy.store,'p_inv'): #important!
         $ p_inv = []
-    
+
     $ p_base = ["Polyjuice Potion", "Expanding Elixir", "Moreish Mead", "Transparent Tincture", "Coloring Concoction"] #base potion names
     $ p_items = ["Wormwood", "Knotgrass", "Root of Aconite", "Niffler's fancy", "Cat Hair", "Luna's Hair", "Basilisk Scale"] #item names
-    
+
     $ p_potion_names = []
     $ p_potion_names.append("Cum Addiction Potion")
     $ p_potion_names.append("Ass Expansion Potion")
@@ -13,7 +13,7 @@ label __init_variables:
     $ p_potion_names.append("Luna Transformation Potion")
     $ p_potion_names.append("Lamia Transformation Potion")
     $ p_potion_names.append("Transparency Potion")
-    
+
     $ p_cum_addiction = ["Wormwood","Moreish Mead"]
     $ p_ass_expansion = ["Knotgrass","Expanding Elixir"]
     $ p_breast_expansion = ["Root of Aconite","Expanding Elixir"]
@@ -21,7 +21,7 @@ label __init_variables:
     $ p_luna_transformation = ["Luna's Hair","Polyjuice Potion"]
     $ p_lamia_transformation = ["Basilisk Scale","Polyjuice Potion"]
     $ p_transparency = ["Niffler's fancy","Transparent Tincture"]
-    
+
     $ p_ingredients = [[0 for i in xrange(3)] for i in xrange(8)]
     $ p_ingredients[0] = ["Wormwood","Moreish Mead"]
     $ p_ingredients[1] = ["Knotgrass","Expanding Elixir"]
@@ -30,7 +30,7 @@ label __init_variables:
     $ p_ingredients[4] = ["Luna's Hair","Polyjuice Potion"]
     $ p_ingredients[5] = ["Basilisk Scale","Polyjuice Potion"]
     $ p_ingredients[6] = ["Niffler's fancy","Transparent Tincture"]
-    
+
     return
 
 label potion_menu:
@@ -50,7 +50,7 @@ label potion_menu:
         "{color=#858585}-craft: \"[p_potion_names[0]]\"-{/color}" if not set(p_cum_addiction).issubset(set(p_inv)):
             call p_lack_materials(0)
             jump potion_menu
-        
+
         "-craft: \"[p_potion_names[1]]\"-" if set(p_ass_expansion).issubset(set(p_inv)):
             ">You mix the {i}[p_ass_expansion[0]]{/i} with the {i}[p_ass_expansion[1]]{/i}"
             ">You received the item: \"[p_potion_names[1]]\"."
@@ -61,7 +61,7 @@ label potion_menu:
         "{color=#858585}-craft: \"[p_potion_names[1]]\"-{/color}" if not set(p_ass_expansion).issubset(set(p_inv)):
             call p_lack_materials(1)
             jump potion_menu
-        
+
         "-craft: \"[p_potion_names[2]]\"-" if set(p_breast_expansion).issubset(set(p_inv)):
             ">You mix the {i}[p_breast_expansion[0]]{/i} with the {i}[p_breast_expansion[1]]{/i}"
             ">You received the item: \"[p_potion_names[2]]\"."
@@ -72,7 +72,7 @@ label potion_menu:
         "{color=#858585}-craft: \"[p_potion_names[2]]\"-{/color}" if not set(p_breast_expansion).issubset(set(p_inv)):
             call p_lack_materials(2)
             jump potion_menu
-        
+
         "-craft: \"[p_potion_names[3]]\"-" if set(p_cat_transformation).issubset(set(p_inv)):
             ">You mix the {i}[p_cat_transformation[0]]{/i} with the {i}[p_cat_transformation[1]]{/i}"
             ">You received the item: \"[p_potion_names[3]]\"."
@@ -83,7 +83,7 @@ label potion_menu:
         "{color=#858585}-craft: \"[p_potion_names[3]]\"-{/color}" if not set(p_cat_transformation).issubset(set(p_inv)):
             call p_lack_materials(3)
             jump potion_menu
-        
+
         "-craft: \"[p_potion_names[4]]-" if set(p_luna_transformation).issubset(set(p_inv)):
             ">You mix the {i}[p_luna_transformation[0]]{/i} with the {i}[p_luna_transformation[1]]{/i}"
             ">You received the item: \"[p_potion_names[4]]\"."
@@ -94,7 +94,7 @@ label potion_menu:
         "{color=#858585}-craft: \"[p_potion_names[4]]\"-{/color}" if not set(p_luna_transformation).issubset(set(p_inv)):
             call p_lack_materials(4)
             jump potion_menu
-        
+
         "-craft: \"[p_potion_names[5]]-" if set(p_lamia_transformation).issubset(set(p_inv)):
             ">You mix the {i}[p_lamia_transformation[0]]{/i} with the {i}[p_lamia_transformation[1]]{/i}"
             ">You received the item: \"[p_potion_names[5]]\"."
@@ -105,7 +105,7 @@ label potion_menu:
         "{color=#858585}-craft: \"[p_potion_names[5]]\"-{/color}" if not set(p_lamia_transformation).issubset(set(p_inv)):
             call p_lack_materials(5)
             jump potion_menu
-        
+
         "-craft: \"[p_potion_names[6]]-" if set(p_transparency).issubset(set(p_inv)):
             ">You mix the {i}[p_transparency[0]]{/i} with the {i}[p_transparency[1]]{/i}"
             ">You received the item: \"[p_potion_names[6]]\"."
@@ -118,7 +118,7 @@ label potion_menu:
             jump potion_menu
         "-Never mind-":
             jump cupboard
-        
+
         # "-craft: \"[p_potion_names[POT_INDEX_HERE]]\"-" if set(POT_ARRAY_HERE).issubset(set(p_inv)):
             # ">You mix the {i}[POT_ARRAY_HERE[0]]{/i} with the {i}[POT_ARRAY_HERE[1]]{/i}"
             # ">You received the item: \"[p_potion_names[POT_INDEX_HERE]]\"."
@@ -129,8 +129,8 @@ label potion_menu:
         # "{color=#858585}-craft: \"[p_potion_names[POT_INDEX_HERE]]\"-{/color}" if not set(POT_ARRAY_HERE).issubset(set(p_inv)):
             # call p_lack_materials(POT_INDEX_HERE)
             # jump potion_menu
-        
-        
+
+
 label p_lack_materials(potion_id):
     show screen blktone8
     ">You lack the required materials to make this."
@@ -138,7 +138,7 @@ label p_lack_materials(potion_id):
     ">[tmp_str]"
     hide screen blktone8
     return
-    
+
 
     #base potions:
     # Polyjuice potion (Luna, Cat, Lamia)
@@ -146,7 +146,7 @@ label p_lack_materials(potion_id):
     # Moreish mead (cum)
     # Transparent tincture (Transparency potion)
     # Coloring concoction (hair colors)
-    
+
     # Cum addiction = Moreish mead? + wormwood + your cum
     # Ass expansion = Expanding Elixir + knotgrass
     # Breast expansion = Expanding Elixir + Root of aconite
@@ -154,7 +154,7 @@ label p_lack_materials(potion_id):
     # Luna potion = Polyjuice + Luna's hair
     # Lamia potion = Polyjuice + Basilisk scale
     # Transparency potion = Transparent tincture + Niffler's fancy
-    
+
     # Cum addiction: wormwood+your cum (jerk off into it)
     # Ass expansion: knotgrass
     # Breast expansion: Root of aconite
@@ -162,7 +162,7 @@ label p_lack_materials(potion_id):
     # Transparency potion:  Niffler's fancy
     # Lamia potion: Basilisk scale
 
-    
+
     # wormwood = forbidden forest
     # knotgrass = ?
     # root_of_aconite =?

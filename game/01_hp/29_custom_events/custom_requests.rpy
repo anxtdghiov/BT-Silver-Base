@@ -84,10 +84,10 @@ label new_custom_request:
 
 
             ### LEVEL 07 ### IMAGINATION == 5
-            
+
             # "{color=#404033}Favour: \"Rubber Cement\"":
                 # jump rcement
-            
+
             "-Never mind-":
 
                 $ only_upper = only_upper_fixer

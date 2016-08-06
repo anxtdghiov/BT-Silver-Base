@@ -55,10 +55,10 @@ label l_tutoring:
 
     if v_tutoring == 0:   # Whoring lvl 0
         $ h_xpos = 370
-        
+
         call her_main("Of course, sir.","body_14")
         her "I'll go get my books then."
-        
+
         hide screen hermione_main
         show screen blkfade
         with d3
@@ -68,15 +68,15 @@ label l_tutoring:
         pause.3
         $ h_xpos = 140
         $ book_hold = True
-        
+
         call her_main("","body_45")
-        
+
         hide screen blkfade
         with d3
         show screen ctc
         pause
         hide screen ctc
-        
+
         call her_main("Again, thank you for doing this for me, sir...","body_14")
         m "..........."
         call her_main("Sir?","body_13")
@@ -120,15 +120,15 @@ label l_tutoring:
         hide screen hermione_main
         with d3
         "You dismiss Hermione."
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(I'm glad professor agreed to tutor me){/size}","head_exp/35")
         call her_head("{size=-4}(But pleasure and pain? I don't understand where this is going...){/size}","head_exp/2")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 1
         jump l_tutoring_end
 
@@ -177,15 +177,15 @@ label l_tutoring:
         hide screen hermione_main
         with d3
         "You dismiss Hermione."
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Filthy whores...){/size}","head_exp/19")
         call her_head("{size=-4}(Oh, I should not talk like that...{w=0.5} but it feels so good){/size}","head_exp/35")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 2
         jump l_tutoring_end
 
@@ -235,16 +235,16 @@ label l_tutoring:
         hide screen hermione_main
         with d3
         "You dismiss Hermione."
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Hmm, I wonder what he {b}was{/b} thinking about){/size}","head_exp/16")
         call her_head("{size=-4}(Probably all the problems caused by those harlots){/size}","head_exp/18")
         call her_head("{size=-4}(Well I will never be like them, so no need to worry){/size}","head_exp/34")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 3
         jump l_tutoring_end
 
@@ -313,16 +313,16 @@ label l_tutoring:
         hide screen hermione_main
         with d3
         "You dismiss Hermione."
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Well, I'll try to investigate those two girls again){/size}","head_exp/12")
         call her_head("{size=-4}(Like a real anthropologist){/size}","head_exp/18")
         call her_head("{size=-4}(Yes, that's right, Hermione the anthropologist!){/size}","head_exp/35")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 4
         jump l_tutoring_end
 
@@ -442,9 +442,9 @@ label l_tutoring:
         hide screen hermione_main
         with d3
         "You dismiss Hermione."
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(I enjoyed it too much. Maybe I'm becoming a pervert as well){/size}","head_exp/6")
         call her_head("{size=-4}(I lost control, it won't happen again!){/size}","head_exp/13")
@@ -479,12 +479,12 @@ label l_tutoring:
         m "Come here."
         hide screen hermione_main
         with d3
-        
+
         call her_walk(400,300,1)
         show screen blkfade
         with d1
         pause.5
-        
+
         hide screen genie
         show screen ctc
         show screen no_groping_01
@@ -530,9 +530,9 @@ label l_tutoring:
         "You dismiss Hermione."
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(This is wrong...){/size}","head_exp/12")
         call her_head("{size=-4}(I shouldn't listen to him){/size}","head_exp/15")
@@ -639,7 +639,7 @@ label l_tutoring:
         show screen genie_and_hermione
         hide screen blkfade
         with d1
-        
+
         call her_main("Don't stop, you idiot!","body_218")
         show screen blkfade
         ">She moves away from the desk."
@@ -648,7 +648,7 @@ label l_tutoring:
         show screen hermione_blink
         hide screen blkfade
         with d1
-        
+
         call her_main("...........","body_206")
         call her_main("Sorry, professor.","body_187")
         m "Lesson is over. Time to practice by yourself."
@@ -657,9 +657,9 @@ label l_tutoring:
         call her_main("{size=-2}(This too short of a lesson){/size}","body_17")
         hide screen hermione_main
         with d3
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(\"My little witch?\"){/size}","head_exp/4")
         call her_head("{size=-4}(Why not, after all...){/size}","head_exp/6")
@@ -792,16 +792,16 @@ label l_tutoring:
         "You dismiss Hermione."
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(I'm such a slut...){/size}","head_exp/6")
         call her_head("{size=-4}(Coming in front of my professor){/size}","head_exp/16")
         call her_head("{size=-4}(I definitely need to do that again){/size}","head_exp/18")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 8
         jump l_tutoring_end
 
@@ -862,7 +862,7 @@ label l_tutoring:
         show screen blkfade
         hide screen hermione_main
         with d3
-        
+
         hide screen blkfade
         call her_walk(400,300,1)
         show screen blkfade
@@ -979,16 +979,16 @@ label l_tutoring:
         "You dismiss Hermione."
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Favorite...){/size}","head_exp/6")
         call her_head("{size=-4}(There's another one?){/size}","head_exp/7")
         call her_head("{size=-4}(I'll do my best to remain his favorite!){/size}","head_exp/35")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 9
         jump l_tutoring_end
 
@@ -1151,16 +1151,16 @@ label l_tutoring:
         with d3
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Rest...){/size}","head_exp/16")
         call her_head("{size=-4}(Not before I've played with this marvelous toy again){/size}","head_exp/18")
         call her_head("{size=-4}(And again){/size}","head_exp/34")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 10
         jump l_tutoring_end
 
@@ -1345,16 +1345,16 @@ label l_tutoring:
         with d3
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Finally tonight I'll just go to bed){/size}","head_exp/35")
         call her_head("{size=-4}(That was a little too intense){/size}","head_exp/15")
         call her_head("{size=-4}(Not that I'm complaining...){/size}","head_exp/34")
         show screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 11
         jump l_tutoring_end
 
@@ -1602,16 +1602,16 @@ label l_tutoring:
         with d3
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Sucking his cock without getting any points!){/size}","head_exp/4")
         call her_head("{size=-4}(If he hadn't made me come so hard...){/size}","head_exp/6")
         call her_head("{size=-4}(*sigh* Although I guess it's not that high a price...){/size}","head_exp/16")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 12
         jump l_tutoring_end
 
@@ -1747,7 +1747,7 @@ label l_tutoring:
         hide screen blkfade
         with d5
         ##$ v_her_robe = 0
-        $ robe = 0 
+        $ robe = 0
         $ h_body = "01_hp/13_hermione_main/body_182.png"
         show screen hermione_main
         pause
@@ -1821,15 +1821,15 @@ label l_tutoring:
         $ b_her_tears = False
         hide screen blkfade
         show screen genie
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(Yes, sweet dreams...){/size}","head_exp/35")
         call her_head("{size=-4}(Sweet and wet!){/size}","head_exp/34")
         hide screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 13
         jump l_tutoring_end
 
@@ -1947,16 +1947,16 @@ label l_tutoring:
         play sound sd_slap
         with hpunch
         call her_main("Aah, like this, punish me more master {image=textheart}.","body_138")
-        play sound sd_slap 
+        play sound sd_slap
         with hpunch
         call her_main("Yess!","body_215")
-        play sound sd_slap 
+        play sound sd_slap
         with hpunch
         call her_main("Mooore!","body_215")
-        play sound sd_slap 
+        play sound sd_slap
         with hpunch
         call her_main("I'm about to...","body_142")
-        play sound sd_slap 
+        play sound sd_slap
         with hpunch
         pause.1
         play sound sd_slap
@@ -2009,16 +2009,16 @@ label l_tutoring:
         show screen genie
         hide screen blkfade
         with d3
-        
+
         call her_walk(400,610,2)
-        
+
         show screen hermione_stand_f
         call her_head("{size=-4}(I called my headmaster \"my beloved prince\"){/size}","head_exp/16")
         call her_head("{size=-4}(He's hardly Prince Charming but...){/size}","head_exp/18")
         call her_head("{size=-4}(I doubt Prince Charming could fuck me half as well as he can!){/size}","head_exp/38")
         show screen hermione_stand_f
         with d3
-        
+
         $ v_tutoring = 14
         jump l_tutoring_end
 

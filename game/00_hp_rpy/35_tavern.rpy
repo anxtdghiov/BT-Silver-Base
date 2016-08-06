@@ -27,7 +27,7 @@ label inn_menu:
             jump return_office
 
 
-label inn_intro: 
+label inn_intro:
     m "Hello."
     abe "Hello Professor..."
     ">There is a sour tone in the mans voice."
@@ -64,7 +64,7 @@ label inn_intro:
     ">You drink well into the night, eventually staggering back to the castle"
     $ inn_first = False
     jump day_start
-    
+
 label inn_talk: #Responses to Genie asking Aberforth how he's doing
 if day_random <= 2:
     "bla bla bla"

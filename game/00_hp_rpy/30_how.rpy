@@ -3,13 +3,13 @@ label howtoplay_ht:
     show screen end_u_1                                             #<---- SCREEN
     play music "music/silly_fun_loop.mp3" fadein 1 fadeout 1 # LOLA'S THEME.
     if not persistent.tut: #Turns TRUE after tutorial happened once already. EVENT_01
-        
-        
-        
-        
+
+
+
+
         $ lola_face = "01_hp/22_lola/01.png"
         $ lola_body = "01_hp/22_lola/body_01.png"
-        
+
         $ l_things = True
         #$ l_blush = True
         $ lx = 490
@@ -90,20 +90,20 @@ label howtoplay_ht:
             "\"You bet!\"":
                 $ lola_face = "01_hp/22_lola/01.png"
                 show screen l_head
-                
+
                 $ d_flag_01 = True
                 l "Alrighty!"
                 hide screen l_head
                 pause.1
-                show screen blkfade 
+                show screen blkfade
                 with d3
                 $ lola_body = "01_hp/22_lola/body_02.png"
                 $ l_blush = True
                 pause.5
                 hide screen blkfade
                 with d7
-                
-                
+
+
             "\"Not interested.\"":
                 $ lola_face = "01_hp/22_lola/12.png"
                 show screen l_head
@@ -111,32 +111,32 @@ label howtoplay_ht:
                 $ lola_face = "01_hp/22_lola/09.png"
                 l "Well, whatever..."
 
-                   
+
     ### THE TUTORIAL ###
-    play music "music/Under-the-Radar by PhobyAk.mp3" fadein 1 fadeout 1 
+    play music "music/Under-the-Radar by PhobyAk.mp3" fadein 1 fadeout 1
     $ lola_face = "01_hp/22_lola/06.png"
     show screen l_head
     l "Here is a short list of things to keep in mind..."
     with hpunch
     $ end_u_1_pic =  "01_hp/22_lola/tut_02.png" #<---- SCREEN
-    $ renpy.play('sounds/boing02.mp3')   
+    $ renpy.play('sounds/boing02.mp3')
 
     l "Hermione will only be willing to sell sexual favors in exchange for house points when house of gryffindor is falling behind."
-    
+
     with hpunch
     $ end_u_1_pic =  "01_hp/22_lola/tut_01.png" #<---- SCREEN
-    $ renpy.play('sounds/boing02.mp3')   
+    $ renpy.play('sounds/boing02.mp3')
     l "Making friends with professor Snape will make him trust you more, and will increase the rate at which slytherin house get's the points."
     with hpunch
     $ end_u_1_pic =  "01_hp/22_lola/tut_03.png" #<---- SCREEN
-    $ renpy.play('sounds/boing02.mp3') 
+    $ renpy.play('sounds/boing02.mp3')
     if d_flag_01: # TOPLESS.
         $ lola_face = "01_hp/22_lola/07.png"
     l "Reading educational books makes earning money easier, but is not mandatory."
 
     with hpunch
     $ end_u_1_pic =  "01_hp/22_lola/tut_04.png" #<---- SCREEN
-    $ renpy.play('sounds/boing02.mp3') 
+    $ renpy.play('sounds/boing02.mp3')
     l "Buying the same sexual favor again could lead to a different outcome depending on how far along Hermione is in her training."
     $ lola_face = "01_hp/22_lola/06.png"
 
@@ -151,21 +151,21 @@ label howtoplay_ht:
     with hpunch
     $ end_u_1_pic =  "01_hp/22_lola/tut_05.png" #<---- SCREEN
 
-    $ renpy.play('sounds/boing02.mp3') 
+    $ renpy.play('sounds/boing02.mp3')
     l "Treating Hermione poorly will worsen her mood and could make her very uncooperative..."
     l "She will cool off with time, but you can speed up the process by buying her something nice..."
-    
+
     with hpunch
     $ end_u_1_pic =  "01_hp/22_lola/tut_06.png" #<---- SCREEN
-    $ renpy.play('sounds/boing02.mp3') 
+    $ renpy.play('sounds/boing02.mp3')
     l "And there is no timelimit. So feel free to take as many days to comlete the game as you want."
- 
-    
-    
-    
+
+
+
+
     $ end_u_1_pic =  "01_hp/22_lola/tut_00.png" #<---- SCREEN
     $ l_drop = False
-    
+
     if not persistent.tut: # FIRST TIME TUTORIAL. Turns TRUE after tutorial happened once already. EVENT_01
         $ persistent.tut = True #Turns TRUE after tutorial happened once already.
         hide screen l_head
@@ -239,20 +239,20 @@ label howtoplay_ht:
             l "And that's that..."
             $ lola_face = "01_hp/22_lola/13.png"
             l "Did you get it this time?"
-            
-        
+
+
 return
 
 ### ABOUT GAME ####
 label abouttrainer_ht:
     $ end_u_1_pic =  "title3.jpg" #<---- SCREEN
     show screen end_u_1                                             #<---- SCREEN
-    play music "music/GrapeSodaIsFuckingRawbyjrayteam6.mp3" fadein 1 fadeout 1 
-    
+    play music "music/GrapeSodaIsFuckingRawbyjrayteam6.mp3" fadein 1 fadeout 1
+
     a1 "Hm... Let's see..."
     a1 "I started to work on \"Hermione Trainer\" right after the release of \"Princess Trainer\"."
     a1 "In my mind I had an idea for a cute little game the development of which should not have taken me longer the a couple of month."
-    a1 "As we all know now it actually took me longer then half a year..." 
+    a1 "As we all know now it actually took me longer then half a year..."
     a1 "And that it despite countless compromises I had to make simply to prevent the damn thing taking even longer to develop."
     a1 "Working on this game was quite fun at times..."
     a1 "But it was also challenging..."
@@ -268,15 +268,15 @@ label abouttrainer_ht:
 ### F.A.Q. ###
 label faq_ht:
     $ end_u_1_pic =  "title3.jpg" #<---- SCREEN
-    show screen end_u_1 
+    show screen end_u_1
     with flashbb#<---- SCREEN
-    play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1 
-    
-    a1 "Hello. My name is Akabur. I am the creator of this game and I'm here to answer your questions." 
-label faq_ht2:    
+    play music "music/(Orchestral) Playful Tension by Shadow16nh.mp3" fadein 1 fadeout 1
+
+    a1 "Hello. My name is Akabur. I am the creator of this game and I'm here to answer your questions."
+label faq_ht2:
     menu:
         "How can I show my support?":
-            a1 "Well, there are few ways to do that..."  
+            a1 "Well, there are few ways to do that..."
             a1 "The easiest way would be to contact me (akaburfake2@yahoo.com) and let me know that you enjoyed the game."
             a1 "You could also support me personally at {a=http://www.patreon.com/akabur}www.patreon.com/akabur{/a}"
             a1 "Another way to support me though would be to follow this link: {a=http://akabur.hentaiunited.com}akabur.hentaiunited.com{/a}."
@@ -301,10 +301,10 @@ label faq_ht2:
 #                "-Cancel-":
 #                    jump faq_ht2
             jump faq_ht2
-            
+
         "How to stay tuned?":
             a1 "Well, follow this link: {a=http://akabur.hentaiunited.com}akabur.hentaiunited.com{/a} and subscribe. Or visit my site: {a=http://akabur.com}akabur.com{/a}."
-            a1 "There is also Patreon of course {a=http://www.patreon.com/akabur}www.patreon.com/akabur{/a}.\nAnd {a=https://twitter.com/AKABUR}my twitter{/a}." 
+            a1 "There is also Patreon of course {a=http://www.patreon.com/akabur}www.patreon.com/akabur{/a}.\nAnd {a=https://twitter.com/AKABUR}my twitter{/a}."
             jump faq_ht2
         "I have another question.":
             a1 "If you have a question that is not covered in this \"F.A.Q.\", feel free to email it to me: akaburfake2@yahoo.com"
@@ -335,5 +335,5 @@ label faq_ht2:
         "Nevermind. Let me out of here!":
             return
 
-    
+
     return

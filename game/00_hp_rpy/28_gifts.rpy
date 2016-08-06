@@ -112,7 +112,7 @@ label happy(sub_mad = 0):
 
 label no_change:
     hide screen hermione_main
-    with d3  
+    with d3
     ">Hermione's mood didn't change much..."
     return
 
@@ -122,7 +122,7 @@ label upset(add_mad):
     $ mad += add_mad
     ">Hermione's mood worsened...\n>Hermione is {size=+5}upset{/size} with you..."
     return
-    
+
 label her_gift_menu:
     python:
         choices = []
@@ -131,20 +131,20 @@ label her_gift_menu:
             if g3.inv.gift[name] > 0:
                 choices.append( ( ("-"+name+"- ("+g3.inv.gift[name]+")"), gift) )
 
-        
+
         choices.append(("-Never mind-", "nvm"))
         result = renpy.display_menu(choices)
-        
+
     if result == "nvm":
         jump day_time_requests
     else:
         call give_her_gift(result)
-    
+
 label give_her_gift(gift_name):
     hide screen hermione_main
     with d5
     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
-    
+
     if gift.name == "Lollipop candy":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A lollipop?","body_01")
@@ -164,7 +164,7 @@ label give_her_gift(gift_name):
             call her_main("Ehm... Sure, thanks...","body_08")
             call happy(5)
             $ h_body = "body_06"
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("A lollipop?","body_06")
             call her_main("Clever girls use candy like this as a \"weapon\".","body_46")
             call give_gift(">You give the candy to Hermione...",gift)
@@ -191,7 +191,7 @@ label give_her_gift(gift_name):
             call give_gift(">You give the chocolate to Hermione...", gift)
             call her_main("Ehm... Sure, thanks...","body_01")
             call happy(10)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("A chocolate bar?","body_06")
             call her_main("You spoil me, [genie_name].","body_111")
             call give_gift(">You give the chocolate to Hermione...", gift)
@@ -217,7 +217,7 @@ label give_her_gift(gift_name):
             call give_gift(">You give the owl to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_01")
             call happy(15)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("This is one of those adult toys isn't it?","body_66")
             call her_main("There's got to be a switch or a button somewhere...","body_87")
             call her_main("So... Does it vibrate or something?","body_124")
@@ -249,7 +249,7 @@ label give_her_gift(gift_name):
             call give_gift(">You give the bottle to Hermione...",gift)
             call her_main("I shall drink this with the girls later.","body_06")
             call happy(15)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("Butterbeer...?","body_06")
             call her_main("Thank you, [genie_name].","body_01")
             call give_gift(">You give the bottle to Hermione...",gift)
@@ -277,13 +277,13 @@ label give_her_gift(gift_name):
             call give_gift(">You give an assortment of educational magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name]!","body_06")
             call happy(3)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("Ehm...","body_10")
             call her_main("To be honest, magazines like that lost their appeal to me completely lately...","body_08")
             call her_main("But I don't mind taking them off you hands anyway, [genie_name].","body_11")
             call give_gift(">You give an assortment of educational magazines to Hermione...",gift)
             call her_main("Thank you.","body_13")
-            call no_change 
+            call no_change
     if gift.name == "Girly magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm?","body_15")
@@ -306,7 +306,7 @@ label give_her_gift(gift_name):
             call her_main("Thank you, [genie_name].","body_08")
             call happy(15)
             $ h_body = "body_06"
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("The Latest edition of \"Girlz\"?!","body_18")
             call her_main("I can't have enough of that brilliant magazine!","body_24")
             call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift)
@@ -334,7 +334,7 @@ label give_her_gift(gift_name):
             call her_main("I shall throw these away myself...","body_79")
             call happy(8)
             $ h_body = "body_120"
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("The New edition of \"L.o.v.e.\"!!!","body_75")
             call her_main("Err.. I mean, adult magazines?","body_122")
             call her_main("This is a little inappropriate...")
@@ -364,7 +364,7 @@ label give_her_gift(gift_name):
             call her_main("And I shall throw them in the trash, where they and... girls who like these things belong...","body_79")
             call no_change
             $ h_body = "body_120"
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("Pornography?","body_48")
             call her_main("................","body_118")
             call her_main("How can women even agree to do things like that, [genie_name]?","body_117")
@@ -394,7 +394,7 @@ label give_her_gift(gift_name):
             call her_main("I can see why the girls find the brutish physique of some players appealing...","body_87")
             call give_gift(">You give the poster to Hermione...",gift)
             call happy(15)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("A Viktor Krum poster?!","body_72")
             call her_main("Thank you, [genie_name]!","body_24")
             call give_gift(">You give the poster to Hermione...",gift)
@@ -417,7 +417,7 @@ label give_her_gift(gift_name):
             call give_gift(">You give the lingerie to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_188")
             call happy(7)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("sexy lingerie?","body_124")
             call her_main("Do You think it will make me look like one of the witches in those adult magazines, [genie_name]?","body_123")
             call her_main("Oh... I mean, thank you, [genie_name].","body_122")
@@ -471,7 +471,7 @@ label give_her_gift(gift_name):
             call her_main("But I shall take it nonetheless...","body_29")
             call give_gift(">You give the vibrator to Hermione...",gift)
             call no_change
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("This vibrator...","body_11")
             call her_main("It's... calling out for me...","body_10")
             call her_main("But not in a dirty way, [genie_name].","body_66")
@@ -500,7 +500,7 @@ label give_her_gift(gift_name):
             call her_main("Still, I think you should not give presents like this to your pupils, [genie_name].","body_186")
             call no_change
             $ h_body = "body_79"
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("Anal lubricant, [genie_name]?","body_124")
             call her_main("I know a couple of girls who would do anything for a commodity like that.","body_186")
             call her_main("Thank for looking out for us, [genie_name].","body_128")
@@ -512,7 +512,7 @@ label give_her_gift(gift_name):
             call her_main("Is this like one of those adult toys?","body_141")
             call her_main("What woman in her right mind would subject herself to a humiliation like that?","body_30")
             call her_main("And what possible use could I have for such objects?","body_186")
-            call her_main("This is just insulting, [genie_name]...","body_187")                                                                                                                                                                                                              
+            call her_main("This is just insulting, [genie_name]...","body_187")
             call upset(10)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
             call her_main("[genie_name], do you not realize how inappropriate it would be for me to accept a present like that?","body_186")
@@ -530,7 +530,7 @@ label give_her_gift(gift_name):
             call her_main("Yes, I shall take these to her...","body_188")
             call give_gift(">You give the ball gag and cuffs to Hermione...",gift)
             call happy(9)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("A ball gag and handcuffs?","body_190")
             call her_main("This is completely inappropriate, [genie_name].","body_122") # :)
             call her_main("But a gift is a gift, right?","body_129")
@@ -555,7 +555,7 @@ label give_her_gift(gift_name):
             call her_main("But not me, [genie_name].")
             call her_main("No, thank you.","body_120")
             call no_change
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("Anal plugs?","body_118")
             call her_main("I have no use for things like that, [genie_name]...","body_117")
             call her_main("They are so pretty though...","body_122")
@@ -595,7 +595,7 @@ label give_her_gift(gift_name):
             call her_main("I will take it...","body_33")
             call give_gift(">You give the strap-on to Hermione...",gift)
             call happy(10)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("It's... It's magnificent, [genie_name]...","body_48")
             call her_main("Is it really modeled after a thestral?","body_189")
             call her_main("But the creatures are invisible...","body_190")
@@ -633,7 +633,7 @@ label give_her_gift(gift_name):
             call give_gift(">You give the broom to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_120")
             call happy(30)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("A broom...","body_124")
             call her_main("Hm...")
             call her_main("That saddle, [genie_name]...","body_189")
@@ -661,19 +661,19 @@ label give_her_gift(gift_name):
             call give_gift(">You give the blow-up doll to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_124")
             call happy(10)
-        if whoring >= 18: # Lv 7+  
+        if whoring >= 18: # Lv 7+
             call her_main("the Joanne sex doll?","body_73")
             call her_main("I Can't say that I approve of this...","body_189")
             call her_main("But I know Harry would love to have a go at it...","body_124")
             call give_gift(">You give the blow-up doll to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_188")
             call happy(30)
-    
+
     $ h_xpos=370 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
     show screen hermione_main
     with d3
     return
-    
+
 label give_gift(text = "", gift):
     hide screen hermione_main
     with d3
@@ -685,7 +685,7 @@ label give_gift(text = "", gift):
     with d3
     $ g3.inv.gift[gift.name] -= 1
     return
-    
+
 label display_gift(text=">Gift given", gift_id):
     hide screen hermione_main
     with d3
@@ -696,12 +696,12 @@ label display_gift(text=">Gift given", gift_id):
     hide screen gift
     with d3
     return
-    
+
 label give_her_existing_stock(stock_id):
     hide screen hermione_main
     with d5
     $ hermione_xpos = 140
-    
+
     if stock_id == "fishnet_stockings":
         call her_main("A pair of stockings?","body_03")
         call display_gift(">You give the stockings to Hermione...\n>Fishnet stockings have been added to the wardrobe.","30")
@@ -756,18 +756,18 @@ label give_her_existing_stock(stock_id):
         $ cs_existing_stock_gifted.append("ITEM_ID")
         call her_main("Thank you, [genie_name].","body_04")
         call happy(30)
-        
+
     $ hermione_xpos = 370 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
     show screen hermione_main
     with d3
-    jump day_time_requests 
-    
-    
+    jump day_time_requests
+
+
 ###GIVING CLOTHING RESPONSES
 label giving_gryffindor_cheer:
     hide screen hermione_main
     with d5
-    
+
     $ mad -= 30
     call her_main("A Cheerleading costume?","body_03",xpos=140)
     hide screen hermione_main
@@ -779,14 +779,14 @@ label giving_gryffindor_cheer:
     hide screen gift
     call her_main("Thank you, [genie_name], although I don't know when I'd wear it.","body_04")
     call happy
-    
+
     call her_main("","body_03",xpos=370)
-    jump day_time_requests    
+    jump day_time_requests
 
 label giving_slytherin_cheer:
     hide screen hermione_main
     with d5
-    
+
     $ mad -= 30
     call her_main("A Cheerleading costume? For Slytherin?","body_03",xpos=140)
     hide screen hermione_main
@@ -798,14 +798,14 @@ label giving_slytherin_cheer:
     hide screen gift
     call her_main("Thank you, [genie_name], even though I'm not in Slytherin...","body_04")
     call happy
-    
+
     call her_main("","body_03",xpos=370)
-    jump day_time_requests    
+    jump day_time_requests
 
 label giving_maid_outfit:
     hide screen hermione_main
     with d5
-    
+
     $ mad -= 30
     $ nets = 7 # Means already gifted.
     call her_main("A maid outfit?","body_03",xpos=140)
@@ -818,14 +818,14 @@ label giving_maid_outfit:
     hide screen gift
     call her_main("Thank you, [genie_name].","body_04")
     call happy
-    
+
     call her_main("","body_03",xpos=370)
-    jump day_time_requests    
+    jump day_time_requests
 
 label giving_silk_nightgown:
     hide screen hermione_main
     with d5
-    
+
     $ mad -= 30
     call her_main("A nightgown?","body_03",xpos=140)
     hide screen hermione_main
@@ -837,11 +837,11 @@ label giving_silk_nightgown:
     hide screen gift
     call her_main("Thank you, [genie_name].","body_04")
     call happy
-    
+
     call her_main("","body_03",xpos=370)
-    jump day_time_requests    
-    
-    
+    jump day_time_requests
+
+
 label giving_skirt:
     $ gifted = True #Prevents you from giving Hermione a several gifts in a row. Turns back to False every night and every morning.
     $ have_miniskirt = False # Turns TRUE when you have the skirt in your possession.
@@ -849,8 +849,8 @@ label giving_skirt:
     $ days_without_an_event = 0
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d5
-    
-    
+
+
     $ mad = 0
     m "Here... This is for you..."
     $ the_gift = "01_hp/18_store/07.png" # Miniskirt.
@@ -863,14 +863,14 @@ label giving_skirt:
     hide screen hermione_main
     with d3
     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
-    
+
     call her_main("Hm...? What is this?","body_01")
     call her_main("A skirt?","body_11")
     call her_main("Thank you [genie_name].","body_06")
     #her "Thank you professor."
     m "Don't mention it."
     hide screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3  
+    with d3
     $ renpy.play('sounds/win_04.mp3')   #Not loud.
     show screen notes
     #">\"Dresscode\" option unlocked. From now on you can affect Hermione's attire choices."
@@ -878,11 +878,11 @@ label giving_skirt:
     $ h_body = "body_01"
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     jump day_time_requests
-    
+
 ### DRESS CODE ###
 label mini_on:
-    
-    
+
+
     if whoring >= 0 and whoring <= 5: # Lv 1-2.
         call her_main("You cannot be serious, [genie_name]!","body_04")
         her "A skirt this short?!"
@@ -901,8 +901,8 @@ label mini_on:
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 $ mad += 10
                 call upset
-        
-        
+
+
 
     if whoring >= 6 and whoring <= 11: # Lv 3-4.
         call her_main("Hm...?","body_15")
@@ -913,11 +913,11 @@ label mini_on:
                 call her_main("[genie_name] this is hardly the appropriate attire for a Hogwarts student.","body_07")
                 call her_main("I refuse!","body_09")
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
-                with d3  
+                with d3
                 $ mad += 5
                 call upset                                                                                                                                                                                                                #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
             "\"I will give you 15 points.\"":
                 $ gryffindor +=15
@@ -942,21 +942,21 @@ label mini_on:
             "\"Fine. Forget it\"":
                 call her_main("Oh...","body_13")
                 jump day_time_requests
-        
 
 
-    
+
+
     if whoring >= 18: # Lv 7+
         call her_main("Of course, [genie_name]...","body_118")
         hide screen hermione_main                                                                                                                                                                                   #HERMIONE
         with d3                                                                                                                                                                                                                        #HERMIONE
         $ h_body = "body_78"
                                                                                                                                                                                                                           #HERMIONE
-    
-    
+
+
     $ legs_02 = True
     $ legs_03 = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -968,27 +968,27 @@ label mini_on:
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     jump day_time_requests
-    
+
 label mini_off:
     if whoring >= 0 and whoring <= 5: # Lv 1-2.
         call her_main("I'm glad that you came to your senses, [genie_name].","body_04")
         hide screen hermione_main                                                                                                                                                                                   #HERMIONE
         with d3                                                                                                                                                                                                                        #HERMIONE
         $ h_body = "body_03"
-        
+
     if whoring >= 6 and whoring <= 11: # Lv 3-4.
         call her_main("Gladly, [genie_name].","body_01")
 
     if whoring >= 12 and whoring <= 17: # Lv 5-6.
         call her_main("Alright...","body_13")
-    
+
     if whoring >= 18: # Lv 7+
         call her_main("That boring thing again?","body_28")
-    
-    
+
+
     $ legs_02 = False
     $ legs_03 = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -998,10 +998,10 @@ label mini_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-   
+
 label tiny_on:
-    
-    
+
+
     if whoring >= 0 and whoring <= 5: # Lv 1-2.
         call her_main("You cannot be serious, [genie_name]!","body_04")
         her "A skirt THIS short?!"
@@ -1013,7 +1013,7 @@ label tiny_on:
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
             "\"I will give you 35 points.\"":
                 $ gryffindor +=35
@@ -1024,8 +1024,8 @@ label tiny_on:
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 $ mad += 10
                 call upset
-        
-        
+
+
 
     if whoring >= 6 and whoring <= 11: # Lv 3-4.
         call her_main("Hm...?","body_15")
@@ -1036,11 +1036,11 @@ label tiny_on:
                 call her_main("[genie_name] this is hardly the appropriate attire for a Hogwarts student.","body_07")
                 call her_main("I refuse!","body_09")
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
-                with d3  
+                with d3
                 $ mad += 5
                 call upset                                                                                                                                                                                                                #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
             "\"I will give you 35 points.\"":
                 $ gryffindor +=35
@@ -1052,7 +1052,7 @@ label tiny_on:
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
 
     if whoring >= 12 and whoring <= 17: # Lv 5-6.
@@ -1071,23 +1071,23 @@ label tiny_on:
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
-        
 
 
-    
+
+
     if whoring >= 18: # Lv 7+
         call her_main("Of course, [genie_name]...","body_118")
         hide screen hermione_main                                                                                                                                                                                   #HERMIONE
         with d3                                                                                                                                                                                                                        #HERMIONE
         $ h_body = "body_78"
                                                                                                                                                                                                                           #HERMIONE
-    
-    
+
+
     $ legs_03 = True
     $ legs_02 = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1099,12 +1099,12 @@ label tiny_on:
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     jump day_time_requests
-    
+
 label give_glasses:
     call her_main("But I don't need glasses...","body_01")
-    
+
     $ glasses_worn = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1114,12 +1114,12 @@ label give_glasses:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label take_glasses:
     call her_main("I was just getting used to them though.","body_01")
-    
+
     $ glasses_worn = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1129,12 +1129,12 @@ label take_glasses:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label badge_put:
     call her_main("Of course, [genie_name]...","body_01")
-    
+
     $ hermione_badges = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1144,12 +1144,12 @@ label badge_put:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label shirt_off:
     call her_main("That boring old thing? ok then","body_08")
-    
+
     $ wear_shirts = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1159,12 +1159,12 @@ label shirt_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label shirt_on:
     call her_main("Finally, it was soooo boring dressing like this","body_06")
-    
+
     $ wear_shirts = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1174,7 +1174,7 @@ label shirt_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label bra_on:
     call her_main("What, I can't do that, everyone would call me a slut","body_05")
     m "just do it"
@@ -1184,10 +1184,10 @@ label bra_on:
     her "200"
     m "sure, why not"
     her ".............fine"
-    
+
     $ wear_shirts = False
     $ gryffindor +=200
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1197,12 +1197,12 @@ label bra_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label bra_off:
     call her_main("oh thank you, you have no idea what it was like...","body_01")
-    
+
     $ wear_shirts = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1212,13 +1212,13 @@ label bra_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
-    
+
+
 label g_stockings_on:
     call her_main("Ok then","body_01")
-    
+
     $ stockings = 2
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1228,12 +1228,12 @@ label g_stockings_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label g_stockings_off:
     call her_main("Ok.","body_01")
-    
+
     $ stockings = 0
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1243,14 +1243,14 @@ label g_stockings_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label lace_on:
     call her_main("A bra?","body_01")
     m "I thought that you could use a new one."
     her "Thank you [genie_name]."
-    
+
     $ custom_bra = 1
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1260,12 +1260,12 @@ label lace_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label lace_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_bra = 0
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1275,14 +1275,14 @@ label lace_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label cupless_on:
     call her_main("You want me to wear this?","body_01")
     m "No one will see it."
     her "...Fine"
-    
+
     $ custom_bra = 2
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1292,12 +1292,12 @@ label cupless_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label cupless_off:
     call her_main("Finally. This thing isn't very comfortable.","body_01")
-    
+
     $ custom_bra = 0
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1307,13 +1307,13 @@ label cupless_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label silk_on:
     call her_main("You want me to change bra?","body_01")
     her "Ok then"
-    
+
     $ custom_bra = 3
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1323,12 +1323,12 @@ label silk_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label silk_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_bra = 0
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1338,14 +1338,14 @@ label silk_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_06_on:
     call her_main("What is this?","body_01")
     m "I literally have no idea"
     her "Ok then"
-    
+
     $ custom_06_worn = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1355,12 +1355,12 @@ label custom_06_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_06_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_06_worn = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1370,14 +1370,14 @@ label custom_06_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_07_on:
     call her_main("What is this?","body_01")
     m "I literally have no idea"
     her "Ok then"
-    
+
     $ custom_07_worn = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1387,12 +1387,12 @@ label custom_07_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_07_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_07_worn = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1402,14 +1402,14 @@ label custom_07_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_08_on:
     call her_main("What is this?","body_01")
     m "I literally have no idea"
     her "Ok then"
-    
+
     $ custom_08_worn = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1419,12 +1419,12 @@ label custom_08_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_08_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_08_worn = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1434,14 +1434,14 @@ label custom_08_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_09_on:
     call her_main("What is this?","body_01")
     m "I literally have no idea"
     her "Ok then"
-    
+
     $ custom_09_worn = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1451,12 +1451,12 @@ label custom_09_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_09_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_09_worn = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1466,14 +1466,14 @@ label custom_09_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_10_on:
     call her_main("What is this?","body_01")
     m "I literally have no idea"
     her "Ok then"
-    
+
     $ custom_10_worn = True
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1483,12 +1483,12 @@ label custom_10_on:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label custom_10_off:
     call her_main("Ok","body_01")
-    
+
     $ custom_10_worn = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1498,43 +1498,43 @@ label custom_10_off:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 label h_top_on:
     hide screen hermione_main
-    with d5  
+    with d5
     $ hermione_wear_top = True
     call update_her_uniform
     show screen hermione_main
-    with d5 
+    with d5
     return
-    
+
 label h_top_off:
     hide screen hermione_main
-    with d5    
+    with d5
     $ hermione_wear_top = False
     call update_her_uniform
     show screen hermione_main
-    with d5 
+    with d5
     return
-    
+
 label h_skirt_on:
     hide screen hermione_main
-    with d5  
+    with d5
     $ hermione_wear_skirt = True
     call update_her_uniform
     show screen hermione_main
-    with d5 
+    with d5
     return
-    
+
 label h_skirt_off:
     hide screen hermione_main
-    with d5  
+    with d5
     $ hermione_wear_skirt = False
     call update_her_uniform
     show screen hermione_main
-    with d5 
+    with d5
     return
-    
+
 ###WEAR PANTIES
 label h_panties_on:
     m "I want you to start wearing panties again"
@@ -1550,13 +1550,13 @@ label h_panties_on:
     her "fine I'll do it"
     $ h_request_wear_panties = True
     return
-    
+
 label h_panties_off:
     m "stop wearing those panties"
     her "freedom at last"
     $ h_request_wear_panties = False
     return
-    
+
 label h_badge_on(badge = "SPEW_badge"):
     hide screen hermione_main
     with d5
@@ -1566,7 +1566,7 @@ label h_badge_on(badge = "SPEW_badge"):
     show screen hermione_main
     with d5
     return
-    
+
 label h_badge_off(badge = "SPEW_badge"):
     hide screen hermione_main
     with d5
@@ -1576,7 +1576,7 @@ label h_badge_off(badge = "SPEW_badge"):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_underwear(bra="base_bra_white_1", panties="base_panties_1"):
     hide screen hermione_main
     with d5
@@ -1586,7 +1586,7 @@ label set_h_underwear(bra="base_bra_white_1", panties="base_panties_1"):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_hair(hair_style="A", color=1):
     hide screen hermione_main
     with d5
@@ -1596,7 +1596,7 @@ label set_h_hair(hair_style="A", color=1):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_hair_style(hair_style = "A"):
     hide screen hermione_main
     with d5
@@ -1605,7 +1605,7 @@ label set_h_hair_style(hair_style = "A"):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_hair_color(hair_color = 1):
     hide screen hermione_main
     with d5
@@ -1614,7 +1614,7 @@ label set_h_hair_color(hair_color = 1):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_stockings(stocking = "00_blank"):
     hide screen hermione_main
     with d5
@@ -1623,7 +1623,7 @@ label set_h_stockings(stocking = "00_blank"):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_costume(costume_id = 0):
     hide screen hermione_main
     with d5
@@ -1631,7 +1631,7 @@ label set_h_costume(costume_id = 0):
     show screen hermione_main
     with d5
     return
-    
+
 label set_h_skirt(skirt = ""):
     if "skirt_" in skirt:
         $ h_skirt = "skirt_"
@@ -1658,7 +1658,7 @@ label set_h_skirt(skirt = ""):
         show screen hermione_main
         with d5
         return
-    
+
 label set_h_skirt_color(color = ""):
     hide screen hermione_main
     with d5
@@ -1667,15 +1667,15 @@ label set_h_skirt_color(color = ""):
     show screen hermione_main
     with d5
     return
-    
+
 
 #$ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
+
 label badge_take:
     call her_main("As you wish, [genie_name]...","body_01")
     $ badges = True
     $ ba_01 = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1685,7 +1685,7 @@ label badge_take:
     hide screen blkfade
     with d3
     jump day_time_requests
-    
+
 ### FISHNETS ###
 label nets_put:
     if whoring >= 0 and whoring <= 5: # Lv 1-2.
@@ -1698,7 +1698,7 @@ label nets_put:
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
             "\"I will give you 15 points.\"":
                 $ gryffindor +=15
@@ -1709,7 +1709,7 @@ label nets_put:
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 $ mad += 5
                 call upset
-    
+
     if whoring >= 6 and whoring <= 11: # Lv 3-4.
         call her_main("Hm...?","body_15")
         call her_main("I am not that kind of girl [genie_name]...","body_17")
@@ -1720,11 +1720,11 @@ label nets_put:
                 call her_main("[genie_name] this is hardly the appropriate attire for a Hogwarts student.","body_07")
                 call her_main("I refuse!","body_09")
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
-                with d3  
+                with d3
                 $ mad += 5
                 call upset                                                                                                                                                                                                                #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
             "\"I will give you 15 points.\"":
                 $ gryffindor +=15
@@ -1736,9 +1736,9 @@ label nets_put:
                 hide screen hermione_main                                                                                                                                                                                   #HERMIONE
                 with d3                                                                                                                                                                                                                        #HERMIONE
                 show screen hermione_main                                                                                                                                                                                 #HERMIONE
-                with d3            
+                with d3
                 jump day_time_requests
-    
+
     if whoring >= 12 and whoring <= 17: # Lv 5-6.
         call her_main("Hm...?","body_15")
         call her_main("Fishnet stockings?","body_17")
@@ -1756,21 +1756,21 @@ label nets_put:
         hide screen hermione_main                                                                                                                                                                                   #HERMIONE
         with d3                                                                                                                                                                                                                        #HERMIONE
         show screen hermione_main                                                                                                                                                                                 #HERMIONE
-        with d3            
+        with d3
         jump day_time_requests
-    
+
     if whoring >= 18: # Lv 7+
         call her_main("If you insist, [genie_name]...","body_118")
         hide screen hermione_main                                                                                                                                                                                   #HERMIONE
         with d3                                                                                                                                                                                                                        #HERMIONE
         $ h_body = "body_78"
-    
+
     $ ne = True # Shows fishnets layer.
     $ ne_01 = True # Shows the fishnets.
-    
+
     #$ legs_02 = True
     #$ legs_03 = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1783,29 +1783,29 @@ label nets_put:
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     jump day_time_requests
-    
+
 label nets_take:
     if whoring >= 0 and whoring <= 5: # Lv 1-2.
         call her_main("I'm glad that you came to your senses, [genie_name].","body_04")
         hide screen hermione_main                                                                                                                                                                                   #HERMIONE
         with d3                                                                                                                                                                                                                        #HERMIONE
         $ h_body = "body_03"
-        
+
     if whoring >= 6 and whoring <= 11: # Lv 3-4.
         call her_main("Gladly, [genie_name].","body_01")
 
     if whoring >= 12 and whoring <= 17: # Lv 5-6.
         call her_main("As you wish, [genie_name].","body_12")
-    
+
     if whoring >= 18: # Lv 7+
         call her_main("Really? Aw...","body_28")
-    
-    
+
+
     $ ne = False # Shows fishnets layer.
     $ ne_01 = False # Shows the fishnets.
     #$ legs_02 = False
     #$ legs_03 = False
-    
+
     show screen blkfade
     with d3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -1817,4 +1817,4 @@ label nets_take:
     show screen hermione_main
     with d3
     jump day_time_requests
-    
+

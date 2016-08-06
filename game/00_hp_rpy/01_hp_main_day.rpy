@@ -279,13 +279,13 @@ if event13_happened and not event14_happened:
 
 if skip_duel == True:
     $ day = 5
-    $ bird_examined = True 
+    $ bird_examined = True
     $ desk_examined = True
-    $ cupboard_examined = True 
+    $ cupboard_examined = True
     $ door_examined = True
     $ fireplace_examined = True
     $ skip_duel = False
-    
+
 ### EVENTS ### (COMMENTED OUT FOR THE TESTING PORPOISES) ===============================================================================================================================
 if day == 1 and not bird_examined and not desk_examined and not cupboard_examined and not door_examined and not fireplace_examined:
     call event_01
@@ -302,7 +302,7 @@ label day_main_menu:
 
 if phoenix_is_feed:
     show screen phoenix_food
-    
+
 
 if day == 1 and daytime and bird_examined and desk_examined and cupboard_examined and door_examined and fireplace_examined:
     show screen bld1

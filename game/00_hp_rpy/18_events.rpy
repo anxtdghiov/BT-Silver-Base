@@ -1,10 +1,10 @@
 
 #First time genie meets snape
 label event_00:
-    
-    play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
-    
-    
+
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1
+
+
     #show screen snape_01 #OWL SITTING ON A PACKAGE.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     show screen snape_01 #Snape stands still.
@@ -17,7 +17,7 @@ label event_00:
     with d3
     $ tt_xpos=650
     $ tt_ypos=180
-    show screen thought 
+    show screen thought
     with Dissolve(.3)
     pause 1
     show screen bld1
@@ -26,13 +26,13 @@ label event_00:
     m "{size=-3}(Maybe if I just act cool he'll leave...?){/size}"
     hide screen bld1
     with d3
-    hide screen thought 
+    hide screen thought
     with Dissolve(.3)
-    
+
     $ walk_xpos=610 #Animation of walking chibi. (From) 610
     $ walk_xpos2=360 #Coordinates of it's movement. (To) 360
     $ snape_speed = 04.0 #The speed of moving the walking animation across the screen.
-    show screen snape_walk_01 
+    show screen snape_walk_01
     pause 4
     show screen snape_02 #Snape stands still.
     pause.5
@@ -48,7 +48,7 @@ label event_00:
     who2 "Albus... Do you have a moment?"
     hide screen snape_main
     hide screen ctc
-    
+
 #    show screen ctc
 #    pause
 #    pat "I hate to ask but its been bugging me for awhile."
@@ -59,7 +59,7 @@ label event_00:
 #    sna "Mister silvarius..."
 #    sna "This is your first strike..."
 #    sna "If I hear this question from you again, then it will cost your house 100 points."
-    
+
 #    hide screen snape_main
 #    with d3
 #    show screen emo
@@ -77,7 +77,7 @@ label event_00:
 #    with d3
 #    sna "I hope we came to an understanding, here, mister silvarius."
 #    sna "Didn't we?"
-    
+
 
     #m "{size=-3}(\"Albus\"? Is that supposed to be my name or is that's just how the humans of this world greet one another?){/size}"
     menu:
@@ -103,10 +103,10 @@ label event_00:
             call sna_main("","snape_03")
             who2 "I would rather avoid having to deal with that bureaucrat..."
             m "Fine, never mind... How can I be of help?"
-            
+
     $ s_sprite = "01_hp/13_characters/snape/main/snape_06.png"
     who2 "I have something important I need to discuss with you..."
-    who2 "I think we need to revise our admittance policy." 
+    who2 "I think we need to revise our admittance policy."
     hide screen snape_main
     with d3
     m "................?"
@@ -161,19 +161,19 @@ label event_00:
     who2 "Well, those wretched kids left me completely exhausted, I think I will retire for today."
     $ s_sprite = "01_hp/13_characters/snape/main/snape_09.png"
     who2 "................"
-    
+
     stop music fadeout 1.0
-    
+
     hide screen snape_main
     hide screen bld1
     with d3
-    $ walk_xpos=360 #Animation of walking chibi. (From desk) 360 
+    $ walk_xpos=360 #Animation of walking chibi. (From desk) 360
     $ walk_xpos2=610 #Coordinates of it's movement. (To the door) 610
     $ snape_speed = 03.0 #The speed of moving the walking animation across the screen. Default - .03
-    show screen snape_walk_01_f 
+    show screen snape_walk_01_f
     pause 3
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    hide screen snape_walk_01_f 
+    hide screen snape_walk_01_f
     with d4
     pause.5
     show screen bld1
@@ -185,7 +185,7 @@ label event_00:
     m "So basically, I'm a genie disguised as a human, who is in turn disguised as another human..."
     m "No, that's not stupid at all..."
     a4 "Shut it! Nobody understands a true genius."
-    
+
 #    who2 "Professor Dumbldore, do you have a minute?"
 #    m "{size=-3}(What? Another one?){/size}"
 #    who2 "Let me speak to him!"
@@ -220,7 +220,7 @@ label event_00:
 #            who2 "M-master...?"
 #        "\"Apology accepted. What do you want?\"":
 #            who2 "You are unusually forgiving for a genie. But we shall not test your patience anymore..."
-            
+
 #    vol "Correct me if we are wrong, but you came to our world due to an accident..."
 #    m ".................."
 #    vol "And you find our world intriguing, do you not?"
@@ -238,13 +238,13 @@ label event_00:
 #    m "..................."
 #    g4 "What the....?"
 #    m "Ah, hell. May as well stay for one more day..."
-    
+
     $ days_without_an_event = 0
-    
+
     jump day_start
 
 #First event in the game. Gennie finds himself at the desk.
-label event_01: 
+label event_01:
     show screen bld1
     with d3
     m "..................?"
@@ -272,7 +272,7 @@ label event_01:
 #owl event
 label event_02:
     $ letters += 1 #Adds one letter in waiting list to be read. Displays owl with envelope.
-    #$ mail_from_her = True #Comented out because replaced with $ letters += 1 
+    #$ mail_from_her = True #Comented out because replaced with $ letters += 1
     play sound "sounds/owl.mp3"  #Quiet...
     show screen owl
     show screen bld1
@@ -283,14 +283,14 @@ label event_02:
     return
 
 #Sanpe talks to genie about hermione, snape becomes suspicious
-label event_03: 
-    play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
-    
+label event_03:
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     $ snape_speed = 02.0 #The speed of moving the walking animation across the screen.
     $ walk_xpos=470 #Animation of walking chibi. (From)
     $ walk_xpos2=360 #Coordinates of it's movement. (To)
-    show screen snape_walk_01 
+    show screen snape_walk_01
     with d3
     pause 1.5
     show screen snape_02 #Snape stands still.
@@ -326,7 +326,7 @@ label event_03:
                     who2 "Hm....."
 
         "\".....................................................\"":
-            pass        
+            pass
     who2 "Remember how back in the days they used to publicly flog the students?"
     who2 "I swear if we could bring that back all of our problems would be solved..."
     who2 "Yes... I would gladly tie that girl to a flogging pole in front of the entire school..."
@@ -356,18 +356,18 @@ label event_03:
     who2 "You can't show weakness to those kids or they will swallow you whole..."
     call sna_main("","24")
     who2 "Good night, Albus."
-    
-    
+
+
     hide screen snape_main
     hide screen bld1
     with d3
     $ walk_xpos=360 #Animation of walking chibi. (From desk)
     $ walk_xpos2=610 #Coordinates of it's movement. (To the door)
     $ snape_speed = 03.0 #The speed of moving the walking animation across the screen.
-    show screen snape_walk_01_f 
+    show screen snape_walk_01_f
     pause 3
     hide screen snape_walk_01_f
-    
+
     show screen snape_01_f #Snape stands still. (Mirrored).
     pause.2
     who2 "................."
@@ -391,16 +391,16 @@ label event_04:
     return
 
 #Snape comes in, has a talk with Genie, then the duel starts.
-label event_05: 
-    
-    play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
-    
+label event_05:
+
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
+
     $ snape_speed = 02.0 #The speed of moving the walking animation across the screen.
     $ walk_xpos=470 #Animation of walking chibi. (From)
     $ walk_xpos2=360 #Coordinates of it's movement. (To)
-    show screen snape_walk_01 
+    show screen snape_walk_01
     with d3
     pause 1.5
     show screen snape_02 #Snape stands still.
@@ -453,7 +453,7 @@ label event_05:
             who2 "Really now?"
             who2 "Any lies about me in particular?"
             who2 "I hope you know better than to listen to the likes of her..."
-    
+
     call sna_main("","snape_03")
     who2 "She would never admit it, but I know she's been spreading those nasty rumours about me around the school..."
     call sna_main("","snape_29")
@@ -467,7 +467,7 @@ label event_05:
     call sna_main("","snape_01")
     who2 "Well, I just wanted to make sure that you take those rumours about me for what they are..."
     who2 "Nasty lies made up by a bunch of spoiled kids."
-    
+
 
     who2 "Oh.... Before I go..."
     who2 "There is one thing I meant to ask you for a while now..."
@@ -512,38 +512,38 @@ label event_05:
     $ walk_xpos=360 #Animation of walking chibi. (From desk)
     $ walk_xpos2=610 #Coordinates of it's movement. (To the door)
     $ snape_speed = 03.0 #The speed of moving the walking animation across the screen.
-    show screen snape_walk_01_f 
+    show screen snape_walk_01_f
     pause 3
-    hide screen snape_walk_01_f 
+    hide screen snape_walk_01_f
     show screen snape_01_f #Snape stands still. (Mirrored).
     pause.2
-    
-    
-    
-    
+
+
+
+
     stop music fadeout 1.0
     who2 "........................"
     hide screen snape_01_f
     hide screen bld1
     hide screen snape_main
-    hide screen snape_02 #Snape stands still. 
+    hide screen snape_02 #Snape stands still.
     #hide screen genie
     show screen blkfade
     with d3
-    $ renpy.play('sounds/07_run.mp3') 
+    $ renpy.play('sounds/07_run.mp3')
     pause 2
     g4 "???"
-    
+
     show screen snape_defends
     hide screen blkfade
     with d3
     show screen ctc
-    
-    
-    
-    play music "music/hitman.mp3" fadein 1 fadeout 1 # TENSE THEME 
-    
-    
+
+
+
+    play music "music/hitman.mp3" fadein 1 fadeout 1 # TENSE THEME
+
+
     pause
     hide screen ctc
     show screen bld1
@@ -557,10 +557,10 @@ label event_05:
     else:
         sna_[1] "My name is Severus Snape!"
         sna_[1] "Now, who might you be...?"
-        
+
     g4 "!!!"
     sna_[1] "Easy now... Just answer my question."
-    
+
     m "Alright, alright, just calm down, would you...?"
     sna_[1] "........"
     $ d_points = 0
@@ -618,19 +618,19 @@ label event_05:
     else:
         jump no_wait_2
 
-            
-            
+
+
     sna_[1] "I've heard enough!"
     g4 "By the great desert sands! Would you let me explain, human?!"
     sna_[1] "There is nothing left to explain!"
     sna_[1] "Since you refuse to cooperate, I'll be taking you into custody by force!"
     g4 "What?! Wait!"
-    
+
     if skip_duel == True:
         jump snape_lost
-    
-    
-    stop music 
+
+
+    stop music
     $ renpy.play('sounds/glass_break.mp3') #Sound of a door opening.
     play music "music/Final Fantasy VII Boss Theme.mp3" fadein 1 fadeout 1
 
@@ -640,26 +640,26 @@ label event_05:
     hide screen snape_defends
     pause 3
 
-    
-    
+
+
 
     jump duel
 
 #THE TALK AFTER THE DUEL ENDS.
-label event_06: 
-    $ potions = 0 #Makes sure there are no potions left in the possessions. 
-    
-    #play music "music/Final Fantasy VII - Victory Fanfare.mp3" fadein 1 fadeout 1 
+label event_06:
+    $ potions = 0 #Makes sure there are no potions left in the possessions.
+
+    #play music "music/Final Fantasy VII - Victory Fanfare.mp3" fadein 1 fadeout 1
     stop music fadeout 2.0
     g4 "*Panting*"
     g4 "Ready to talk now?!"
     sna_[8] "(...i-impossible...)"
-    
-    play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
-    
+
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1
+
     hide ch_gen
-    show image "01_hp/04_duel/no_magic.png" at Position(xpos=550, ypos=250, xanchor="center", yanchor="center") 
-    
+    show image "01_hp/04_duel/no_magic.png" at Position(xpos=550, ypos=250, xanchor="center", yanchor="center")
+
     m "I told you you are no match for me..."
     show screen bld1
     with d3
@@ -808,13 +808,13 @@ label event_06:
     jump day_start
 
 #THE TALK WITH SNAPE THE DAY AFTER THE DUEL.
-label event_07: 
-    play music "music/Dark Fog.mp3" fadein 1 fadeout 1 
+label event_07:
+    play music "music/Dark Fog.mp3" fadein 1 fadeout 1
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     $ snape_speed = 02.0 #The speed of moving the walking animation across the screen.
     $ walk_xpos=470 #Animation of walking chibi. (From)
     $ walk_xpos2=360 #Coordinates of it's movement. (To)
-    show screen snape_walk_01 
+    show screen snape_walk_01
     with d3
     pause 1.5
     show screen snape_02 #Snape stands still.
@@ -861,7 +861,7 @@ label event_07:
     call sna_main("So we shall keep the charade going for now...","snape_03")
 
     m "By doing what exactly?"
-    call sna_main("Just act like Albus always does: never leave this tower and try to avoid any human contact...","snape_05") 
+    call sna_main("Just act like Albus always does: never leave this tower and try to avoid any human contact...","snape_05")
     m "That...."
     m "Sounds..."
     g4 "Incredibly boring!"
@@ -896,7 +896,7 @@ label event_07:
     m "I do..."
     m "Instead of sitting here on my ass all day and being quiet I could explore your world..."
     call sna_main("Hm...","snape_03")
-    call sna_main("Well, alright, what do you want?","snape_01") 
+    call sna_main("Well, alright, what do you want?","snape_01")
     m "Teach me your magic..."
     call sna_main("My magic?","snape_05")
     m "Yes... The way you conjure up your spells is..."
@@ -936,12 +936,12 @@ label event_07:
     $ walk_xpos=360 #Animation of walking chibi. (From desk)
     $ walk_xpos2=610 #Coordinates of it's movement. (To the door)
     $ snape_speed = 03.0 #The speed of moving the walking animation across the screen.
-    show screen snape_walk_01_f 
+    show screen snape_walk_01_f
     pause 3
-    hide screen snape_walk_01_f 
+    hide screen snape_walk_01_f
     show screen snape_01_f #Snape stands still. (Mirrored).
     pause.2
-    
+
     call sna_head(".................","snape_06",xpos=330,ypos=380)
     call sna_head("\"Send those whores up, Severus!\" Ha-ha-ha..","snape_28")
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
@@ -951,18 +951,18 @@ label event_07:
     m "I Suppose I'll just curl up in a ball on top of this desk as usual..."
     pause.2
     show screen notes
-    $ renpy.play('sounds/win2.mp3') 
+    $ renpy.play('sounds/win2.mp3')
     show screen blktone
     with d3
     ">You've unlocked the ability to summon Severus Snape to your office."
     hide screen blktone
     with d3
     $ hanging_with_snape = True
-    
+
     jump day_start
 
 #HERMONE SHOWS UP FOR THE FIRST TIME. IN USE.
-label event_08: 
+label event_08:
     #"EVENT_08"
     stop music fadeout 1.0
     pause 1
@@ -988,7 +988,7 @@ label event_08:
             who "It's me, professor..."
             who "Hermione Granger. Can I come in?"
             m "{size=-4}(It's that wretched woman who's been harassing me with her letters lately...){/size}"
-            menu: 
+            menu:
                 m "..."
                 "\"Go away, please. I'm busy.\"":
                     her "But, professor, I really need to talk to you..."
@@ -996,7 +996,7 @@ label event_08:
                     her "Professor? I'm coming in!"
                     m "{size=-4}(Crap...){/size}"
                 "\"Yes, yes, you can come in.\"":
-                    pass          
+                    pass
         "\"Come in!\"":
             pass
         "\"Go away!\"":
@@ -1025,18 +1025,18 @@ label event_08:
         m "?!!"
     if not d_flag_02: #When TRUE Genie knows it's a girl knocking on the door.
         m "{size=-3}(A girl?){/size}"
-        
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
-    
+
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
+
     call her_walk(610,400,3)
     show screen hermione_blink #Hermione stands still.
     pause.5
-    
+
     show screen bld1
     show screen ctc
     show screen hermione_blink
     with d3
-    
+
     call her_main("","body_01",xpos=370,ypos=0)
     pause
     call her_main("Good morning professor.","body_03")
@@ -1067,7 +1067,7 @@ label event_08:
     menu:
         "\"(I will jerk off a little while she talks.)\"":
             $ jerk_off_session = True #Affects next conversation with Snape.
-            $ d_flag_01 = True #If TRUE genie jerks off under the desk.    
+            $ d_flag_01 = True #If TRUE genie jerks off under the desk.
         "\"(No, that's stupid! I Need to behave!)\"":
             $ d_flag_01 = False #NOT JERKING OFF.
             pass
@@ -1139,7 +1139,7 @@ label event_08:
         show screen blktone8
         with d4
         ">You stroke you diamond-hard cock ferociously!"
-        hide screen blktone8 
+        hide screen blktone8
         with d4
         show screen hermione_main
         with d3
@@ -1152,7 +1152,7 @@ label event_08:
         her "Ehm... So, as I was saying..."
         hide screen hermione_main
         with d3
-        m "{size=-4}(Oh... That was a good jerkoff session, but I'm getting dangerously close to the \"grand finale\".){/size}" 
+        m "{size=-4}(Oh... That was a good jerkoff session, but I'm getting dangerously close to the \"grand finale\".){/size}"
         m "{size=-4}(Maybe I should stop before I get myself into trouble.){/size}"
         menu:
             "\"(Yes, time to actually listen to her.)\"":
@@ -1179,15 +1179,15 @@ label event_08:
     if d_flag_01:
         g4 "{size=-4}(She said \"hard-on\"!) *Panting*{/size}"
     her "But you could delegate that task to me..."
-    her "Just put your faith in me professor." 
-    if d_flag_01: 
+    her "Just put your faith in me professor."
+    if d_flag_01:
         call her_main("Yes, you can do it! Just put it in me, sir!","body_01")
         stop music fadeout 1.0
-        show screen white 
+        show screen white
         pause.1
         hide screen white
         pause.2
-        show screen white 
+        show screen white
         pause .1
         hide screen white
         with hpunch
@@ -1199,7 +1199,7 @@ label event_08:
         show screen genie_jerking_sperm
         with d3
         pause 3
-        
+
         show screen bld1
         with d3
         call her_main("Professor?! What is going on...?","body_18")
@@ -1216,7 +1216,7 @@ label event_08:
         m "Alright... I will think about your proposal, I promise."
     call her_main("Really?","body_07")
     her "hm..........."
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
     call her_main("That's a relief! Thank you, professor.","body_04")
     if d_flag_01:
         m "No, no, thank you..."
@@ -1226,9 +1226,9 @@ label event_08:
     hide screen bld1
     hide screen hermione_main
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
@@ -1245,15 +1245,15 @@ label event_08:
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
     return
 
-### FOLLOWING EVENT IS NOT IN USE ANYMORE ###    
+### FOLLOWING EVENT IS NOT IN USE ANYMORE ###
 label event_08_02:
     "EVENT_08_02"
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock!*"
     menu:
         "\"Who is it?\"":
-            her "It's me, Hermione Granger." 
-            m "(It's that young witch again...)" 
+            her "It's me, Hermione Granger."
+            m "(It's that young witch again...)"
             her "Professor, I'm coming in..."
             m "{size=-4}(Crap!){/size}"
         "\"Yes, come in...\"":
@@ -1264,14 +1264,14 @@ label event_08_02:
             m "............................."
             her "Professor, I'm coming in..."
             m "{size=-4}(Crap!){/size}"
-    
+
     call her_walk(610,400,3)
     show screen hermione_blink #Hermione stands still.
-    
+
     pause.5
     show screen bld1
     with Dissolve(.3)
-    
+
     show screen hermione_blink
     with d3
     call her_main("Good morning, professor Dumbledore.","body_01",xpos=370,ypos=0)
@@ -1287,12 +1287,12 @@ label event_08_02:
             g4 "{size=-4}(OK, that was stupid. Damage control, damage control!){/size}"
             m "*Khem* Excuse me, something stuck in my throat... Good morning, miss Granger."
             her "{size=-5}(Did he just called me a.... no, no way.){/size}"
-            
+
     her "Professor Dumbledore, I am here to talk to you as the \"MRM\" president..."
     m "............."
     her "We held an emergency assembly yesterday..."
     her "The matter in question was the \"Hogwarts\" uniform for girls..."
-    her "We came to the conclusion that the currently employed dress-code is highly inappropriate for an educational institution..." 
+    her "We came to the conclusion that the currently employed dress-code is highly inappropriate for an educational institution..."
     show screen ctc
     pause
     her "///////"
@@ -1327,35 +1327,35 @@ label event_08_02:
             her "!!!"
             her "Tsk!"
             her "I will make you take me seriously, professor!"
-        
+
         "{size=-4}\"Boys must study in peace. request approved!\"{/size}":
             her "Splendid. I will everyone know."
             her "Thank you professor."
             hide screen bld1
             hide screen hermione_main
             with Dissolve(.3)
-            
+
             call her_walk(400,610,2)
-            
+
             $ renpy.play('sounds/door.mp3') #Sound of a door opening.
             with Dissolve(.3)
             pause.5
             m "...................."
-           
+
 
     hide screen bld1
     hide screen hermione_main
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
     m "I'm Starting to enjoy our meetings less and less..."
     return
 
-#NOT IN USE#   
+#NOT IN USE#
 label event_08_03:
     "EVENT_08_03"
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
@@ -1369,7 +1369,7 @@ label event_08_03:
     show screen bld1
     show screen hermione_blink
     with d3
-    
+
     call her_main("Good morning, professor Dumbledore.","body_01",xpos=370,ypos=0)
     menu:
         "\"Good morning, miss Granger.\"":
@@ -1380,7 +1380,7 @@ label event_08_03:
             her "nothing sir..."
         "\"Good morning, miss president.\"":
             her "{size=-4}(Is he being sarcastic?){/size}"
-            
+
 
     if not d_flag_05:
         her "You promised me to take action, professor..."
@@ -1444,35 +1444,35 @@ label event_08_03:
             her "What? I..."
             her "But this is... you can't..."
             m "Dismissed!"
-            her "Tsk..."       
+            her "Tsk..."
     hide screen bld1
     hide screen hermione_main
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
     m "...................."
-    
+
     $ snape_against_hermione = True #Turns True after event_08_03. Activates event_09 when hanging out with Snape next time.
 
-    
+
     return
 
-#Second visit from Hermione. Says she sent a letter to the Minestry. 
+#Second visit from Hermione. Says she sent a letter to the Minestry.
 label event_09:
                 #Takes place after first special event with Snape, where he just complains about Hermione.
-    
+
     #"EVENT_09"
     stop music fadeout 3.0
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock!*"
     menu:
         "\"Who is it?\"":
-            her "It's me, Hermione Granger." 
-            m "(It's that young witch again...)" 
+            her "It's me, Hermione Granger."
+            m "(It's that young witch again...)"
             her "Can I come in, sir?"
             menu:
                 m "..."
@@ -1497,16 +1497,16 @@ label event_09:
 
     $ event09 = True #You let Hermione in. This event will stop looping now.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
+
     call her_walk(610,400,3,redux_pause=0.5)
-    
+
     show screen hermione_blink #Hermione stands still.
     pause.5
     show screen bld1
     with d3
-    
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
-    
+
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
+
     show screen hermione_blink
     with d3
     call her_main("","body_03",xpos=370,ypos=0)
@@ -1526,7 +1526,7 @@ label event_09:
             her "Ehm... so, about the reason of me being here today then..."
         "\"Yeah, yeah, whatever...\"":
             pass
-    
+
     her "I see that no matter what I do I simply cannot get through to you, sir."
     call her_main("So in light of your negligence towards your duties I decided to take the initiative myself!","body_04")
     m "Did you now...?"
@@ -1539,7 +1539,7 @@ label event_09:
     g4 "Blame everything on--"
     stop music fadeout 1.0
     m "Wait, did you say {size=+5}MEN'S{/size} rights movement?"
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
     call her_main("You have no idea how hard it is to be a boy in our school these days...","body_11")
     menu:
         "\"Didn't see this one coming...\"":
@@ -1576,18 +1576,18 @@ label event_09:
     hide screen bld1
     hide screen hermione_main
     with d3
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with d3
     pause.5
     m "...................."
-    
+
 
     $ hermione_is_waiting_01 = False #Makes sure this event is not repeated.
     $ snape_against_hermione_02 = True #Turns True after event_09. Activates second event when hanging out with Snape.
-    
+
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
     return
 
@@ -1598,8 +1598,8 @@ label event_09_2: #Takes place after second special event with Snape, where he j
     "*Knock-knock-knock!*"
     menu:
         "\"Who is it?\"":
-            her "It's me, Hermione Granger." 
-            m "(It's that young witch again...)" 
+            her "It's me, Hermione Granger."
+            m "(It's that young witch again...)"
             her "Can I come in, sir?"
             menu:
                 m "..."
@@ -1624,15 +1624,15 @@ label event_09_2: #Takes place after second special event with Snape, where he j
 
     $ event09 = True #You let Hermione in. This event will stop looping now.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
+
     call her_walk(610,400,3,redux_pause=0.5)
-    
+
     show screen hermione_blink #Hermione stands still.
     with d3
     pause.5
     show screen bld1
     with d3
-    
+
     show screen hermione_blink
     with d3
     call her_main("Good morning, professor Dumbledore.","body_01",xpos=370,ypos=0)
@@ -1645,8 +1645,8 @@ label event_09_2: #Takes place after second special event with Snape, where he j
             her "nothing sir..."
         "\"...............\"":
             her "...................."
-            
-            
+
+
     her "My classes are about to start so I don't have much time..."
     her "Being a top student is not easy, so I hope you understand that the Other kids in our school are looking up to me."
     #m "{size=-4}(Is that so...?){/size}"
@@ -1699,14 +1699,14 @@ label event_09_2: #Takes place after second special event with Snape, where he j
     hide screen bld1
     hide screen hermione_main
     with d3
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with d3
     pause.5
     m "...................."
-    
+
     $ hermione_is_waiting_01 = False #Makes sure this event is not repeated.
     $ snape_against_hermione_02 = True #Turns True after event_09. Activates second event when hanging out with Snape.
     return
@@ -1719,8 +1719,8 @@ label event_10: #Takes place after second special even with Snape where Ginie is
     "*Knock-knock-knock!*"
     menu:
         "\"Who is it?\"":
-            her "It's me, Hermione Granger." 
-            m "(It's that young witch again...)" 
+            her "It's me, Hermione Granger."
+            m "(It's that young witch again...)"
             her "Can I come in, sir?"
             menu:
                 m "..."
@@ -1748,7 +1748,7 @@ label event_10: #Takes place after second special even with Snape where Ginie is
     $ walk_xpos2=400 #Coordinates of it's movement. (To)
     $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen hermione_walk_01 
+    show screen hermione_walk_01
     with d4
     pause 2.5
     $ hermione_chibi_xpos = 400 #Near the desk.
@@ -1756,7 +1756,7 @@ label event_10: #Takes place after second special even with Snape where Ginie is
     pause.5
     show screen bld1
     with Dissolve(.3)
-    
+
     show screen hermione_blink
     with d3
     call her_main("Good morning, professor Dumbledore.","body_01",xpos=370,ypos=0)
@@ -1812,35 +1812,35 @@ label event_10: #Takes place after second special even with Snape where Ginie is
     hide screen bld1
     hide screen hermione_main
     with d3
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
     m "The little woman quite literary sucks out all the happiness out of me..."
-   
+
     $ hermione_takes_classes = True
-   
+
     $ hermione_is_waiting_02 = False #Makes sure this event is not repeated.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
     return
 
 #Third visit, after second special date with Snape. Hermione complains that she almost failed a test. (EVENING EVENT!)
-label event_11: 
+label event_11:
     #"EVENT_11"
     stop music fadeout 1.0
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock!*"
     her "Professor, I'm coming in!"
     m "...."
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
 
     $ walk_xpos=570 #Animation of walking chibi. (From)
     $ walk_xpos2=400 #Coordinates of it's movement. (To)
     $ hermione_speed = 02.1 #The speed of moving the walking animation across the screen.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    # show screen hermione_walk_01 
+    # show screen hermione_walk_01
     show screen hermione_chibi_robe #Hermione. Chibi. Walking. Wearing a robe.
     with d4
     pause 1.8
@@ -1850,9 +1850,9 @@ label event_11:
     show screen bld1
     show screen ctc
     with Dissolve(.3)
-    
+
     $ robeon = True #Hermione is wearing a robe.
-    
+
     call her_main("","body_09",xpos=370,ypos=0)
     pause
     call her_main("Good evening professor.","body_12")
@@ -1911,7 +1911,7 @@ label event_11:
     m "............"
     call her_main("Well, if there is nothing else, I have a studying schedule to keep.","body_16")
     m "By all means..."
-    
+
     hide screen bld1
     hide screen hermione_main
     with Dissolve(.3)
@@ -1919,19 +1919,19 @@ label event_11:
     $ walk_xpos2=610 #Coordinates of it's movement. (To)
     $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
     show screen hermione_chibi_robe_f #Hermione. Chibi. Walking. Wearing a robe.
-    #show screen hermione_walk_01_f 
+    #show screen hermione_walk_01_f
     pause 2
     hide screen hermione_chibi_robe_f #Hermione. Chibi. Walking. Wearing a robe.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
-    
+
     $ robeon = False #Hermione is NOT wearing a robe.
     $ only_upper = False #Otherwise skirt shows up under the robe.
-    
+
     $ event11_happened = True #Allows next event to start.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
+
     play music "music/Music for Manatees.mp3" fadein 1 fadeout 1
 
     return
@@ -1939,14 +1939,14 @@ label event_11:
 #Hermione complains that she might have failed a test. (EVENING EVENT!)
 label event_12:
     #"EVENT_12"
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
+
     $ walk_xpos=570 #Animation of walking chibi. (From)
     $ walk_xpos2=400 #Coordinates of it's movement. (To)
     $ hermione_speed = 02.1 #The speed of moving the walking animation across the screen.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen hermione_walk_01 
+    show screen hermione_walk_01
     with d4
     pause 1.8
     $ hermione_chibi_xpos = 400 #Near the desk.
@@ -1966,7 +1966,7 @@ label event_12:
         "\"You should study more, girl!\"":
             call her_main("But I did study all night!","body_19")
         "\"There, there... It'll be alright.\"":
-            call her_main("No it won't! This is a catastrophe!","body_20") 
+            call her_main("No it won't! This is a catastrophe!","body_20")
 
     call her_main("And the worst part is that I think I might be the only one who has failed...","body_21")
     call her_main("How will this make me look?","body_22")
@@ -2004,27 +2004,27 @@ label event_12:
     hide screen bld1
     hide screen hermione_main
     with d3
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with d3
     pause.5
-    
+
     $ event12_happened = True #Allows next event to start.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
+
     call day_start
 
 #Hermione complains that she did fail the test. (EVENING EVENT!)
-label event_13: 
+label event_13:
     #"EVENT_13"
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
+
     $ walk_xpos=570 #Animation of walking chibi. (From)
     $ walk_xpos2=500 #Coordinates of it's movement. (To)
     $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-    show screen hermione_walk_01 
+    show screen hermione_walk_01
     with d4
     pause 1.3
     $ hermione_chibi_xpos = 500 #Near the desk.
@@ -2032,20 +2032,20 @@ label event_13:
     with d3
     her "....................."
     m "???"
-    
+
     $ walk_xpos=500 #Animation of walking chibi. (From)
     $ walk_xpos2=400 #Coordinates of it's movement. (To)
     $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-    show screen hermione_walk_01 
+    show screen hermione_walk_01
     hide screen hermione_blink #Hermione stands still.
     pause 1.8
     $ hermione_chibi_xpos = 400 #Near the desk.
     show screen hermione_blink #Hermione stands still.
     with d3
     her "............"
-    m "Miss Granger?" 
+    m "Miss Granger?"
     her "..............................."
-    m "Miss Granger?!!" 
+    m "Miss Granger?!!"
     show screen bld1
     with d3
     call her_main("","body_26")
@@ -2067,8 +2067,8 @@ label event_13:
     hide screen bld1
     hide screen hermione_main
     with Dissolve(.3)
-    
-    
+
+
     $ walk_xpos=400 #Animation of walking chibi. (From)
     $ walk_xpos2=610 #Coordinates of it's movement. (To)
     $ hermione_speed = 01.0 #The speed of moving the walking animation across the screen.
@@ -2080,16 +2080,16 @@ label event_13:
     hide screen hermione_run
     with Dissolve(.3)
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-  
+
     pause.3
     m "............."
     m "She will be alright..."
     m "I think..."
-    
-    
-    
-    
-    
+
+
+
+
+
 #    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 #    $ hermione_chibi_xpos = 400 #Middle of the room.
 #    show screen hermione_stand_f #Hermione stands still.
@@ -2098,21 +2098,21 @@ label event_13:
 #    $ walk_xpos=400 #Animation of walking chibi. (From)
 #    $ walk_xpos2=510 #Coordinates of it's movement. (To)
 #    $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-#    show screen hermione_walk_01_f 
+#    show screen hermione_walk_01_f
 #    pause 2
-#    hide screen hermione_walk_01_f 
+#    hide screen hermione_walk_01_f
 #    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 #    $ hermione_chibi_xpos = 500 #Middle of the room.
 #    show screen hermione_stand_f #Hermione stands still.
 #    with Dissolve(.3)
 #    her "................"
-    
+
 #    $ walk_xpos=500 #Animation of walking chibi. (From)
 #    $ walk_xpos2=610 #Coordinates of it's movement. (To)
 #    $ hermione_speed = 02.0 #The speed of moving the walking animation across the screen.
-#    show screen hermione_walk_01_f 
+#    show screen hermione_walk_01_f
 #    pause 2
-#    hide screen hermione_walk_01_f 
+#    hide screen hermione_walk_01_f
 #    $ renpy.play('sounds/door.mp3') #Sound of a door opening.
 #    with Dissolve(.3)
 #    pause.5
@@ -2121,21 +2121,21 @@ label event_13:
 
     $ event13_happened = True #Allows next event to start.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
+
     call day_start
 
 #Hermione comes after her breakdown (when she failed the test). She is asking for tutoring. Tutoring unlocked.
-label event_14: 
+label event_14:
     #"EVENT_14"
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
 
     $ walk_xpos=570 #Animation of walking chibi. (From)
     $ walk_xpos2=400 #Coordinates of it's movement. (To)
     $ hermione_speed = 02.1 #The speed of moving the walking animation across the screen.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen hermione_walk_01 
+    show screen hermione_walk_01
     with d4
     pause 1.8
     $ hermione_chibi_xpos = 400 #Near the desk.
@@ -2143,7 +2143,7 @@ label event_14:
     with d3
     show screen bld1
     with Dissolve(.3)
-    
+
     show screen hermione_blink
     with d3
     call her_main("Good morning, Professor.","body_01",xpos=370,ypos=0)
@@ -2151,7 +2151,7 @@ label event_14:
     call her_main("Well, first of all I am terribly sorry about yesterday's display, sir...","body_04")
     call her_main("I never failed a test in my life, so I wasn't sure how to react...","body_08")
     call her_main("But I am all better now...","body_04")
-    m "I see..." 
+    m "I see..."
     her "I will not take much of your time, I promise..."
     if tutoring_offer_made:
         her "I am here to take you up on your offer."
@@ -2212,26 +2212,26 @@ label event_14:
     her "I have a list of suspects already but I will get back to you on this later...."
     m "Ehm... alright..."
     call her_main("Oh, the classes are about to start. I'd better go...","body_10")
-    
+
     hide screen bld1
     hide screen hermione_main
     with Dissolve(.3)
-    
+
     call her_walk(400,610,2)
-    
+
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     with Dissolve(.3)
     pause.5
-    
+
     stop music fadeout 1.0
 
     $ event14_happened = True #Allows next event to start.
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
+
     show screen blktone
     with d3
     show screen notes
-    $ renpy.play('sounds/win2.mp3') 
+    $ renpy.play('sounds/win2.mp3')
     ">You unlocked an ability to summon Hermione Granger to your office."
     hide screen blktone
     with d3
@@ -2239,28 +2239,28 @@ label event_14:
     $ hermione_takes_classes = True
     $ tutoring_hermione_unlocked = True
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
-    
-    
+
+
     play music "music/Brittle Rille.mp3" fadein 1 fadeout 1
 
     return
 
 #Hermione comes and asks to buy a favour from her.
-label event_15: 
-    
+label event_15:
+
     #"EVENT_15"
-    
+
 #    $ slytherin +=49
 #    hide screen s_p_u
 #    $ s_p_u_pic = "what_49_points"
 #    show screen s_p_u
-    
+
     $ renpy.play('sounds/knocking.mp3') #Sound someone knocking on the door.
     "*Knock-knock-knock!*"
     menu:
         "\"Who is it?\"":
-            her "It's me, Hermione Granger." 
-            m "(It's that young witch again...)" 
+            her "It's me, Hermione Granger."
+            m "(It's that young witch again...)"
             her "Can I come in, sir?"
             menu:
                 m "..."
@@ -2283,12 +2283,12 @@ label event_15:
             her "Professor, I'm coming in..."
             m "{size=-4}(Crap!){/size}"
 
-   
+
     $ walk_xpos=610 #Animation of walking chibi. (From)
     $ walk_xpos2=400 #Coordinates of it's movement. (To)
     $ hermione_speed = 03.0 #The speed of moving the walking animation across the screen.
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
-    show screen hermione_walk_01 
+    show screen hermione_walk_01
     with d4
     pause 2.5
     $ hermione_chibi_xpos = 400 #Near the desk.
@@ -2296,7 +2296,7 @@ label event_15:
     pause.5
     show screen bld1
     with Dissolve(.3)
-    
+
     show screen hermione_blink
     with d3
     call her_main("Good evening, professor...","body_13",xpos=370,ypos=0)
@@ -2330,9 +2330,9 @@ label event_15:
             her "Professor, please, I am really desperate..."
             m "Desperate you say..?"
             m "Well alright..."
-    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1 
+    play music "music/Chipper Doodle v2.mp3" fadein 1 fadeout 1
     call her_main("Thank you, professor...","body_01")
-    
+
     label choose_favor_agagin:
     $ d_flag_01 = False
     $ d_flag_02 = False
@@ -2381,7 +2381,7 @@ label event_15:
         "\"40 points.\"":
             $ d_flag_06 = True
             pass
-    
+
     call her_main("Em, alright...",xpos=140)
     if d_flag_01: #Show me your tongue.
         call her_main("M-my... tongue, sir?","body_24")
@@ -2394,7 +2394,7 @@ label event_15:
         call her_main(".................","body_36")
         show screen ctc
         pause
-        menu: 
+        menu:
             "\"Very good. Here are your points.\"":
                 pass
             "\"Not good enough. You can do better\"":
@@ -2437,7 +2437,7 @@ label event_15:
                 show screen bld1
                 with d3
                 jump stupid_enogh
-        
+
         m "Very good, you can turn back now..."
         show screen hermione_stand #Hermione stands still.
         with Dissolve(.7)
@@ -2446,9 +2446,9 @@ label event_15:
         show screen bld1
         with d3
         her "................."
-   
-    
-    
+
+
+
 #    if d_flag_02: #Pretend to be a monkey.
 #        her "A monkey then..."
 #        her "ooh ooh...."
@@ -2481,7 +2481,7 @@ label event_15:
                 jump stupid_enogh
             "\"Not stupid enough.\"":
                 jump stupid_faces
-    
+
     if d_flag_04: #BAD GIRL
         call her_main("I...","body_07",xpos=140)
         her "I have been a very bad girl..."
@@ -2522,7 +2522,7 @@ label event_15:
             "\"Come here and suck my cock!\"":
                 m "{size=-5}(Too early for this... I need to reel her in first.){/size}"
                 jump to_early_for_sucking_cocks
-    
+
     label stupid_enogh:
     if d_flag_05:
         m "20 points to the \"Gryffindor\" house."
@@ -2536,7 +2536,7 @@ label event_15:
     elif d_flag_08:
         m "1 point to the \"Gryffindor\" house."
         $ gryffindor +=1
-    
+
     call her_main("Yay!..............","body_24",xpos=140)
     her "This was quite easy..."
     her "You think you could buy some more favours from me in the future, professor?"
@@ -2550,7 +2550,7 @@ label event_15:
             m "Well, when you put it that way..."
         "\"That's a possibility...\"":
             pass
-            
+
     call her_main("Thank you professor. Thank you so much.","body_06")
     call her_main("Well, I suppose, I'd better go now...","body_01")
     m "............"
@@ -2558,9 +2558,9 @@ label event_15:
     hide screen bld1
     hide screen hermione_main
     with d3
-    
+
     call her_walk(400,610,2)
-    
+
     show screen hermione_stand_f #Hermione stands still.
     with d3
 
@@ -2570,7 +2570,7 @@ label event_15:
         her "{size=-4}(Although that's usually when the teacher is not looking...){/size}"
         her "{size=-4}(But there is nothing wrong with what I did today...){/size}"
         her "{size=-4}(I earned my house extra points...){/size}"
-        
+
     if d_flag_02: #Stand still...
         her "{size=-4}(I can just stand there and let the professor look at me...){/size}"
         her "{size=-4}(There is nothing wrong with that... nothing at all...){/size}"
@@ -2598,19 +2598,19 @@ label event_15:
     show screen blktone
     with d3
     show screen notes
-    $ renpy.play('sounds/win2.mp3') 
+    $ renpy.play('sounds/win2.mp3')
     ">You unlocked an ability to buy sexual favours from Hermione Granger."
     hide screen blktone
     with d3
-    $ buying_favors_from_hermione_unlocked = True 
+    $ buying_favors_from_hermione_unlocked = True
     $ days_without_an_event = 0 #Resets the counter. This counts how many days have passed since this event happened.
     $ event15_happened = True #Turns TRUE after event_15
     jump day_start
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+

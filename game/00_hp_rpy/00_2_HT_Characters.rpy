@@ -21,7 +21,7 @@ init python:
             self[self._at] -= 1
 
     # Character tables
-    
+
     ### SNAPE HEAD ###
     sna_ = [""]
     for i in range(1,26):
@@ -37,8 +37,8 @@ init python:
     sly2 = Character('Another Slytherin student', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     cr1 = Character('Somebody from the crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     cr2 = Character('Another voice from the crowd', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-     
-    
+
+
     ###HARRY POTTER CHARACTERS###
     her_char = Character('Hermione', color="#402313", window_left_padding=85, show_two_window=True, ctc="ctc3", ctc_position="fixed")
     her2 = Character('Hermione', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
@@ -61,8 +61,8 @@ define dum2 = Character(None, window_left_padding=240, image="dum2", color="#402
 define dum3 = Character(None, window_left_padding=240, image="dum3", color="#402313", ctc="ctc3", ctc_position="fixed")
 define dum4 = Character(None, window_left_padding=240, image="dum4", color="#402313", ctc="ctc3", ctc_position="fixed")
 define dum5 = Character(None, window_left_padding=240, image="dum5", color="#402313", ctc="ctc3", ctc_position="fixed")
-    
-    
+
+
 ## FAWKES ##
 define faw = Character('Fawkes',
     color="#f21111",
@@ -71,9 +71,9 @@ define faw = Character('Fawkes',
     show_who_xalign=0.5,
     ctc="ctc3",
     ctc_position="fixed")
-   
-    
-    
+
+
+
 define pat = Character('silvarius2000',
     color="#402313",
     window_right_padding=270,

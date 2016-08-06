@@ -155,7 +155,7 @@ image ch_hem hotdog:
     pause.3
     repeat
 
-    
+
 ### LUNA ANIMATIONS
 image ch_lun walk_a:    #shirt 00
     "01_hp/13_characters/luna/chibis/walk/l_walk_a_01.png"
@@ -225,7 +225,7 @@ image ch_lun blink_a_flip:
     im.Flip("01_hp/13_characters/luna/chibis/walk/l_walk_a_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_lun walk_n:    #shirt 00
     "01_hp/13_characters/luna/chibis/walk/l_walk_n_01.png"
     pause.08
@@ -294,7 +294,7 @@ image ch_lun blink_n_flip:
     im.Flip("01_hp/13_characters/luna/chibis/walk/l_walk_n_01.png", horizontal=True)
     pause 3
     repeat
-    
+
 image ch_lun walk_robe:    #shirt 00
     "01_hp/13_characters/luna/chibis/walk/l_walk_robe_01.png"
     pause.08
@@ -363,9 +363,9 @@ image ch_lun blink_robe_flip:
     im.Flip("01_hp/13_characters/luna/chibis/walk/l_walk_robe_01.png", horizontal=True)
     pause 3
     repeat
-    
-    
-    
+
+
+
 ### HERMIONE GIVING GENIE A HANDJOB ###
 image handjob_ani:
     "01_hp/08_animation_02/12_handjob_01.png"
@@ -684,15 +684,15 @@ image sex_cum_in_ani:#----------### HERMIONE SEX CUM INSIDE ###
     pause.1
     "01_hp/08_animation_02/23_cum_23.png"
     pause.1
-    repeat 
-image pause_sex:#---------------### HERMIONE PAUSE SEX ###  
+    repeat
+image pause_sex:#---------------### HERMIONE PAUSE SEX ###
     "01_hp/08_animation_02/21_sex_03.png"
 
 
 
- 
- 
- 
+
+
+
 image ch_hem walk_a_01:
     "01_hp/16_hermione_chibi/walk/h_walk_a_01.png"
     pause.08
@@ -976,8 +976,8 @@ image thought: #Thinking emotion over a chibi.
 
 
 
-    
-    
+
+
 image ch_hem run:
     "01_hp/16_hermione_chibi/run/h_run_01.png"
     pause.07
@@ -1014,8 +1014,8 @@ image ch_hem run_flip:
     im.Flip("01_hp/16_hermione_chibi/run/h_run_04.png", horizontal=True)
     pause.07
     repeat
-    
-    
+
+
 
 
 image feather: #Falling feather.
@@ -1313,7 +1313,7 @@ image groping_naked_tits_ani: #Genie groping Hermione under her skirt. Hermione 
     "01_hp/animation/tit_molester_naked_08.png"
     pause.2
     repeat
-    
+
 image groping_naked_tits_ani_01: #Genie groping Hermione under her skirt. Hermione is facing Genie.
     "01_hp/animation/tit_molester_naked_00_01.png"
     pause.2
@@ -1345,7 +1345,7 @@ image jerking_off_ani: #Genie jerking off in front of top pulled up (shirt + ves
     "01_hp/animation/07_jerking_off_04.png"
     pause.2
     repeat
-    
+
 ### JERKING OFF 2.0###
 # image jerking_off_ani_a: #Genie jerking off in front of top pulled up (shirt + vest) Hermione.
     # "01_hp/08_animation_02/07_jerking_off_a_01.png"
@@ -1377,7 +1377,7 @@ image jerking_off_ani: #Genie jerking off in front of top pulled up (shirt + ves
     # "01_hp/08_animation_02/07_jerking_off_c_04.png"
     # pause.2
     # repeat
-# image jerking_off_ani_d: #Genie jerking off in front of topless Hermione. 
+# image jerking_off_ani_d: #Genie jerking off in front of topless Hermione.
     # "01_hp/08_animation_02/07_jerking_off_d_01.png"
     # pause.2
     # "01_hp/08_animation_02/07_jerking_off_d_02.png"
@@ -1387,7 +1387,7 @@ image jerking_off_ani: #Genie jerking off in front of top pulled up (shirt + ves
     # "01_hp/08_animation_02/07_jerking_off_d_04.png"
     # pause.2
     # repeat
-    
+
 image desk_blinking: #Animation of Hermione blinking her eyes standing at genie's desk.
     "01_hp/animation/00.png"
     pause.1
@@ -1404,7 +1404,7 @@ image desk_blinking: #Animation of Hermione blinking her eyes standing at genie'
     "01_hp/animation/00.png"
     pause 3
     repeat
-    
+
 ### GENIE SPELL ANIMATION ###
 image spell_ani:
     "01_hp/08_animation_02/spell01.png"
@@ -1441,8 +1441,8 @@ image spell_ani:
     pause.1
     "01_hp/08_animation_02/spell17.png"
     pause.1
-   
-    
+
+
 image jerking_off_02_ani: #Genie jerking off in front of dancing on a desk Hermione. (Difference is that the dick is aimed higher.)
     "01_hp/08_animation_02/06_jerking_01.png"
     pause.2
@@ -1592,9 +1592,9 @@ image snape_cum_01: #Snape cumming on Hermione after she is done striping.
     "01_hp/08_animation_02/00.png"
     pause.5
     repeat
-    
-    
-    
+
+
+
 ### HANGING WITH SNAPE ###
 image genie_toast_goblet: #Genie and Snape sitting in front of fireplace...
     "01_hp/animation/hanging_with_snape_01.png"
@@ -1848,7 +1848,7 @@ image owl_01: #OWL WITH ENVELOPE IN IT'S MOUTH, BLINKING.
     pause 7
     repeat
 
-    
+
 
 ### BROKEN GLASS ###
 image glass: # Animation that shows a broken glass effect when the duel starts.
@@ -2351,7 +2351,7 @@ image flower_appear:
     pause.1
     "01_hp/08_animation_02/Flower4.png"
     pause.8
-    
+
 # image vanish_effect_bouquet:
     # "01_hp/08_animation_02/BouquetPaf.png"
     # pause.1

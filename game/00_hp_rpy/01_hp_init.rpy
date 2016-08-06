@@ -170,7 +170,7 @@ $ hg_whoring_lvl = 0
 
 
 
-    
+
 #Flirt with 3 classmates.
 #Flirt with a teacher.
 #(Goes to class without panties).
@@ -291,7 +291,7 @@ call luna_init
 
 ###SCREENS### NO NEED FOR THIS ONE ANYMORE. (SHOWS WHORING THOUGH).
 screen statistics: #http://www.renpy.org/doc/html/screens.html
-    hbox: 
+    hbox:
         spacing 10 xpos 630 ypos 2
         text "{size=-3}Day: [day]\nWhoring: [whoring]\nLevel: [level]\nKnowledge: [knowledge]\nSlytherin [slytherin]\nGryffindor [gryffindor]\nS.Freind: [snape_friendship]\nDay of week: [day_of_week]\nConcentration: [concentration]\nSpeedwriting: [speedwriting]{/size}" #сумма текстом
 
@@ -342,23 +342,23 @@ init -2:
     $ l_tears = False # Turns on tears in l_screen. (Lola).
 
     $ config.autoreload = False
-    
-    
+
+
     transform custom_walk_02(x,x2): #Same custom walk but for Hermione.
         xpos x
         ypos 250
         linear hermione_speed xpos x2 # linear
 
-    transform custom_walk(x,x2): # http://www.renpy.org/wiki/atl 
+    transform custom_walk(x,x2): # http://www.renpy.org/wiki/atl
         xpos x
         ypos 210
         linear snape_speed xpos x2 # linear
-        
-    transform genie_walk(x,x2): #http://www.renpy.org/wiki/atl 
+
+    transform genie_walk(x,x2): #http://www.renpy.org/wiki/atl
         xpos x
         ypos 260
         linear snape_speed xpos x2 # linear
-        
+
 
 
     transform cloud_move: #http://www.renpy.org/wiki/atl

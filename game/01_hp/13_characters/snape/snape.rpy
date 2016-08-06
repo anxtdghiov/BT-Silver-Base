@@ -14,7 +14,7 @@ label sna_main(text="",face=""):
                 $ text = text.replace("[hermione_name]",hermione_name)
         sna "[text]"
     return
-    
+
 label sna_head(text="",face="",xpos=s_head_xpos ,ypos=s_head_ypos):
     if xpos != s_head_xpos:
         $ s_head_xpos = xpos+140
@@ -27,7 +27,7 @@ label sna_head(text="",face="",xpos=s_head_xpos ,ypos=s_head_ypos):
         sna2 "[text]"
     hide screen s_head
     return
-    
+
 label snape_walk(pos1 = walk_xpos, pos2 = walk_xpos2, speed = snape_speed, loiter = False,redux_pause = 0):
     hide screen snape_walk_01
     hide screen snape_walk_01_f
@@ -54,4 +54,3 @@ label snape_walk(pos1 = walk_xpos, pos2 = walk_xpos2, speed = snape_speed, loite
         if loiter:
             show screen snape_01_f
     return
-    

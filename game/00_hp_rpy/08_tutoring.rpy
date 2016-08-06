@@ -1,17 +1,17 @@
 label tutoring:
 
     $ tut_happened = True # Turns TRUE after you click the tutoring button and see th message that tutoring is not a part of this game. Make sure the tutoring button will not be visible after that.
-    
+
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ h_xpos=370 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)                                                       #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_14.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
-    
+
     her "Of course, sir."
     her "I'll go get my books then."
-    
+
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     show screen blkfade
     with d3
@@ -19,7 +19,7 @@ label tutoring:
     pause 2
     $ renpy.play('sounds/door.mp3') #Sound of a door opening.
     pause.3
-    
+
 
     $ only_upper = True
     $ badges = False
@@ -30,21 +30,21 @@ label tutoring:
     $ hermione_body = "01_hp/13_hermione_main/body_199.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
-    
-    
+
+
     hide screen blkfade
     with d3
-    
+
     show screen ctc
     pause
     hide screen ctc
-    
+
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_198.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
-    
+
     her "Again, thank you for doing this for me, sir..."
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
@@ -133,7 +133,7 @@ label tutoring:
 #    with d3
 #    m "Well, alright then. I can't blame you after hearing all of that."
 #########################################################
-###########JJ additions   12/28/2014 ####################  
+###########JJ additions   12/28/2014 ####################
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_203.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
@@ -173,7 +173,7 @@ label tutoring:
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_206.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3  
+    with d3
     her "And I'm the best at nearly every kind of magic among all of the students!  And better than some of the teachers as well!"
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
@@ -192,26 +192,26 @@ label tutoring:
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_202.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3  
+    with d3
     m "I know.  The teachers have all come to me concerned about your...stagnation.  You should be progressing much faster in your ability than you are."
     m "Some have said they are concerned you may not be able to pass the next tier of tests satisfactorily."
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_205.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3  
+    with d3
     her "The N.E.W.T.s?  But...but I must pass them!  No one has said I might fail!"
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_202.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3 
+    with d3
     m "You said you were failing tests already.  If you cannot pass simple course work I don't know how you will pass a newt..."
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_204.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3 
+    with d3
     her "Professor, this is terrible!  I've done so well before!  I can't fail now!  What is the problem?  I have to fix whatever it is!"
     m "Hmm.  I have a suspicion as to why you are having difficulties.  I think a small demonstration is in order..."
     m "Let's put the books away for now and ready your wand."
@@ -219,14 +219,14 @@ label tutoring:
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_203.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
-    with d3 
+    with d3
     her "Yes, sir."
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     $ hermione_body = "01_hp/13_hermione_main/body_15_Wand.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
-    
+
     m "Good.  Now, let me see you cast a spell.  Why don’t you do something simple, like, say, produce a flower here on my desk."
     her "All right sir."
     her ">Hermione waves her wand"
@@ -242,7 +242,7 @@ label tutoring:
     her ">Hermione waves her wand again. "
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
-    her "Evanesco!" 
+    her "Evanesco!"
     hide screen H_Flowers_in
     show screen H_Flowers_out
     hide screen H_Flowers_out
@@ -315,7 +315,7 @@ label tutoring:
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     her "Auras?  Isn’t that just a bunch of Divination nonsense?"
-    m "Oh, no, that’s not true at all.  Every living thing has a life aura.  Witches and wizards also have a magical aura.  Wands, however do not."  
+    m "Oh, no, that’s not true at all.  Every living thing has a life aura.  Witches and wizards also have a magical aura.  Wands, however do not."
     m "Or they should not, I should say.  Perhaps you should be paying more attention in Divination class."
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
@@ -350,7 +350,7 @@ label tutoring:
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
     her "But that means I might become a muggle or a squib one day?  If I don’t have my wand, I mean?"
-    m "(what the hell is a squib?)  Perhaps.  And that would be a disaster for you if you were to have your wand damaged or lost through some calamity!"  
+    m "(what the hell is a squib?)  Perhaps.  And that would be a disaster for you if you were to have your wand damaged or lost through some calamity!"
     m "But I think I can help you halt and possibly reverse the process.  It may be that you can get your magic back inside you and return you to normal.  "
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
@@ -367,7 +367,7 @@ label tutoring:
     $ hermione_body = "01_hp/13_hermione_main/body_130_wand.png" #Sprite of Hermione's upper body.                                                                   #HERMIONE
     show screen hermione_main                                                                                                                                                                                 #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
-    her "Three....or four years!?!  Oh, I can’t wait that long, sir!  I have tests coming up and need to practice for them right away! " 
+    her "Three....or four years!?!  Oh, I can’t wait that long, sir!  I have tests coming up and need to practice for them right away! "
     her "And from what you say, with as little magic as I have in me now I don’t think I could pass any examination!"
     hide screen hermione_main                                                                                                                                                                                   #HERMIONE
     with d3                                                                                                                                                                                                                        #HERMIONE
@@ -469,7 +469,7 @@ label tutoring:
     m "Very well."
     m "<I wonder if this spell that makes me look like Dumbledore will let me...>"
     # black screen
-#    hide screen hermione_main    
+#    hide screen hermione_main
     m "They are closed now.  You may begin."
     her "Thank you sir.  I'd be too embarrassed to have you watch this."
     m "<Wow! It worked!>"
@@ -525,7 +525,7 @@ label tutoring:
     her "(Hermione pulls it from under her skirt, looks at it, then pauses and wipes it off on the hem before handing to Genie)"
     hide screen hermione_02_wf
     show screen hermione_blink
-    m "Hmmm.  Yes, yes, yes.  Excellent!  Miss Granger, I believe you may have reduced the amount of magic stored in the wand by a considerable amount."  
+    m "Hmmm.  Yes, yes, yes.  Excellent!  Miss Granger, I believe you may have reduced the amount of magic stored in the wand by a considerable amount."
     m "Possibly 2 or maybe even 3 percent!"
     her "Two percent!? Is that all?"
     m "Oh, yes.  But that was an excellent first attempt.  You should be very proud of the way you have performed tonight.  "
@@ -539,7 +539,7 @@ label tutoring:
     m "Please do not try to bait me into awarding more points for something that benefits you alone!"
     her "I'm sorry, sir.  I really need to find a way to help Gryffindor get more points.  The Slytherins are cheating and may win the House Cup!"
     m "Regardless of that, you must continue to work on retrieving your magic at all costs.  Any time you have a free moment you need to work on it.  "
-    m "Perhaps late at night before you go to sleep, or in the mornings at your bath.  Or if you find you cannot sleep."  
+    m "Perhaps late at night before you go to sleep, or in the mornings at your bath.  Or if you find you cannot sleep."
     m "When you take a break in the library, or are reading in class."
     her "I think I can manage to do that..."
     m "But I warn you, every time you use your wand to do magic in class or elsewhere some of your essence will leach back into it."
@@ -568,86 +568,86 @@ label tutoring:
 #    show screen hermione_main                                                                                                                                                                                 #HERMIONE
 #    with d3                                                                                                                                                                                                                        #HERMIONE
     stop music
-    
+
 #    show screen blktone8
 #    with d3
 
     $ only_upper = False
     $ ne = True # Desplays a fishnets in hermione_main screen.
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
     #"You spend the evening tutoring Hermione. Hermione become a bit smarter."
-    
+
 #    if knowledge >= 5 and tutoring_events == 0 and whoring >= 1:
 #        $ tutoring_events += 1
 #        "Event 01"
-        
+
 #    if knowledge >= 10 and tutoring_events == 1 and whoring >= 2: #LEVEL 02
 #        $ tutoring_events += 1
 #        "Event 02"
-        
+
 #    if knowledge >= 15 and tutoring_events == 2 and whoring >= 3: #LEVEL 03
 #        $ tutoring_events += 1
 #        "Event 03"
-        
+
 #    if knowledge >= 20 and tutoring_events == 3 and whoring >= 4: #LEVEL 04
 #        $ tutoring_events += 1
 #        "Event 04"
-        
+
 #    if knowledge >= 25 and tutoring_events == 4 and whoring >= 5: #LEVEL 05
 #        $ tutoring_events += 1
 #        "Event 05"
-        
+
 #    if knowledge >= 30 and tutoring_events == 5 and whoring >= 7: #LEVEL 06
 #        $ tutoring_events += 1
 #        "Event 06"
-        
+
 #    if knowledge >= 35 and tutoring_events == 6 and whoring >= 8: #LEVEL 07
 #        $ tutoring_events += 1
 #        "Event 07"
-         
+
 #    if knowledge >= 40 and tutoring_events == 7 and whoring >= 9: #LEVEL 08
 #        $ tutoring_events += 1
 #        "Event 08"
-        
+
 #    if knowledge >= 45 and tutoring_events == 8 and whoring >= 11: #LEVEL 09
 #        $ tutoring_events += 1
 #        "Event 09"
-        
+
 #    if knowledge >= 50 and tutoring_events == 9 and whoring >= 13: #EVENT 10
 #        $ tutoring_events += 1
 #        "Event 10"
-        
+
 #    if knowledge >= 55 and tutoring_events == 10 and whoring >= 14: #EVENT 10
 #        $ tutoring_events += 1
 #        "Event 11"
-        
+
 #    if knowledge >= 60 and tutoring_events == 11 and whoring >= 16: #EVENT 11
 #        $ tutoring_events += 1
 #        "Event 12"
-         
+
 #    if knowledge >= 65 and tutoring_events == 12 and whoring >= 18: #EVENT 12
 #        $ tutoring_events += 1
 #        "Event 13"
-        
+
 #    if knowledge >= 70 and tutoring_events == 13 and whoring >= 20: #EVENT 13
 #        $ tutoring_events += 1
 #        "Event 14"
-        
+
 #    if knowledge >= 75 and tutoring_events == 14 and whoring >= 21: #EVENT 14
 #        $ tutoring_events += 1
 #        "Event 15"
-        
- 
-    
-   
+
+
+
+
 #    $ knowledge +=1
 #    "You dismiss Hermione."
     jump day_start
