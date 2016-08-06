@@ -252,7 +252,7 @@ label package_gift:
     $ timer_jump = 'package_gift'
     if 'Gift' in delivery and len(delivery['Gift']):
         $ (name, quantity) = delivery['Gift'].popitem()
-        $ g3.inv.gift[name] += quantity
+        $ g3.gift[name] += quantity
         $ the_gift = gift_list[name].image
         show screen giftTimer
         with d3

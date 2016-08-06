@@ -301,7 +301,7 @@ label pickup_outfit:
 
     if outfit_order_placed: # OUTFIT
         $ outfit_order.purchased = True
-        $ g3.inv.outfit[outfit_order.name] = True
+        $ g3.outfit[outfit_order.name] = True
         call display_package(">A "+outfit_order.name+R" outfit has been added to your possessions.")
         call receive_package
         call screen main_menu_01

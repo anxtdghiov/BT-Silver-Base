@@ -14,22 +14,22 @@ label l_tutoring_check:
     elif v_tutoring == 6 and whoring >= 11:
         jump l_tutoring
     elif v_tutoring == 7 and whoring >= 14:
-        if g3.inv.gift["Adult magazines"] >= 1:
+        if g3.gift["Adult magazines"] >= 1:
             jump l_tutoring
         else:
             m "I need to buy adult magazines for this lesson."
     elif v_tutoring == 8 and whoring >= 17:
-        if g3.inv.gift["Porn magazines"] >= 1:
+        if g3.gift["Porn magazines"] >= 1:
             jump l_tutoring
         else:
             m "I need to buy porn magazines for this lesson."
     elif v_tutoring == 9 and whoring >= 20:
-        if g3.inv.gift["Vibrator"] >= 1:
+        if g3.gift["Vibrator"] >= 1:
             jump l_tutoring
         else:
             m "I need to buy a vibrator for this lesson."
     elif v_tutoring == 10 and whoring >= 23:
-        if g3.inv.gift["Anal plugs"] >= 1:
+        if g3.gift["Anal plugs"] >= 1:
             jump l_tutoring
         else:
             m "I need to buy anal plugs for this lesson."

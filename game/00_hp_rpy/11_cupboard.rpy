@@ -35,8 +35,8 @@ label cupboard:
                         python:
                             for item in gift_list:
                                 name = item.name
-                                if g3.inv.gift[name] > 0:
-                                    choices.append( ( ("-"+name+"- ("+str(g3.inv.gift[name])+")"), gift_list[name]) )
+                                if g3.gift[name] > 0:
+                                    choices.append( ( ("-"+name+"- ("+str(g3.gift[name])+")"), gift_list[name]) )
                         $ choices.append(("-Never mind-", "nvm"))
                         $ result = renpy.display_menu(choices)
                         if result == "nvm":
@@ -470,7 +470,7 @@ label rum_block(item = None):
 
     if item in gift_list.indexForName:
         $ renpy.play('sounds/win2.mp3')   #Not loud.
-        $ g3.inv.gift[item] += 1
+        $ g3.gift[item] += 1
         $ the_gift = gift_list[item].image
         $ descr = gift_list[item].description
         show screen gift

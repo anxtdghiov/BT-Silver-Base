@@ -191,13 +191,13 @@ screen wardrobe_gifts:
         hotspot (480, 30, 67, 82) clicked Show("wardrobe_gifts")
 
         for i in range(0,6):
-            if g3.inv.outfit[outfit_list[i]] > 0:
+            if g3.outfit[outfit_list[i]] > 0:
                 hotspot ((21+(90*i)), 140, 83, 85) clicked [SetVariable("wardrobe_gift_item",i+1),Jump("wardrobe_give_gift")]
         for i in range(0,6):
-            if g3.inv.outfit[outfit_list[i+7]] > 0:
+            if g3.outfit[outfit_list[i+7]] > 0:
                 hotspot ((21+(90*i)), 232, 83, 85) clicked [SetVariable("wardrobe_gift_item",i+7),Jump("wardrobe_give_gift")]
         for i in range(0,6):
-            if g3.inv.outfit[outfit_list[i+13]] > 0:
+            if g3.outfit[outfit_list[i+13]] > 0:
                 hotspot ((21+(90*i)), 324, 83, 85) clicked [SetVariable("wardrobe_gift_item",i+13),Jump("wardrobe_give_gift")]
 
         for i in range(1,7):

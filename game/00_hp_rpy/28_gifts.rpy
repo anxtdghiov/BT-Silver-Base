@@ -128,8 +128,8 @@ label her_gift_menu:
         choices = []
         for item in gift_list:
             name = item.name
-            if g3.inv.gift[name] > 0:
-                choices.append( ( ("-"+name+"- ("+g3.inv.gift[name]+")"), gift) )
+            if g3.gift[name] > 0:
+                choices.append( ( ("-"+name+"- ("+g3.gift[name]+")"), gift) )
 
 
         choices.append(("-Never mind-", "nvm"))
@@ -683,7 +683,7 @@ label give_gift(text = "", gift):
     "[text]"
     hide screen gift
     with d3
-    $ g3.inv.gift[gift.name] -= 1
+    $ g3.gift[gift.name] -= 1
     return
 
 label display_gift(text=">Gift given", gift_id):
