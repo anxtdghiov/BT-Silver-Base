@@ -1,5 +1,8 @@
 ###HARRY POTTER CHARACTERS###
 init python:
+    import re
+    import datetime
+    from math import exp
 
     class Caricature(Container):
         def __init__(self, name, real_char):
@@ -19,6 +22,50 @@ init python:
                 section = self._at
             other[section] += 1
             self[self._at] -= 1
+
+    class Breast(Container):
+        def __init__(self, cupsize=None):
+            super(Breast, self).__init__()
+            m = re.search("([0-9]+)([a-zA-Z])$", cupsize)
+            self.cup = ord(m.group(2).upper()) - 67
+            self.size = int(m.group(1))
+            self._milked = None
+        def weight(self):
+            # in pounds
+            vol = self.size + self.cup * 2
+            return exp(-3.84 + (self.size + self.cup * 2) * .1)
+        def milk(self):
+            # in pounds as well
+            if not self._milked:
+                return 0
+            d = datetime.timedelta(hours=15)
+            now = datetime.datetime.now()
+            d = min(now - self._milked, d).total_seconds() / d.total_seconds()
+            self._milked = now
+            return self.weight() * .18 * d
+
+    class Pussy(Container):
+        def __init__(self):
+            super(Pussy, self).__init__()
+
+    class Anus(Container):
+        def __init__(self):
+            super(Anus, self).__init__()
+
+    class Girl(Caricature):
+        def __init__(self, name, real_char, cupsize=None):
+            if cupsize == None:
+                cupsize = "38C"
+            super(Girl, self).__init__(name, real_char)
+            self.breasts = [Breast(cupsize), Breast(cupsize)]
+            self.pussy = Pussy()
+            self.anus = Anus()
+
+        def set_lactating(self, last_time=None):
+            if not last_time:
+                last_time = datetime.datetime.now()
+            for breast in self.breasts:
+                breast._milked = last_time
 
     # Character tables
 

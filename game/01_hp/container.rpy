@@ -7,7 +7,7 @@ init -10 python:
 
         def _keyChain(self, k):
             self._at += k
-            if self._at in self._has and isinstance(self._has[self._at], Container):
+            if self._at in self._has and isinstance(self._has[self._at], (Container, tuple, list)):
                 k = self._at
                 self._at = ()
                 return self._has[k]
