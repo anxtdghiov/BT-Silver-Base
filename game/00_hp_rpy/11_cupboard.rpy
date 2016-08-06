@@ -33,10 +33,10 @@ label cupboard:
                     label possessions_gift_items:
                         $ choices = []
                         python:
-                            for id in range(0, len(gift_list)):
-                                if gift_item_inv[id] > 0:
-                                    name = gift_list[id].name
-                                    choices.append( ( ("-"+str(name)+"- ("+str(gift_item_inv[id])+")"), gift_list[id]) )
+                            for item in gift_list:
+                                name = item.name
+                                if g3.inv.gift[name] > 0:
+                                    choices.append( ( ("-"+name+"- ("+str(g3.inv.gift[name])+")"), gift_list[name]) )
                         $ choices.append(("-Never mind-", "nvm"))
                         $ result = renpy.display_menu(choices)
                         if result == "nvm":
@@ -470,10 +470,9 @@ label rum_block(item = None):
 
     if item in gift_list.indexForName:
         $ renpy.play('sounds/win2.mp3')   #Not loud.
-        $ i = gift_list.indexForName[item]
-        $ gift_item_inv[i] += 1
-        $ the_gift = gift_list[i].image
-        $ descr = gift_list[i].description
+        $ g3.inv.gift[item] += 1
+        $ the_gift = gift_list[item].image
+        $ descr = gift_list[item].description
         show screen gift
         with d3
         ">You found [item]..."

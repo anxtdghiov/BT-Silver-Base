@@ -154,21 +154,21 @@ label door:
                             "-Working-":
                                 label working_menu:
                                 menu:
-                                    "-Work as a maid-" if "maid" in outfit_inventory and daytime:
+                                    "-Work as a maid-" if g3.inv.outfit["maid"] == True and daytime:
                                         jump job_1
                                         
-                                    "{color=#858585}-Work as a maid-{/color}" if not daytime and "maid" in outfit_inventory:
+                                    "{color=#858585}-Work as a maid-{/color}" if not daytime and g3.inv.outfit["maid"] == True:
                                         "This job is only available during the day."
                                         jump working_menu
                                     
-                                    "-Work as a cheerleader for Gryffindor-" if daytime and "gryffindor_cheerleader" in outfit_inventory:
+                                    "-Work as a cheerleader for Gryffindor-" if daytime and g3.inv.outfit["gryffindor_cheerleader"] == True:
                                         jump job_3
                                     
                                     "{color=#858585}-Work as a cheerleader for Gryffindor-{/color}" if not daytime:
                                         "This job is only available during the day."
                                         jump working_menu
                                     
-                                    "-Work as a cheerleader for Slytherin-" if daytime and "slytherin_cheerleader" in outfit_inventory:
+                                    "-Work as a cheerleader for Slytherin-" if daytime and g3.inv.outfit["slytherin_cheerleader"] == True:
                                         jump job_4
                                     
                                     "{color=#858585}-Work as a cheerleader for Slytherin-{/color}" if not daytime:

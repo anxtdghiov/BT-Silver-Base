@@ -19,6 +19,10 @@ init python:
     # inherit from a standard list to get all its functions
     class GiftList(list):
         indexForName = {}
+        def __getitem__(self, i):
+            if isinstance(i, basestring):
+                i = self.indexForName[i]
+            return super(GiftList, self).__getitem__(i)
 
         def append(self, **entry):
             self.indexForName[entry['name']] = len(self)
@@ -122,10 +126,10 @@ label upset(add_mad):
 label her_gift_menu:
     python:
         choices = []
-        for id in range(0, len(gift_list)):
-            if gift_item_inv[id] > 0:
-                name = gift_list[id].name
-                choices.append( ( ("-"+name+"- ("+str(gift_item_inv[id])+")"), name) )
+        for item in gift_list:
+            name = item.name
+            if g3.inv.gift[name] > 0:
+                choices.append( ( ("-"+name+"- ("+g3.inv.gift[name]+")"), gift) )
 
         
         choices.append(("-Never mind-", "nvm"))
@@ -136,41 +140,41 @@ label her_gift_menu:
     else:
         call give_her_gift(result)
     
-label give_her_gift(gift_id):
+label give_her_gift(gift_name):
     hide screen hermione_main
     with d5
     $ h_xpos=140 #Defines position of the Hermione's full length sprite. (Default 370). (Center: 140)
     
-    if gift_id == "Lollipop candy":
+    if gift.name == "Lollipop candy":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A lollipop?","body_01")
-            call give_gift(">You give the candy to Hermione...",gift_id)
+            call give_gift(">You give the candy to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_06")
             call happy(5)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
             call her_main("Candy?","body_03")
             call her_main("Candy is for kids, [genie_name].","body_02")
-            call give_gift(">You give the candy to Hermione...",gift_id)
+            call give_gift(">You give the candy to Hermione...",gift)
             call her_main("Thank you...","body_29")
             call happy(5)
             $ h_body = "body_06"
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("Candy?","body_03")
-            call give_gift(">You give the candy to Hermione...",gift_id)
+            call give_gift(">You give the candy to Hermione...",gift)
             call her_main("Ehm... Sure, thanks...","body_08")
             call happy(5)
             $ h_body = "body_06"
         if whoring >= 18: # Lv 7+  
             call her_main("A lollipop?","body_06")
             call her_main("Clever girls use candy like this as a \"weapon\".","body_46")
-            call give_gift(">You give the candy to Hermione...",gift_id)
+            call give_gift(">You give the candy to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_74")
             call happy(5)
             $ h_body = "body_128"
-    if gift_id == "Chocolate":
+    if gift.name == "Chocolate":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A chocolate bar?","body_01")
-            call give_gift(">You give the chocolate to Hermione...", gift_id)
+            call give_gift(">You give the chocolate to Hermione...", gift)
             call her_main("Thank you, [genie_name].","body_06")
             call happy(10)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
@@ -178,39 +182,39 @@ label give_her_gift(gift_id):
             call her_main("Hm...","body_09")
             call her_main("That thing about fairies...")
             call her_main("That is a joke of some sort, right?","body_11")
-            call give_gift(">You give the chocolate to Hermione...", gift_id)
+            call give_gift(">You give the chocolate to Hermione...", gift)
             call her_main("Thank you...","body_15")
             call happy(10)
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("A chocolate bar?","body_03")
             call her_main("I just like the way it crunches, [genie_name]! N-not the taste...","body_24")
-            call give_gift(">You give the chocolate to Hermione...", gift_id)
+            call give_gift(">You give the chocolate to Hermione...", gift)
             call her_main("Ehm... Sure, thanks...","body_01")
             call happy(10)
         if whoring >= 18: # Lv 7+  
             call her_main("A chocolate bar?","body_06")
             call her_main("You spoil me, [genie_name].","body_111")
-            call give_gift(">You give the chocolate to Hermione...", gift_id)
+            call give_gift(">You give the chocolate to Hermione...", gift)
             call her_main("Thank you.","body_129")
             call happy(10)
-    if gift_id == "Plush owl":
+    if gift.name == "Plush owl":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A stuffed owl?","body_01")
             call her_main("It's cute...","body_06")
-            call give_gift(">You give the owl to Hermione...",gift_id)
+            call give_gift(">You give the owl to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_01")
             call happy(7)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
             call her_main("A plush toy?","body_11")
             call her_main("I like it!","body_06")
-            call give_gift(">You give the owl to Hermione...",gift_id)
+            call give_gift(">You give the owl to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_01")
             call happy(10)
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("A toy?","body_01")
             call her_main("Toys are for kids, [genie_name].","body_02")
             call her_main("But I'll take it...","body_29")
-            call give_gift(">You give the owl to Hermione...",gift_id)
+            call give_gift(">You give the owl to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_01")
             call happy(15)
         if whoring >= 18: # Lv 7+  
@@ -221,48 +225,48 @@ label give_her_gift(gift_id):
             call her_main("So it is really just a plush toy then?")
             call her_main("Shame...","body_118")
             call her_main("I mean, thank you, [genie_name].","body_34")
-            call give_gift(">You give the owl to Hermione...",gift_id)
+            call give_gift(">You give the owl to Hermione...",gift)
             $ h_body = "body_01"
             call happy(4)
-    if gift_id == "Butterbeer":
+    if gift.name == "Butterbeer":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Butterbeer?","body_01")
             call her_main("Are you sure about that, [genie_name]?","body_08")
             call her_main("It does contain alcohol, you know...","body_06")
-            call give_gift(">You give the bottle to Hermione...",gift_id)
+            call give_gift(">You give the bottle to Hermione...",gift)
             call her_main("Thank you.","body_01")
             call happy(3)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
             call her_main("Butterbeer, [genie_name]?","body_11")
             call her_main("To let you in on a little secret, [genie_name]...","body_14")
             call her_main("I'm a big fan of this completely harmless beverage.","body_06")
-            call give_gift(">You give the bottle to Hermione...",gift_id)
+            call give_gift(">You give the bottle to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_01")
             call happy(10)
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("Butterbeer?","body_01")
             call her_main("Thank you, [genie_name].","body_24")
-            call give_gift(">You give the bottle to Hermione...",gift_id)
+            call give_gift(">You give the bottle to Hermione...",gift)
             call her_main("I shall drink this with the girls later.","body_06")
             call happy(15)
         if whoring >= 18: # Lv 7+  
             call her_main("Butterbeer...?","body_06")
             call her_main("Thank you, [genie_name].","body_01")
-            call give_gift(">You give the bottle to Hermione...",gift_id)
+            call give_gift(">You give the bottle to Hermione...",gift)
             call her_main("I shall drink this later with the boys.","body_06")
             call her_main("Err... I meant to say with the girls, of course.","body_189")
             call happy(20)
             $ h_body = "body_01"
-    if gift_id == "Educational magazines":
+    if gift.name == "Educational magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("\"Popular magic\" magazines?","body_01")
-            call give_gift(">You give an assortment of educational magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of educational magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name]!","body_06")
             call her_main("I will use them for my research!")
             call happy(15)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
             call her_main("Sometimes I find information in magazines that I could never find in a book...","body_01")
-            call give_gift(">You give an assortment of educational magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of educational magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name]!","body_06")
             call her_main("I will use them for my research!")
             call happy(10)
@@ -270,17 +274,17 @@ label give_her_gift(gift_id):
             call her_main("Oh...","body_02")
             call her_main("Yes, I used to read magazines like that a lot...","body_06")
             call her_main("Lately not so much though...","body_10")
-            call give_gift(">You give an assortment of educational magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of educational magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name]!","body_06")
             call happy(3)
         if whoring >= 18: # Lv 7+  
             call her_main("Ehm...","body_10")
             call her_main("To be honest, magazines like that lost their appeal to me completely lately...","body_08")
             call her_main("But I don't mind taking them off you hands anyway, [genie_name].","body_11")
-            call give_gift(">You give an assortment of educational magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of educational magazines to Hermione...",gift)
             call her_main("Thank you.","body_13")
             call no_change 
-    if gift_id == "Girly magazines":
+    if gift.name == "Girly magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm?","body_15")
             call her_main("This is the sort of press some \"slytherin\" bimbo would appreciate.","body_17")
@@ -291,25 +295,25 @@ label give_her_gift(gift_id):
             call her_main("I don't read magazines of that nature, [genie_name]...","body_04")
             call her_main("................","body_13")
             call her_main("But I could give it a try just to humour you I suppose...","body_04")
-            call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name]!","body_08")
             call happy(5)
             $ h_body = "body_06"
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("I ashamed to admit this, but...","body_10")
             call her_main("I really enjoy reading magazines like that lately...","body_24")
-            call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_08")
             call happy(15)
             $ h_body = "body_06"
         if whoring >= 18: # Lv 7+  
             call her_main("The Latest edition of \"Girlz\"?!","body_18")
             call her_main("I can't have enough of that brilliant magazine!","body_24")
-            call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of rather girly magazines to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_08")
             call happy(15)
             $ h_body = "body_06"
-    if gift_id == "Adult magazines":
+    if gift.name == "Adult magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Are that...?","body_02")
             call her_main("Adult magazines, [genie_name]?","body_31")
@@ -326,7 +330,7 @@ label give_her_gift(gift_id):
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("Adult magazines?","body_31")
             call her_main("[genie_name], this is such an inappropriate present for a girl my age...","body_34")
-            call give_gift(">You give an assortment of adult magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of adult magazines to Hermione...",gift)
             call her_main("I shall throw these away myself...","body_79")
             call happy(8)
             $ h_body = "body_120"
@@ -335,10 +339,10 @@ label give_her_gift(gift_id):
             call her_main("Err.. I mean, adult magazines?","body_122")
             call her_main("This is a little inappropriate...")
             call her_main("But I will take them...","body_74")
-            call give_gift(">You give an assortment of adult magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of adult magazines to Hermione...",gift)
             call her_main("thank you, [genie_name].","body_74")
             call happy(15)
-    if gift_id == "Porn magazines":
+    if gift.name == "Porn magazines":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm... What is this?","body_01")
             call her_main("[genie_name], those are porn magazines!","body_130")
@@ -356,7 +360,7 @@ label give_her_gift(gift_id):
             call her_main("Which is a completely inappropriate gift for a girl my age!","body_34")
             call her_main("..............","body_118")
             call her_main("But I will take them...","body_117")
-            call give_gift(">You give an assortment of porn magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of porn magazines to Hermione...",gift)
             call her_main("And I shall throw them in the trash, where they and... girls who like these things belong...","body_79")
             call no_change
             $ h_body = "body_120"
@@ -367,10 +371,10 @@ label give_her_gift(gift_id):
             call her_main(".................","body_118")
             call her_main("Alright, I shall accept them...","body_120")
             call her_main("Solely for research purposes of course...","body_189")
-            call give_gift(">You give an assortment of porn magazines to Hermione...",gift_id)
+            call give_gift(">You give an assortment of porn magazines to Hermione...",gift)
             call happy(15)
             $ h_body = "body_45"
-    if gift_id == "Viktor Krum Poster":
+    if gift.name == "Viktor Krum Poster":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A Quidditch poster?","body_73")
             call her_main("What am I supposed to do with it, [genie_name]?","body_185")
@@ -382,22 +386,22 @@ label give_her_gift(gift_id):
             call her_main("Hm...","body_185")
             call her_main("I think I saw this player once or twice...","body_71")
             call her_main("He is that Durmstrang student, right?","body_06")
-            call give_gift(">You give the poster to Hermione...",gift_id)
+            call give_gift(">You give the poster to Hermione...",gift)
             call happy(5)
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("A Viktor Krum poster, [genie_name]?","body_73")
             call her_main("Can't say that I care much for Quidditch, but...","body_08")
             call her_main("I can see why the girls find the brutish physique of some players appealing...","body_87")
-            call give_gift(">You give the poster to Hermione...",gift_id)
+            call give_gift(">You give the poster to Hermione...",gift)
             call happy(15)
         if whoring >= 18: # Lv 7+  
             call her_main("A Viktor Krum poster?!","body_72")
             call her_main("Thank you, [genie_name]!","body_24")
-            call give_gift(">You give the poster to Hermione...",gift_id)
+            call give_gift(">You give the poster to Hermione...",gift)
             call her_main("Can't wait to hang it over my bed!","body_46")
             call her_main("The girls will go green with envy...","body_64")
             call happy(25)
-    if gift_id == "Sexy lingerie":
+    if gift.name == "Sexy lingerie":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("lingerie?","body_118")
             call her_main("[genie_name], I cannot accept a gift like this from you...","body_120")
@@ -410,16 +414,16 @@ label give_her_gift(gift_id):
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
             call her_main("sexy lingerie?","body_124")
             call her_main("[genie_name] that is so inappropriate...","body_122")
-            call give_gift(">You give the lingerie to Hermione...",gift_id)
+            call give_gift(">You give the lingerie to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_188")
             call happy(7)
         if whoring >= 18: # Lv 7+  
             call her_main("sexy lingerie?","body_124")
             call her_main("Do You think it will make me look like one of the witches in those adult magazines, [genie_name]?","body_123")
             call her_main("Oh... I mean, thank you, [genie_name].","body_122")
-            call give_gift(">You give the lingerie to Hermione...",gift_id)
+            call give_gift(">You give the lingerie to Hermione...",gift)
             call happy(15)
-    if gift_id == "A pack of condoms":
+    if gift.name == "A pack of condoms":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Condoms?!","body_18")
             call her_main("[genie_name], I wouldn't even know what to do with them...","body_30")
@@ -434,16 +438,16 @@ label give_her_gift(gift_id):
             call her_main("A pack of condoms?","body_03")
             call her_main("[genie_name], what possible use could I have for those?")
             call her_main("Well, I shall accept them simply because it is rude to refuse a gift...","body_04")
-            call give_gift(">You give a pack of condoms to Hermione...", gift_id)
+            call give_gift(">You give a pack of condoms to Hermione...", gift)
             call happy(3)
             $ h_body = "body_29"
         if whoring >= 18: # Lv 7+
             call her_main("A pack of condoms?","body_08")
             call her_main("I appreciate your concern, [genie_name]. Thank you.","body_128")
-            call give_gift(">You give a pack of condoms to Hermione...", gift_id)
+            call give_gift(">You give a pack of condoms to Hermione...", gift)
             call happy(4)
             $ h_body = "body_45"
-    if gift_id == "Vibrator":
+    if gift.name == "Vibrator":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A magic wand?","body_01")
             call her_main("No, it doesn't look like--","body_15")
@@ -465,16 +469,16 @@ label give_her_gift(gift_id):
             call her_main("Did you have this custom made for me [genie_name]?","body_118")
             call her_main("This is inappropriate...","body_30")
             call her_main("But I shall take it nonetheless...","body_29")
-            call give_gift(">You give the vibrator to Hermione...",gift_id)
+            call give_gift(">You give the vibrator to Hermione...",gift)
             call no_change
         if whoring >= 18: # Lv 7+  
             call her_main("This vibrator...","body_11")
             call her_main("It's... calling out for me...","body_10")
             call her_main("But not in a dirty way, [genie_name].","body_66")
-            call give_gift(">You give the vibrator to Hermione...",gift_id)
+            call give_gift(">You give the vibrator to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_124")
             call happy(10)
-    if gift_id == "Jar of anal lubricant":
+    if gift.name == "Jar of anal lubricant":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("I don't know what this is...","body_02")
             call her_main("But I have the feeling that the jar is full of something vile and inappropriate...","body_05")
@@ -492,7 +496,7 @@ label give_her_gift(gift_id):
             call her_main("Ehm.. well... I know this girl...","body_189")
             call her_main("I mean I don't know her, she is a friend of a friend...")
             call her_main("Yes, I will take this for her...")
-            call give_gift(">You give the jar to Hermione...", gift_id, 0)
+            call give_gift(">You give the jar to Hermione...", gift, 0)
             call her_main("Still, I think you should not give presents like this to your pupils, [genie_name].","body_186")
             call no_change
             $ h_body = "body_79"
@@ -500,9 +504,9 @@ label give_her_gift(gift_id):
             call her_main("Anal lubricant, [genie_name]?","body_124")
             call her_main("I know a couple of girls who would do anything for a commodity like that.","body_186")
             call her_main("Thank for looking out for us, [genie_name].","body_128")
-            call give_gift(">You give the jar to Hermione...", gift_id)
+            call give_gift(">You give the jar to Hermione...", gift)
             call happy(5)
-    if gift_id == "Ball gag and cuffs":
+    if gift.name == "Ball gag and cuffs":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("What is this?","body_118")
             call her_main("Is this like one of those adult toys?","body_141")
@@ -524,19 +528,19 @@ label give_her_gift(gift_id):
             call her_main("But I assure you that I am not one of them, [genie_name].","body_120")
             call her_main("But I know a girl who knows a girl who is into things like...","body_189")
             call her_main("Yes, I shall take these to her...","body_188")
-            call give_gift(">You give the ball gag and cuffs to Hermione...",gift_id)
+            call give_gift(">You give the ball gag and cuffs to Hermione...",gift)
             call happy(9)
         if whoring >= 18: # Lv 7+  
             call her_main("A ball gag and handcuffs?","body_190")
             call her_main("This is completely inappropriate, [genie_name].","body_122") # :)
             call her_main("But a gift is a gift, right?","body_129")
-            call give_gift(">You give the ball gag and cuffs to Hermione...",gift_id)
+            call give_gift(">You give the ball gag and cuffs to Hermione...",gift)
             call happy(15)
-    if gift_id == "Anal plugs":
+    if gift.name == "Anal plugs":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Hm...?","body_01")
             call her_main("Are those like key-chain toys?","body_15")
-            call give_gift(">You give the anal plugs to Hermione...",gift_id)
+            call give_gift(">You give the anal plugs to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_185")
             call happy(8)
         if whoring >= 6 and whoring <= 11: # Lv 3-4.
@@ -557,17 +561,17 @@ label give_her_gift(gift_id):
             call her_main("They are so pretty though...","body_122")
             call her_main(".....................","body_118")
             call her_main("Well, alright. I shall take them off your hands if I must, [genie_name].","body_121")
-            call give_gift(">You give the anal plugs to Hermione...",gift_id)
+            call give_gift(">You give the anal plugs to Hermione...",gift)
             call her_main("But I shall never use them of course...","body_127")
             call her_main("................","body_124")
             call happy(10)
-    if gift_id == "Thestral Strap-on":
+    if gift.name == "Thestral Strap-on":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("What is that?","body_18")
             call her_main("An artifact of some sort or a trophy?","body_14")
             call her_main("So well-crafted...","body_01")
             call her_main("Are you sure that it's alright for me to have it, [genie_name]?","body_06")
-            call give_gift(">You give the strap-on to Hermione...",gift_id)
+            call give_gift(">You give the strap-on to Hermione...",gift)
             call her_main("Thank you very much, [genie_name]. I promise to take good care of it.","body_16")
             call happy(20)
             $ h_body = "body_15"
@@ -589,7 +593,7 @@ label give_her_gift(gift_id):
             call her_main("Is this like a party prank prop?","body_117")
             call her_main("It's so well-crafted though...","body_118")
             call her_main("I will take it...","body_33")
-            call give_gift(">You give the strap-on to Hermione...",gift_id)
+            call give_gift(">You give the strap-on to Hermione...",gift)
             call happy(10)
         if whoring >= 18: # Lv 7+  
             call her_main("It's... It's magnificent, [genie_name]...","body_48")
@@ -599,16 +603,16 @@ label give_her_gift(gift_id):
             call her_main("Breathtaking...","body_123")
             call her_main("Not in the way you think, [genie_name]...","body_120")
             call her_main("I am merely admiring the craftsmanship...","body_127")
-            call give_gift(">You give the strap-on to Hermione...",gift_id)
+            call give_gift(">You give the strap-on to Hermione...",gift)
             call her_main("Thank you for the gift, [genie_name].","body_129")
             call happy(30)
-    if gift_id == "Lady Speed Stick-2000":
+    if gift.name == "Lady Speed Stick-2000":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("A broom...?","body_01")
             call her_main("Hm...","body_03")
             call her_main("What is that silly-looking thing attached to it?","body_07")
             call her_main("Is it like a saddle...?","body_08")
-            call give_gift(">You give the broom to Hermione...",gift_id)
+            call give_gift(">You give the broom to Hermione...",gift)
             call her_main("Thank you for the gift, [genie_name].","body_11")
             $ h_body = "body_06"
             call happy(20)
@@ -617,7 +621,7 @@ label give_her_gift(gift_id):
             call her_main("Hm...","body_07")
             call her_main("It's a sex-toy of some sort, isn't it?","body_05")
             call her_main("But it is so well crafted...","body_87")
-            call give_gift(">You give the broom to Hermione...",gift_id)
+            call give_gift(">You give the broom to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_120")
             call happy(20)
         if whoring >= 12 and whoring <= 17: # Lv 5-6.
@@ -626,7 +630,7 @@ label give_her_gift(gift_id):
             call her_main("What kind of saddle is that...?","body_66")
             call her_main("Well, doesn't matter.","body_127")
             call her_main("Refusing an expensive gift like that would be rude...")
-            call give_gift(">You give the broom to Hermione...",gift_id)
+            call give_gift(">You give the broom to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_120")
             call happy(30)
         if whoring >= 18: # Lv 7+  
@@ -636,10 +640,10 @@ label give_her_gift(gift_id):
             call her_main("It was designed especially for witches, was it not?","body_190")
             call her_main("I am not sure whether this is inappropriate or clever...","body_185")
             call her_main("But this is a brilliant piece of engineering eitherway...","body_129")
-            call give_gift(">You give the broom to Hermione...",gift_id)
+            call give_gift(">You give the broom to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_128")
             call happy(30)
-    if gift_id == "Sex doll \"Joanne\"":
+    if gift.name == "Sex doll \"Joanne\"":
         if whoring >= 0 and whoring <= 5: # Lv 1-2.
             call her_main("Is this...","body_48")
             call her_main("A sex doll?!","body_34")
@@ -654,14 +658,14 @@ label give_her_gift(gift_id):
             call her_main("A sex doll...","body_118")
             call her_main("This is a little inappropriate...","body_120")
             call her_main("But maybe we could use it for a prank or something...","body_124")
-            call give_gift(">You give the blow-up doll to Hermione...",gift_id)
+            call give_gift(">You give the blow-up doll to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_124")
             call happy(10)
         if whoring >= 18: # Lv 7+  
             call her_main("the Joanne sex doll?","body_73")
             call her_main("I Can't say that I approve of this...","body_189")
             call her_main("But I know Harry would love to have a go at it...","body_124")
-            call give_gift(">You give the blow-up doll to Hermione...",gift_id)
+            call give_gift(">You give the blow-up doll to Hermione...",gift)
             call her_main("Thank you, [genie_name].","body_188")
             call happy(30)
     
@@ -670,7 +674,7 @@ label give_her_gift(gift_id):
     with d3
     return
     
-label give_gift(text = "", gift = 0):
+label give_gift(text = "", gift):
     hide screen hermione_main
     with d3
     $ the_gift = gift.image
@@ -679,13 +683,13 @@ label give_gift(text = "", gift = 0):
     "[text]"
     hide screen gift
     with d3
-    $ gift_item_inv[gift.id] -= 1
+    $ g3.inv.gift[gift.name] -= 1
     return
     
 label display_gift(text=">Gift given", gift_id):
     hide screen hermione_main
     with d3
-    $ the_gift = "01_hp/18_store/"+str(gift_id)+".png"
+    $ the_gift = "01_hp/18_store/"+gift_id+".png"
     show screen gift
     with d3
     "[text]"

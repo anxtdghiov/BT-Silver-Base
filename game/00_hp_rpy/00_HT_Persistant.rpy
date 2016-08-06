@@ -200,10 +200,27 @@ label __init_variables:
     if not hasattr(renpy.store,'tent_scroll'): #important!
         $ tent_scroll = False
 
+    # mail system
     if not hasattr(renpy.store,'dailyDelivery'): #important!
         $ dailyDelivery = DailyDelivery()
 
-    
+    # Character wrapper to enable inventory, body function, etc.
+    if not hasattr(renpy.store,'her'): #important!
+        $ her = Caricature('Hermione', 'her_char', has_body=True)
+
+    if not hasattr(renpy.store,'l'): #important!
+        $ l = Caricature('Lola', 'l_char', has_body=True)
+
+    if not hasattr(renpy.store,'lun'): #important!
+        $ lun = Caricature('Luna', 'lun_char', has_body=True)
+
+    if not hasattr(renpy.store,'sna'): #important!
+        $ sna = Caricature('Severus Snape', 'sna_char')
+
+    if not hasattr(renpy.store,'g3'): #important!
+        $ g3 = Caricature('Genie', 'g3_char')
+
+
     
     $ override_persistant = False
     

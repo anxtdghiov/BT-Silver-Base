@@ -1,5 +1,20 @@
 ###HARRY POTTER CHARACTERS###
 init python:
+    class Caricature(object):
+        def __init__(self, name, real_char, has_body=None, **kwargs):
+            if has_body:
+                self.body = Container()
+            else:
+                self.body = None
+            self.inv = Container()
+            self.name = name
+            self.real_char = real_char
+
+        def __call__(self, what, interact=True):
+            return getattr(store, self.real_char)(what, interact=interact)
+
+        def predict(self, what):
+            return getattr(store, self.real_char).predict(what)
     # Character tables
     
     ### SNAPE HEAD ###
@@ -7,13 +22,6 @@ init python:
     for i in range(1,26):
         sna_.append("")
         sna_[i] = Character("Severus Snape", color="#402313", window_right_padding=270, show_side_image=Image("01_hp/13_characters/snape/head/head_" + str(i) + ".png", xalign=1.0, yalign=0.0), show_two_window=True, show_who_xalign=0.5, ctc="ctc3", ctc_position="fixed")
-    
-    
-    ### HERMIONE HEAD (OLD) ###
-    her_ = [""]
-    for i in range(1,43):
-        her_.append("")
-        her_[i] = Character("Hermione", color="#402313", window_right_padding=270, show_side_image=Image("01_hp/15_hermione_head/" + str(i) + ".png", xalign=1.0, yalign=0.0), show_two_window=True, show_who_xalign=0.5, ctc="ctc3", ctc_position="fixed")
 
 
     fem = Character('Female Student', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
@@ -27,24 +35,22 @@ init python:
      
     
     ###HARRY POTTER CHARACTERS###
-    her = Character('Hermione', color="#402313", window_left_padding=85, show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    her_char = Character('Hermione', color="#402313", window_left_padding=85, show_two_window=True, ctc="ctc3", ctc_position="fixed")
     her2 = Character('Hermione', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).
-    sna = Character('Severus Snape', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    sna_char = Character('Severus Snape', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     sna2 = Character('Severus Snape', color="#402313", window_right_padding=220, show_two_window=True, ctc="ctc3", ctc_position="fixed")  #Text box used for "head only" speech. (Because it has padding).
     vol = Character('Lord Voldemort', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    l = Character('Lola', color="#402313", window_right_padding=230, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).    $ bought_mag3 = False #Affects 15_mail.rpy
-    g3 = Character('Genie', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+    l_char = Character('Lola', color="#402313", window_right_padding=230, show_two_window=True, ctc="ctc3", ctc_position="fixed") #Text box used for "head only" speech. (Because it has padding).    $ bought_mag3 = False #Affects 15_mail.rpy)
+    g3_char = Character('Genie', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
 
     ###Custom Characters for WT:Silver
     spo = Character('Professor Sprout', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     maf = Character('Madam Mafkin', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     hoo = Character('Madam Hooch', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
     abe = Character('Aberforth', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    lun = Character('Luna', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
-    
-    
-    
-    
+    lun_char = Character('Luna', color="#402313", show_two_window=True, ctc="ctc3", ctc_position="fixed")
+
+
 define dum = Character(None, window_left_padding=240, image="dum1", color="#402313", ctc="ctc3", ctc_position="fixed")
 define dum2 = Character(None, window_left_padding=240, image="dum2", color="#402313", ctc="ctc3", ctc_position="fixed")
 define dum3 = Character(None, window_left_padding=240, image="dum3", color="#402313", ctc="ctc3", ctc_position="fixed")

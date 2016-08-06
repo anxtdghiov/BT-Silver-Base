@@ -242,68 +242,56 @@ label mail_02: #Packages only. <================================================
     # must receive every day, even if it's empty.
     $ delivery = dailyDelivery.receive()
     $ package_is_here = False
-    if 'Gift' in delivery:
-        python:
-            most_expensive = 0
-            prepend = ""
-            the_gift = None
-            for name, quantity in delivery['Gift'].items():
 
-                id = gift_list.indexForName[name]
-                gift_item_inv[id] += quantity
-                if prepend == "" and most_expensive != 0:
-                    prepend = "several items, including: "
+    if len(delivery) == 0:
+        call screen main_menu_01
 
-                # show the image for the most expensive asset
-                if quantity * gift_list[id].cost > most_expensive:
-
-                    if quantity > 1:
-                        listing = str(quantity) + " \"" + name + "'s\""
-                    else:
-                        listing = " a \"" + name + "\""
-
-                    listing += ", and have" if quantity > 1 else ", and has"
-
-                    the_gift = gift_list[id].image
-                    most_expensive = quantity * gift_list[id].cost
-
-        show screen gift
+label package_gift:
+    $ time = 1
+    $ timer_range = 1
+    $ timer_jump = 'package_gift'
+    if 'Gift' in delivery and len(delivery['Gift']):
+        $ (name, quantity) = delivery['Gift'].popitem()
+        $ g3.inv.gift[name] += quantity
+        $ the_gift = gift_list[name].image
+        show screen giftTimer
         with d3
-        ">A package arrived containing [prepend][listing] been added to your possessions."
-        hide screen gift
+        if quantity > 1:
+            "The pacakge contains [quantity] \"[name]'s\"{fast}"
+        else:
+            "The pacakge contains a \"[name]\"{fast}"
+        hide screen giftTimer
         with d3
-    if 'One time item' in delivery:
-        python:
-            the_gift = None
-            descr = ""
-            for name in delivery['One time item'].keys():
-                the_gift = oneTimeItem[name].image
-                oneTimeItem[name].orderStatus = orderStatus['delivered']
-                if name == "Ball dress":
-                    descr = "A fancy nightdress has"
-                    gifts12.append("ball_dress")
-                    bought_dress_already = True #Makes sure that you won't buy the dress twice.
-                elif name == "Mini Skirt":
-                    descr = "A School miniskirt has"
-                    bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
-                    have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
-                elif name == "Glasses":
-                    descr = "Some fine reading glasses have"
-                    glasses = True #Glasses owned
-                    glasses_worn = False
-                elif name == "S.P.E.W. Badge":
-                    descr = "A \"S.P.E.W.\" badge has"
-                    badge_01 = 1
 
-                    the_gift = "01_hp/18_store/29.png" # S.P.E.W. Badge.
-                elif name == "Fishnet stockings":
-                    descr = "A pair of fishnet stockings have"
-                    nets = 1
+    if 'One time item' in delivery and len(delivery['One time item']):
+        $ (name, quantity) = delivery['Gift'].popitem()
+        $ the_gift = oneTimeItem[name].image
+        $ oneTimeItem[name].orderStatus = orderStatus['delivered']
+        if name == "Ball dress":
+            $ descr = "A fancy nightdress has"
+            $ gifts12.append("ball_dress")
+            $ bought_dress_already = True #Makes sure that you won't buy the dress twice.
+        elif name == "Mini Skirt":
+            $ descr = "A School miniskirt has"
+            $ bought_skirt_already = True #Makes sure that you won't buy the skirt twice.
+            $ have_miniskirt = True # Turns TRUE when you have the skirt in your possession.
+        elif name == "Glasses":
+            $ descr = "Some fine reading glasses have"
+            $ glasses = True #Glasses owned
+            $ glasses_worn = False
+        elif name == "S.P.E.W. Badge":
+            $ descr = "A \"S.P.E.W.\" badge has"
+            $ badge_01 = 1
 
-        show screen gift
+            $ the_gift = "01_hp/18_store/29.png" # S.P.E.W. Badge.
+        elif name == "Fishnet stockings":
+            $ descr = "A pair of fishnet stockings have"
+            $ nets = 1
+
+        show screen giftTimer
         with d3
         ">[descr] been added to your possessions."
-        hide screen gift
+        hide screen giftTimer
         with d3
     call screen main_menu_01
 

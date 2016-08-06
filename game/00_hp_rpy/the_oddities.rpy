@@ -1,6 +1,4 @@
 label __init_variables:
-    if not hasattr(renpy.store,'gift_item_inv'): #important! Gift_Item.ID == Index in this array
-        $ gift_item_inv = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
     if not hasattr(renpy.store,'shop_found'): #important!
         $ shop_found = False
     if not hasattr(renpy.store,'sscroll_'): #important!

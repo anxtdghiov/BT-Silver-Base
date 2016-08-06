@@ -3632,18 +3632,10 @@ Kenneth Aguilar, alt, David McClellan, Leo H Wilkin, Thorn, TheDudeAbides, Alexa
     
     # SILVER Items
     
-    # gift item invintory
-    $ persistent.gift_item_inv = []
-    $ persistent.gift_item_inv = gift_item_inv
-    
     # scroll invintory
     $ persistent.sscroll_ = []
     $ persistent.sscroll_ = sscroll_
-    
-    # outfit invintory 
-    $ persistent.outfit_inventory = []
-    $ persistent.outfit_inventory = outfit_inventory
-    
+
     # books
     $ persistent.book_progress = []
     $ persistent.book_progress = book_progress

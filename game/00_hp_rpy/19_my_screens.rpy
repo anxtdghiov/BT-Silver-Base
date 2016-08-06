@@ -602,9 +602,13 @@ screen gift:
     zorder 5
     add "01_hp/18_store/00.png"
     add the_gift at Position(xpos=140, ypos=0)
-    
-    
 
+
+screen giftTimer:
+    timer time repeat False action [Hide('giftTimer'), Jump(timer_jump)]
+    zorder 5
+    add "01_hp/18_store/00.png"
+    add the_gift at Position(xpos=140, ypos=0)
 
 
 

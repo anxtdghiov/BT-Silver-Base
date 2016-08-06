@@ -191,24 +191,24 @@ screen wardrobe_gifts:
         hotspot (480, 30, 67, 82) clicked Show("wardrobe_gifts")
         
         for i in range(0,6):
-            if gift_item_inv[i+1] > 0:
+            if g3.inv.outfit[outfit_list[i]] > 0:
                 hotspot ((21+(90*i)), 140, 83, 85) clicked [SetVariable("wardrobe_gift_item",i+1),Jump("wardrobe_give_gift")]
         for i in range(0,6):
-            if gift_item_inv[i+7] > 0:
+            if g3.inv.outfit[outfit_list[i+7]] > 0:
                 hotspot ((21+(90*i)), 232, 83, 85) clicked [SetVariable("wardrobe_gift_item",i+7),Jump("wardrobe_give_gift")]
         for i in range(0,6):
-            if gift_item_inv[i+13] > 0:
+            if g3.inv.outfit[outfit_list[i+13]] > 0:
                 hotspot ((21+(90*i)), 324, 83, 85) clicked [SetVariable("wardrobe_gift_item",i+13),Jump("wardrobe_give_gift")]
         
         for i in range(1,7):
             add "01_hp/18_store/gifts/"+str(i)+".png" xpos -150+(90*i) ypos 90 zoom 0.30
-            text str(gift_item_inv[i]) xpos -70+(90*i) ypos 210 
+            text outfit_list[i-1] xpos -70+(90*i) ypos 210 
         for i in range(7,13):
             add "01_hp/18_store/gifts/"+str(i)+".png" xpos -150+(90*(i-6)) ypos 180 zoom 0.30
-            text str(gift_item_inv[i]) xpos -70+(90*(i-6)) ypos 300
+            text outfit_list[i-1] xpos -70+(90*(i-6)) ypos 300
         for i in range(13,18):
             add "01_hp/18_store/gifts/"+str(i)+".png" xpos -150+(90*(i-12)) ypos 270 zoom 0.30
-            text str(gift_item_inv[i]) xpos -70+(90*(i-12)) ypos 390 
+            text outfit_list[i-1] xpos -70+(90*(i-12)) ypos 390 
 
         #Adding custom one off items (Collar, dress, stockings)
 
